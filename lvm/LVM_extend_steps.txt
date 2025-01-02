@@ -1,0 +1,7 @@
+sudo wipefs --all --backup /dev/nvme0n1
+sudo pvcreate /dev/nvme0n1
+sudo vgs
+sudo vgextend ubuntu-vg /dev/nvme0n1
+sudo lvdisplay
+sudo lvextend -l +100%FREE /dev/ubuntu-vg/ubuntu-lv
+sudo resize2fs /dev/ubuntu-vg/ubuntu-lv

@@ -1,0 +1,23 @@
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+/dev/mapper/madz-slash /               xfs     defaults        0       0
+# /boot was on /dev/sda1 during installation
+UUID=ca5df49c-b946-4397-ac6c-c3408d3751c6 /boot           ext2    defaults        0       2
+/dev/mapper/madz-home /home           xfs     defaults        0       0
+/dev/mapper/madz-opt /opt            xfs     defaults        0       0
+/dev/mapper/madz-tmp /tmp            xfs     defaults        0       0
+/dev/mapper/madz-var_log /var/log        xfs     defaults        0       0
+/dev/mapper/madz-var_tmp /var/tmp        xfs     defaults        0       0
+# swap was on /dev/sda2 during installation
+UUID=6b39c102-d169-467c-b892-fa996e48e081 none            swap    sw              0       0
+# //nas1.compute.dtu.dk/home1/madz	/mnt/compute		cifs	noauto,users,domain=win,user=madz	0	0
+# //nas1.compute.dtu.dk/winhome/madz	/mnt/winhome		cifs	noauto,users,domain=win,user=madz	0	0
+# //dtu-storage.win.dtu.dk/madz		/mnt/dtu-storage	cifs	noauto,users,domain=win,user=madz	0	0
+/dev/sdb	/mnt/320GB	cifs	defaults	0	0
+/dev/sdc	/mnt/160GB	cifs	defaults	0	0
+/dev/sdd	/mnt/120GB	cifs	defaults	0	0

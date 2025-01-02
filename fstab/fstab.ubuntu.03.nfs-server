@@ -1,0 +1,25 @@
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# / was on /dev/sda3 during installation
+
+UUID=7ff8ff4e-b942-4371-88b7-28a5e553a5bf	/			ext4	errors=remount-ro			0	1	#/dev/sdb3: 111.3gf
+
+# /boot/efi was on /dev/sda2 during installation
+
+UUID=A3A0-C877					/boot/efi		vfat	umask=0077				0	1	#/dev/sdb3: 111.3gf
+
+# nfs drives mounted @ /mnt/nfs
+
+#UUID=2eb9f63a-5afd-4eaf-8487-605fe1f938d5	/mnt/nfs/1.8twdg	ext4	defaults,noatime,errors=remount-ro	0	0	#/dev/sdc: 1.8gwdg
+UUID=8d4fc295-9d4e-4123-8893-aca3a454f1df	/mnt/nfs/931.5gwdb	ext4	defaults,noatime,errors=remount-ro	0	0	#/dev/sda: 931.5gwdb
+UUID=e31e9226-4f11-44cc-89b7-d0eb47789dd9	/mnt/nfs/465.8gwdcg	ext4	defaults,noatime,errors=remount-ro	0	0	#/dev/sde: 465.8gwdcg
+UUID=4193d882-42e5-4a70-b44a-9341de8567e8	/mnt/nfs/298.1gsb	ext4	defaults,noatime,errors=remount-ro	0	0	#/dev/sdh: 298.1gsb
+UUID=b1fedf42-d938-4852-a12e-0d3ee9981330	/mnt/nfs/149.1gsb	ext4	defaults,noatime,errors=remount-ro	0	0	#/dev/sdg: 149.1gsb
+
+
+#/swapfile                                 none            swap    sw              0       0
