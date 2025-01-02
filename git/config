@@ -19,17 +19,18 @@
 	
 	cmt = commit -m
 	u = push
+	pl = pull
 	
 	graph = log --oneline --decorate --all --graph
 	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
 	
 	br = branch -a
-	brm = branch -M
+	brm = branch -M		# M - shortcut for --move --force
 
-	clean = remote prune	# cleans git cache from previously removed branches 
-	rmt = remote -v
-	rmta = remote add
-	rmtr = remote remove
+	cl = remote prune	# cleans git cache from previously removed branches 
+	rt = remote -v
+	rma = remote add
+	rmrm = remote remove
 
 	st = status			# 'status' is protected name so using 'st' instead
 	tg = tag			# Creates a lightweight tag: Contains no additional metadata, such as a tag message or an author

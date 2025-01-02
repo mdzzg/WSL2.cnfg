@@ -10,8 +10,12 @@ alias .5=../../../../..
 alias cv=~/Documents/data/job.applications/cv/tex.v4.6
 alias dc=~/Documents
 alias dl=~/Downloads
+alias cnfg=~/cnfg.bak
 # alias cv=~/docs/job_apps/cv/tex.v4.6
+# alias cli=~/docs/job_apps/personal.letter/novo.industry/generic.application/v0.3
+# alias cla=~/docs/job_apps/personal.letter/novo.academia/generic.application
 # alias dc=~/docs
+# alias dcw=/mnt/c/Users/mario/Documents/data/backup
 # alias dl=~/dls
 
 ###     grep    ###
@@ -41,6 +45,9 @@ alias psa='ps auxf'          # process status of all running processes - tree vi
 alias psgrep='ps aux|grep -v grep|grep -i VSZ'
 alias psmem='ps auxf|sort -nr -k 4'
 alias pscpu='ps auxf|sort -nr -k 3'
+
+### system  ###
+alias var='env|most'
 
 ###	turn off	###
 alias off='systemctl hibernate'
@@ -201,11 +208,14 @@ export -f psb
 #function delete_git_branch_1(){ git push "$1" -d "$2"  && git remote prune "$1";}
 #export -f delete_git_branch_1
 
-function delete_git_branch(){ git branch -d "$1" && git push "$2" -d "$1";}
-export -f delete_git_branch
+function git-filter(){ git filter-repo --path '$1' --invert-paths;}
+export -f git-filter
 
-function rename_git_branch(){ git branch -m "$1" "$2" && git push "$3" -d "$1" && git push "$3" "$2";}
-export -f rename_git_branch
+function git-branch-delete(){ git branch -d "$1" && git push "$2" -d "$1";}
+export -f git-branch-delete
+
+function git-branch-rename(){ git branch -m "$1" "$2" && git push "$3" -d "$1" && git push "$3" "$2";}
+export -f git-branch-rename
 
 ###    find    ###
 function ff() { find . -depth -type f -name "*$1*";}
