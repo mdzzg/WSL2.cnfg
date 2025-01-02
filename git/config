@@ -1,0 +1,48 @@
+[user]
+	email = mdamarija@gmail.com
+	name = mdzzg
+[credential]
+	helper = store --file ~/.config/git/credentials
+[pull]
+	rebase = false
+[core]
+	editor = code-insiders --wait
+	excludesfile = /home/madz/.config/git/ignore
+	autocrlf = true
+	fileMode = false
+[alias]
+	cnfg = config --global -l
+	cnfge = config --global -e
+
+	ad = add .		# Adds all new, modified, and deleted files in the current directory and its subdirectories to the staging area - Works recursively from the current directory downwards
+	adu = add -u	# Adds only modified and deleted files to the staging area, but not new files - Operates only on tracked files in the working directory
+	
+	cmt = commit -m
+	u = push
+	
+	graph = log --oneline --decorate --all --graph
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+	
+	br = branch -a
+	brm = branch -M
+
+	clean = remote prune	# cleans git cache from previously removed branches 
+	rmt = remote -v
+	rmta = remote add
+	rmtr = remote remove
+
+	st = status			# 'status' is protected name so using 'st' instead
+	tg = tag			# Creates a lightweight tag: Contains no additional metadata, such as a tag message or an author
+	ntg = tag -a		# Creates an annotated tag: Contains a tag message, the name of the person who created the tag, the date of the tag
+[color]
+	ui = auto
+[color "branch"]
+	current = red reverse
+	local = cyan
+	remote = yellow
+[credential "github.com"]
+	useHttpPath = true
+[push]
+	default = matching
+[init]
+	defaultBranch = default
