@@ -1,3 +1,63 @@
+Q: I have renamed default branch on GitHub. How to incorporate this locally in git?
+
+A: When you rename the default branch on GitHub, you need to make a few changes locally to align your Git repository with the updated branch name.
+
+Here’s how to do it:
+
+---
+
+### Steps to Incorporate the Default Branch Change Locally:
+
+#### 1. **Fetch the Latest Changes from the Remote**:
+   Fetch the updated branch list and information:
+   ```bash
+   git fetch origin
+   ```
+
+#### 2. **Switch to the New Default Branch**:
+   If you know the new branch name (e.g., `main`):
+   ```bash
+   git switch new-branch-name
+   ```
+   Or, if you don’t know the branch name, list the available branches:
+   ```bash
+   git branch -r
+   ```
+
+#### 3. **Update the Remote Tracking Branch**:
+   Set the upstream branch to point to the new remote default:
+   ```bash
+   git branch --set-upstream-to=origin/new-branch-name new-branch-name
+   ```
+
+#### 4. **(Optional) Delete the Old Branch Locally**:
+   If you want to remove the old branch:
+   ```bash
+   git branch -d old-branch-name
+   ```
+
+   **Note:** If the branch has unmerged changes, use `-D` instead of `-d`.
+
+#### 5. **Update the Initial Push/Default Target**:
+   If your Git configuration still points to the old branch, update the default push behavior:
+   ```bash
+   git config push.default matching
+   ```
+
+---
+
+### Verify Changes
+You can confirm the changes by running:
+- **For Local Branch**: `git branch`
+- **For Upstream Branch**: `git remote show origin`
+
+---
+
+### Automation for Renamed Branch
+GitHub usually provides a link or notice to set up your local repository for the renamed branch. Follow the instructions in your repository's GitHub webpage for easier integration.
+
+========================================================================================================================================================================================
+
 Q: branch out of the current non-main git branch and name it W.dates, delete the old branch W.dates - give me the commands. Can I have two git branches with the same name?
 
 A: Here’s how you can create a new branch named `W.dates` from the current non-main branch, delete the old `W.dates` branch, and handle naming conflicts:

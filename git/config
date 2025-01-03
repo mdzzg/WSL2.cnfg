@@ -24,7 +24,8 @@
 	graph = log --oneline --decorate --all --graph
 	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
 	
-	br = branch -a
+	br = branch
+	bra = branch -a
 	brm = branch -M		# M - shortcut for --move --force
 
 	cl = remote prune	# cleans git cache from previously removed branches 

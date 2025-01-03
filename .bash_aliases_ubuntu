@@ -1,4 +1,13 @@
-### ALIASES ###
+#  __  __  _____
+# |  \/  ||  __ \       
+# | \  / || |  | |      mdamarija@gmail.com (mdzzg)
+# | |\/| || |  | |      https://github.com/mdzzg 
+# | |  | || |__| |      
+# |_|  |_||_____/       
+ 
+# My runtime environment pseudonyms. Not much to see here; just some standard stuff.
+
+### PSEUDONYMS ###
 # navigation
 # cd -/cd -- -> go to the previous dir
 alias .1=..
@@ -31,9 +40,9 @@ alias list_descriptive='whatis `compgen -c`|sort -u|nl|most'
 alias update='sudo apt update -y && sudo apt full-upgrade -y'
 alias upgradable="apt list --upgradable|awk -F '/' '/^/ {print $1}'|cut -f1|grep -v Listing...|tr '\r\n' ' '"
 alias clean='sudo apt purge -y && sudo apt autoclean -y && sudo apt autoremove -y'
-alias snap='sudo snap refresh snap-store'
+alias snaprf='sudo snap refresh'
 alias snapi='sudo snap install'
-alias snapr='sudo snap remove'
+alias snaprm='sudo snap remove'
 alias snapl='snap list'
 # apt list --upgradable|awk -F '/' '/^/ { print $1 }'
 # apt list --installed|awk -F '/' '/^/ { print $1 }'
@@ -60,7 +69,7 @@ alias txfy='pdflatex --output-directory bin'
 alias pdf2txt='pdftotext'
 
 ### git ###
-alias gcnfg='git cnfg|fgrep alias'
+alias gcnfg='git cnfg|fgrep alias|sort'
 #alias graph='git log --oneline --decorate --all --graph'
 
 ###	frequent	###
@@ -124,15 +133,16 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 ###	mounts	###
 alias disk='df -h'          # human-readable sizes
-alias smount='showmount -e 8560w.local'
-alias mountn='sudo mount -t nfs 8560w.local:/mnt/nfs /mnt/nfs'
-alias umounta='sudo umount -a'
-alias spec='sudo smartctl -i'
+# alias smount='showmount -e 8560w.local'
+# alias mountn='sudo mount -t nfs 8560w.local:/mnt/nfs /mnt/nfs'
+# alias umounta='sudo umount -a'
+# alias spec='sudo smartctl -i'
 # sudo blkid
 # lsblk
 
 ###	variuos	###
-alias cal='ncal -b'
+alias clc='bc' ### scale=2
+# alias clc='ncal -b' ### scale=2
 alias PWD='LANG=c < /dev/urandom tr -dc _A-Z-a-z-0-9|head -c$"16";echo;'
 
 #	retired
@@ -152,7 +162,7 @@ alias pss34='/mnt/c/Program\ Files\ \(x86\)/PTI/PSSEXplore34/PSSBIN/Psse34.exe'
 #   alias insiders='/mnt/c/Users/mario/AppData/Local/Programs/Microsoft\ VS\ Code\ Insiders/Code\ -\ Insiders.exe'
 
 ### speedtest   ###
-alias speed='speedtest-cli --bytes --simple' #  --list ->  Display a list of speedtest.net servers sorted by distance
+alias spdtst='speedtest-cli --bytes --simple' #  --list ->  Display a list of speedtest.net servers sorted by distance
 # alias spdtst='speedtest -v -P 8 -u MiB/s'
 
 ###    FUNCTIONS	###
@@ -205,14 +215,19 @@ export -f pss
 function psb(){ ps aux|grep brave|awk '{print $2}'|sudo xargs kill -9;}
 export -f psb
 
-#function delete_git_branch_1(){ git push "$1" -d "$2"  && git remote prune "$1";}
-#export -f delete_git_branch_1
-
 function git-filter(){ git filter-repo --path '$1' --invert-paths;}
 export -f git-filter
 
-function git-branch-delete(){ git branch -d "$1" && git push "$2" -d "$1";}
+function git-branch-delete(){ git branch -d "$1" && git push "$2" -d "$1" && git remote prune "$1";}
 export -f git-branch-delete
+
+# function git-rmrm(){ git rm -r --cached "$1";}  # removes files from git cache recursively - become untracked by Git
+
+function git-rmrm(){ git remote remove "$1";}
+export -f git-rmrm
+
+function git-prune(){ git remote prune "$1";}   # cleans git cache from previously removed branches
+export -f git-prune
 
 function git-branch-rename(){ git branch -m "$1" "$2" && git push "$3" -d "$1" && git push "$3" "$2";}
 export -f git-branch-rename

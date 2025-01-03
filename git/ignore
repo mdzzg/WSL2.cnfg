@@ -6,8 +6,7 @@
 *.log
 *.out
 /.git/*
-
-
+*Zone.Identifier
 
 # Docusaurus Dependencies ignore
 /node_modules
