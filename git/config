@@ -8,7 +8,7 @@
 [core]
 	editor = code-insiders --wait
 	excludesfile = /home/madz/.config/git/ignore
-	autocrlf = true
+	autocrlf = input
 	fileMode = false
 	attributesfile = /home/madz/.config/git/attributes/.gitattributes
 [alias]
