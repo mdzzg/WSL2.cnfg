@@ -8,8 +8,9 @@
 [core]
 	editor = code-insiders --wait
 	excludesfile = /home/madz/.config/git/ignore
-	autocrlf = input
+	autocrlf = true
 	fileMode = false
+	attributesfile = /home/madz/.config/git/attributes/.gitattributes
 [alias]
 	cnfg = config --global -l
 	cnfge = config --global -e
