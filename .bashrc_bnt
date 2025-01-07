@@ -5,7 +5,7 @@
 # | |  | || |__| |      
 # |_|  |_||_____/       
  
-# My run commands/runtime configuration/resource configuration.
+# My Stephen Richard "Steve" Bourne Again SHell runtime configuration/resource configuration/run commands.
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
@@ -13,7 +13,7 @@
 
 ### EXPORT  ###
 # no duplicate entries, no entry with leading space == ignorespace & ignoredups - don't put duplicate lines or lines starting with space into the history
-# alternative: 
+# alternative:
 export HISTCONTROL=ignoreboth:erasedups           
 export HISTTIMEFORMAT=' %y/%m/%d '	# save timestamp beside history entry
 export HISTIGNORE='&:history:ls:[bf]g:exit:pwd:clear:cls:mount:umount:forget*:[ ]*'
