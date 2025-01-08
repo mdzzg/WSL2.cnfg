@@ -216,28 +216,28 @@ export -f pss
 function psb(){ ps aux|grep brave|awk '{print $2}'|sudo xargs kill -9;}
 export -f psb
 
-function git-filter(){ gt filter-repo --path '$1' --invert-paths;}
-export -f git-filter
+function gt-filter(){ gt filter-repo --path '$1' --invert-paths;}
+export -f gt-filter
 
-function git-radd(){ gt remote add "$1" "$2";}
-export -f git-radd
+function gt-radd(){ gt remote add "$1" "$2";}
+export -f gt-radd
 
-function git-init(){ gt u --set-upstream "$1" "$2";}   # git init & set upstream repo for the branch: `-u` == `--set-upstream`
-export -f git-init
+function gt-init(){ gt u --set-upstream "$1" "$2";}   # git init & set upstream repo for the branch: `-u` == `--set-upstream`
+export -f gt-init
 
-function git-branch-delete(){ gt branch -d "$1" && gt push "$2" -d "$1" && gt remote prune "$1";}
-export -f git-branch-delete
+function gt-branch-delete(){ gt branch -d "$1" && gt push "$2" -d "$1" && gt remote prune "$1";}
+export -f gt-branch-delete
 
 # function git-rmrm(){ gt rm -r --cached "$1";}  # removes files from git cache recursively - become untracked by Git
 
-function git-rtrm(){ gt remote remove "$1";}
-export -f git-rtrm
+function gt-rtrm(){ gt remote remove "$1";}
+export -f gt-rtrm
 
-function git-prune(){ gt remote prune "$1";}   # cleans git cache from previously removed branches
-export -f git-prune
+function gt-prune(){ gt remote prune "$1";}   # cleans git cache from previously removed branches
+export -f gt-prune
 
-function git-branch-rename(){ gt branch -m "$1" "$2" && gt push "$3" -d "$1" && gt push "$3" "$2";}
-export -f git-branch-rename
+function gt-branch-rename(){ gt branch -m "$1" "$2" && gt push "$3" -d "$1" && gt push "$3" "$2";}
+export -f gt-branch-rename
 
 ###    find    ###
 function ff() { find . -depth -type f -name "*$1*";}
