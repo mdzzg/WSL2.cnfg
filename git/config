@@ -30,7 +30,7 @@
 	brm = branch -M		# M - shortcut for --move --force
 
 	rt = remote -v
-	rma = remote add
+	rta = remote add
 
 	st = status			# 'status' is protected name so using 'st' instead
 	tg = tag			# Creates a lightweight tag: Contains no additional metadata, such as a tag message or an author

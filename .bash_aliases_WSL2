@@ -219,13 +219,19 @@ export -f psb
 function git-filter(){ gt filter-repo --path '$1' --invert-paths;}
 export -f git-filter
 
+function git-radd(){ gt remote add "$1" "$2";}
+export -f git-radd
+
+function git-init(){ gt u --set-upstream "$1" "$2";}   # git init & set upstream repo for the branch
+export -f git-init
+
 function git-branch-delete(){ gt branch -d "$1" && gt push "$2" -d "$1" && gt remote prune "$1";}
 export -f git-branch-delete
 
 # function git-rmrm(){ gt rm -r --cached "$1";}  # removes files from git cache recursively - become untracked by Git
 
-function git-rmrm(){ gt remote remove "$1";}
-export -f git-rmrm
+function git-rtrm(){ gt remote remove "$1";}
+export -f git-rtrm
 
 function git-prune(){ gt remote prune "$1";}   # cleans git cache from previously removed branches
 export -f git-prune
