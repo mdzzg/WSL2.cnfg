@@ -10,6 +10,9 @@
 # Windows generated file
 *Zone.Identifier
 
+# Linux generated files
+*.bak
+
 # Docusaurus Dependencies ignore
 /node_modules
 # Production
