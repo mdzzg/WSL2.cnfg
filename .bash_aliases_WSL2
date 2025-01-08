@@ -222,7 +222,7 @@ export -f git-filter
 function git-radd(){ gt remote add "$1" "$2";}
 export -f git-radd
 
-function git-init(){ gt u --set-upstream "$1" "$2";}   # git init & set upstream repo for the branch
+function git-init(){ gt u --set-upstream "$1" "$2";}   # git init & set upstream repo for the branch: `-u` == `--set-upstream`
 export -f git-init
 
 function git-branch-delete(){ gt branch -d "$1" && gt push "$2" -d "$1" && gt remote prune "$1";}
