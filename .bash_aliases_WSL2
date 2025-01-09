@@ -8,6 +8,7 @@
 # My runtime environment pseudonyms.
 
 ### PSEUDONYMS ###
+alias ali='alias -p'
 # navigation
 # cd -/cd -- -> go to the previous dir
 alias .1=..
@@ -69,7 +70,7 @@ alias txfy='pdflatex --output-directory bin'
 alias pdf2txt='pdftotext'
 
 ### git ###
-alias gt='git'
+alias gt='git '
 alias gcnfg='gt cnfg|fgrep alias|sort'
 #alias graph='git log --oneline --decorate --all --graph'
 
