@@ -239,7 +239,13 @@ export -f gt-prune
 function gt-branch-rename(){ gt branch -m "$1" "$2" && gt push "$3" -d "$1" && gt push "$3" "$2";}
 export -f gt-branch-rename
 
-###    find    ###
+function gt-branch-create(){ gt checkout -b "$1" && gt push -u "$2" "$1";}
+
+function gt-branch-merge(){ gt checkout "$1" && gt merge "$2";}
+
+function crlf2lf(){ sed -i 's/\r$//' "$1";}
+
+###    find files and directories arbitrary depth   ###
 function ff() { find . -depth -type f -name "*$1*";}
 export -f ff
 
