@@ -1,0 +1,9 @@
+{
+    "workbench.colorTheme": "Default Light Modern",
+    "security.workspace.trust.untrustedFiles": "open",
+    "security.allowedUNCHosts": [
+        "wsl.localhost"
+    ],
+    "python.defaultInterpreterPath": "/usr/bin/python3",
+    "python.condaPath": "/home/madz/miniforge3/condabin/conda"
+}
