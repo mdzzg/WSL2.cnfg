@@ -5,7 +5,7 @@
 # | |  | || |__| |      
 # |_|  |_||_____/       
  
-# My Stephen Richard "Steve" Bourne Again SHell runtime configuration/resource configuration/run commands.
+# My Brian Fox Bourne Again SHell runtime configuration/resource configuration/run commands.
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
@@ -43,7 +43,7 @@ shopt -s checkwinsize
 
 ### Derek Taylor SHOPT configuration
 shopt -s autocd         # Automatically change to the named directory
-# shopt -s cdable_vars    # Use the cd command with the names of variables that contain directory paths instead of only using literal directory paths.
+shopt -s cdable_vars    # Use the cd command with the names of variables that contain directory paths instead of only using literal directory paths.
 shopt -s cdspell        # Autocorrects typos in the `cd` command
 shopt -s cmdhist        # save multi-line commands in history as single line
 shopt -s dotglob        # Include hidden files (dotfiles) for wildcard expansion: file wildcard (* or ?) includes dotfiles - normally excluded

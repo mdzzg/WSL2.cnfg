@@ -8,6 +8,7 @@
 # My runtime environment pseudonyms.
 
 ### PSEUDONYMS ###
+alias ali='alias -p'
 # navigation
 # cd -/cd -- -> go to the previous dir
 alias .1=..
@@ -31,6 +32,9 @@ alias cnfg=~/cnfg.bak
 alias grep='grep --color=always'
 alias fgrep='grep -F --color=always'
 alias egrep='grep -E --color=always'
+alias diff='diff --color=always'
+alias sdiff='sdiff -s'
+
 
 ###	apt		###
 alias list_apt="apt list --installed|awk -F '/' '/^/ {print $1}'|cut -f1|grep -v Listing...|nl|most"

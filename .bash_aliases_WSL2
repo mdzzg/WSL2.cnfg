@@ -32,6 +32,9 @@ alias dl=~/dls
 alias grep='grep --color=always'
 alias fgrep='grep -F --color=always'
 alias egrep='grep -E --color=always'
+alias diff='diff --color=always'
+alias sdiff='sdiff -s'
+
 
 ###	apt		###
 alias list_apt="apt list --installed|awk -F '/' '/^/ {print $1}'|cut -f1|grep -v Listing...|nl|most"
@@ -70,7 +73,7 @@ alias txfy='pdflatex --output-directory bin'
 alias pdf2txt='pdftotext'
 
 ### git ###
-alias gt='git '
+alias gt='git'
 alias gcnfg='gt cnfg|fgrep alias|sort'
 #alias graph='git log --oneline --decorate --all --graph'
 
