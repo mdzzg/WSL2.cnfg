@@ -1,0 +1,16 @@
+{
+    "workbench.colorTheme": "Default Light Modern",
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "all",
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.wordWrap": "on",
+    "git.openRepositoryInParentFolders": "always",
+    "editor.suggest.showWords": false,
+    "notebook.output.textLineLimit": 3000,
+    "terminal.integrated.inheritEnv": false,
+    "cSpell.userWords": [
+        "Colab"
+    ],
+    "git.mergeEditor": true
+}

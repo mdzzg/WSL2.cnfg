@@ -1,0 +1,15 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "meta+c",
+        "command": "editor.action.toggleColumnSelection"
+    },
+    {
+        "key": "alt+s",
+        "command": "workbench.action.files.saveFiles"
+    },
+    {
+        "key": "ctrl+shift+[Minus]",
+        "command": "editor.action.jumpToBracket"
+    }
+]
