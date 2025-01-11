@@ -104,6 +104,11 @@ for src in "${!files[@]}"; do
     sync_files "$src" "$dest"
 done
 
-echo "Backup complete."
+cd "$DIR1" || exit
+git adr
+git ct 'Automated backup on $(date)'
+git u
+
+echo "Backup complete and pushed to GitHub."
 
 # ====================================================================================================
