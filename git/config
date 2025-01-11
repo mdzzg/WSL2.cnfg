@@ -15,9 +15,9 @@
 	cnfg = config --global -l
 	cnfge = config --global -e
 
-	ad = add .		# Adds all new, modified, and deleted files in the current directory and its subdirectories to the staging area - Works recursively from the current directory downwards
-	adu = add -u	# Adds only modified and deleted files to the staging area, but not new files - Operates only on tracked files in the working directory
-	adr = add --renormalize .	# Normalize inconsistent line endings in the repo
+	ad = add .					# Adds all new, modified, and deleted files in the current directory and its subdirectories to the staging area - Works recursively from the current directory downwards
+	adu = add -u				# Adds only modified and deleted files to the staging area, but not new files - Operates only on tracked files in the working directory
+	adr = add . --renormalize	# Normalize inconsistent line endings in the repo
 	adru = add --renormalize -u	# Normalize inconsistent line endings of the previously tracked files of the repo
 	
 	ct = commit -m
