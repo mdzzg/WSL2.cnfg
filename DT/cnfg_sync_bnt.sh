@@ -106,7 +106,7 @@ done
 
 cd "$DIR1" || exit
 git adr
-git ct 'Automated backup on $(date_+%Y.%m.%d-%H:%M:%S)'
+git ct "Automated backup on $(date_+%Y.%m.%d-%H:%M:%S)"
 git u
 
 echo "Backup complete and pushed to GitHub."
