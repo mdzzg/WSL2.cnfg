@@ -105,7 +105,7 @@ for src in "${!files[@]}"; do
 done
 
 cd "$DIR1" || exit
-git adr
+git ad
 git ct "Automated backup on $(date +%y.%m.%d-%H:%M:%S)"
 git u
 

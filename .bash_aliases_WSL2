@@ -29,9 +29,10 @@ alias dcw=/mnt/c/Users/mario/Documents/data/backup
 alias dl=~/dls
 
 ###     grep    ###
-alias grep='grep --color=always'
-alias fgrep='grep -F --color=always'
-alias egrep='grep -E --color=always'
+alias grep='grep --color=always --group-separator=SEP'
+export GREP_COLORS="ms=01;31;7:mc=01;32;7:sl=01;36;7:cx=33:fn=01;33:ln=32:bn=34:se=36"
+alias fgrep='grep -F --color=always'    # Interpret PATTERNS as fixed strings (F).
+alias egrep='grep -E --color=always'    # Interpret PATTERNS as extended regular expressions (EREs, see below).
 alias diff='diff --color=always'
 alias sdiff='sdiff -s'
 
@@ -111,8 +112,9 @@ alias power='upower -i /org/freedesktop/UPower/devices/battery_BAT0|grep -e 'sta
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 ###	rsync	###
-#	rsync -OaEHv --delete --info=progress2 /mnt/nfs/149.1gsb/ /mnt/nfs/465.8gwdcg/data/
-#	rsync -aSvx . tv-box.local:/home/madz/Videos
+#	rsync -OaEHv --delete --info=progress2 /mnt/nfs/149.1gsb/ /mnt/nfs/465.8gwdcg/data/ # a==rlptgoD - it does not include preserving ACLs (-A), xattrs (-X), atimes (-U), crtimes (-N), nor the finding and preserving of hardlinks (-H); H==preserve hardlinks; E==preserve executability x of files; v==verbose;
+#	rsync -aSvx . tv-box.local:/home/madz/Videos    # S==Try to handle sparse files efficiently so they take up less space on the destination; x==one-file-system; a==archive mode; v==verbose
+#	rsync -aSvE --delete --info=progress2 /mnt/nfs/149.1gsb/ /mnt/nfs/465.8gwdcg/data/ # a==rlptgoD - it does not include preserving ACLs (-A), xattrs (-X), atimes (-U), crtimes (-N), nor the finding and preserving of hardlinks (-H); S==Try to handle sparse files efficiently so they take up less space on the destination; v==verbose;
 
 ###	python: adding jupyter to the environment	###
 #	pip install ipykernel
