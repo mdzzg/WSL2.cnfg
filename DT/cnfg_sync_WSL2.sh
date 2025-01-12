@@ -29,3 +29,52 @@ else
 fi
 
 echo "Backup complete"
+
+# ====================================================================================================
+
+# #!/bin/bash
+
+# Directories
+DIR1="$HOME/cnfg.bak"
+DIR2="$HOME/.config/git"
+DIR3="$DIR1/git"
+
+# File pairs for syncing
+declare -A files=(
+    ["$DIR1/.bash_aliases_WSL2"]="$HOME/.bash_aliases"
+    ["$DIR1/.bashrc_WSL2"]="$HOME/.bashrc"
+    ["$DIR3/config"]="$DIR2/config"
+    ["$DIR3/ignore"]="$DIR2/ignore"
+)
+
+# Function to synchronize files
+sync_files() {
+    local src="$1"
+    local dst="$2"
+
+    # Sync src to dest only if src is newer
+    if [ "$src" -nt "$dst" ]; then
+        echo "Copying $src -> $dst"
+        rsync -auv "$src" "$dst"
+    elif [ "$src" -ot "$dst" ]; then
+        echo "Copying $dst -> $src"
+        rsync -auv "$dst" "$src"
+    else
+        echo "Both files are up-to-date: $src and $dst"
+    fi
+}
+
+# Loop over file pairs to sync them
+for src in "${!files[@]}"; do
+    dst="${files[$src]}"
+    sync_files "$src" "$dst"
+done
+
+cd "$DIR1" || exit
+git adr
+git ct "Automated backup on $(date +%y.%m.%d-%H:%M:%S)"
+git u
+
+echo "Backup complete and pushed to GitHub."
+
+# ====================================================================================================
