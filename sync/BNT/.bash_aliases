@@ -1,0 +1,267 @@
+#  __  __  _____
+# |  \/  ||  __ \       
+# | \  / || |  | |      mdamarija@gmail.com (mdzzg)
+# | |\/| || |  | |      https://github.com/mdzzg 
+# | |  | || |__| |      
+# |_|  |_||_____/       
+ 
+# My runtime environment pseudonyms.
+
+### PSEUDONYMS ###
+alias ali='alias -p'
+# navigation
+# cd -/cd -- -> go to the previous dir
+alias .1=..
+alias .2=../..
+alias .3=../../..
+alias .4=../../../..
+alias .5=../../../../..
+
+alias cv=~/Documents/data/job.applications/cv/tex.v4.6
+alias dc=~/Documents
+alias dl=~/Downloads
+alias cnfg=~/cnfg.bak
+# alias cv=~/docs/job_apps/cv/tex.v4.6
+# alias cli=~/docs/job_apps/personal.letter/novo.industry/generic.application/v0.3
+# alias cla=~/docs/job_apps/personal.letter/novo.academia/generic.application
+# alias dc=~/docs
+# alias dcw=/mnt/c/Users/mario/Documents/data/backup
+# alias dl=~/dls
+
+###     grep    ###
+alias grep='grep --color=always --group-separator=SEP'
+export GREP_COLORS="ms=01;31;7:mc=01;32;7:sl=01;37;07;07:cx=33:fn=01;33:ln=32:bn=34:se=36"
+alias fgrep='grep -F --color=always'    # Interpret PATTERNS as fixed strings (F).
+alias egrep='grep -E --color=always'    # Interpret PATTERNS as extended regular expressions (EREs, see below).
+alias diff='diff --color=always'
+alias sdiff='sdiff -s'
+
+
+###	apt		###
+alias list_apt="apt list --installed|awk -F '/' '/^/ {print $1}'|cut -f1|grep -v Listing...|nl|most"
+# alias list_apt="apt list --installed 2>/dev/null | sed -n 's,/.*,,p'|most"
+alias list_full='compgen -c|sort -u|nl|most'
+alias list_descriptive='whatis `compgen -c`|sort -u|nl|most'
+alias update='sudo apt update -y && sudo apt full-upgrade -y'
+alias upgradable="apt list --upgradable|awk -F '/' '/^/ {print $1}'|cut -f1|grep -v Listing...|tr '\r\n' ' '"
+alias clean='sudo apt purge -y && sudo apt autoclean -y && sudo apt autoremove -y'
+alias snaprf='sudo snap refresh'
+alias snapi='sudo snap install'
+alias snaprm='sudo snap remove'
+alias snapl='snap list'
+# apt list --upgradable|awk -F '/' '/^/ { print $1 }'
+# apt list --installed|awk -F '/' '/^/ { print $1 }'
+# apt-cache show %packagename
+# apt-cache search %packagename |sort
+
+# ps
+alias psa='ps auxf'          # process status of all running processes - tree view
+alias psgrep='ps aux|grep -v grep|grep -i VSZ'
+alias psmem='ps auxf|sort -nr -k 4'
+alias pscpu='ps auxf|sort -nr -k 3'
+
+### system  ###
+alias var='env|most'
+
+###	turn off	###
+alias off='systemctl hibernate'
+alias reboot='systemctl reboot -i'
+alias poweroff='systemctl poweroff -n'
+#	sudo systemctl reboot --firmware-setup
+
+###	latex/pdf	##
+alias txfy='pdflatex --output-directory bin'
+alias pdf2txt='pdftotext'
+
+### git ###
+alias gt='git'
+alias gcnfg='gt cnfg|fgrep alias|sort'
+#alias graph='git log --oneline --decorate --all --graph'
+
+###	frequent	###
+alias rst='. ~/.bashrc'	#'source ~/.bashrc'
+alias cls="printf '\033c'"
+alias alt='sudo update-alternatives --config' 
+#alias forget='1
+alias line="printf '\033[1;31m%100s\033[0m\\n' | tr ' ' ="
+# alias hline="printf '%100s\n' | tr ' ' \#"
+# alias mline="printf '%125s\n' | tr ' ' --"
+
+# some more ls aliases
+alias ll='ls -AFghoX --color=always'  # F - classify executables (*), directories (/), symbolic links (@); X - alphabetical sort; A - all WO parents; og - ommit owner & group;  
+alias lc='ls -CFhm --color=always'    # C - column mode; m - comma separated
+# R - recursive display of all dirs
+alias dir='dir --color=always'
+alias vdir='vdir --color=always'
+
+###	RAM	###
+alias free='free -m'           # show sizes in MB
+alias RAM0='sudo lshw -c memory'
+alias RAM1='sudo dmidecode --type memory'
+alias RAM2='sudo dmidecode -t 17'
+
+###	battery		###
+alias power='upower -i /org/freedesktop/UPower/devices/battery_BAT0|grep -e 'state:' -e 'percentage:''
+# alias charge='acpi'
+# smbios-battery-ctl --get-charging-cfg
+# smbios-battery-ctl --set-charging-mode=custom
+# smbios-battery-ctl --set-custom-charge-interval=50 80	#	it has to be integer value
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+###	rsync	###
+#	rsync -OaEHv --delete --info=progress2 /mnt/nfs/149.1gsb/ /mnt/nfs/465.8gwdcg/data/ # a==rlptgoD - it does not include preserving ACLs (-A), xattrs (-X), atimes (-U), crtimes (-N), nor the finding and preserving of hardlinks (-H); H==preserve hardlinks; E==preserve executability x of files; v==verbose;
+#	rsync -aSvx . tv-box.local:/home/madz/Videos    # S==Try to handle sparse files efficiently so they take up less space on the destination; x==one-file-system; a==archive mode; v==verbose
+#	rsync -aSvE --delete --info=progress2 /mnt/nfs/149.1gsb/ /mnt/nfs/465.8gwdcg/data/ # a==rlptgoD - it does not include preserving ACLs (-A), xattrs (-X), atimes (-U), crtimes (-N), nor the finding and preserving of hardlinks (-H); S==Try to handle sparse files efficiently so they take up less space on the destination; v==verbose;
+
+###	python: adding jupyter to the environment	###
+#	pip install ipykernel
+#	python -m ipykernel install --user --name env.name --display-name 'esm-2024'
+
+###	python		###
+#   alias ipy3="ipython3 --no-confirm-exit --no-banner --quick --InteractiveShellApp.extensions=\"['autoreload']\" --InteractiveShellApp.exec_lines=\"['%autoreload 2', 'import os,sys,%alias']\""
+
+###	exportfs	###
+#	screen sudo gedit /etc/exports
+#	sudo exportfs -rv && sudo systemctl restart nfs-kernel-server
+#	sudo exportfs -a
+#	sudo exportfs -s
+#	sudo exportfs -fv
+
+###	chown & chmod	###
+#	sudo chmod 0777 /etc/exports
+#	sudo chown mdzzg:mdzzg /etc/fstab
+#	sudo chown nobody:nogroup /mnt/nfs/149.1gsb/backup/data.backup/cl.history/.bash_history
+#	sudo chmod -R 0777 /mnt/nfs/149.1gsb/backup/data.backup/cl.history/.bash_history
+#	sudo chown -R nobody:nogroup /mnt/nfs && sudo chmod -R 0777 /mnt/nfs
+#	sudo chown -hR madz /mnt
+
+###	mounts	###
+alias disk='df -h'          # human-readable sizes
+# alias smount='showmount -e 8560w.local'
+# alias mountn='sudo mount -t nfs 8560w.local:/mnt/nfs /mnt/nfs'
+# alias umounta='sudo umount -a'
+# alias spec='sudo smartctl -i'
+# sudo blkid
+# lsblk
+
+###	variuos	###
+alias clc='bc' ### scale=2
+# alias clc='ncal -b' ### scale=2
+alias PWD='LANG=c < /dev/urandom tr -dc _A-Z-a-z-0-9|head -c$"16";echo;'
+
+#	retired
+#	alias eno1='sudo ifdown wlp2s0 && sudo ifup eno1'
+#	alias wlp2s0='sudo ifdown eno1 && sudo ifup wlp2s0'
+#	alias mounta='sudo mount /dev/sda /media/madz/298.1G/; sudo mount /dev/sdb /media/madz/149.1G/; sudo mount /dev/sdd /media/madz/465.8G/ || sudo mount /dev/sdc /media/madz/465.8G/'
+#	alias umounta='sudo umount /dev/sda; sudo umount /dev/sdb; sudo umount /dev/sdd || sudo umount /dev/sdc'
+#	function mycvcl() { cvlc $1 && wmctrl -r :ACTIVE: -b toggle,above; }
+#	alias yt='youtube-dl'
+#	alias yta='youtube-dl -x -f bestaudio/best'
+#	alias ytva='youtube-dl -f bestvideo,bestaudio'
+#	alias playlist='%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s'
+
+###	work    ###
+
+alias pss34='/mnt/c/Program\ Files\ \(x86\)/PTI/PSSEXplore34/PSSBIN/Psse34.exe'
+#   alias insiders='/mnt/c/Users/mario/AppData/Local/Programs/Microsoft\ VS\ Code\ Insiders/Code\ -\ Insiders.exe'
+
+### speedtest   ###
+alias spdtst='speedtest-cli --bytes --simple' #  --list ->  Display a list of speedtest.net servers sorted by distance
+# alias spdtst='speedtest -v -P 8 -u MiB/s'
+
+###    FUNCTIONS	###
+# function that checks for broken URLs in a resume.pdf
+function pdfcheck(){ pdfx -v bin/"$1" -c;}
+export -f pdfcheck
+
+# function that queries apt for upgradable packages, lists them, & then installs them
+function upgrade(){ sudo apt install $(apt list --upgradable|awk -F '/' '/^/ {print $1}'|cut -f1 |grep -v Listing...|tr '\r\n' ' ') -y;}
+export -f upgrade
+
+# function that lists installed apt/dpkg packages
+list_dpkg(){
+    # dpkg-query -W -f='${Package}\n' | less
+    dpkg -l|awk '/^ii/ {print $2}'|nl|most;
+}
+export -f list_dpkg
+
+function up() {
+    local d=""
+    local limit="$1"
+
+    if [ -z "$limit" ] || [ "$limit" -le 0 ]; then
+        limit=1
+    fi
+
+    for ((i=1;i<=limit;i++)); do
+        d="../$d"
+    done
+
+    # if ! cd "$d"; then
+    #     echo "couldn't go up $limit dirs.";
+    # fi
+    
+    # Change to the constructed path
+    cd "$d" || return
+}
+export -f up
+
+###     mkdir creates parents verbosely and cds into it immediatelly    ###
+function mcd() {
+    /bin/mkdir -pv "$1" && cd "$1"
+}
+export -f mcd
+
+###     process kill    ###
+function pss(){ ps aux|grep snap|awk '{print $2}'|sudo xargs kill -9;}
+export -f pss
+
+function psb(){ ps aux|grep brave|awk '{print $2}'|sudo xargs kill -9;}
+export -f psb
+
+function gt-filter(){ gt filter-repo --path '$1' --invert-paths;}
+export -f gt-filter
+
+function gt-radd(){ gt remote add "$1" "$2";}
+export -f gt-radd
+
+function gt-init(){ gt u --set-upstream "$1" "$2";}   # git init & set upstream repo for the branch: `-u` == `--set-upstream`
+export -f gt-init
+
+function gt-branch-delete(){ gt branch -d "$1" && gt push "$2" -d "$1" && gt remote prune "$1";}
+export -f gt-branch-delete
+
+# function git-rmrm(){ gt rm -r --cached "$1";}  # removes files from git cache recursively - become untracked by Git
+
+function gt-rtrm(){ gt remote remove "$1";}
+export -f gt-rtrm
+
+function gt-prune(){ gt remote prune "$1";}   # cleans git cache from previously removed branches
+export -f gt-prune
+
+function gt-branch-rename(){ gt branch -m "$1" "$2" && gt push "$3" -d "$1" && gt push "$3" "$2";}
+export -f gt-branch-rename
+
+function gt-branch-create(){ gt checkout -b "$1" && gt push -u "$2" "$1";}
+
+function gt-branch-merge(){ gt checkout "$1" && gt merge "$2";}
+
+function crlf2lf(){ sed -i 's/\r$//' "$1";}
+
+###    find files and directories arbitrary depth   ###
+function ff() { find . -depth -type f -name "*$1*";}
+export -f ff
+
+function fd() {	find . -depth -type d -name "*$1*";}
+export -f fd
+
+#	find ~/ -type f -name "postgis-2.0.0"
+#	pdfgrep -ri python /home/madz/Dropbox/
+#	find /path -iname '*.pdf' -exec pdfgrep pattern {} +
+
+# function insiders(){
+# /mnt/c/Users/mario/AppData/Local/Programs/Microsoft\ VS\ Code\ Insiders/Code\ -\ Insiders.exe "$1"
+# }
