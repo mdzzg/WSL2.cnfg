@@ -87,12 +87,12 @@ sync_files() {
     local dst="$2"
 
     # Sync src to dest only if src is newer
-    if [ "$src" -ot "$dest" ]; then
-        echo "Copying $dst -> $src"
-        rsync -auv "$dst" "$src"
-    elif [ "$scr" -nt "$dst" ]; then
+    if [ "$src" -nt "$dst" ]; then
         echo "Copying $src -> $dst"
         rsync -auv "$src" "$dst"
+    elif [ "$src" -ot "$dst" ]; then
+        echo "Copying $dst -> $src"
+        rsync -auv "$dst" "$src"
     else
         echo "Both files are up-to-date: $src and $dst"
     fi

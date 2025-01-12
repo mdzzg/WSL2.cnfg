@@ -53,6 +53,7 @@ shopt -s expand_aliases # Expand aliases for scripts and function declarations
 shopt -s checkhash      # Automatically checks and updates the hash table of commands when their location changes | Example: Useful for ensuring commands like python point to updated binaries after installation or relocation.
 shopt -s direxpand      # Expands ~ or .. into full directory paths when using Tab completion
 shopt -s failglob       # If a wildcard pattern does not match any files, an error message will be printed
+shopt -s extglob        # extended pattern matching
 shopt -s globstar       # Enables the ** wildcard pattern to match all files in nested directories
 shopt -s histreedit     # Allows the user to re-edit a failed recalled history line
 shopt -s histverify     # Allow the user to edit a recalled history line before executing
