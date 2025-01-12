@@ -91,7 +91,7 @@ sync_files() {
         echo "Copying $dst -> $src"
         rsync -auv "$dst" "$src"
     elif [ "$scr" -nt "$dst" ]; then
-        echo "Copying $crs -> $dst"
+        echo "Copying $src -> $dst"
         rsync -auv "$src" "$dst"
     else
         echo "Both files are up-to-date: $src and $dst"
