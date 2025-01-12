@@ -34,15 +34,17 @@
 
 # Directories
 DIR1="$HOME/cnfg.bak"
-DIR2="$HOME/.config/git"
-DIR3="$DIR1/git"
+DIR2="$DIR1/sync"
+DIR3="$DIR2/WSL2"
+DIR4="$DIR2/git"
+DIR5="$HOME/.config/git"
 
 # File pairs for syncing
 declare -A files=(
-    ["$DIR1/.bash_aliases_WSL2"]="$HOME/.bash_aliases"
-    ["$DIR1/.bashrc_WSL2"]="$HOME/.bashrc"
-    ["$DIR3/config"]="$DIR2/config"
-    ["$DIR3/ignore"]="$DIR2/ignore"
+    ["$DIR3/.bash_aliases"]="$HOME/.bash_aliases"
+    ["$DIR3/.bashrc"]="$HOME/.bashrc"
+    ["$DIR4/config"]="$DIR5/config"
+    ["$DIR4/ignore"]="$DIR5/ignore"
 )
 
 # Function to synchronize files
