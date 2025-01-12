@@ -84,24 +84,24 @@ declare -A files=(
 # Function to synchronize files
 sync_files() {
     local src="$1"
-    local dest="$2"
+    local dst="$2"
 
     # Sync src to dest only if src is newer
-    if [ "$src" -nt "$dest" ]; then
-        echo "Copying $src -> $dest"
-        rsync -auv "$src" "$dest"
-    elif [ "$dest" -nt "$src" ]; then
-        echo "Copying $dest -> $src"
-        rsync -auv "$dest" "$src"
+    if [ "$src" -ot "$dest" ]; then
+        echo "Copying $dst -> $src"
+        rsync -auv "$dst" "$src"
+    elif [ "$scr" -nt "$dst" ]; then
+        echo "Copying $crs -> $dst"
+        rsync -auv "$src" "$dst"
     else
-        echo "Both files are up-to-date: $src and $dest"
+        echo "Both files are up-to-date: $src and $dst"
     fi
 }
 
 # Loop over file pairs to sync them
 for src in "${!files[@]}"; do
-    dest="${files[$src]}"
-    sync_files "$src" "$dest"
+    dst="${files[$src]}"
+    sync_files "$src" "$dst"
 done
 
 cd "$DIR1" || exit
