@@ -71,7 +71,7 @@
 # Directories
 DIR1="$HOME/cnfg.bak/sync/BNT"
 DIR2="$HOME/.config/git"
-DIR3="$HOME/cnfg.bak/git"
+DIR3="$HOME/cnfg.bak/sync/git"
 
 # File pairs for syncing
 declare -A files=(
