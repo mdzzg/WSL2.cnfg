@@ -90,13 +90,15 @@ sync_files() {
 
     # Sync src to dest only if src is newer
     if [ "$src" -nt "$dst" ]; then
+        echo "The $src is newer than the $dst"
         echo "Copying $src -> $dst"
         rsync -auv "$src" "$dst"
     elif [ "$src" -ot "$dst" ]; then
+        echo "The $dst is newer than the $src"
         echo "Copying $dst -> $src"
         rsync -auv "$dst" "$src"
     else
-        echo "Both files are up-to-date: $src and $dst"
+        echo "Both files are in sync: $src and $dst"
     fi
 }
 
@@ -107,7 +109,7 @@ for src in "${!files[@]}"; do
 done
 
 cd "$DIR1" || exit
-git ad
+git adr
 git ct "Automated backup on $(date +%y.%m.%d-%H:%M:%S)"
 git u
 
