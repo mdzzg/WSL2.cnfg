@@ -11,7 +11,7 @@ DOCS_DEST="/mnt/d/Lat_back"
 WSL2_DEST="/mnt/d/WSL2"
 
 # Common rsync options
-OPTIONS="-aSvEu --delete --info=progress2 --timeout=5"
+OPTIONS="-auES --delete --info=progress2 --timeout=5"
 
 # Synchronize the Documents folder
 rsync $OPTIONS --exclude="Downloaded Installations" --exclude="PTI" "$DOCS_SRC/" "$DOCS_DEST/"
