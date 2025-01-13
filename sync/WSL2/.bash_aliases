@@ -9,6 +9,8 @@
 
 ### PSEUDONYMS ###
 alias ali='alias -p'
+# bind Space:magic-space	# pressing Space after the command will auto-expand them inline
+
 # navigation
 # cd -/cd -- -> go to the previous dir
 alias .1=..
