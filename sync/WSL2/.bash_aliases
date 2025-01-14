@@ -24,9 +24,6 @@ alias .3=../../..
 alias .4=../../../..
 alias .5=../../../../..
 
-# alias cv=~/Documents/data/job.applications/cv/tex.v4.6
-# alias dc=~/Documents
-# alias dl=~/Downloads
 alias cnfg=~/cnfg.bak
 alias cv=~/docs/job_apps/cv/tex.v4.6
 alias cli=~/docs/job_apps/personal.letter/novo.industry/generic.application/v0.3

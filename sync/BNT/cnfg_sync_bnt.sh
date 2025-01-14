@@ -108,10 +108,10 @@ for src in "${!files[@]}"; do
     sync_files "$src" "$dst"
 done
 
-cd "$DIR1" || exit
-git adr
-git ct "Automated backup on $(date +%y.%m.%d-%H:%M:%S)"
-git u
+cd "/home/madz/cnfg.bak" || exit
+git add . -renormalize
+git commit -m'Automated backup on $(date +%y.%m.%d-%H:%M:%S)'
+git push
 
 echo "Backup complete and pushed to GitHub."
 
