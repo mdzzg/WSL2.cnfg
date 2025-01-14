@@ -22,7 +22,7 @@ export HISTIGNORE='&:history:ls:[bf]g:exit:pwd:clear:cls:mount:umount:forget*:[ 
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
-      *) return;;
+      *) restart;;
 esac
 
 # Immediately append to the history file, do not wait until the shell exits to append it.
@@ -64,9 +64,6 @@ shopt -s nocaseglob     # Makes wildcard patterns case-insensitive
 # match all files and zero or more directories and subdirectories.
 # shopt -s globstar
 
-# ignore upper and lowercase when TAB completion
-bind "set completion-ignore-case on"
-
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
@@ -97,8 +94,8 @@ parse_git_branch() {
  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 # if [ "$color_prompt" = yes ]; then
-#  PS1='${debian_chroot:+($debian_chroot)}\[\033[04;31;7m\]$(parse_git_branch)\[\033[0m\]\[\033[04;32;7m\]\W\n\[\033[0m\]\[\033[01;37m\]'
-# #  PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]$(parse_git_branch)\[\033[01;34m\]\W:\n\[\033[01;32m\]\$ '
+# PS1='${debian_chroot:+($debian_chroot)}\[\033[04;31;7m\]$(parse_git_branch)\[\033[0m\]\[\033[04;32;7m\]\W\n\[\033[0m\]\[\033[01;37m\]'
+#  PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]$(parse_git_branch)\[\033[01;34m\]\W:\n\[\033[01;32m\]\$ '
 # else
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;04;31;7m\]$(parse_git_branch)\[\033[0m\]\[\033[01;04;32;7m\]\W\n\[\033[0m\]\[\033[01;37m\]'
 #  PS1='${debian_chroot:+($debian_chroot)}\[\033[1;32m\]\W \D{%H:%M}\[\033[1;32m\]$(parse_git_branch)\$ '
@@ -107,12 +104,27 @@ PS1='${debian_chroot:+($debian_chroot)}\[\033[01;04;31;7m\]$(parse_git_branch)\[
 # unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
+# case "$TERM" in
+# xterm*|rxvt*)
+#     # PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+#     if [[ $- == *i* ]]; then
+#         HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | awk -F: '{print $2}' | xargs)
+#         HOSTNAMECTL_INFO_2=$(hostnamectl | grep "Hardware Vendor" | awk -F: '{print $2}' | xargs)
+#     fi
+#     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h $HOSTNAMECTL_INFO_1 $HOSTNAMECTL_INFO_2 | \w |\r\n\r\n \t \d | jobs = \j | clh = \!\a\]$PS1"
+#     ;;
+# *)
+#     ;;
+# esac
+
 case "$TERM" in
 xterm*|rxvt*)
-    # PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | awk -F: '{print $2}' | xargs)
-    HOSTNAMECTL_INFO_2=$(hostnamectl | grep "Hardware Vendor" | awk -F: '{print $2}' | xargs)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h $HOSTNAMECTL_INFO_1 $HOSTNAMECTL_INFO_2 | \w |\r\n\r\n \t \d | jobs = \j | clh = \!\a\]$PS1"    ;;
+    if [[ -z "$HOSTNAMECTL_INFO_1" || -z "$HOSTNAMECTL_INFO_2" && $- == *i* ]]; then
+        HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | awk -F: '{print $2}' | xargs)
+        HOSTNAMECTL_INFO_2=$(hostnamectl | grep "Hardware Vendor" | awk -F: '{print $2}' | xargs)
+    fi
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h $HOSTNAMECTL_INFO_1 $HOSTNAMECTL_INFO_2 | \w |\r\n\r\n \t \d | jobs = \j | clh = \!\a\]$PS1"
+    ;;
 *)
     ;;
 esac

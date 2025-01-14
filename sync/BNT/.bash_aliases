@@ -9,6 +9,13 @@
 
 ### PSEUDONYMS ###
 alias ali='alias -p'
+
+# pressing Space after the command will auto-expand it inline
+set Space:magic-space
+
+# ignore upper and lowercase when TAB completion
+set set completion-ignore-case on
+
 # navigation
 # cd -/cd -- -> go to the previous dir
 alias .1=..

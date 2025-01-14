@@ -31,7 +31,7 @@ DEST1="/mnt/tsclient/D/strucno/"
 DEST2="/mnt/tsclient/D/privatno/"
 
 # Common rsync options
-OPTIONS="-aSvEu --delete --info=progress2 --timeout=5"
+OPTIONS="-auES --delete --info=progress2 --timeout=5"
 
 # Sync command for SRC1 to DEST1
 echo "Synchronizing $SRC1 to $DEST1"
