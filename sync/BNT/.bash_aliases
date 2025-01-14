@@ -14,7 +14,7 @@ alias ali='alias -p'
 set Space:magic-space
 
 # ignore upper and lowercase when TAB completion
-set set completion-ignore-case on
+set completion-ignore-case on
 
 # navigation
 # cd -/cd -- -> go to the previous dir
