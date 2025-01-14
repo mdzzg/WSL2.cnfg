@@ -9,7 +9,12 @@
 
 ### PSEUDONYMS ###
 alias ali='alias -p'
-# bind Space:magic-space	# pressing Space after the command will auto-expand them inline
+
+# pressing Space after the command will auto-expand it inline
+bind Space:magic-space	
+
+# ignore upper and lowercase when using TAB complete
+bind set completion-ignore-case on
 
 # navigation
 # cd -/cd -- -> go to the previous dir
