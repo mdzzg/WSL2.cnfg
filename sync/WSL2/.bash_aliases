@@ -222,7 +222,7 @@ export -f pss
 function psb(){ ps aux|grep brave|awk '{print $2}'|sudo xargs kill -9;}
 export -f psb
 
-function gt-filter(){ gt filter-repo --path "$1" --invert-paths;}
+function gt-filter(){ gt filter-repo --path '$1' --invert-paths;}
 export -f gt-filter
 
 function gt-radd(){ gt remote add "$1" "$2";}
