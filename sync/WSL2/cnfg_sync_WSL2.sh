@@ -43,6 +43,7 @@ DIR5="$HOME/.config/git"
 declare -A files=(
     ["$DIR3/.bash_aliases"]="$HOME/.bash_aliases"
     ["$DIR3/.bashrc"]="$HOME/.bashrc"
+    ["$DIR3/.inputrc"]="$HOME/.inputrc"
     ["$DIR4/config"]="$DIR5/config"
     ["$DIR4/ignore"]="$DIR5/ignore"
 )
