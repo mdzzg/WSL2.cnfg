@@ -8,13 +8,9 @@
 # My runtime environment pseudonyms.
 
 ### PSEUDONYMS ###
+
+# list all pseudonyms
 alias ali='alias -p'
-
-# pressing Space after the command will auto-expand it inline
-bind "Space:magic-space"	
-
-# ignore upper and lowercase when using TAB complete
-bind "set completion-ignore-case on"
 
 # navigation
 # cd -/cd -- -> go to the previous dir
@@ -30,7 +26,6 @@ alias cla=~/Documents/data/job.applications/personal.letter/novo.academia/generi
 alias cli=~/Documents/data/job.applications/personal.letter/novo.industry/generic.application/v0.3
 alias dc=~/Documents
 alias dl=~/Downloads
-
 
 ###     grep    ###
 alias grep='grep --color=always --group-separator=SEP'

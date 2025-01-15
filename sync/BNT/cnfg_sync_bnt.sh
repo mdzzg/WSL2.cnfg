@@ -110,9 +110,9 @@ for src in "${!files[@]}"; do
 done
 
 cd "$DIR1" || exit
-gt ad
-gt ct "Automated backup on $(date +%y.%m.%d-%H:%M:%S)"
-gt u
+git ad
+git ct "Automated backup on $(date +%y.%m.%d-%H:%M:%S)"
+git u
 
 echo "Backup complete and pushed to GitHub."
 

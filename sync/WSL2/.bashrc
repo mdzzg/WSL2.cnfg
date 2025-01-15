@@ -97,7 +97,7 @@ if [ "$color_prompt" = yes ]; then
  PS1='${debian_chroot:+($debian_chroot)}\[\033[01;04;31;7m\]$(parse_git_branch)\[\033[0m\]\[\033[01;04;32;7m\]\W\n\[\033[0m\]\[\033[01;37m\]'
 #  PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]$(parse_git_branch)\[\033[01;34m\]\W:\n\[\033[01;32m\]\$ '
 else
- PS1='${debian_chroot:+($debian_chroot)}\[\033[01;04;31;7m\]$(parse_git_branch)\[\033[0m\]\[\033[01;04;32;7m\]\W\n\[\033[0m\]\[\033[01;37m\]'
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;04;31;7m\]$(parse_git_branch)\[\033[0m\]\[\033[01;04;32;7m\]\W\n\[\033[0m\]\[\033[01;37m\]'
 #  PS1='${debian_chroot:+($debian_chroot)}\[\033[1;32m\]\W \D{%H:%M}\[\033[1;32m\]$(parse_git_branch)\$ '
 fi
 
