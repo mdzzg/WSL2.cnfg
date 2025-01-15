@@ -1,0 +1,17 @@
+# ~/.inputrc
+
+# pressing Space after the command will auto-expand it inline
+" ": magic-space
+
+# case-insensitive tab completion
+set completion-ignore-case on
+
+# show all possible completions without double tabbing
+set show-all-if-ambiguous on
+
+# no bell sound
+set bell-style none
+
+# search history with up and down arrow
+"\e[A": history-search-backward
+"\e[B": history-search-forward
