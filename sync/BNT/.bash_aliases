@@ -25,15 +25,11 @@ alias .4=../../../..
 alias .5=../../../../..
 
 alias cv=~/Documents/data/job.applications/cv/tex.v4.6
+alias cla=~/Documents/data/job.applications/personal.letter/novo.academia/generic.application
+alias cli=~/Documents/data/job.applications/personal.letter/novo.industry/generic.application/v0.3
 alias dc=~/Documents
 alias dl=~/Downloads
 alias cnfg=~/cnfg.bak
-# alias cv=~/docs/job_apps/cv/tex.v4.6
-# alias cli=~/docs/job_apps/personal.letter/novo.industry/generic.application/v0.3
-# alias cla=~/docs/job_apps/personal.letter/novo.academia/generic.application
-# alias dc=~/docs
-# alias dcw=/mnt/c/Users/mario/Documents/data/backup
-# alias dl=~/dls
 
 ###     grep    ###
 alias grep='grep --color=always --group-separator=SEP'
