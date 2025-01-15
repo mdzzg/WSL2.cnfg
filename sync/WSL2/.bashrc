@@ -36,20 +36,21 @@ shopt -s histappend
 export HISTSIZE=-1 #infinite history
 export HISTFILESIZE=-1 #infinite history
 
+shopt -s expand_aliases # Expand aliases for scripts and function declarations
+
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
 ### Derek Taylor SHOPT configuration
 shopt -s autocd         # Automatically change to the named directory
-shopt -s cdable_vars    # Use the cd command with the names of variables that contain directory paths instead of only using literal directory paths.
+# shopt -s cdable_vars    # Use the cd command with the names of variables that contain directory paths instead of only using literal directory paths.
 shopt -s cdspell        # Autocorrects typos in the `cd` command
-shopt -s cmdhist        # save multi-line commands in history as single line
+# shopt -s cmdhist        # save multi-line commands in history as single line
 shopt -s dotglob        # Include hidden files (dotfiles) for wildcard expansion: file wildcard (* or ?) includes dotfiles - normally excluded
-shopt -s expand_aliases # Expand aliases for scripts and function declarations
 
 ### myown SHOPT configuration
-shopt -s checkhash      # Automatically checks and updates the hash table of commands when their location changes | Example: Useful for ensuring commands like python point to updated binaries after installation or relocation.
+# shopt -s checkhash      # Automatically checks and updates the hash table of commands when their location changes | Example: Useful for ensuring commands like python point to updated binaries after installation or relocation.
 shopt -s direxpand      # Expands ~ or .. into full directory paths when using Tab completion
 shopt -s failglob       # If a wildcard pattern does not match any files, an error message will be printed
 shopt -s extglob        # extended pattern matching
