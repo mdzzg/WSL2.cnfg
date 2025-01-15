@@ -68,12 +68,6 @@
 
 #!/bin/bash
 
-# Git
-
-GIT_AUTHOR_NAME="you@exam"
-GIT_AUTHOR_EMAIL="mdamarija@gmail.com"
-export GIT_AUTHOR_NAME GIT_AUTHOR_EMAIL
-
 # Directories
 DIR1="$HOME/cnfg.bak"
 DIR2="$DIR1/sync"
@@ -114,10 +108,10 @@ for src in "${!files[@]}"; do
     sync_files "$src" "$dst"
 done
 
-cd "/home/madz/cnfg.bak" || exit
-git add . --renormalize
-git commit -m'Automated backup on $(date +%y.%m.%d-%H:%M:%S)'
-git push
+cd "$DIR1" || exit
+git adr
+git ct "Automated backup on $(date +%y.%m.%d-%H:%M:%S)"
+git u
 
 echo "Backup complete and pushed to GitHub."
 

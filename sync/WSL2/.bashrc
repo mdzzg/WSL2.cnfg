@@ -33,9 +33,8 @@ PROMPT_COMMAND='history -a'
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-export HISTSIZE= #infinite history
-#HISTSIZE=1000
-#HISTFILESIZE=2000
+export HISTSIZE=-1 #infinite history
+export HISTFILESIZE=-1 #infinite history
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.

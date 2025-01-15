@@ -11,10 +11,10 @@
 alias ali='alias -p'
 
 # pressing Space after the command will auto-expand it inline
-set Space:magic-space
+bind "Space:magic-space"	
 
-# ignore upper and lowercase when TAB completion
-set completion-ignore-case on
+# ignore upper and lowercase when using TAB complete
+bind "set completion-ignore-case on"
 
 # navigation
 # cd -/cd -- -> go to the previous dir
