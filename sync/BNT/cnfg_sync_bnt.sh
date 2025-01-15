@@ -79,6 +79,7 @@ DIR5="$HOME/.config/git"
 declare -A files=(
     ["$DIR3/.bash_aliases"]="$HOME/.bash_aliases"
     ["$DIR3/.bashrc"]="$HOME/.bashrc"
+    ["$DIR3/.inputrc"]="$HOME/.inputrc"
     ["$DIR4/config"]="$DIR5/config"
     ["$DIR4/ignore"]="$DIR5/ignore"
 )
@@ -109,9 +110,9 @@ for src in "${!files[@]}"; do
 done
 
 cd "$DIR1" || exit
-git adr
-git ct "Automated backup on $(date +%y.%m.%d-%H:%M:%S)"
-git u
+gt ad
+gt ct "Automated backup on $(date +%y.%m.%d-%H:%M:%S)"
+gt u
 
 echo "Backup complete and pushed to GitHub."
 
