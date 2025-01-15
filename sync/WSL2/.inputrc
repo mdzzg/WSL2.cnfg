@@ -12,6 +12,6 @@ set show-all-if-ambiguous on
 # no bell sound
 set bell-style none
 
-# search history with up and down arrow
-"\e[A": history-search-backward
-"\e[B": history-search-forward
+# # search history with up and down arrow
+# "\e[A": history-search-backward
+# "\e[B": history-search-forward
