@@ -111,7 +111,8 @@ unset color_prompt force_color_prompt
 # *)
 #     ;;
 # esac
-PROMPT_COMMAND='echo -en "\033]0;Kitty\a"'
+HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | cut -d: -f2  | xargs)
+PROMPT_COMMAND='echo -en "\033]0;$HOSTNAMECTL_INFO_1\a"'
 # case "$TERM" in
 # xterm*|rxvt*)
 #     HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | awk -F: '{print $2}' | xargs)
