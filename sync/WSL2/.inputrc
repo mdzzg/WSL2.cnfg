@@ -27,4 +27,4 @@ set bell-style none
 # set menu-complete on
 # set menu-complete-display-prefix on
 
-"\e[01;33m": active-region-start-color
+# "\e[01;33m": active-region-start-color

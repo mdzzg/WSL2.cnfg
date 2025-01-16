@@ -54,6 +54,14 @@ alias snapl='snap list'
 # apt-cache show %packagename
 # apt-cache search %packagename |sort
 
+### CRON ###
+alias crons='service cron status'
+alias cronr='sudo service cron restart' # Stops and then starts the cron service. This terminates all currently running jobs and restarts the scheduler. Use it for a hard reset when something seems wrong with the service.
+
+# alias cronfr='sudo service cron force-reload' # Forces the cron service to re-read its configuration files (e.g., /etc/crontab or ~/.crontab), even if there's no detected change. Use it when configuration changes were made but didn't take effect.
+
+# alias cronfr='sudo service cron reload' # Gracefully reloads the configuration of the cron service. This is often equivalent to a light restart but does not terminate active jobs. Use when you want to refresh cron configurations without disrupting currently running tasks.
+
 # ps
 alias psa='ps auxf'          # process status of all running processes - tree view
 alias psgrep='ps aux|grep -v grep|grep -i VSZ'
@@ -80,6 +88,7 @@ alias gcnfg='gt cnfg|fgrep alias|sort'
 
 ###	frequent	###
 alias rst='. ~/.bashrc'	#'source ~/.bashrc'
+alias rsti='bind -f ~/.inputrc'	#'source ~/.bashrc'
 alias cls="printf '\033c'"
 alias alt='sudo update-alternatives --config' 
 #alias forget='1
@@ -88,7 +97,8 @@ alias line="printf '\033[1;31m%100s\033[0m\\n' | tr ' ' ="
 # alias mline="printf '%125s\n' | tr ' ' --"
 
 # some more ls aliases
-alias ll='ls -AFghoX --color=always'  # F - classify executables (*), directories (/), symbolic links (@); X - alphabetical sort; A - all WO parents; og - ommit owner & group;  
+export LS_COLORS="di=01;34;07:ln=36:so=35:pi=33:ex=32;07:bd=34;46:cd=34;43:su=37;41:sg=30;43:tw=30;42:ow=34;42"
+alias ll='ls -AFghoX --color=always'  # F - classify executables (*), directories (/), symbolic links (@); X - alphabetical sort; A - all WO parents; og - ommit owner & group;
 alias lc='ls -CFhm --color=always'    # C - column mode; m - comma separated
 # R - recursive display of all dirs
 alias dir='dir --color=always'
