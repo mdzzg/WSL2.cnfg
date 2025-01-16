@@ -111,10 +111,18 @@ unset color_prompt force_color_prompt
 # *)
 #     ;;
 # esac
-# HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | cut -d: -f2  | xargs)
-# HOSTNAMECTL_INFO_2=$(hostnamectl | grep "Hardware Vendor" | cut -d: -f2 | xargs)
-# PROMPT_COMMAND='echo -en "\033]0;${debian_chroot:+($debian_chroot)}\\u@\h $HOSTNAMECTL_INFO_1 $HOSTNAMECTL_INFO_2 | \w |\r\n\r\n \t \d | jobs = \j | clh = \!\a"'
-# case "$TERM" in
+HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | cut -d: -f2  | xargs)
+HOSTNAMECTL_INFO_2=$(hostnamectl | grep "Hardware Vendor" | cut -d: -f2 | xargs)
+PROMPT_COMMAND='
+    current_dir=$(basename "$PWD")
+    if [[ "$PWD" == "$HOME" ]]; then
+        current_dir="~"
+    elif [[ "$PWD" == "$HOME/"* ]]; then
+        current_dir="~/$(basename "$PWD")"
+    fi
+    echo -en "\033]0;${USER}@${HOSTNAME} ${HOSTNAMECTL_INFO_1} ${HOSTNAMECTL_INFO_2} | ${current_dir} |\r\n\r\n $(date +"%H:%M:%S %a %b %d") | jobs = $(jobs | wc -l) | clh = ${HISTCMD}\a"
+    '
+# # case "$TERM" in
 # xterm*|rxvt*)
 #     HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | awk -F: '{print $2}' | xargs)
 #     HOSTNAMECTL_INFO_2=$(hostnamectl | grep "Hardware Vendor" | awk -F: '{print $2}' | xargs)
@@ -123,15 +131,15 @@ unset color_prompt force_color_prompt
 # *)
 #     ;;
 # esac
-PROMPT_COMMAND="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h | \w |\r\n\r\n \t \d | jobs = \j | clh = \!\a\]$PS1"
-case "$TERM" in
-xterm*|rxvt*)
-    PROMPT_COMMAND='
-    HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | cut -d: -f2  | xargs)
-    HOSTNAMECTL_INFO_2=$(hostnamectl | grep "Hardware Vendor" | cut -d: -f2 | xargs)
-    echo -ne "\033]0;${debian_chroot:+($debian_chroot)}\u@\h $HOSTNAMECTL_INFO_1 $HOSTNAMECTL_INFO_2 | \w |\t | \d$PROMPT_COMMAND\007"'
-    ;;
-esac
+# PROMPT_COMMAND="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h | \w |\r\n\r\n \t \d | jobs = \j | clh = \!\a\]$PS1"
+# case "$TERM" in
+# xterm*|rxvt*)
+#     PROMPT_COMMAND='
+#     HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | cut -d: -f2  | xargs)
+#     HOSTNAMECTL_INFO_2=$(hostnamectl | grep "Hardware Vendor" | cut -d: -f2 | xargs)
+#     echo -ne "\033]0;${debian_chroot:+($debian_chroot)}\u@\h $HOSTNAMECTL_INFO_1 $HOSTNAMECTL_INFO_2 | \w |\t | \d$PROMPT_COMMAND\007"'
+#     ;;
+# esac
 
 # enable color support of ls and also add handy aliases - load dircolors
 if [ -x /usr/bin/dircolors ]; then
