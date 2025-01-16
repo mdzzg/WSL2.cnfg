@@ -112,7 +112,8 @@ unset color_prompt force_color_prompt
 #     ;;
 # esac
 HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | cut -d: -f2  | xargs)
-PROMPT_COMMAND='echo -en "\033]0; $HOSTNAMECTL_INFO_1 \a"'
+HOSTNAMECTL_INFO_2=$(hostnamectl | grep "Hardware Vendor" | cut -d: -f2 | xargs)
+PROMPT_COMMAND='echo -en "\033]0;\u@\h $HOSTNAMECTL_INFO_1 $HOSTNAMECTL_INFO_2 | \w |\r\n\r\n \t \d | jobs = \j | clh = \!\a"'
 # case "$TERM" in
 # xterm*|rxvt*)
 #     HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | awk -F: '{print $2}' | xargs)
