@@ -50,7 +50,7 @@ shopt -s cdspell        # Autocorrects typos in the `cd` command
 shopt -s dotglob        # Include hidden files (dotfiles) for wildcard expansion: file wildcard (* or ?) includes dotfiles - normally excluded
 
 ### myown SHOPT configuration
-# shopt -s checkhash      # Automatically checks and updates the hash table of commands when their location changes | Example: Useful for ensuring commands like python point to updated binaries after installation or relocation.
+shopt -s checkhash      # Automatically checks and updates the hash table of commands when their location changes | Example: Useful for ensuring commands like python point to updated binaries after installation or relocation.
 shopt -s direxpand      # Expands ~ or .. into full directory paths when using Tab completion
 shopt -s failglob       # If a wildcard pattern does not match any files, an error message will be printed
 shopt -s extglob        # extended pattern matching

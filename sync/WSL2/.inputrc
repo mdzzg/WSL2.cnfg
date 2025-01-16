@@ -3,6 +3,9 @@
 # pressing Space after the command will auto-expand it inline
 " ": magic-space
 
+# Expands ~ to the home directory during line editing.
+set expand-tilde on
+
 # case-insensitive tab completion
 set completion-ignore-case on
 
@@ -15,3 +18,11 @@ set bell-style none
 # # search history with up and down arrow
 # "\e[A": history-search-backward
 # "\e[B": history-search-forward
+
+# # search history with up and down arrow
+"\C-r": reverse-search-history
+"\C-s": forward-search-history
+
+# Menu-style completion
+set menu-complete on
+set menu-complete-display-prefix on
