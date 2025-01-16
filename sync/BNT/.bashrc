@@ -111,14 +111,14 @@ unset color_prompt force_color_prompt
 # *)
 #     ;;
 # esac
-HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | cut -d: -f2  | xargs)
-HOSTNAMECTL_INFO_2=$(hostnamectl | grep "Hardware Vendor" | cut -d: -f2 | xargs)
-PROMPT_COMMAND='echo -en "\033]0;\u@\h $HOSTNAMECTL_INFO_1 $HOSTNAMECTL_INFO_2 | \w |\r\n\r\n \t \d | jobs = \j | clh = \!\a"'
+# HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | cut -d: -f2  | xargs)
+# HOSTNAMECTL_INFO_2=$(hostnamectl | grep "Hardware Vendor" | cut -d: -f2 | xargs)
+# PROMPT_COMMAND='echo -en "\033]0;${debian_chroot:+($debian_chroot)}\\u@\h $HOSTNAMECTL_INFO_1 $HOSTNAMECTL_INFO_2 | \w |\r\n\r\n \t \d | jobs = \j | clh = \!\a"'
 # case "$TERM" in
 # xterm*|rxvt*)
 #     HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | awk -F: '{print $2}' | xargs)
 #     HOSTNAMECTL_INFO_2=$(hostnamectl | grep "Hardware Vendor" | awk -F: '{print $2}' | xargs)
-#     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h $HOSTNAMECTL_INFO_1 $HOSTNAMECTL_INFO_2 | \w |\r\n\r\n \t \d | jobs = \j | clh = \!\a\]$PS1"
+#     PROMPT_COMMAND="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h $HOSTNAMECTL_INFO_1 $HOSTNAMECTL_INFO_2 | \w |\r\n\r\n \t \d | jobs = \j | clh = \!\a\]$PS1"
 #     ;;
 # *)
 #     ;;
