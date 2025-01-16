@@ -62,7 +62,7 @@ shopt -s nocaseglob     # Makes wildcard patterns case-insensitive
 
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
-# shopt -s globstar
+#shopt -s globstar
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
@@ -70,63 +70,53 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
 fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
-# case "$TERM" in
-#     xterm-color|*-256color) color_prompt=yes;
-# esac
+case "$TERM" in
+    xterm-color|*-256color) color_prompt=yes;;
+esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
-# force_color_prompt=yes
+#force_color_prompt=yes
 
-# if [ -n "$force_color_prompt" ]; then
-#     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-# 	# We have color support; assume it's compliant with Ecma-48
-# 	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-# 	# a case would tend to support setf rather than setaf.)
-# 	color_prompt=yes
-#     else
-# 	color_prompt=
-#     fi
-# fi
-
-parse_git_branch() {
-    git rev-parse --abbrev-ref HEAD 2>/dev/null | sed -e 's/.*/(&)/'
-}
-if [ "$color_prompt" = yes ]; then
- PS1='${debian_chroot:+($debian_chroot)}\[\033[01;04;31;7m\]$(parse_git_branch)\[\033[0m\]\[\033[01;04;32;7m\]\W\n\[\033[0m\]\[\033[01;37m\]'
-#  PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]$(parse_git_branch)\[\033[01;34m\]\W:\n\[\033[01;32m\]\$ '
-else
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;04;31;7m\]$(parse_git_branch)\[\033[0m\]\[\033[01;04;32;7m\]\W\n\[\033[0m\]\[\033[01;37m\]'
-#  PS1='${debian_chroot:+($debian_chroot)}\[\033[1;32m\]\W \D{%H:%M}\[\033[1;32m\]$(parse_git_branch)\$ '
+if [ -n "$force_color_prompt" ]; then
+    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+	# We have color support; assume it's compliant with Ecma-48
+	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+	# a case would tend to support setf rather than setaf.)
+	color_prompt=yes
+    else
+	color_prompt=
+    fi
 fi
 
-# unset color_prompt force_color_prompt
+if [ "$color_prompt" = yes ]; then
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;04;31;7m\]$(parse_git_branch)\[\033[0m\]\[\033[01;04;32;7m\]\W\n\[\033[0m\]\[\033[01;37m\]'
+#    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]$(parse_git_branch)\[\033[01;34m\]\W:\n\[\033[01;32m\]\$ '
+else
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;04;31;7m\]$(parse_git_branch)\[\033[0m\]\[\033[01;04;32;7m\]\W\n\[\033[0m\]\[\033[01;37m\]'
+#    PS1='${debian_chroot:+($debian_chroot)}\[\033[1;32m\]\W \D{%H:%M}\[\033[1;32m\]$(parse_git_branch)\$ '
+fi
+unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
-# case "$TERM" in
-# xterm*|rxvt*)
-#     # PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-#     if [[ $- == *i* ]]; then
-#         HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | awk -F: '{print $2}' | xargs)
-#         HOSTNAMECTL_INFO_2=$(hostnamectl | grep "Hardware Vendor" | awk -F: '{print $2}' | xargs)
-#     fi
-#     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h $HOSTNAMECTL_INFO_1 $HOSTNAMECTL_INFO_2 | \w |\r\n\r\n \t \d | jobs = \j | clh = \!\a\]$PS1"
-#     ;;
-# *)
-#     ;;
-# esac
-
 case "$TERM" in
 xterm*|rxvt*)
-    # PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Virtualization" | awk -F: '{print $2}' | xargs)
-    # HOSTNAMECTL_INFO_2=$(hostnamectl | grep "Static hostname" | awk -F: '{print $2}' | xargs)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h $HOSTNAMECTL_INFO_1 | \w |\r\n\r\n \t \d | jobs = \j | clh = \!\a\]$PS1"
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h | \w |\r\n\r\n \t \d | jobs = \j | clh = \!\a\]$PS1"
     ;;
 *)
     ;;
 esac
+# case "$TERM" in
+# xterm*|rxvt*)
+#     # PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+#     HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Virtualization" | awk -F: '{print $2}' | xargs)
+#     # HOSTNAMECTL_INFO_2=$(hostnamectl | grep "Static hostname" | awk -F: '{print $2}' | xargs)
+#     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h $HOSTNAMECTL_INFO_1 | \w |\r\n\r\n \t \d | jobs = \j | clh = \!\a\]$PS1"
+#     ;;
+# *)
+#     ;;
+# esac
 
 # enable color support of ls and also add handy aliases - load dircolors
 if [ -x /usr/bin/dircolors ]; then
@@ -174,6 +164,6 @@ if [ -f "/home/madz/miniforge3/etc/profile.d/mamba.sh" ]; then
     . "/home/madz/miniforge3/etc/profile.d/mamba.sh"
 fi
 # <<< conda initialize <<<
-mamba deactivate
+# mamba deactivate
 
 #export PATH="$PATH:/home/madz/.local/bin"
