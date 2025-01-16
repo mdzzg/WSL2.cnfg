@@ -23,6 +23,8 @@ set bell-style none
 "\C-r": reverse-search-history
 "\C-s": forward-search-history
 
-# Menu-style completion
-set menu-complete on
-set menu-complete-display-prefix on
+# # Menu-style completion
+# set menu-complete on
+# set menu-complete-display-prefix on
+
+"\e[01;33m": active-region-start-color
