@@ -97,7 +97,7 @@ alias line="printf '\033[1;31m%100s\033[0m\\n' | tr ' ' ="
 # alias mline="printf '%125s\n' | tr ' ' --"
 
 # some more ls aliases
-export LS_COLORS="di=01;34;07:ln=36:so=35:pi=33:ex=32;07:bd=34;46:cd=34;43:su=37;41:sg=30;43:tw=30;42:ow=34;42"
+export LS_COLORS="di=01;34;07:ln=36:so=35:pi=33:ex=96;07:bd=34;46:cd=34;43:su=37;41:sg=30;43:tw=30;42:ow=34;42:fi=01;37;07"
 alias ll='ls -AFghoX --color=always'  # F - classify executables (*), directories (/), symbolic links (@); X - alphabetical sort; A - all WO parents; og - ommit owner & group;
 alias lc='ls -CFhm --color=always'    # C - column mode; m - comma separated
 # R - recursive display of all dirs
@@ -125,6 +125,8 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 #	rsync -OaEHv --delete --info=progress2 /mnt/nfs/149.1gsb/ /mnt/nfs/465.8gwdcg/data/ # a==rlptgoD - it does not include preserving ACLs (-A), xattrs (-X), atimes (-U), crtimes (-N), nor the finding and preserving of hardlinks (-H); H==preserve hardlinks; E==preserve executability x of files; v==verbose;
 #	rsync -aSvx . tv-box.local:/home/madz/Videos    # S==Try to handle sparse files efficiently so they take up less space on the destination; x==one-file-system; a==archive mode; v==verbose
 #	rsync -aSvE --delete --info=progress2 /mnt/nfs/149.1gsb/ /mnt/nfs/465.8gwdcg/data/ # a==rlptgoD - it does not include preserving ACLs (-A), xattrs (-X), atimes (-U), crtimes (-N), nor the finding and preserving of hardlinks (-H); S==Try to handle sparse files efficiently so they take up less space on the destination; v==verbose;
+alias cnfgs='~/cnfg.bak/sync/WSL2/cnfg_sync_WSL2.sh'
+alias datas='/mnt/c/Windows/system32/cmd.exe /c "C:\Users\mario\Documents\data\backup\install\windows\linux\WSL2\backup_script\backup_Lat-E7450.bat"'
 
 ###	python: adding jupyter to the environment	###
 #	pip install ipykernel
