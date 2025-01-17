@@ -62,7 +62,7 @@ shopt -s nocaseglob     # Makes wildcard patterns case-insensitive
 
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
-#shopt -s globstar
+# shopt -s globstar
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
@@ -77,7 +77,7 @@ esac
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
-#force_color_prompt=yes
+# force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
@@ -102,14 +102,8 @@ else
 fi
 unset color_prompt force_color_prompt
 
-# If this is an xterm set the title to user@host:dir
-# case "$TERM" in
-# xterm*|rxvt*)
-#     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h | \w |\r\n\r\n \t \d | jobs = \j | clh = \!\a\]$PS1"
-#     ;;
-# *)
-#     ;;
-# esac
+
+### Terminal Title  ###
 
 # Define hardware information dynamically
 export HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Virtualization" | cut -d: -f2 | xargs)
@@ -122,8 +116,16 @@ export PROMPT_COMMAND="
     elif [[ \"\$PWD\" == \"\$HOME\"/* ]]; then
         current_dir=\"~/\$(basename \"\$PWD\")\"
     fi
-    echo -en \"\033]0;${USER}@${HOSTNAME} | \${current_dir} | $(date +"%H:%M:%S %a %b %d") | jobs = $(jobs | wc -l) | clh = ${HISTCMD}\007\"
+    echo -ne \"\033]0;${USER}@${HOSTNAME} | \${current_dir} | $(date +"%H:%M:%S %a %b %d") | jobs = $(jobs | wc -l) | clh = ${HISTCMD}\a\"
 "
+
+# case "$TERM" in
+# xterm*|rxvt*)
+#     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h | \w |\r\n\r\n \t \d | jobs = \j | clh = \!\a\]$PS1"
+#     ;;
+# *)
+#     ;;
+# esac
 
 # case "$TERM" in
 # xterm*|rxvt*)
@@ -184,4 +186,4 @@ fi
 # <<< conda initialize <<<
 # mamba deactivate
 
-#export PATH="$PATH:/home/madz/.local/bin"
+# export PATH="$PATH:/home/madz/.local/bin"
