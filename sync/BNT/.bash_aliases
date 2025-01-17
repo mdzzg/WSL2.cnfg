@@ -96,7 +96,7 @@ alias line="printf '\033[1;31m%100s\033[0m\\n' | tr ' ' ="
 # alias mline="printf '%125s\n' | tr ' ' --"
 
 # some more ls aliases
-export LS_COLORS="di=01;34;07:ln=36:so=35:pi=33:ex=96;07:bd=34;46:cd=34;43:su=37;41:sg=30;43:tw=30;42:ow=34;42:fi=01;37;07"
+export LS_COLORS="di=34;01;07:ln=36:so=35:pi=33:ex=96;07:bd=34;46:cd=34;43:su=37;41:sg=30;43:tw=30;42:ow=34;42:fi=31;40;01;07"
 alias ll='ls -AFghoX --color=always'  # F - classify executables (*), directories (/), symbolic links (@); X - alphabetical sort; A - all WO parents; og - ommit owner & group;
 alias lc='ls -CFhm --color=always'    # C - column mode; m - comma separated
 # R - recursive display of all dirs

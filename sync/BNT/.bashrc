@@ -111,17 +111,32 @@ unset color_prompt force_color_prompt
 # *)
 #     ;;
 # esac
-HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | cut -d: -f2  | xargs)
-HOSTNAMECTL_INFO_2=$(hostnamectl | grep "Hardware Vendor" | cut -d: -f2 | xargs)
-PROMPT_COMMAND='
-    current_dir=$(basename "$PWD")
-    if [[ "$PWD" == "$HOME" ]]; then
-        current_dir="~"
-    elif [[ "$PWD" == "$HOME/"* ]]; then
-        current_dir="~/$(basename "$PWD")"
+
+# Define hardware information dynamically
+export HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | cut -d: -f2 | xargs)
+export HOSTNAMECTL_INFO_2=$(hostnamectl | grep "Hardware Vendor" | cut -d: -f2 | xargs)
+
+# Update PROMPT_COMMAND for dynamic terminal title
+export PROMPT_COMMAND="
+    current_dir=\$(basename \"\$PWD\")
+    if [[ \"\$PWD\" == \"\$HOME\" ]]; then
+        current_dir=\"~\"
+    elif [[ \"\$PWD\" == \"\$HOME\"/* ]]; then
+        current_dir=\"~/\$(basename \"\$PWD\")\"
     fi
-    echo -en "\033]0;${USER}@${HOSTNAME} ${HOSTNAMECTL_INFO_1} ${HOSTNAMECTL_INFO_2} | ${current_dir} |\r\n\r\n $(date +"%H:%M:%S %a %b %d") | jobs = $(jobs | wc -l) | clh = ${HISTCMD}\a"
-    '
+    echo -en \"\033]0;${USER}@${HOSTNAME} ${HOSTNAMECTL_INFO_1} ${HOSTNAMECTL_INFO_2} | \${current_dir} | $(date +"%H:%M:%S %a %b %d") | jobs = $(jobs | wc -l) | clh = ${HISTCMD}\007\"
+"
+# HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | cut -d: -f2  | xargs)
+# HOSTNAMECTL_INFO_2=$(hostnamectl | grep "Hardware Vendor" | cut -d: -f2 | xargs)
+# PROMPT_COMMAND='
+#     current_dir=$(basename "$PWD")
+#     if [[ "$PWD" == "$HOME" ]]; then
+#         current_dir="~"
+#     elif [[ "$PWD" == "$HOME/"* ]]; then
+#         current_dir="~/$(basename "$PWD")"
+#     fi
+#     echo -en "\033]0;${USER}@${HOSTNAME} ${HOSTNAMECTL_INFO_1} ${HOSTNAMECTL_INFO_2} | ${current_dir} |\r\n\r\n $(date +"%H:%M:%S %a %b %d") | jobs = $(jobs | wc -l) | clh = ${HISTCMD}\a"
+#     '
 # # case "$TERM" in
 # xterm*|rxvt*)
 #     HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | awk -F: '{print $2}' | xargs)
