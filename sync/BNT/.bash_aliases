@@ -124,9 +124,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 #	rsync -OaEHv --delete --info=progress2 /mnt/nfs/149.1gsb/ /mnt/nfs/465.8gwdcg/data/ # a==rlptgoD - it does not include preserving ACLs (-A), xattrs (-X), atimes (-U), crtimes (-N), nor the finding and preserving of hardlinks (-H); H==preserve hardlinks; E==preserve executability x of files; v==verbose;
 #	rsync -aSvx . tv-box.local:/home/madz/Videos    # S==Try to handle sparse files efficiently so they take up less space on the destination; x==one-file-system; a==archive mode; v==verbose
 #	rsync -aSvE --delete --info=progress2 /mnt/nfs/149.1gsb/ /mnt/nfs/465.8gwdcg/data/ # a==rlptgoD - it does not include preserving ACLs (-A), xattrs (-X), atimes (-U), crtimes (-N), nor the finding and preserving of hardlinks (-H); S==Try to handle sparse files efficiently so they take up less space on the destination; v==verbose;
-alias cnfgs='~/cnfg.bak/sync/BNT/cnfg_sync_bnt.sh'
-alias datas='/mnt/c/Windows/system32/cmd.exe /c "C:\Users\mario\Documents\data\backup\install\windows\linux\WSL2\backup_script\backup_Lat-E7450.bat"'
-
+alias csync='~/cnfg.bak/sync/BNT/cnfg_sync_bnt.sh'
 ###	python: adding jupyter to the environment	###
 #	pip install ipykernel
 #	python -m ipykernel install --user --name env.name --display-name 'esm-2024'
