@@ -102,30 +102,31 @@ else
 fi
 unset color_prompt force_color_prompt
 
-# # If this is an xterm set the title to user@host:dir
-# case "$TERM" in
-# xterm*|rxvt*)
-#     HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | cut -d: -f2  | xargs)
-#     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h | \w |\r\n\r\n \t \d | jobs = \j | clh = \!\a\]$PS1"
-#     ;;
-# *)
-#     ;;
-# esac
+Update PROMPT_COMMAND for dynamic terminal title
+case "$TERM" in
+xterm*|rxvt*)
+    HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | cut -d: -f2  | xargs)
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h | \w |\r\n\r\n \t \d | jobs = \j | clh = \!\a\]$PS1"
+    ;;
+*)
+    ;;
+esac
 
 # Define hardware information dynamically
-export HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | cut -d: -f2 | xargs)
-export HOSTNAMECTL_INFO_2=$(hostnamectl | grep "Hardware Vendor" | cut -d: -f2 | xargs)
+# export HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | cut -d: -f2 | xargs)
+# export HOSTNAMECTL_INFO_2=$(hostnamectl | grep "Hardware Vendor" | cut -d: -f2 | xargs)
 
 # Update PROMPT_COMMAND for dynamic terminal title
-export PROMPT_COMMAND="
-    current_dir=\$(basename \"\$PWD\")
-    if [[ \"\$PWD\" == \"\$HOME\" ]]; then
-        current_dir=\"~\"
-    elif [[ \"\$PWD\" == \"\$HOME\"/* ]]; then
-        current_dir=\"~/\$(basename \"\$PWD\")\"
-    fi
-    echo -en \"\033]0;${USER}@${HOSTNAME} ${HOSTNAMECTL_INFO_1} ${HOSTNAMECTL_INFO_2} | \${current_dir} | $(date +"%H:%M:%S %a %b %d") | jobs = $(jobs | wc -l) | clh = ${HISTCMD}\007\"
-"
+# export PROMPT_COMMAND="
+#     current_dir=\$(basename \"\$PWD\")
+#     if [[ \"\$PWD\" == \"\$HOME\" ]]; then
+#         current_dir=\"~\"
+#     elif [[ \"\$PWD\" == \"\$HOME\"/* ]]; then
+#         current_dir=\"~/\$(basename \"\$PWD\")\"
+#     fi
+#     echo -en \"\033]0;${USER}@${HOSTNAME} ${HOSTNAMECTL_INFO_1} ${HOSTNAMECTL_INFO_2} | \${current_dir} | $(date +"%H:%M:%S %a %b %d") | jobs = $(jobs | wc -l) | clh = ${HISTCMD}\007\"
+# "
+
 # HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | cut -d: -f2  | xargs)
 # HOSTNAMECTL_INFO_2=$(hostnamectl | grep "Hardware Vendor" | cut -d: -f2 | xargs)
 # PROMPT_COMMAND='
