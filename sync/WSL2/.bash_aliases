@@ -22,8 +22,8 @@ alias .5=../../../../..
 
 alias cnfg=~/cnfg.bak
 alias cv=~/docs/job_apps/cv/tex.v4.6
-alias cli=~/docs/job_apps/personal.letter/novo.industry/generic.application/v0.3
 alias cla=~/docs/job_apps/personal.letter/novo.academia/generic.application
+alias cli=~/docs/job_apps/personal.letter/novo.industry/generic.application/v0.3
 alias dc=~/docs
 alias dcw=/mnt/c/Users/mario/Documents/data/backup
 alias dl=~/dls
@@ -38,8 +38,8 @@ alias sdiff='sdiff -s'
 
 
 ###	apt		###
-alias list_apt="apt list --installed|awk -F '/' '/^/ {print $1}'|cut -f1|grep -v Listing...|nl|most"
-# alias list_apt="apt list --installed 2>/dev/null | sed -n 's,/.*,,p'|most"
+# alias list_apt="apt list --installed|awk -F '/' '/^/ {print $1}'|cut -f1|grep -v Listing...|nl|most"
+alias list_apt="apt list --installed 2>/dev/null | sed -n 's,/.*,,p'|nl|most"
 alias list_full='compgen -c|sort -u|nl|most'
 alias list_descriptive='whatis `compgen -c`|sort -u|nl|most'
 alias update='sudo apt update -y && sudo apt full-upgrade -y'

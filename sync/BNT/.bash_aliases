@@ -37,8 +37,8 @@ alias sdiff='sdiff -s'
 
 
 ###	apt		###
-alias list_apt="apt list --installed|awk -F '/' '/^/ {print $1}'|cut -f1|grep -v Listing...|nl|most"
-# alias list_apt="apt list --installed 2>/dev/null | sed -n 's,/.*,,p'|most"
+# alias list_apt="apt list --installed|awk -F '/' '/^/ {print $1}'|cut -f1|grep -v Listing...|nl|most"
+alias list_apt="apt list --installed 2>/dev/null | sed -n 's,/.*,,p'|nl|most"
 alias list_full='compgen -c|sort -u|nl|most'
 alias list_descriptive='whatis `compgen -c`|sort -u|nl|most'
 alias update='sudo apt update -y && sudo apt full-upgrade -y'
@@ -233,8 +233,17 @@ export -f pss
 function psb(){ ps aux|grep brave|awk '{print $2}'|sudo xargs kill -9;}
 export -f psb
 
-function gt-filter(){ gt filter-repo --path '$1' --invert-paths;}
+function gt-filter(){ gt filter-repo --invert-paths --path '$1';}
 export -f gt-filter
+
+function gt-filtera(){ gt filter-repo --invert-paths --all --path '$1';}
+export -f gt-filtera
+
+function gt-filtert(){ gt filter-repo --replace-text '$1';}
+export -f gt-filtert
+
+function gt-filtertf(){ gt filter-repo --force --replace-text '$1';}
+export -f gt-filtertf
 
 function gt-radd(){ gt remote add "$1" "$2";}
 export -f gt-radd

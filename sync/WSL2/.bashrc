@@ -106,7 +106,7 @@ unset color_prompt force_color_prompt
 ### Terminal Title  ###
 
 # Define hardware information dynamically
-export HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Virtualization" | cut -d: -f2 | xargs)
+# export HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Virtualization" | cut -d: -f2 | xargs)
 
 # Update PROMPT_COMMAND for dynamic terminal title
 export PROMPT_COMMAND="
@@ -185,5 +185,3 @@ if [ -f "/home/madz/miniforge3/etc/profile.d/mamba.sh" ]; then
 fi
 # <<< conda initialize <<<
 # mamba deactivate
-
-# export PATH="$PATH:/home/madz/.local/bin"
