@@ -30,7 +30,7 @@ alias dc=~/Documents
 alias dl=~/Downloads
 
 ###     ls    ###
-export LS_COLORS="no=91;100:di=01;004:fi=31;40;01;07:ex=30;01:*pdf=01;35"
+export LS_COLORS="no=01;32;40:di=01;40:fi=31;40;01;07:ex=30;01:*pdf=01;35"
 alias ll='ls -AFghoX --color=always'  # F - classify executables (*), directories (/), symbolic links (@); X - alphabetical sort; A - all WO parents; og - omit owner & group;
 alias lc='ls -CFhm --color=always'    # C - column mode; m - comma separated
 # R - recursive display of all dirs
