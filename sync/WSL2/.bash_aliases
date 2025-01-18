@@ -39,7 +39,7 @@ alias diff='diff --color=always'
 alias sdiff='sdiff -s'
 
 ###     ls    ###
-export LS_COLORS="di=37;01;07:ln=36:so=35:pi=33:ex=96;07:bd=34;46:cd=34;43:su=37;41:sg=30;43:tw=30;42:ow=1;105:fi=31;40;01;07"
+export LS_COLORS="no=01;101:di=01;004:fi=31;40;01;07:ex=30;01:*pdf=01;35"
 alias ll='ls -AFghoX --color=always'  # F - classify executables (*), directories (/), symbolic links (@); X - alphabetical sort; A - all WO parents; og - omit owner & group;
 alias lc='ls -CFhm --color=always'    # C - column mode; m - comma separated
 # R - recursive display of all dirs
