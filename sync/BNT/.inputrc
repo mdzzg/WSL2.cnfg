@@ -1,4 +1,6 @@
 # ~/.inputrc
+# use command "bind -f ~/.inputrc" to bind the below keys
+# use "showkey -a" to find the key code
 
 # pressing Space after the command will auto-expand it inline
 " ": magic-space
@@ -31,3 +33,21 @@ set bell-style none
 
 "\e[Z": menu-complete-backward
 "\t": menu-complete
+
+# Quickly delete backward words
+"\C-w": backward-kill-word
+
+# command "bind -P | grep complete" displays all key bindings for completion
+# complete can be found on "\e\e".
+# complete-command can be found on "\e!".
+# complete-filename can be found on "\e/".
+# complete-hostname can be found on "\e@".
+# complete-into-braces can be found on "\e{".
+# complete-username can be found on "\e~".
+# complete-variable can be found on "\e$".
+# dynamic-complete-history can be found on "\e\C-i".
+# glob-complete-word can be found on "\eg".
+# menu-complete can be found on "\C-i".
+# menu-complete-backward can be found on "\e[Z".
+# old-menu-complete is not bound to any keys
+# vi-complete is not bound to any keys
