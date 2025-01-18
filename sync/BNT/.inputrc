@@ -11,6 +11,7 @@ set completion-ignore-case on
 
 # show all possible completions without double tabbing
 set show-all-if-ambiguous on
+set menu-complete-display-prefix on
 
 # no bell sound
 set bell-style none
@@ -23,8 +24,10 @@ set bell-style none
 "\C-r": reverse-search-history
 "\C-s": forward-search-history
 
-# # Menu-style completion
+# Menu-style completion
 # set menu-complete on
-# set menu-complete-display-prefix on
 
 # "\e[01;33m": active-region-start-color
+
+"\e[Z": menu-complete-backward
+"\t": menu-complete
