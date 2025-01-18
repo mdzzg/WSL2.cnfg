@@ -20,6 +20,8 @@ alias .3=../../..
 alias .4=../../../..
 alias .5=../../../../..
 
+###	alias for the most used commands	###
+
 alias cnfg=~/cnfg.bak
 alias cv=~/Documents/data/job.applications/cv/tex.v4.6
 alias cla=~/Documents/data/job.applications/personal.letter/novo.academia/generic.application
@@ -44,8 +46,10 @@ alias dir='dir --color=always'
 alias vdir='vdir --color=always'
 
 ###	apt/snap	###
+alias list_apt="apt list --installed|cut -d/ -f1|grep -v Listing...|nl|most"
+alias list_apts="apt list --installed 2>/dev/null | sed -n 's,/.*,,p'|egrep -v '^(python|lib)'|nl"
 # alias list_apt="apt list --installed|awk -F '/' '/^/ {print $1}'|cut -f1|grep -v Listing...|nl|most"
-alias list_apt="apt list --installed 2>/dev/null | sed -n 's,/.*,,p'|nl|most"
+# alias list_apt="apt list --installed 2>/dev/null | sed -n 's,/.*,,p'|nl|most"
 alias list_full='compgen -c|sort -u|nl|most'
 alias list_descriptive='whatis `compgen -c`|sort -u|nl|most'
 alias update='sudo apt update -y && sudo apt full-upgrade -y'
@@ -124,6 +128,7 @@ alias csync='~/cnfg.bak/sync/BNT/cnfg_sync_bnt.sh'
 #	rsync -OaEHv --delete --info=progress2 /mnt/nfs/149.1gsb/ /mnt/nfs/465.8gwdcg/data/ # a==rlptgoD - it does not include preserving ACLs (-A), xattrs (-X), atimes (-U), crtimes (-N), nor the finding and preserving of hardlinks (-H); H==preserve hardlinks; E==preserve executability x of files; v==verbose;
 #	rsync -aSvx . tv-box.local:/home/madz/Videos    # S==Try to handle sparse files efficiently so they take up less space on the destination; x==one-file-system; a==archive mode; v==verbose
 #	rsync -aSvE --delete --info=progress2 /mnt/nfs/149.1gsb/ /mnt/nfs/465.8gwdcg/data/ # a==rlptgoD - it does not include preserving ACLs (-A), xattrs (-X), atimes (-U), crtimes (-N), nor the finding and preserving of hardlinks (-H); S==Try to handle sparse files efficiently so they take up less space on the destination; v==verbose;
+
 ###	python: adding jupyter to the environment	###
 #	pip install ipykernel
 #	python -m ipykernel install --user --name env.name --display-name 'esm-2024'
@@ -159,19 +164,6 @@ alias disk='df -h'          # human-readable sizes
 alias clc='bc' ### scale=2
 alias PWD='LANG=c < /dev/urandom tr -dc _A-Z-a-z-0-9|head -c$"16";echo;'
 # alias clc='ncal -b' ### scale=2
-
-#	retired
-#	alias eno1='sudo ifdown wlp2s0 && sudo ifup eno1'
-#	alias wlp2s0='sudo ifdown eno1 && sudo ifup wlp2s0'
-#	alias mounta='sudo mount /dev/sda /media/madz/298.1G/; sudo mount /dev/sdb /media/madz/149.1G/; sudo mount /dev/sdd /media/madz/465.8G/ || sudo mount /dev/sdc /media/madz/465.8G/'
-#	alias umounta='sudo umount /dev/sda; sudo umount /dev/sdb; sudo umount /dev/sdd || sudo umount /dev/sdc'
-#	function mycvcl() { cvlc $1 && wmctrl -r :ACTIVE: -b toggle,above; }
-#	alias yt='youtube-dl'
-#	alias yta='youtube-dl -x -f bestaudio/best'
-#	alias ytva='youtube-dl -f bestvideo,bestaudio'
-#	alias playlist='%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s'
-
-###	alias for the most used commands	###
 
 ### speedtest   ###
 alias spdtst='speedtest-cli --bytes --simple' #  --list ->  Display a list of speedtest.net servers sorted by distance
@@ -229,7 +221,7 @@ function gt-branch-create(){ gt checkout -b "$1" && gt push -u "$2" "$1";}
 function gt-branch-merge(){ gt checkout "$1" && gt merge "$2";}
 
 function crlf2lf(){ sed -i 's/\r$//' "$1";}
-# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ###     cd up    ###
 
@@ -287,6 +279,18 @@ export -f fd
 ###	work    ###
 # alias pss34='/mnt/c/Program\ Files\ \(x86\)/PTI/PSSEXplore34/PSSBIN/Psse34.exe'
 # alias insiders='/mnt/c/Users/mario/AppData/Local/Programs/Microsoft\ VS\ Code\ Insiders/Code\ -\ Insiders.exe'
+
 # function insiders(){
 # /mnt/c/Users/mario/AppData/Local/Programs/Microsoft\ VS\ Code\ Insiders/Code\ -\ Insiders.exe "$1"
 # }
+
+###	retired	###
+#	alias eno1='sudo ifdown wlp2s0 && sudo ifup eno1'
+#	alias wlp2s0='sudo ifdown eno1 && sudo ifup wlp2s0'
+#	alias mounta='sudo mount /dev/sda /media/madz/298.1G/; sudo mount /dev/sdb /media/madz/149.1G/; sudo mount /dev/sdd /media/madz/465.8G/ || sudo mount /dev/sdc /media/madz/465.8G/'
+#	alias umounta='sudo umount /dev/sda; sudo umount /dev/sdb; sudo umount /dev/sdd || sudo umount /dev/sdc'
+#	function mycvcl() { cvlc $1 && wmctrl -r :ACTIVE: -b toggle,above; }
+#	alias yt='youtube-dl'
+#	alias yta='youtube-dl -x -f bestaudio/best'
+#	alias ytva='youtube-dl -f bestvideo,bestaudio'
+#	alias playlist='%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s'
