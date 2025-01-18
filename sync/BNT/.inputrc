@@ -8,6 +8,10 @@
 # Expands ~ to the home directory during line editing.
 set expand-tilde on
 
+# completions listed immediately instead of ringing the bell
+set show-all-if-ambiguous On
+set show-all-if-unmodified On
+
 # case-insensitive tab completion
 set completion-ignore-case on
 
@@ -23,8 +27,10 @@ set bell-style none
 # "\e[B": history-search-forward
 
 # # search history with up and down arrow
-"\C-r": reverse-search-history
-"\C-s": forward-search-history
+"\C-p": history-search-backward
+"\C-n": history-search-forward
+# "\C-r": reverse-search-history
+# "\C-s": forward-search-history
 
 # Menu-style completion
 # set menu-complete on
@@ -32,11 +38,19 @@ set bell-style none
 # "\e[01;33m": active-region-start-color
 
 "\e[Z": menu-complete-backward
-"\t": menu-complete
+"\C-i": menu-complete
 
 # Quickly delete backward words
 "\C-w": backward-kill-word
 
+# completions appended by file types reported by the stat system call
+set visible-stats On
+
+# colored completions determined by LS_COLORS
+set colored-stats On
+
+# common completion text part substituted by ellipsis
+set completion-prefix-display-length 3
 # command "bind -P | grep complete" displays all key bindings for completion
 # complete can be found on "\e\e".
 # complete-command can be found on "\e!".
