@@ -29,6 +29,14 @@ alias cli=~/Documents/data/job.applications/personal.letter/novo.industry/generi
 alias dc=~/Documents
 alias dl=~/Downloads
 
+###     ls    ###
+export LS_COLORS="no=91;100:di=01;004:fi=31;40;01;07:ex=30;01:*pdf=01;35"
+alias ll='ls -AFghoX --color=always'  # F - classify executables (*), directories (/), symbolic links (@); X - alphabetical sort; A - all WO parents; og - omit owner & group;
+alias lc='ls -CFhm --color=always'    # C - column mode; m - comma separated
+# R - recursive display of all dirs
+alias dir='dir --color=always'
+alias vdir='vdir --color=always'
+
 ###     grep    ###
 export GREP_COLORS="ms=01;31;7:mc=01;32;7:sl=01;37;07;07:cx=33:fn=01;33:ln=32:bn=34:se=36"
 alias grep='grep --color=always --group-separator=SEP'
@@ -36,14 +44,6 @@ alias fgrep='grep -F --color=always'    # Interpret PATTERNS as fixed strings (F
 alias egrep='grep -E --color=always'    # Interpret PATTERNS as extended regular expressions (EREs, see below).
 alias diff='diff --color=always'
 alias sdiff='sdiff -s'
-
-###     ls    ###
-export LS_COLORS="no=01;101:di=01;004:fi=31;40;01;07:ex=30;01:*pdf=01;35"
-alias ll='ls -AFghoX --color=always'  # F - classify executables (*), directories (/), symbolic links (@); X - alphabetical sort; A - all WO parents; og - omit owner & group;
-alias lc='ls -CFhm --color=always'    # C - column mode; m - comma separated
-# R - recursive display of all dirs
-alias dir='dir --color=always'
-alias vdir='vdir --color=always'
 
 ###	apt/snap	###
 alias list_apt="apt list --installed|cut -d/ -f1|grep -v Listing...|nl|most"
