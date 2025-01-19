@@ -14,11 +14,11 @@ alias ali='alias -p'
 
 # navigation
 # cd -/cd -- -> go to the previous dir -> officially retired given the up function
-alias .1=..
-alias .2=../..
-alias .3=../../..
-alias .4=../../../..
-alias .5=../../../../..
+# alias .1=..
+# alias .2=../..
+# alias .3=../../..
+# alias .4=../../../..
+# alias .5=../../../../..
 
 ###	alias for the most used commands	###
 
