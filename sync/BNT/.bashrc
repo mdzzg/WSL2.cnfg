@@ -117,7 +117,7 @@ export PROMPT_COMMAND="
     elif [[ \"\$PWD\" == \"\$HOME\"/* ]]; then
         current_dir=\"~/\$(basename \"\$PWD\")\"
     fi
-    echo -ne \"\033]0;${USER}@${HOSTNAME} ${HOSTNAMECTL_INFO_1} ${HOSTNAMECTL_INFO_2} | \${current_dir} | $(date +"%H:%M:%S %a %b %d") | jobs = $(jobs | wc -l) | clh = ${HISTCMD}\a\"
+    echo -ne \"\033]0;${USER}@${HOSTNAME} ${HOSTNAMECTL_INFO_1} ${HOSTNAMECTL_INFO_2} | \${current_dir} | $(date +"%H:%M:%S %a %Bb%d") | jobs = $(jobs | wc -l) | clh = ${HISTCMD}\a\"
 "
 
 # HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | cut -d: -f2  | xargs)
