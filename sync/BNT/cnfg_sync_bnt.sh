@@ -1,26 +1,26 @@
 #!/bin/bash
 
 # Directories
-DIR1="$HOME/cnfg.bak"
-DIR2="$DIR1/sync"
-DIR3="$DIR2/BNT"
-DIR4="$DIR2/git"
-DIR5="$HOME/.config/git"
-DIR6="$DIR1/fstb"
-DIR7="/etc/fstab"
-# DIR8="$DIR1/crtb"
-# DIR9="/var/spool/cron/crontabs"
+DIR01="$HOME/cnfg.bak"
+DIR02="$DIR01/sync"
+DIR03="$DIR02/BNT"
+DIR04="$DIR02/cmmn"
+DIR05="$DIR04/git"
+DIR06="$HOME/.config/git"
+DIR07="$DIR01/fstb"
+DIR08="/etc"
+# DIR09="$DIR1/crtb"
+# DIR10="/var/spool/cron/crontabs"
 
 # File pairs for syncing
 declare -A files=(
-    ["$DIR3/.bash_aliases"]="$HOME/.bash_aliases"
-    ["$DIR3/.bashrc"]="$HOME/.bashrc"
-    ["$DIR3/.inputrc"]="$HOME/.inputrc"
-    ["$DIR3/.dircolors"]="$HOME/.dircolors"
-    ["$DIR4/config"]="$DIR5/config"
-    ["$DIR4/ignore"]="$DIR5/ignore"
-    # ["$DIR6/fstab.P5550#2"]="$DIR7/fstab"
-    # ["$DIR6/fstab.P5550#2"]="$DIR7/fstab"
+    ["$DIR03/.bash_aliases"]="$HOME/.bash_aliases"
+    ["$DIR03/.bashrc"]="$HOME/.bashrc"
+    ["$DIR04/.inputrc"]="$HOME/.inputrc"
+    ["$DIR04/.dircolors"]="$HOME/.dircolors"
+    ["$DIR05/config"]="$DIR06/config"
+    ["$DIR05/ignore"]="$DIR06/ignore"
+    ["$DIR07/fstab.P5550#2"]="$DIR08/fstab"
 )
 
 # Function to synchronize files
