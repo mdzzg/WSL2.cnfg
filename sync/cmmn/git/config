@@ -29,6 +29,7 @@
 	
 	br = branch
 	bra = branch -a
+	brr = branch -r		# List remote branches
 	brm = branch -M		# M - shortcut for --move --force
 
 	rt = remote -v
