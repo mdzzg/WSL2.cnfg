@@ -20,8 +20,6 @@ alias .3=../../..
 alias .4=../../../..
 alias .5=../../../../..
 
-###	alias for the most used commands	###
-
 alias cnfg=~/cnfg.bak
 alias cv=~/docs/job_apps/cv/tex.v4.6
 alias cla=~/docs/job_apps/personal.letter/novo.academia/generic.application
@@ -31,25 +29,16 @@ alias dl=~/dls
 alias dcw=/mnt/c/Users/mario/Documents/data/backup
 
 ###     grep    ###
-export GREP_COLORS="ms=01;31;7:mc=01;32;7:sl=01;37;07;07:cx=33:fn=01;33:ln=32:bn=34:se=36"
 alias grep='grep --color=always --group-separator=SEP'
+export GREP_COLORS="ms=01;31;7:mc=01;32;7:sl=01;37;07;07:cx=33:fn=01;33:ln=32:bn=34:se=36"
 alias fgrep='grep -F --color=always'    # Interpret PATTERNS as fixed strings (F).
 alias egrep='grep -E --color=always'    # Interpret PATTERNS as extended regular expressions (EREs, see below).
 alias diff='diff --color=always'
 alias sdiff='sdiff -s'
 
-###     ls    ###
-export LS_COLORS="no=01;101:di=01;004:fi=31;40;01;07:ex=30;01:*pdf=01;35"
-alias ll='ls -AFghoX --color=always'  # F - classify executables (*), directories (/), symbolic links (@); X - alphabetical sort; A - all WO parents; og - omit owner & group;
-alias lc='ls -CFhm --color=always'    # C - column mode; m - comma separated
-# R - recursive display of all dirs
-alias dir='dir --color=always'
-alias vdir='vdir --color=always'
 
-###	apt/snap	###
-alias list_apt="apt list --installed|cut -d/ -f1|grep -v Listing...|nl|most"
-alias list_apts="apt list --installed 2>/dev/null | sed -n 's,/.*,,p'|egrep -v '^(python|lib)'|nl"
-# alias list_apt="apt list --installed|awk -F '/' '/^/ {print $1}'|cut -f1|grep -v Listing...|nl|most"
+###	apt		###
+alias list_apt="apt list --installed|awk -F '/' '/^/ {print $1}'|cut -f1|grep -v Listing...|nl|most"
 # alias list_apt="apt list --installed 2>/dev/null | sed -n 's,/.*,,p'|nl|most"
 alias list_full='compgen -c|sort -u|nl|most'
 alias list_descriptive='whatis `compgen -c`|sort -u|nl|most'
@@ -107,6 +96,14 @@ alias line="printf '\033[1;31m%100s\033[0m\\n' | tr ' ' ="
 # alias hline="printf '%100s\n' | tr ' ' \#"
 # alias mline="printf '%125s\n' | tr ' ' --"
 
+# some more ls aliases
+export LS_COLORS="di=34;01;07:ln=36:so=35:pi=33:ex=96;07:bd=34;46:cd=34;43:su=37;41:sg=30;43:tw=30;42:ow=34;42:fi=31;40;01;07"
+alias ll='ls -AFghoX --color=always'  # F - classify executables (*), directories (/), symbolic links (@); X - alphabetical sort; A - all WO parents; og - ommit owner & group;
+alias lc='ls -CFhm --color=always'    # C - column mode; m - comma separated
+# R - recursive display of all dirs
+alias dir='dir --color=always'
+alias vdir='vdir --color=always'
+
 ###	RAM	###
 alias free='free -m'           # show sizes in MB
 alias RAM0='sudo lshw -c memory'
@@ -125,11 +122,11 @@ alias power='upower -i /org/freedesktop/UPower/devices/battery_BAT0|grep -e 'sta
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 ###	rsync	###
-alias dsync='/mnt/c/Windows/system32/cmd.exe /c "C:\Users\mario\Documents\data\backup\install\windows\linux\WSL2\backup_script\backup_Lat-E7450.bat"'
-alias csync='~/cnfg.bak/sync/WSL2/cnfg_sync_WSL2.sh'
 #	rsync -OaEHv --delete --info=progress2 /mnt/nfs/149.1gsb/ /mnt/nfs/465.8gwdcg/data/ # a==rlptgoD - it does not include preserving ACLs (-A), xattrs (-X), atimes (-U), crtimes (-N), nor the finding and preserving of hardlinks (-H); H==preserve hardlinks; E==preserve executability x of files; v==verbose;
 #	rsync -aSvx . tv-box.local:/home/madz/Videos    # S==Try to handle sparse files efficiently so they take up less space on the destination; x==one-file-system; a==archive mode; v==verbose
 #	rsync -aSvE --delete --info=progress2 /mnt/nfs/149.1gsb/ /mnt/nfs/465.8gwdcg/data/ # a==rlptgoD - it does not include preserving ACLs (-A), xattrs (-X), atimes (-U), crtimes (-N), nor the finding and preserving of hardlinks (-H); S==Try to handle sparse files efficiently so they take up less space on the destination; v==verbose;
+alias csync='~/cnfg.bak/sync/WSL2/cnfg_sync_WSL2.sh'
+alias dsync='/mnt/c/Windows/system32/cmd.exe /c "C:\Users\mario\Documents\data\backup\install\windows\linux\WSL2\backup_script\backup_Lat-E7450.bat"'
 
 ###	python: adding jupyter to the environment	###
 #	pip install ipykernel
@@ -164,14 +161,33 @@ alias disk='df -h'          # human-readable sizes
 
 ###	variuos	###
 alias clc='bc' ### scale=2
-alias PWD='LANG=c < /dev/urandom tr -dc _A-Z-a-z-0-9|head -c$"16";echo;'
 # alias clc='ncal -b' ### scale=2
+alias PWD='LANG=c < /dev/urandom tr -dc _A-Z-a-z-0-9|head -c$"16";echo;'
+
+#	retired
+#	alias eno1='sudo ifdown wlp2s0 && sudo ifup eno1'
+#	alias wlp2s0='sudo ifdown eno1 && sudo ifup wlp2s0'
+#	alias mounta='sudo mount /dev/sda /media/madz/298.1G/; sudo mount /dev/sdb /media/madz/149.1G/; sudo mount /dev/sdd /media/madz/465.8G/ || sudo mount /dev/sdc /media/madz/465.8G/'
+#	alias umounta='sudo umount /dev/sda; sudo umount /dev/sdb; sudo umount /dev/sdd || sudo umount /dev/sdc'
+#	function mycvcl() { cvlc $1 && wmctrl -r :ACTIVE: -b toggle,above; }
+#	alias yt='youtube-dl'
+#	alias yta='youtube-dl -x -f bestaudio/best'
+#	alias ytva='youtube-dl -f bestvideo,bestaudio'
+#	alias playlist='%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s'
+
+###	work    ###
+
+alias pss34='/mnt/c/Program\ Files\ \(x86\)/PTI/PSSEXplore34/PSSBIN/Psse34.exe'
+#   alias insiders='/mnt/c/Users/mario/AppData/Local/Programs/Microsoft\ VS\ Code\ Insiders/Code\ -\ Insiders.exe'
 
 ### speedtest   ###
 alias spdtst='speedtest-cli --bytes --simple' #  --list ->  Display a list of speedtest.net servers sorted by distance
 # alias spdtst='speedtest -v -P 8 -u MiB/s'
 
 ###    FUNCTIONS	###
+# function that checks for broken URLs in a resume.pdf
+function pdfcheck(){ pdfx -v bin/"$1" -c;}
+export -f pdfcheck
 
 # function that queries apt for upgradable packages, lists them, & then installs them
 function upgrade(){ sudo apt install $(apt list --upgradable|awk -F '/' '/^/ {print $1}'|cut -f1 |grep -v Listing...|tr '\r\n' ' ') -y;}
@@ -184,7 +200,39 @@ list_dpkg(){
 }
 export -f list_dpkg
 
-###     git     ###
+function up() {
+    local d=""
+    local limit="$1"
+
+    if [ -z "$limit" ] || [ "$limit" -le 0 ]; then
+        limit=1
+    fi
+
+    for ((i=1;i<=limit;i++)); do
+        d="../$d"
+    done
+
+    # if ! cd "$d"; then
+    #     echo "couldn't go up $limit dirs.";
+    # fi
+    
+    # Change to the constructed path
+    cd "$d" || return
+}
+export -f up
+
+###     mkdir creates parents verbosely and cds into it immediatelly    ###
+function mcd() {
+    /bin/mkdir -pv "$1" && cd "$1"
+}
+export -f mcd
+
+###     process kill    ###
+function pss(){ ps aux|grep snap|awk '{print $2}'|sudo xargs kill -9;}
+export -f pss
+
+function psb(){ ps aux|grep brave|awk '{print $2}'|sudo xargs kill -9;}
+export -f psb
 
 function gt-filter(){ gt filter-repo --invert-paths --path '$1';}
 export -f gt-filter
@@ -223,49 +271,6 @@ function gt-branch-create(){ gt checkout -b "$1" && gt push -u "$2" "$1";}
 function gt-branch-merge(){ gt checkout "$1" && gt merge "$2";}
 
 function crlf2lf(){ sed -i 's/\r$//' "$1";}
-# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-###     cd up    ###
-
-function up() {
-    local d=""
-    local limit="$1"
-
-    if [ -z "$limit" ] || [ "$limit" -le 0 ]; then
-        limit=1
-    fi
-
-    for ((i=1;i<=limit;i++)); do
-        d="../$d"
-    done
-
-    # if ! cd "$d"; then
-    #     echo "couldn't go up $limit dirs.";
-    # fi
-    
-    # Change to the constructed path
-    cd "$d" || return
-}
-export -f up
-
-###     process kill    ###
-function pss(){ ps aux|grep snap|awk '{print $2}'|sudo xargs kill -9;}
-export -f pss
-
-function psb(){ ps aux|grep brave|awk '{print $2}'|sudo xargs kill -9;}
-export -f psb
-
-# function that checks for broken URLs in a resume.pdf
-function pdfcheck(){ pdfx -v bin/"$1" -c;}
-export -f pdfcheck
-
-###     mkdir creates parents verbosely and cds into it immediatelly    ###
-function mcd() {
-    /bin/mkdir -pv "$1" && cd "$1"
-}
-export -f mcd
-
-###     find    ###
 
 ###    find files and directories arbitrary depth   ###
 function ff() { find . -depth -type f -name "*$1*";}
@@ -278,21 +283,6 @@ export -f fd
 #	pdfgrep -ri python /home/madz/Dropbox/
 #	find /path -iname '*.pdf' -exec pdfgrep pattern {} +
 
-###	work    ###
-# alias pss34='/mnt/c/Program\ Files\ \(x86\)/PTI/PSSEXplore34/PSSBIN/Psse34.exe'
-# alias insiders='/mnt/c/Users/mario/AppData/Local/Programs/Microsoft\ VS\ Code\ Insiders/Code\ -\ Insiders.exe'
-
 # function insiders(){
 # /mnt/c/Users/mario/AppData/Local/Programs/Microsoft\ VS\ Code\ Insiders/Code\ -\ Insiders.exe "$1"
 # }
-
-###	retired	###
-#	alias eno1='sudo ifdown wlp2s0 && sudo ifup eno1'
-#	alias wlp2s0='sudo ifdown eno1 && sudo ifup wlp2s0'
-#	alias mounta='sudo mount /dev/sda /media/madz/298.1G/; sudo mount /dev/sdb /media/madz/149.1G/; sudo mount /dev/sdd /media/madz/465.8G/ || sudo mount /dev/sdc /media/madz/465.8G/'
-#	alias umounta='sudo umount /dev/sda; sudo umount /dev/sdb; sudo umount /dev/sdd || sudo umount /dev/sdc'
-#	function mycvcl() { cvlc $1 && wmctrl -r :ACTIVE: -b toggle,above; }
-#	alias yt='youtube-dl'
-#	alias yta='youtube-dl -x -f bestaudio/best'
-#	alias ytva='youtube-dl -f bestvideo,bestaudio'
-#	alias playlist='%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s'
