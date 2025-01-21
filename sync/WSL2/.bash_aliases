@@ -49,9 +49,9 @@ alias sdiff='sdiff -s'
 
 ###	apt/snap	###
 alias list_apt="apt list --installed 2>/dev/null | sed -n 's,/.*,,p'|nl|most"
-# alias list_apt="apt list --installed|awk -F '/' '/^/ {print $1}'|cut -f1|grep -v Listing...|nl|most"
 alias list_apts="apt list --installed 2>/dev/null | sed -n 's,/.*,,p'|egrep -v '^(python|lib)'|nl"
-#alias list_apt="apt list --installed|cut -d/ -f1|grep -v Listing...|nl|most"
+# alias list_apt="apt list --installed|awk -F '/' '/^/ {print $1}'|cut -f1|grep -v Listing...|nl|most"
+# alias list_apt="apt list --installed|cut -d/ -f1|grep -v Listing...|nl|most"
 alias list_full='compgen -c|sort -u|nl|most'
 alias list_descriptive='whatis `compgen -c`|sort -u|nl|most'
 alias update='sudo apt update -y && sudo apt full-upgrade -y'
