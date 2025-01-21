@@ -39,7 +39,7 @@ alias dir='dir --color=always'
 alias vdir='vdir --color=always'
 
 ###     grep    ###
-export GREP_COLORS="ms=01;31;7:mc=01;32;7:sl=01;37;07;07:cx=33:fn=01;33:ln=32:bn=34:se=36"
+export GREP_COLORS="ms=01;31;7:mc=01;32;7:sl=01;31;07;07:cx=33:fn=01;33:ln=32:bn=34:se=36"
 alias grep='grep --color=always --group-separator=SEP'
 alias fgrep='grep -F --color=always'    # Interpret PATTERNS as fixed strings (F).
 alias egrep='grep -E --color=always'    # Interpret PATTERNS as extended regular expressions (EREs, see below).
@@ -48,7 +48,7 @@ alias sdiff='sdiff -s'
 
 ###	apt/snap	###
 alias list_apt="apt list --installed|cut -d/ -f1|grep -v Listing...|nl|most"
-alias list_apts="apt list --installed 2>/dev/null | sed -n 's,/.*,,p'|egrep -v '^(python|lib)'|nl"
+alias list_apts="apt list --installed 2>/dev/null | sed -n 's,/.*,,p'|egrep -nv '^(python|lib)'|nl"
 # alias list_apt="apt list --installed|awk -F '/' '/^/ {print $1}'|cut -f1|grep -v Listing...|nl|most"
 # alias list_apt="apt list --installed 2>/dev/null | sed -n 's,/.*,,p'|nl|most"
 alias list_full='compgen -c|sort -u|nl|most'
@@ -203,7 +203,7 @@ export -f gt-radd
 function gt-init(){ gt u --set-upstream "$1" "$2";}   # git init & set upstream repo for the branch: `-u` == `--set-upstream`
 export -f gt-init
 
-function gt-branch-delete(){ gt branch -d "$1" && gt push "$2" -d "$1" && gt remote prune "$1";}
+function gt-branch-delete(){ gt br -d "$1" && gt u "$2" -d "$1" && gt rt prune "$1";}
 export -f gt-branch-delete
 
 # function git-rmrm(){ gt rm -r --cached "$1";}  # removes files from git cache recursively - become untracked by Git
