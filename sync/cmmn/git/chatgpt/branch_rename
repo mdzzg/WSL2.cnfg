@@ -221,8 +221,9 @@ git checkout old-branch-name
 git branch -m new-branch-name
 git push repo new-branch-name
 git branch --unset-upstream old-branch-name
-git branch --set-upstream-to=repo/remote_branch new-local_branch
+git branch -u repo/remote_branch new-local_branch  #  "--set-upstream-to=" is equal to "u" flag
 git push origin --delete old-branch-name
 ```
+if the above does not work: git push -u repo branch   #  gt u -u repo branch
 
 This process ensures the branch is renamed locally and remotely, and the old branch is properly deleted from the remote repository.
