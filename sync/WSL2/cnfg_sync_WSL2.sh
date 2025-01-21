@@ -2,8 +2,7 @@
 
 # Directories
 DIR01="$HOME/cnfg.bak/sync"
-# DIR02="$DIR01/"
-DIR02="$DIR01/WSL"
+DIR02="$DIR01/WSL2"
 DIR03="$DIR01/cmmn"
 DIR04="$DIR03/git"
 DIR05="$HOME/.config/git"
