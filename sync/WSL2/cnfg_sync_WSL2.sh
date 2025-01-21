@@ -1,21 +1,21 @@
 #!/bin/bash
 
 # Directories
-DIR01="$HOME/cnfg.bak"
-DIR02="$DIR01/sync"
-DIR03="$DIR02/WSL"
-DIR04="$DIR02/cmmn"
-DIR05="$DIR04/git"
-DIR06="$HOME/.config/git"
+DIR01="$HOME/cnfg.bak/sync"
+# DIR02="$DIR01/"
+DIR02="$DIR01/WSL"
+DIR03="$DIR01/cmmn"
+DIR04="$DIR03/git"
+DIR05="$HOME/.config/git"
 
 # File pairs for syncing
 declare -A files=(
-    ["$DIR03/.bash_aliases"]="$HOME/.bash_aliases"
-    ["$DIR03/.bashrc"]="$HOME/.bashrc"
-    ["$DIR04/.inputrc"]="$HOME/.inputrc"
-    ["$DIR04/.dircolors"]="$HOME/.dircolors"
-    ["$DIR05/config"]="$DIR06/config"
-    ["$DIR05/ignore"]="$DIR06/ignore"
+    ["$DIR02/.bash_aliases"]="$HOME/.bash_aliases"
+    ["$DIR02/.bashrc"]="$HOME/.bashrc"
+    ["$DIR03/.inputrc"]="$HOME/.inputrc"
+    ["$DIR03/.dircolors"]="$HOME/.dircolors"
+    ["$DIR04/config"]="$DIR05/config"
+    ["$DIR04/ignore"]="$DIR05/ignore"
 )
 
 # Function to synchronize files
