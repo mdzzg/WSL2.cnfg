@@ -89,7 +89,7 @@ alias poweroff='systemctl poweroff -n'
 #	sudo systemctl reboot --firmware-setup
 
 ###	latex/pdf	##
-alias txfy='pdflatex --output-directory bin'
+alias txfy='pdflatex -output-directory=bin' # -jobname=filename -output-directory=bin -aux-directory=bin
 alias pdf2txt='pdftotext'
 
 ### git ###

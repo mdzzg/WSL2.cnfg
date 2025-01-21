@@ -221,7 +221,7 @@ git checkout old-branch-name
 git branch -m new-branch-name
 git push repo new-branch-name
 git branch --unset-upstream old-branch-name
-git push --set-upstream-to repo/remote_branch new-local_branch
+git branch --set-upstream-to=repo/remote_branch new-local_branch
 git push origin --delete old-branch-name
 ```
 
