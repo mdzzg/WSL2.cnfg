@@ -48,7 +48,7 @@ for src_1 in "${!files[@]}"; do
     sync_files "$src_1" "$src_2"
 done
 
-cd "$DIR1" || exit
+cd "$DIR01" || exit
 git ad
 git ct "Automated backup on $(date +%y.%m.%d-%H:%M:%S)"
 git u

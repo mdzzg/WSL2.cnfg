@@ -1,20 +1,21 @@
 #!/bin/bash
 
 # Directories
-DIR01="$HOME/cnfg.bak/sync"
-DIR02="$DIR01/WSL2"
-DIR03="$DIR01/cmmn"
-DIR04="$DIR03/git"
-DIR05="$HOME/.config/git"
+DIR01="$HOME/cnfg.bak"
+DIR02="$DIR01/sync"
+DIR03="$DIR02/WSL2"
+DIR04="$DIR02/cmmn"
+DIR05="$DIR04/git"
+DIR06="$HOME/.config/git"
 
 # File pairs for syncing
 declare -A files=(
-    ["$DIR02/.bash_aliases"]="$HOME/.bash_aliases"
-    ["$DIR02/.bashrc"]="$HOME/.bashrc"
-    ["$DIR03/.inputrc"]="$HOME/.inputrc"
-    ["$DIR03/.dircolors"]="$HOME/.dircolors"
-    ["$DIR04/config"]="$DIR05/config"
-    ["$DIR04/ignore"]="$DIR05/ignore"
+    ["$DIR03/.bash_aliases"]="$HOME/.bash_aliases"
+    ["$DIR03/.bashrc"]="$HOME/.bashrc"
+    ["$DIR04/.inputrc"]="$HOME/.inputrc"
+    ["$DIR04/.dircolors"]="$HOME/.dircolors"
+    ["$DIR05/config"]="$DIR06/config"
+    ["$DIR05/ignore"]="$DIR06/ignore"
 )
 
 # Function to synchronize files
@@ -42,7 +43,7 @@ for src_1 in "${!files[@]}"; do
     sync_files "$src_1" "$src_2"
 done
 
-cd "$DIR1" || exit
+cd "$DIR01" || exit
 git ad
 git ct "Automated backup on $(date +%y.%m.%d-%H:%M:%S)"
 git u

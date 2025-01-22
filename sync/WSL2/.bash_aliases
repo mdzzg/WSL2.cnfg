@@ -205,7 +205,7 @@ export -f gt-radd
 function gt-init(){ gt u --set-upstream "$1" "$2";}   # git init & set upstream repo for the branch: `-u` == `--set-upstream`
 export -f gt-init
 
-function gt-branch-delete(){ gt br -d "$1" && gt u "$2" -d "$1" && gt rt prune "$1";}
+function gt-branch-delete(){ gt br -d "$1" && gt u "$2" -d "$1" && gt rt prune "$2";}
 export -f gt-branch-delete
 
 # function git-rmrm(){ gt rm -r --cached "$1";}  # removes files from git cache recursively - become untracked by Git
