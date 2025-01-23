@@ -83,10 +83,10 @@ alias pscpu='ps auxf|sort -nr -k 3'
 alias var='env|most'
 
 ###	turn off	###
-alias hoff='systemctl hibernate'
-alias reboot='systemctl reboot -i'
 alias off='systemctl poweroff --now'
+alias reboot='systemctl reboot -i'
 alias soff='sudo systemctl poweroff --now'
+alias hoff='systemctl hibernate'
 #	sudo systemctl reboot --firmware-setup
 
 ###	latex/pdf	##
