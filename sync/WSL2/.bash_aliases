@@ -86,7 +86,7 @@ alias var='env|most'
 ###	turn off	###
 alias off='systemctl hibernate'
 alias reboot='systemctl reboot -i'
-alias poweroff='systemctl poweroff -n'
+alias poweroff='systemctl poweroff --now'
 #	sudo systemctl reboot --firmware-setup
 
 ###	latex/pdf	##
