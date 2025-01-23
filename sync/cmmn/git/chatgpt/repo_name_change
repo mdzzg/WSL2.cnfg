@@ -1,0 +1,67 @@
+Q: how to change the remote definition in the local git repository, after renaming the repo on github, from  https://github.com/mdzzg/resume.git to https://github.com/mdzzg/cv
+? 
+which commands should I use?
+
+A:
+
+If you've renamed the repository on GitHub and need to update the remote definition in your local Git repository, follow these steps:
+
+---
+
+### **Steps to Update the Remote URL**
+
+1. **Verify the Current Remote**
+   Check the current remote configuration to confirm the old URL:
+
+   ```bash
+   git remote -v
+   ```
+
+   You should see something like:
+
+   ```plaintext
+   origin  https://github.com/mdzzg/resume.git (fetch)
+   origin  https://github.com/mdzzg/resume.git (push)
+   ```
+
+2. **Update the Remote URL**
+   Use the `git remote set-url` command to update the URL to the new repository:
+
+   ```bash
+   git remote set-url origin https://github.com/mdzzg/cv.git
+   ```
+
+3. **Verify the Change**
+   Confirm that the remote URL has been updated:
+
+   ```bash
+   git remote -v
+   ```
+
+   The output should now look like this:
+
+   ```plaintext
+   origin  https://github.com/mdzzg/cv.git (fetch)
+   origin  https://github.com/mdzzg/cv.git (push)
+   ```
+
+4. **Test the Connection (Optional)**
+   Verify that the new URL works by testing the connection:
+
+   ```bash
+   git fetch origin
+   ```
+
+   If there are no errors, the new remote URL is correctly configured.
+
+---
+
+### **Summary of Commands**
+```bash
+git remote -v
+git remote set-url origin https://github.com/mdzzg/cv.git
+git remote -v
+git fetch origin
+```
+
+This ensures your local repository is now linked to the renamed GitHub repository. Let me know if you need further assistance!
