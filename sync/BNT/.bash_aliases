@@ -173,7 +173,7 @@ alias spdtst='speedtest-cli --bytes --simple' #  --list ->  Display a list of sp
 ###    FUNCTIONS	###
 
 # function that queries apt for upgradable packages, lists them, & then installs them
-function upgrade(){ sudo apt install $(apt list --upgradable 2>&1 | grep -v "apt does not have a stable CLI interface"|cut -d/-f1 |grep -v Listing...|sed 's/^[[:space:]]*//'|tr '\r\n' ' ') -y;}     # superfluous before cut: awk -F '/' '/^/ {print $1}'|
+function upgrade(){ sudo apt install $(apt list --upgradable 2>&1 | grep -v "apt does not have a stable CLI interface"|cut -d/ -f1|grep -v Listing...|sed 's/^[[:space:]]*//'|tr '\r\n' ' ') -y;}     # superfluous before cut: awk -F '/' '/^/ {print $1}'|
 export -f upgrade
 
 # function that lists installed apt/dpkg packages
