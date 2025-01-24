@@ -54,12 +54,12 @@ alias list_apts="apt list --installed 2>/dev/null | sed -n 's,/.*,,p'|egrep -nv 
 alias list_full='compgen -c|sort -u|nl|most'
 alias list_descriptive='whatis `compgen -c`|sort -u|nl|most'
 alias update='sudo apt update -y && sudo apt full-upgrade -y'
-alias upgradable="apt list --upgradable|awk -F '/' '/^/ {print $1}'|cut -f1|grep -v Listing...|tr '\r\n' ' '"
 alias clean='sudo apt purge -y && sudo apt autoclean -y && sudo apt autoremove -y'
 alias snaprf='sudo snap refresh'
 alias snapi='sudo snap install'
 alias snaprm='sudo snap remove'
 alias snapl='snap list'
+# alias upgradable="apt list --upgradable|awk -F '/' '/^/ {print $1}'|cut -f1|grep -v Listing...|tr '\r\n' ' '"
 # apt list --upgradable|awk -F '/' '/^/ { print $1 }'
 # apt list --installed|awk -F '/' '/^/ { print $1 }'
 # apt-cache show %packagename
@@ -174,7 +174,12 @@ alias spdtst='speedtest-cli --bytes --simple' #  --list ->  Display a list of sp
 ###    FUNCTIONS	###
 
 # function that queries apt for upgradable packages, lists them, & then installs them
-function upgrade(){ sudo apt install $(apt list --upgradable 2>&1|grep -v " apt does not have a stable CLI interface"|cut -d/ -f1|grep -v Listing...|sed 's/^[[:space:]]*//'|tr '\r\n' ' ') -y;}     # superfluous before cut: awk -F '/' '/^/ {print $1}'|
+function upgradable() {
+    echo $(apt list --upgradable 2>&1|grep -Ev "Listing...|apt does not have a stable CLI interface"|cut -d/ -f1|awk '{$1=$1};1'|tr '\r\n' ' ')
+}
+export -f upgradable
+
+function upgrade(){ sudo apt install $(apt list --upgradable 2>&1|awk -F '/' '/^/ {print $1}'|cut -f1|grep -Ev "Listing...|apt does not have a stable CLI interface"|sed 's/^[[:space:]]*//'|tr '\r\n' ' ') -y;}
 export -f upgrade
 
 # function that lists installed apt/dpkg packages

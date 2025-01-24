@@ -181,7 +181,7 @@ function upgradable() {
 }
 export -f upgradable
 
-function upgrade(){ sudo apt install $(apt list --upgradable 2>&1|awk -F '/' '/^/ {print $1}'|cut -f1|grep -Ev "Listing...|apt does not have a stable CLI interface"|tr '\r\n' ' ') -y;}     # superfluous before cut: awk -F '/' '/^/ {print $1}'|grep -v "apt does not have a stable CLI interface"||sed 's/^[[:space:]]*//'
+function upgrade(){ sudo apt install $(apt list --upgradable 2>&1|awk -F '/' '/^/ {print $1}'|cut -f1|grep -Ev "Listing...|apt does not have a stable CLI interface"|sed 's/^[[:space:]]*//'|tr '\r\n' ' ') -y;}
 export -f upgrade
 
 # function that lists installed apt/dpkg packages
