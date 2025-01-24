@@ -16,4 +16,4 @@
 #/dev/disk/by-id/usb-Mass_Storage_Device_121220160204-0:0-part1 /mnt/usb-Mass_Storage_Device_121220160204-0:0-part1 auto nosuid,nodev,nofail,noauto,x-gvfs-show 0 0
 #UUID=7E7E-5BEF /mnt/7E7E-5BEF auto nosuid,nodev,nofail,noauto 0 0
 #/dev/disk/by-id/usb-Mass_Storage_Device_121220160204-0:0 /mnt/usb-Mass_Storage_Device_121220160204-0:0 auto nosuid,nodev,nofail,noauto 0 0
-UUID=EF4F-3441» /mnt/SKHynix.48T»       exfat»  defaults,uid=1000,gid=1000,umask=0002,nofail,auto»   0
+UUID=EF4F-3441 /mnt/SKHynix.48T exfat defaults,uid=1000,gid=1000,umask=0002,nofail,noauto,x-gvfs-name=SKHynix.48T,x-gvfs-icon=SKHynix.48T,x-gvfs-symbolic-icon=SKHynix.48T,x-gvfs-show 0
