@@ -162,9 +162,9 @@ export PROMPT_COMMAND="
 # esac
 
 # enable color support of ls and also add handy aliases - load dircolors
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-fi
+# Executes the dircolors command with the -b option to generate shell commands in a format compatible with the BASH shell,
+# applying the color definitions from ~/.dircolors to the current shell.
+eval "$(dircolors -b ~/.dircolors)"
 
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
