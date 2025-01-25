@@ -39,7 +39,7 @@ alias dir='dir --color=always'
 alias vdir='vdir --color=always'
 
 ###     grep    ###
-export GREP_COLORS="ms=01;31;7:mc=01;32;7:sl=01;33;40:cx=33:fn=01;33:ln=32:bn=34:se=36"
+export GREP_COLORS="ms=01;04;33:mc=01;32;7:sl=01;37:cx=33:fn=01;33:ln=32:bn=34:se=36"
 alias grep='grep --color=always --group-separator=SEP'
 alias fgrep='grep -F --color=always'    # Interpret PATTERNS as fixed strings (F).
 alias egrep='grep -E --color=always'    # Interpret PATTERNS as extended regular expressions (EREs, see below).

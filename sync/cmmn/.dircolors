@@ -54,7 +54,7 @@ TERM xterm*
 # 40=black 41=red 42=green 43=yellow 44=blue 45=magenta 46=cyan 47=white
 NORMAL 01;32;40 # bold green with black background - matrix style for user, group, other
 DIR 01;36;40 # directory
-FILE 01;04;97 # regular file: use no color at all
+FILE 01;04;03;38;05;10 # regular file: use no color at all
 EXEC 01;04;31 # files with execute permission in red
 OTHER_WRITABLE 92;100 # dir that is other-writable (o+w) and not sticky
 ### IRRELEVANT  ###
