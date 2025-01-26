@@ -6,14 +6,16 @@
 #
 # <file system> <mount point>   <type>  <options>       <dump>  <pass>
 # / was on /dev/ubuntu-vg/ubuntu-lv during curtin installation
-/dev/disk/by-id/dm-uuid-LVM-lLh0Q5cUcGKf8IGlCW9XqErBW9232RHRqnUtdd67jjrbU9SrbLEcIyCjgkTcRzxt / ext4 defaults,noatime 0 1
+/dev/disk/by-id/dm-uuid-LVM-lLh0Q5cUcGKf8IGlCW9XqErBW9232RHRqnUtdd67jjrbU9SrbLEcIyCjgkTcRzxt	/			ext4	defaults,noatime	0	1
 # /boot was on /dev/nvme0n1p2 during curtin installation
-/dev/disk/by-uuid/23d929b6-5987-4117-8737-9b32d7f23e5f /boot ext4 defaults,noatime 0 1
+/dev/disk/by-uuid/23d929b6-5987-4117-8737-9b32d7f23e5f											/boot		ext4	defaults,noatime	0	1
 # /boot/efi was on /dev/nvme0n1p1 during curtin installation
-/dev/disk/by-uuid/3B3B-CDFA /boot/efi vfat defaults 0
+/dev/disk/by-uuid/3B3B-CDFA																		/boot/efi	vfat	defaults			0
 #	/swap.img	none	swap	sw	0
-#UUID=6FBF-FE5D	/mnt/1_8TWDG	auto	nosuid,nodev,nofail,noauto,x-gvfs-show	0#noatime,uid=1000,gid=1000,umask=0000,nofail,noauto
-#/dev/disk/by-id/usb-Mass_Storage_Device_121220160204-0:0-part1 /mnt/usb-Mass_Storage_Device_121220160204-0:0-part1 auto nosuid,nodev,nofail,noauto,x-gvfs-show 0 0
-#UUID=7E7E-5BEF /mnt/7E7E-5BEF auto nosuid,nodev,nofail,noauto 0 0
-#/dev/disk/by-id/usb-Mass_Storage_Device_121220160204-0:0 /mnt/usb-Mass_Storage_Device_121220160204-0:0 auto nosuid,nodev,nofail,noauto 0 0
-UUID=EF4F-3441 /mnt/SKhynix.48T exfat defaults,uid=1000,gid=1000,umask=0002,nofail,x-gvfs-name=SKhynix.48T,x-gvfs-icon=SKhynix.48T,x-gvfs-symbolic-icon=SKhynix.48T,x-gvfs-show 0
+# /dev/disk/by-id/usb-Mass_Storage_Device_121220160204-0:0-part1 /mnt/usb-Mass_Storage_Device_121220160204-0:0-part1 auto nosuid,nodev,nofail,noauto,x-gvfs-show 0 0
+# /dev/disk/by-id/usb-Mass_Storage_Device_121220160204-0:0 /mnt/usb-Mass_Storage_Device_121220160204-0:0 auto nosuid,nodev,nofail,noauto 0 0
+# UUID="6FBF-FE5D"		/mnt/1_8TWDG		auto	nosuid,nodev,nofail,noauto,x-gvfs-show																													0		#	noatime,uid=1000,gid=1000,umask=0000,nofail,noauto
+# UUID="7E7E-5BEF"		/mnt/7E7E-5BEF 		auto	nosuid,nodev,nofail,noauto																																0	0
+UUID="EF4F-3441"		/mnt/SKhynix.477T	exfat	defaults,uid=1000,gid=1000,umask=0002,nofail,auto,x-gvfs-name=SKhynix.477T,x-gvfs-icon=SKhynix.477T,x-gvfs-symbolic-icon=SKhynix.477T,x-gvfs-show		0
+UUID="55FF-D93E"		/mnt/SD.118T		exfat	defaults,uid=1000,gid=1000,umask=0002,nofail,auto,x-gvfs-name=SD.118T,x-gvfs-icon=SD.118T,x-gvfs-symbolic-icon=SD.118T,x-gvfs-show						0
+UUID="66CF-F932"		/mnt/SD.119T		exfat	defaults,uid=1000,gid=1000,umask=0002,nofail,auto,x-gvfs-name=SD.119T,x-gvfs-icon=SD.119T,x-gvfs-symbolic-icon=SD.119T,x-gvfs-show						0
