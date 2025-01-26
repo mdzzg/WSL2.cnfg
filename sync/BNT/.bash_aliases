@@ -128,8 +128,8 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 ###	rsync	###
 alias csync='~/cnfg.bak/sync/BNT/cnfg_sync_bnt.sh'
 alias clone='dd if=/dev/sda1 of=/dev/sdb1 bs=64k status=progress conv=fdatasync,noerror,sync'
-# block size 64k, reliable copy, compared to larger block sizes, fdatasync - flushes data to disk for integrity.	Ensures that all written data reaches the physical disk before dd exits; noerror	Continues on read errors.	Prevents the process from stopping when a read error occurs but does not handle skipped blocks.
-# sync	Pads blocks with nulls for alignment.	Works with noerror to ensure skipped blocks are filled with null bytes, maintaining the correct output size.
+# block size 64k, reliable copy, compared to larger block sizes, fdatasync - flushes data to disk for integrity.	Ensures that all written data reaches the physical disk before dd exits; noerror - continues on read errors; prevents the process from stopping when a read error occurs but does not handle skipped blocks.
+# sync	- pads blocks with nulls for alignment; works with noerror to ensure skipped blocks are filled with null bytes, maintaining the correct output size.
 
 #	rsync -OaEHv --delete --info=progress2 /mnt/nfs/149.1gsb/ /mnt/nfs/465.8gwdcg/data/ # a==rlptgoD - it does not include preserving ACLs (-A), xattrs (-X), atimes (-U), crtimes (-N), nor the finding and preserving of hardlinks (-H); H==preserve hardlinks; E==preserve executability x of files; v==verbose;
 #	rsync -aSvx . tv-box.local:/home/madz/Videos    # S==Try to handle sparse files efficiently so they take up less space on the destination; x==one-file-system; a==archive mode; v==verbose
