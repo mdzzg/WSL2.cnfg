@@ -18,4 +18,4 @@
 # UUID="7E7E-5BEF"		/mnt/7E7E-5BEF 		auto	nosuid,nodev,nofail,noauto																																0	0
 UUID="EF4F-3441"		/mnt/SKhynix.477T	exfat	defaults,uid=1000,gid=1000,umask=0002,nofail,auto,x-gvfs-name=SKhynix.477T,x-gvfs-icon=SKhynix.477T,x-gvfs-symbolic-icon=SKhynix.477T,x-gvfs-show		0
 UUID="55FF-D93E"		/mnt/SD.118T		exfat	defaults,uid=1000,gid=1000,umask=0002,nofail,auto,x-gvfs-name=SD.118T,x-gvfs-icon=SD.118T,x-gvfs-symbolic-icon=SD.118T,x-gvfs-show						0
-UUID="66CF-F932"		/mnt/SD.119T		exfat	defaults,uid=1000,gid=1000,umask=0002,nofail,auto,x-gvfs-name=SD.119T,x-gvfs-icon=SD.119T,x-gvfs-symbolic-icon=SD.119T,x-gvfs-show						0
+UUID="D033-D12A"		/mnt/SD.119T		exfat	defaults,uid=1000,gid=1000,umask=0002,nofail,auto,x-gvfs-name=SD.119T,x-gvfs-icon=SD.119T,x-gvfs-symbolic-icon=SD.119T,x-gvfs-show						0
