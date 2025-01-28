@@ -28,10 +28,12 @@ sync_files() {
         echo "The $src_1 is newer than the $src_2"
         echo "Copying $src_1 -> $src_2"
         rsync -auv "$src_1" "$src_2"
+	touch -r "$src_1" "$src_2"
     elif [ "$src_1" -ot "$src_2" ]; then
         echo "The $src_2 is newer than the $src_1"
         echo "Copying $src_2 -> $src_1"
         rsync -auv "$src_2" "$src_1"
+	touch -r "$src_1" "$src_2"
     else
         echo "Both files are in sync: $src_1 and $src_2"
     fi
