@@ -53,6 +53,6 @@ git ad
 git ct "Automated backup on $(date +%y.%m.%d-%H:%M:%S)"
 git u
 
-echo "Backup complete and pushed to GitHub."
+# echo "Backup complete and pushed to GitHub."
 
 # ====================================================================================================
