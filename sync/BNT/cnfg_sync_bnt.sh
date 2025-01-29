@@ -29,11 +29,11 @@ sync_files() {
     local src_2="$2"
 
     # Sync src to dest only if src is newer
-    if [ "$src_1" -nt "$src_2" ] && cmp -s "$src_1" "$src_2"; then
+    if [ "$src_1" -nt "$src_2" ] && ! cmp -s "$src_1" "$src_2"; then
         echo "The $src_1 is newer than the $src_2"
         echo "Copying $src_1 -> $src_2"
         rsync -auv "$src_1" "$src_2"
-    elif [ "$src_1" -ot "$src_2" ] && cmp -s "$src_1" "$src_2"; then
+    elif [ "$src_1" -ot "$src_2" ] && ! cmp -s "$src_1" "$src_2"; then
         echo "The $src_2 is newer than the $src_1"
         echo "Copying $src_2 -> $src_1"
         rsync -auv "$src_2" "$src_1"
@@ -50,7 +50,7 @@ done
 
 cd "$DIR01" || exit
 git ad
-git ct "Automated backup on $(date +%y.%m.%d-%H:%M:%S)"
+git ct "Automated backup on $(date +%y.%m.%d_%H:%M:%S)"
 git u
 
 # echo "Backup complete and pushed to GitHub."
