@@ -29,7 +29,7 @@ sync_files() {
     local src_2="$2"
 
     # Sync src to dest only if src is newer
-    if [ "$src_1" -nt "$src_2" ] && ! cmp -s "$src_1" "$src_2"; then
+    if [ "$src_1" -nt "$src_2" ] && cmp -s "$src_1" "$src_2"; then
         echo "The $src_1 is newer than the $src_2"
         echo "Copying $src_1 -> $src_2"
         rsync -auv "$src_1" "$src_2"
