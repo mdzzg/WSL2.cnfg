@@ -27,3 +27,4 @@ PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 # m h  dom mon dow   command
 04 9-17/2 * * mon-fri /mnt/c/Windows/system32/cmd.exe /c "C:\Users\mdzamarija\Desktop\backup_Lenovo.bat" >> /tmp/cron.log 2>&1
 13 9-17/2 * * mon-fri echo "Cron is working: $(date)" >> /tmp/cron.log
+@reboot /bin/bash /home/madz/cnfg.bak/sync/BNT/cnfg_sync_bnt.sh >> /tmp/cron.log 2>&1
