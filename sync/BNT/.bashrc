@@ -185,3 +185,5 @@ if [ -f "/home/madz/miniforge3/etc/profile.d/mamba.sh" ]; then
 fi
 # <<< conda initialize <<<
 mamba deactivate
+
+code-insiders .
