@@ -185,7 +185,3 @@ if [ -f "/home/madz/miniforge3/etc/profile.d/mamba.sh" ]; then
 fi
 # <<< conda initialize <<<
 mamba deactivate
-
-if [[ -z "$WT_SESSION" ]]; then
-    code-insiders .
-fi
