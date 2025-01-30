@@ -183,6 +183,7 @@ unset __conda_setup
 if [ -f "/home/madz/miniforge3/etc/profile.d/mamba.sh" ]; then
     . "/home/madz/miniforge3/etc/profile.d/mamba.sh"
 fi
+
 # <<< conda initialize <<<
 mamba deactivate
 
