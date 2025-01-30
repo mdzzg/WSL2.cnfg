@@ -94,10 +94,10 @@ parse_git_branch() {
     git rev-parse --abbrev-ref HEAD 2>/dev/null | sed -e 's/.*/(&)/'
 }
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;04;31;7m\]$(parse_git_branch)\[\033[0m\]\[\033[01;04;32;7m\]\W\n\[\033[0m\]\[\033[01;37m\]'
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[03;38;05;00;48;05;160m\]$(parse_git_branch)\[\033[0m\]\[\033[04;38;05;00;48;05;35m\]\W\n\[\033[0m\]\[\033[01;38;05;202;48;05;232m\]'
 #    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]$(parse_git_branch)\[\033[01;34m\]\W:\n\[\033[01;32m\]\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[03;38;05;00;48;05;160m\]$(parse_git_branch)\[\033[0m\]\[\033[04;38;05;00;48;05;35m\]\W\n\[\033[0m\]\[\033[01;38;05;202;48;05;232m\]'
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[03;38;05;00;48;05;124m\]$(parse_git_branch)\[\033[0m\]\[\033[03;38;05;05;48;05;04m\]\W\n\[\033[0m\]\[\033[01;37m\]'
 #    PS1='${debian_chroot:+($debian_chroot)}\[\033[1;32m\]\W \D{%H:%M}\[\033[1;32m\]$(parse_git_branch)\$ '
 fi
 unset color_prompt force_color_prompt
@@ -106,8 +106,7 @@ unset color_prompt force_color_prompt
 ### Terminal Title  ###
 
 # Define hardware information dynamically
-# export HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | cut -d: -f2 | xargs)
-# export HOSTNAMECTL_INFO_2=$(hostnamectl | grep "Hardware Vendor" | cut -d: -f2 | xargs)
+# export HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Virtualization" | cut -d: -f2 | xargs)
 
 # Update PROMPT_COMMAND for dynamic terminal title
 export PROMPT_COMMAND="
@@ -117,45 +116,23 @@ export PROMPT_COMMAND="
     elif [[ \"\$PWD\" == \"\$HOME\"/* ]]; then
         current_dir=\"~/\$(basename \"\$PWD\")\"
     fi
-    echo -ne \"\033]0;${USER}@${HOSTNAME} ${HOSTNAMECTL_INFO_1} ${HOSTNAMECTL_INFO_2} | \${current_dir} | $(date +"%H:%M:%S %a %Bb%d") | jobs = $(jobs | wc -l) | clh = ${HISTCMD}\a\"
+    echo -ne \"\033]0;${USER}@${HOSTNAME} | \${current_dir} | $(date +"%H:%M:%S %a %b %d") | jobs = $(jobs | wc -l) | clh = ${HISTCMD}\a\"
 "
 
-# HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | cut -d: -f2  | xargs)
-# HOSTNAMECTL_INFO_2=$(hostnamectl | grep "Hardware Vendor" | cut -d: -f2 | xargs)
-# PROMPT_COMMAND='
-#     current_dir=$(basename "$PWD")
-#     if [[ "$PWD" == "$HOME" ]]; then
-#         current_dir="~"
-#     elif [[ "$PWD" == "$HOME/"* ]]; then
-#         current_dir="~/$(basename "$PWD")"
-#     fi
-#     echo -en "\033]0;${USER}@${HOSTNAME} ${HOSTNAMECTL_INFO_1} ${HOSTNAMECTL_INFO_2} | ${current_dir} |\r\n\r\n $(date +"%H:%M:%S %a %b %d") | jobs = $(jobs | wc -l) | clh = ${HISTCMD}\a"
-#     '
 # case "$TERM" in
 # xterm*|rxvt*)
-#     HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | awk -F: '{print $2}' | xargs)
-#     HOSTNAMECTL_INFO_2=$(hostnamectl | grep "Hardware Vendor" | awk -F: '{print $2}' | xargs)
-#     PROMPT_COMMAND="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h $HOSTNAMECTL_INFO_1 $HOSTNAMECTL_INFO_2 | \w |\r\n\r\n \t \d | jobs = \j | clh = \!\a\]$PROMPT_COMMAND"
+#     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h | \w |\r\n\r\n \t \d | jobs = \j | clh = \!\a\]$PS1"
 #     ;;
 # *)
 #     ;;
 # esac
 
-# PROMPT_COMMAND="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h | \w |\r\n\r\n \t \d | jobs = \j | clh = \!\a\]$PS1"
 # case "$TERM" in
 # xterm*|rxvt*)
-#     PROMPT_COMMAND='
-#     HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | cut -d: -f2  | xargs)
-#     HOSTNAMECTL_INFO_2=$(hostnamectl | grep "Hardware Vendor" | cut -d: -f2 | xargs)
-#     echo -ne "\033]0;${debian_chroot:+($debian_chroot)}\u@\h $HOSTNAMECTL_INFO_1 $HOSTNAMECTL_INFO_2 | \w |\t | \d$PROMPT_COMMAND\007"'
-#     ;;
-# esac
-
-# Update PROMPT_COMMAND for dynamic terminal title
-# case "$TERM" in
-# xterm*|rxvt*)
-#     HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | cut -d: -f2  | xargs)
-#     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h | \w |\r\n\r\n \t \d | jobs = \j | clh = \!\a\]$PS1"
+#     # PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+#     HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Virtualization" | awk -F: '{print $2}' | xargs)
+#     # HOSTNAMECTL_INFO_2=$(hostnamectl | grep "Static hostname" | awk -F: '{print $2}' | xargs)
+#     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h $HOSTNAMECTL_INFO_1 | \w |\r\n\r\n \t \d | jobs = \j | clh = \!\a\]$PS1"
 #     ;;
 # *)
 #     ;;
@@ -208,3 +185,7 @@ if [ -f "/home/madz/miniforge3/etc/profile.d/mamba.sh" ]; then
 fi
 # <<< conda initialize <<<
 mamba deactivate
+
+if [[ -z "$WT_SESSION" ]]; then
+    code-insiders .
+fi
