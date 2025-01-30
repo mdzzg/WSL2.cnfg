@@ -186,6 +186,4 @@ fi
 # <<< conda initialize <<<
 mamba deactivate
 
-if [[ -z "$WT_SESSION" ]]; then
-    code-insiders .
-fi
+code-insiders .
