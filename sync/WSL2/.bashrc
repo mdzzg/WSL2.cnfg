@@ -186,4 +186,6 @@ fi
 # <<< conda initialize <<<
 mamba deactivate
 
-code-insiders .
+if [[ -n "$TERM" ]]; then # if terminal is available, ignored checking for terminal version -> && "$TERM" == "xterm-256color"
+    code-insiders .
+fi
