@@ -25,6 +25,5 @@ PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 # For more information see the manual pages of crontab(5) and cron(8)
 # 
 # m h  dom mon dow   command
-
-* */2 * * * /bin/bash /home/madz/cnfg.bak/sync/BNT/cnfg_sync_bnt.sh
-* */2 * * * echo "Cron is working: $(date)" >> /tmp/cron-test.log
+* */30 * * * /bin/bash /home/madz/cnfg.bak/sync/BNT/cnfg_sync_bnt.sh >> /tmp/cron.log 2>&1
+* */30 * * * echo "Cron is working: $(date)" >> /tmp/cron.log

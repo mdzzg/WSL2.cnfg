@@ -106,8 +106,8 @@ unset color_prompt force_color_prompt
 ### Terminal Title  ###
 
 # Define hardware information dynamically
-export HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | cut -d: -f2 | xargs)
-export HOSTNAMECTL_INFO_2=$(hostnamectl | grep "Hardware Vendor" | cut -d: -f2 | xargs)
+# export HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | cut -d: -f2 | xargs)
+# export HOSTNAMECTL_INFO_2=$(hostnamectl | grep "Hardware Vendor" | cut -d: -f2 | xargs)
 
 # Update PROMPT_COMMAND for dynamic terminal title
 export PROMPT_COMMAND="

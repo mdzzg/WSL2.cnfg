@@ -25,6 +25,7 @@ PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 # For more information see the manual pages of crontab(5) and cron(8)
 # 
 # m h  dom mon dow   command
-04 09-17/2 * * mon-fri /bin/bash /home/madz/cnfg.bak/sync/WSL2/cnfg_sync_WSL2.sh
+04 09-17/2 * * mon-fri /bin/bash /home/madz/cnfg.bak/sync/WSL2/cnfg_sync_WSL2.sh >> /tmp/cron.log 2>&1
 07 09-17/2 * * mon-fri /mnt/c/Windows/system32/cmd.exe /c "C:\Users\mario\Documents\data\backup\install\windows\linux\WSL2\backup_script\backup_Lat-E7450.bat" >> /tmp/cron.log 2>&1
 13 09-17/2 * * mon-fri echo "Cron is working: $(date)" >> /tmp/cron.log
+@reboot /bin/bash /home/madz/cnfg.bak/sync/BNT/cnfg_sync_bnt.sh >> /tmp/cron.log 2>&1
