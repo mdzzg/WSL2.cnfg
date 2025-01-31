@@ -25,5 +25,5 @@ PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 # For more information see the manual pages of crontab(5) and cron(8)
 # 
 # m h  dom mon dow   command
-7,30 * * * mon-fri echo "data sync: $(date)" >> /tmp/cron.log; /mnt/c/Windows/system32/cmd.exe /c "C:\Users\mdzamarija\Desktop\backup_Lenovo.bat" >> /tmp/cron.log 2>&1
-@reboot echo "Startup data sync: $(date)" >> /tmp/cron.log; /mnt/c/Windows/system32/cmd.exe /c "C:\Users\mdzamarija\Desktop\backup_Lenovo.bat" >> /tmp/cron.log 2>&1
+7,37 * * * mon-fri echo "data sync: $(date)" >> /tmp/cron.log; /mnt/c/Windows/system32/cmd.exe /c "C:\Users\mdzamarija\Desktop\backup_Lenovo.bat" >> /tmp/cron.log 2>&1
+# @reboot echo "Startup data sync: $(date)" >> /tmp/cron.log; /mnt/c/Windows/system32/cmd.exe /c "C:\Users\mdzamarija\Desktop\backup_Lenovo.bat" >> /tmp/cron.log 2>&1
