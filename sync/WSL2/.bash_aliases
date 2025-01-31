@@ -23,12 +23,11 @@ alias ali='alias -p'
 ###	alias for the most used commands	###
 
 alias cnfg=~/cnfg.bak
-alias cv=~/docs/job_apps/cv/tex.v4.6
-alias cla=~/docs/job_apps/personal.letter/novo.academia/generic.application
-alias cli=~/docs/job_apps/personal.letter/novo.industry/generic.application/cl_ind_gen
-alias dc=~/docs
-alias dl=~/dls
-alias dcw=/mnt/c/Users/mario/Documents/data/backup
+alias cv=~/Documents/data/job.applications/cv/tex.v4.6
+alias cla=~/Documents/data/job.applications/personal.letter/novo.academia/generic.application
+alias cli=~/Documents/data/job.applications/personal.letter/novo.industry/generic.application/cl_ind_gen
+alias dc=~/Documents
+alias dl=~/Downloads
 
 ###     ls    ###
 # export LS_COLORS="no=01;32;40:di=01;36;40:fi=01;04;97:ex=01;04;31:ow=92;100:*.tex=01;04;31:*.pdf=01;04;35:"\
@@ -38,6 +37,7 @@ alias lc='ls -CFhm --color=always'    # C - column mode; m - comma separated
 # R - recursive display of all dirs
 alias dir='dir --color=always'
 alias vdir='vdir --color=always'
+alias fex='nautilus admin:/'
 
 ###     grep    ###
 export GREP_COLORS="ms=01;04;33:mc=01;32;7:sl=01;37:cx=33:fn=01;33:ln=32:bn=34:se=36"
@@ -48,10 +48,10 @@ alias diff='diff --color=always'
 alias sdiff='sdiff -s'
 
 ###	apt/snap	###
-alias list_apt="apt list --installed 2>/dev/null | sed -n 's,/.*,,p'|nl|most"
+alias list_apt="apt list --installed|cut -d/ -f1|grep -v Listing...|nl|most"
 alias list_apts="apt list --installed 2>/dev/null | sed -n 's,/.*,,p'|egrep -nv '^(python|lib)'|nl"
-# alias list_apt="apt list --installed|awk -F '/' '/^/ {print $1}'|cut -f1|grep -v Listing...|nl|most"
-# alias list_apt="apt list --installed|cut -d/ -f1|grep -v Listing...|nl|most"
+# alias list_apt="apt list --installed|awk -F '/' '/^/ {print $1}'|cut -f1|grep -v Listing...|nl|most"	# inflated compared to the above
+# alias list_apt="apt list --installed 2>/dev/null | sed -n 's,/.*,,p'|nl|most"
 alias list_full='compgen -c|sort -u|nl|most'
 alias list_descriptive='whatis `compgen -c`|sort -u|nl|most'
 alias update='sudo apt update -y && sudo apt full-upgrade -y'
@@ -127,8 +127,7 @@ alias power='upower -i /org/freedesktop/UPower/devices/battery_BAT0|grep -e 'sta
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 ###	rsync	###
-alias csync='~/cnfg.bak/sync/WSL2/cnfg_sync_WSL2.sh'
-alias dsync='/mnt/c/Windows/system32/cmd.exe /c "C:\Users\mario\Documents\data\backup\install\windows\linux\WSL2\backup_script\backup_Lat-E7450.bat"'
+alias csync='~/cnfg.bak/sync/BNT/cnfg_sync_bnt.sh'
 alias clone='dd if=/dev/sda1 of=/dev/sdb1 bs=64k status=progress conv=fdatasync,noerror,sync'
 # block size 64k, reliable copy, compared to larger block sizes; fdatasync - flushes data to disk for integrity, ensures that all written data reaches the physical disk before dd exits; noerror - continues on read errors; prevents the process from stopping when a read error occurs but does not handle skipped blocks; sync	- pads blocks with nulls for alignment; works with noerror to ensure skipped blocks are filled with null bytes, maintaining the correct output size.
 
