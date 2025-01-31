@@ -1,22 +1,22 @@
 #!/bin/bash
 
-LOGFILE="/tmp/last_sync_time.log"
-NOW=$(date +%s)  # Get current timestamp in seconds
-THRESHOLD=1800   # 30 minutes (1800 seconds)
+# LOGFILE="/tmp/last_sync_time.log"
+# NOW=$(date +%s)  # Get current timestamp in seconds
+# THRESHOLD=1800   # 30 minutes (1800 seconds)
 
-# Check if log file exists
-if [ -f "$LOGFILE" ]; then
-    LAST_RUN=$(cat "$LOGFILE")
-    TIME_DIFF=$((NOW - LAST_RUN))
+# # Check if log file exists
+# if [ -f "$LOGFILE" ]; then
+#     LAST_RUN=$(cat "$LOGFILE")
+#     TIME_DIFF=$((NOW - LAST_RUN))
 
-    # If last run was more than 30 minutes ago, run the job
-    if [ "$TIME_DIFF" -lt "$THRESHOLD" ]; then
-        echo "Last run was recent ($TIME_DIFF seconds ago), skipping..."
-        exit 0
-    fi
-fi
+#     # If last run was more than 30 minutes ago, run the job
+#     if [ "$TIME_DIFF" -lt "$THRESHOLD" ]; then
+#         echo "Last run was recent ($TIME_DIFF seconds ago), skipping..."
+#         exit 0
+#     fi
+# fi
 
-echo "$NOW" > "$LOGFILE"  # Update last run time in log file
+# echo "$NOW" > "$LOGFILE"  # Update last run time in log file
 
 # Directories
 DIR01="$HOME/cnfg.bak"
