@@ -1,0 +1,55 @@
+Q:  How to autostart windows terminal on system boot? Regular way of going into Settings and toggling Launch on machine startup does not work. Is there an alternative way? Where is the Windows terminal .exe file on Windows 11 machine?
+
+A:
+
+If enabling "Launch on machine startup" in **Windows Terminal** settings does not work, you can try alternative methods to **autostart Windows Terminal** on system boot.
+
+---
+
+## **Method 1: Add a Shortcut to Startup Folder**
+1. **Locate the Windows Terminal Executable**  
+   The Windows Terminal **executable file** is located here:  
+   ```
+   C:\Program Files\WindowsApps\Microsoft.WindowsTerminal_*\wt.exe
+   ```
+   However, this path is **protected**, so a better approach is to use:
+   ```
+   C:\Windows\System32\cmd.exe /c start wt
+   ```
+
+2. **Create a Shortcut for Windows Terminal in Startup Folder**
+   - Press `Win + R`, type `shell:startup`, and press **Enter**.
+   - This will open the **Startup folder** (`C:\Users\YourUsername\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`).
+   - **Right-click > New > Shortcut**.
+   - In the **location field**, enter:
+     ```
+     C:\Windows\System32\cmd.exe /c start wt
+     ```
+   - Click **Next**, name it **Windows Terminal**, and click **Finish**.
+
+✅ **Now, Windows Terminal should start automatically on boot.**
+
+---
+
+## **Method 2: Use Task Scheduler**
+If the startup folder method does not work, you can use **Task Scheduler**:
+
+1. Open **Task Scheduler** (`Win + R` → type `taskschd.msc` → Enter).
+2. Click **"Create Basic Task..."** on the right.
+3. Name the task **Windows Terminal AutoStart** and click **Next**.
+4. Select **"When I log on"** and click **Next**.
+5. Choose **"Start a program"** and click **Next**.
+6. In **Program/script**, enter:
+   ```
+   wt
+   ```
+7. Click **Next** → **Finish**.
+8. Go to the **"Triggers"** tab, select **"At log on"**, and ensure **"Any user"** is selected.
+9. Under **"Conditions"**, **uncheck** "Start the task only if the computer is on AC power" (for laptops).
+10. Click **OK** to save.
+
+✅ **Now, Windows Terminal should launch automatically when you log in.**
+
+---
+
+Let me know if this works or if you need further troubleshooting! 🚀

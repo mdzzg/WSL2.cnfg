@@ -1,0 +1,6 @@
+PowerShell:
+wsl hostname -I
+(ipconfig /all)
+
+Terminal:
+ip route show | grep -i default | awk '{ print $3}'

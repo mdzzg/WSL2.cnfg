@@ -1,0 +1,3 @@
+GET-CimInstance -query "SELECT * from Win32_DiskDrive"
+wmic diskdrive list brief
+wsl --mount \\.\PHYSICALDRIVE2
