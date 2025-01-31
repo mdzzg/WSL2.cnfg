@@ -94,7 +94,7 @@ parse_git_branch() {
     git rev-parse --abbrev-ref HEAD 2>/dev/null | sed -e 's/.*/(&)/'
 }
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[03;38;05;00;48;05;160m\]$(parse_git_branch)\[\033[0m\]\[\033[04;38;05;00;48;05;35m\]\W\n\[\033[0m\]\[\033[01;38;05;214m\]'
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[03;38;05;00;48;05;160m\]$(parse_git_branch)\[\033[0m\]\[\033[04;38;05;00;48;05;35m\]\W\[\033[0m\]\[\033[K\]\n\[\033[01;38;05;214m\]'
 #    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]$(parse_git_branch)\[\033[01;34m\]\W:\n\[\033[01;32m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\[\033[03;38;05;00;48;05;124m\]$(parse_git_branch)\[\033[0m\]\[\033[03;38;05;05;48;05;04m\]\W\n\[\033[0m\]\[\033[01;37m\]'
