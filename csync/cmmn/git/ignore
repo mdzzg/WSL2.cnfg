@@ -13,6 +13,9 @@
 # Linux generated files
 *.bak
 
+# Pieces OS
+.qdrant-initialized
+
 # Docusaurus Dependencies ignore
 /node_modules
 # Production
