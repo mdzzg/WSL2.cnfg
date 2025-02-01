@@ -185,7 +185,3 @@ if [ -f "/home/madz/miniforge3/etc/profile.d/mamba.sh" ]; then
 fi
 # <<< conda initialize <<<
 mamba deactivate
-
-# if [[ -n "$TERM" ]]; then # if terminal is available, ignored checking for terminal version -> && "$TERM" == "xterm-256color"
-#     code-insiders .
-# fi
