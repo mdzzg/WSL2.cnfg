@@ -127,7 +127,7 @@ alias power='upower -i /org/freedesktop/UPower/devices/battery_BAT0|grep -e 'sta
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 ###	rsync	###
-alias csync='~/cnfg.bak/sync/BNT/cnfg_sync_bnt.sh'
+alias csync='~/cnfg.bak/csync/BNT/cnfg_sync_bnt.sh'
 alias clone='dd if=/dev/sda1 of=/dev/sdb1 bs=64k status=progress conv=fdatasync,noerror,sync'
 # block size 64k, reliable copy, compared to larger block sizes; fdatasync - flushes data to disk for integrity, ensures that all written data reaches the physical disk before dd exits; noerror - continues on read errors; prevents the process from stopping when a read error occurs but does not handle skipped blocks; sync	- pads blocks with nulls for alignment; works with noerror to ensure skipped blocks are filled with null bytes, maintaining the correct output size.
 
@@ -231,7 +231,11 @@ export -f gt-branch-create
 function gt-branch-merge(){ gt checkout "$1" && gt merge "$2";}
 export -f gt-branch-merge
 
-function crlf2lf(){ sed -i 's/\r$//' "$1";}
+function crlf2lf(){ 
+    find . -type f ! -path "./.git/*" ! -name "*.png" | while IFS= read -r file; do
+    sed -i 's/\r$//' "$file"
+    done
+}
 export -f crlf2lf
 # ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
