@@ -226,10 +226,13 @@ function gt-branch-rename(){ gt branch -m "$1" "$2" && gt push "$3" -d "$1" && g
 export -f gt-branch-rename
 
 function gt-branch-create(){ gt checkout -b "$1" && gt push -u "$2" "$1";}
+export -f gt-branch-create
 
 function gt-branch-merge(){ gt checkout "$1" && gt merge "$2";}
+export -f gt-branch-merge
 
 function crlf2lf(){ sed -i 's/\r$//' "$1";}
+export -f crlf2lf
 # ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ###     cd up    ###
