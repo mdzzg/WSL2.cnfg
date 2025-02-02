@@ -38,6 +38,7 @@ alias lc='ls -CFhm --color=always'    # C - column mode; m - comma separated
 # R - recursive display of all dirs
 alias dir='dir --color=always'
 alias vdir='vdir --color=always'
+ll -d !('.git')  # list all files in the current directory except for the .git directory
 
 ###     grep    ###
 export GREP_COLORS="ms=01;04;33:mc=01;32;7:sl=01;37:cx=33:fn=01;33:ln=32:bn=34:se=36"

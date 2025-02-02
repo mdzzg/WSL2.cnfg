@@ -38,6 +38,8 @@ alias lc='ls -CFhm --color=always'    # C - column mode; m - comma separated
 alias dir='dir --color=always'
 alias vdir='vdir --color=always'
 alias fex='nautilus admin:/'
+ll -d !('.git')  # list all files in the current directory except for the .git directory
+find . -type f ! -path "./.git/*" | wc -l  # count all files in the current directory except for the .git directory
 
 ###     grep    ###
 export GREP_COLORS="ms=01;04;33:mc=01;32;7:sl=01;37:cx=33:fn=01;33:ln=32:bn=34:se=36"

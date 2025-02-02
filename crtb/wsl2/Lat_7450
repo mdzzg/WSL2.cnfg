@@ -25,7 +25,7 @@ PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 # For more information see the manual pages of crontab(5) and cron(8)
 # 
 # m h  dom mon dow   command
-*/30 09-17 * * mon-fri echo "cnfg sync: $(date)" >> /tmp/cron.log; /bin/bash /home/madz/cnfg.bak/sync/WSL2/cnfg_sync_WSL2.sh >> /tmp/cron.log 2>&1
+*/30 09-17 * * mon-fri echo "cnfg sync: $(date)" >> /tmp/cron.log; /bin/bash /home/madz/cnfg.bak/csync/WSL2/cnfg_sync_WSL2.sh >> /tmp/cron.log 2>&1
 3,33 09-17 * * mon-fri echo "data sync: $(date)" >> /tmp/cron.log; /mnt/c/Windows/system32/cmd.exe /c "C:\Users\mario\Documents\data\backup\install\windows\linux\WSL2\backup_script\backup_Lat_E7450.bat" >> /tmp/cron.log 2>&1
-@reboot sleep 180; echo "Startup cnfg sync: $(date)" >> /tmp/cron.log; /bin/bash /home/madz/cnfg.bak/sync/WSL2/cnfg_sync_WSL2.sh >> /tmp/cron.log 2>&1
+@reboot sleep 180; echo "Startup cnfg sync: $(date)" >> /tmp/cron.log; /bin/bash /home/madz/cnfg.bak/csync/WSL2/cnfg_sync_WSL2.sh >> /tmp/cron.log 2>&1
 # */30 09-17 * * mon-fri echo "Cron is working: $(date)" >> /tmp/cron.log
