@@ -33,12 +33,12 @@ alias dcw=/mnt/c/Users/mario/Documents/data/backup
 ###     ls    ###
 # export LS_COLORS="no=01;32;40:di=01;36;40:fi=01;04;97:ex=01;04;31:ow=92;100:*.tex=01;04;31:*.pdf=01;04;35:"\
 # "*.py=01;04;32:*.sh=01;04;32:*.tar.gz=01;04;32:*html=01;04;33:*css=01;04;33:*js=01;04;33:*json=01;04;33:*xml=01;04;33:*md=01;04;33:*txt=01;04;33:*csv=01;04;33:*dat=01;04;33:*log=01;04;33:*bak=01;04;33:*tar=01;04;33:*zip=01;04;33:*rar=01;04;33:*7z=01;04;33:*deb=01;04;33:*bin=01;04;33:*iso=01;04;33:*img=01;04;33:*mp3=01;04;33:*mp4=01;04;33:*mkv=01;04;33:*avi=01;04;33:*mov=01;04;33:*wmv=01;04;33:*flv=01;04;33:*webm=01;04;33:*gif=01;04;33:*jpg=01;04;33:*png=01;04;33:*bmp=01;04;33:*svg=01;04;33:*tiff=01;04;33:*eps=01;04;33:*ps=01;04;33:*odt=01;04;33:*doc=01;04;33:*docx=01;04;33:*xls=01;04;33:*xlsx=01;04;33:*ppt=01;04;33:*pptx=01;04;33:*odp=01;04;33:*rtf=01;04"
-alias ll='ls -AFghoX --color=always'  # F - classify executables (*), directories (/), symbolic links (@); X - alphabetical sort; A - all WO parents; og - omit owner & group;
-alias lc='ls -CFhm --color=always'    # C - column mode; m - comma separated
+alias ll='ls -AFghoX --hyperlink=auto --color=always'  # F - classify executables (*), directories (/), symbolic links (@); X - alphabetical sort; A - all WO parents; og - omit owner & group;
+alias lc='ls -CFhm ---hyperlink=auto -color=always'    # C - column mode; m - comma separated
 # R - recursive display of all dirs
-alias dir='dir --color=always'
-alias vdir='vdir --color=always'
-alias nfndls='find . -type f ! -path "./.git/*"'  # ! -name '*.png'    all files in the current directory except for the .git directory
+alias dir='dir --hyperlink=auto --color=always'
+alias vdir='vdir --hyperlink=auto --color=always'
+alias nfnd='find . -type f ! -path "./.git/*"'  # ! -name '*.png'    all files in the current directory except for the .git directory
 alias nls='ll -d !('.git')'  # list all files in the current directory except for the .git directory
 
 ###     grep    ###
