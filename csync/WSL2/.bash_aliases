@@ -40,6 +40,8 @@ alias dir='dir --hyperlink=auto --color=always'
 alias vdir='vdir --hyperlink=auto --color=always'
 alias nfnd='find . -type f ! -path "./.git/*"'  # ! -name '*.png'    all files in the current directory except for the .git directory
 alias nls='ll -d !('.git')'  # list all files in the current directory except for the .git directory
+alias tr='tree -aC -L 2 --dirsfirst --noreport'  # -a - all files; -C - colorize; -L 2 - depth 2; --dirsfirst - list directories first; --noreport - no summary; --hyperlink=auto - hyperlink files; --color=always - colorize output
+# tree -a -I '.git'
 
 ###     grep    ###
 export GREP_COLORS="ms=01;04;33:mc=01;32;7:sl=01;37:cx=33:fn=01;33:ln=32:bn=34:se=36"
