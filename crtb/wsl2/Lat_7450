@@ -26,6 +26,6 @@ PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 # 
 # m h  dom mon dow   command
 */30 09-17 * * mon-fri echo "csync: $(date)" >> /tmp/cron.log; /bin/bash /home/madz/cnfg.bak/csync/WSL2/cnfg_sync_WSL2.sh >> /tmp/cron.log 2>&1
-3,33 09-17 * * mon-fri echo "dsync: $(date)" >> /tmp/cron.log; /mnt/c/Windows/system32/cmd.exe /c "\\wsl$\Ubuntu-22.04\home\madz\cnfg.bak\dsync\backup_script\backup_Lat_E7450.bat" >> /tmp/cron.log 2>&1
+3,33 09-17 * * mon-fri echo "dsync: $(date)" >> /tmp/cron.log; /mnt/c/Windows/system32/cmd.exe /c "C:\Users\mario\Documents\data\backup\install\windows\linux\WSL2\backup_script\backup_Lat_E7450.bat" >> /tmp/cron.log 2>&1
 @reboot sleep 180; echo "Startup csync: $(date)" >> /tmp/cron.log; /bin/bash /home/madz/cnfg.bak/csync/WSL2/cnfg_sync_WSL2.sh >> /tmp/cron.log 2>&1
-@reboot sleep 180; echo "Startup dsync: $(date)" >> /tmp/cron.log; /mnt/c/Windows/system32/cmd.exe /c "\\wsl$\Ubuntu-22.04\home\madz\cnfg.bak\dsync\backup_script\backup_Lat_E7450.bat" >> /tmp/cron.log 2>&
+@reboot sleep 180; echo "Startup dsync: $(date)" >> /tmp/cron.log; /mnt/c/Windows/system32/cmd.exe /c "C:\Users\mario\Documents\data\backup\install\windows\linux\WSL2\backup_script\backup_Lat_E7450.bat" >> /tmp/cron.log 2>&1
