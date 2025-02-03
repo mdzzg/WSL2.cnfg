@@ -131,7 +131,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 ###	rsync	###
 alias csync='~/cnfg.bak/csync/WSL2/cnfg_sync_WSL2.sh'
-alias dsync='/mnt/c/Windows/system32/cmd.exe /c "\\wsl$\Ubuntu-22.04\home\madz\cnfg.bak\dsync\backup_script\backup_Lat_E7450.bat"'
+alias dsync='/mnt/c/Windows/system32/cmd.exe /c "C:\Users\mario\Documents\data\backup\install\windows\linux\WSL2\backup_script\backup_Lat_E7450.bat"'
 alias clone='dd if=/dev/sda1 of=/dev/sdb1 bs=64k status=progress conv=fdatasync,noerror,sync'
 # block size 64k, reliable copy, compared to larger block sizes; fdatasync - flushes data to disk for integrity, ensures that all written data reaches the physical disk before dd exits; noerror - continues on read errors; prevents the process from stopping when a read error occurs but does not handle skipped blocks; sync	- pads blocks with nulls for alignment; works with noerror to ensure skipped blocks are filled with null bytes, maintaining the correct output size.
 
