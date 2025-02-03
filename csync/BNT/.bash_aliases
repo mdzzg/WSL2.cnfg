@@ -89,7 +89,6 @@ alias var='env|most'
 ###	turn off	###
 alias off='systemctl poweroff --now'
 alias reboot='systemctl reboot -i'
-alias soff='sudo systemctl poweroff --now'
 alias hoff='systemctl hibernate'
 #	sudo systemctl reboot --firmware-setup
 
