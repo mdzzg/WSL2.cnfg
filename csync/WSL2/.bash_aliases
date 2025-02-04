@@ -24,7 +24,7 @@ alias ali='alias -p'
 
 alias cnfg=~/cnfg.bak
 alias cv=~/docs/job_apps/cv/tex.v4.6
-alias cla=~/docs/job_apps/personal.letter/novo.academia/generic.application
+alias cla=~/docs/job_apps/personal.letter/novo.academia/cl_ac_gen
 alias cli=~/docs/job_apps/personal.letter/novo.industry/generic.application/cl_ind_gen
 alias dc=~/docs
 alias dl=~/dls
@@ -95,7 +95,7 @@ alias hoff='systemctl hibernate'
 
 ###	latex/pdf	##
 alias txfy='pdflatex -output-directory=bin' # -jobname=filename -output-directory=bin -aux-directory=bin
-alias pdf2txt='pdftotext'
+alias pdf2txt='pdftotext -q'
 
 ### git ###
 alias gt='git'
