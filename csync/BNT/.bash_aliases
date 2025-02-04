@@ -25,7 +25,7 @@ alias ali='alias -p'
 alias cnfg=~/cnfg.bak
 alias cv=~/Documents/data/job.applications/cv/tex.v4.6
 alias cla=~/Documents/data/job.applications/personal.letter/novo.academia/generic.application
-alias cli=~/Documents/data/job.applications/personal.letter/novo.industry/generic.application/cl_ind_gen
+alias cli=~/Documents/data/job.applications/personal.letter/novo.industry/generic.application/cl_in_gen
 alias dc=~/Documents
 alias dl=~/Downloads
 
