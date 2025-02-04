@@ -94,7 +94,7 @@ alias hoff='systemctl hibernate'
 
 ###	latex/pdf	##
 alias txfy='pdflatex -output-directory=bin' # -jobname=filename -output-directory=bin -aux-directory=bin
-alias pdf2txt='pdftotext'
+alias pdf2txt='pdftotext -q'
 
 ### git ###
 alias gt='git'
