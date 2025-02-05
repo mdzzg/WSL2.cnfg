@@ -100,16 +100,20 @@ parse_git_status() {
     # Get branch name
     local branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
 
-    # Check for changes
+    # Get status
     local status=$(git status --porcelain 2>/dev/null)
 
     local indicators=""
 
-    # Add indicators based on status
+    # File status indicators
     [[ "$status" == *" M "* || "$status" == "M "* ]] && indicators+="*"  # Modified files
     [[ "$status" == *"?? "* ]] && indicators+="!"  # Untracked files
     [[ "$status" == *"A "* || "$status" == *"D "* || "$status" == *"R "* ]] && indicators+="+"  # Staged files
     [[ "$status" == *" U "* || "$status" == *"UU "* ]] && indicators+="%"  # Merge conflicts
+
+    # Check if there are commits that haven't been pushed
+    local ahead=$(git rev-list --count @{upstream}..HEAD 2>/dev/null || echo "0")
+    [[ "$ahead" -gt 0 ]] && indicators+="#"  # Unpushed commits indicator
 
     # Format output
     [[ -n "$indicators" ]] && echo "($branch $indicators)" || echo "($branch)"
