@@ -107,7 +107,7 @@ alias rsti='bind -f ~/.inputrc'	#'source ~/.bashrc'
 alias cls="printf '\033c'"
 alias alt='sudo update-alternatives --config' 
 #alias forget='1
-alias line="printf '\033[1;31m%100s\033[0m\\n' | tr ' ' ="
+alias line="printf '\033[1;31m%0.s=\033[0m' {1..100};echo"
 # alias hline="printf '%100s\n' | tr ' ' \#"
 # alias mline="printf '%125s\n' | tr ' ' --"
 
