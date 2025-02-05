@@ -183,9 +183,9 @@ alias spdtst='speedtest-cli --bytes --simple' #  --list ->  Display a list of sp
 function upgradable() { echo $(apt list --upgradable 2>/dev/null | egrep -v 'Listing...|apt does not have a stable CLI interface' | cut -d/ -f1 | awk '{$1=$1};1' | paste -sd ' ' -);}
 export -f upgradable
 
-function upgrade(){ sudo apt install $(apt list --upgradable 2>&1|awk -F '/' '/^/ {print $1}'|cut -f1|egrep -v 'Listing...|apt does not have a stable CLI interface'|sed 's/^[[:space:]]*//'|tr '\r\n' ' ') -y;}
+function upgrade(){ sudo apt install $(apt list --upgradable 2>&1|awk -F '/' '/^/ {print $1}'|cut -f1|egrep -v 'Listing...|apt does not have a stable CLI interface'|sed 's/^[[:space:]]*//');}
 export -f upgrade
-
+# |tr '\r\n' ' ') -y
 # function that lists installed apt/dpkg packages
 list_dpkg(){
     # dpkg-query -W -f='${Package}\n' | less
