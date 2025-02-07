@@ -1,0 +1,13 @@
+# CMD
+
+adb tcpip 5555	(while being USB connected)
+adb connect 10.37.3.60:5555
+adb devices
+adb shell
+pm list packages | grep location
+pm disable-user --user 0 com.honor.browser
+pm uninstall "package"
+pm uninstall --user 0 com.honor.browser
+pm list packages -d
+pm enable com.honor.browser
+reboot
