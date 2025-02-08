@@ -1,16 +1,20 @@
 # CMD
 
-adb tcpip 5555	(while being USB connected)
-adb pair 192.168.43.124:34363
-adb connect 10.37.3.60:5555         (Windows)
 adb connect 192.168.43.124:39647    (Ubuntu)
+adb connect 10.37.3.60:5555         (Windows)
 adb devices
 adb shell
+
+adb tcpip 5555	(while being USB connected)
+adb pair 192.168.43.124:34363
+
+pm list packages -d
 pm list packages | grep location
+
 pm disable-user --user 0 com.honor.browser
 pm uninstall "package"
 pm uninstall --user 0 com.honor.browser
-pm list packages -d
 pm enable [package]
 pm install-existing [package]
+
 reboot
