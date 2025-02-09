@@ -41,3 +41,9 @@ com.hihonor.systemappsupdater	                (all users)
 com.hihonor.detectrepair                        (all users)
 com.hihonor.gameassistant	                    (all users)
 com.hihonor.search                              (all users)
+com.hihonor.android.chr	
+com.hihonor.calendar	
+com.hihonor.contacts	
+
+
+pm uninstall --user current com.android.stk  
