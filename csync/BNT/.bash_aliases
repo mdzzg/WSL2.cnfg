@@ -37,7 +37,7 @@ alias lc="ls -CFhm --hyperlink=always --color=always"    # C - column mode; m - 
 # R - recursive display of all dirs
 alias dir='dir --hyperlink=always --color=always'
 alias vdir='vdir --hyperlink=always --color=always'
-alias fnd='find . ! -path './.git/*' -exec ls -AFghoX --hyperlink=always --color=always -ld {} +'  # -type f ! -name '*.png'    all files in the current directory except for the .git directory
+alias fnd="find . ! -path './.git/*' -exec ls -AFghoX --hyperlink=always --color=always -ld {} +"  # -type f ! -name '*.png'    all files in the current directory except for the .git directory
 alias nls='ll -d !('.git')'  # list all files in the current directory except for the .git directory
 # alias tr='tree -a -I '.git''
 alias tr='tree -aC -L 2 --dirsfirst --noreport'  # -a - all files; -C - colorize; -L 2 - depth 2; --dirsfirst - list directories first; --noreport - no summary; --hyperlink=auto - hyperlink files; --color=always - colorize output
