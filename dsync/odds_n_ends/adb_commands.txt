@@ -47,3 +47,5 @@ com.hihonor.contacts
 
 
 pm uninstall --user current com.android.stk  
+
+pm list packages|cut -d: -f2|grep hihonor
