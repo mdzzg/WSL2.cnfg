@@ -37,3 +37,7 @@ com.hihonor.keychain
 com.android.keychain
 com.hihonor.privatespace
 com.hihonor.contactscamcard                     (all users)
+com.hihonor.systemappsupdater	                (all users)
+com.hihonor.detectrepair                        (all users)
+com.hihonor.gameassistant	                    (all users)
+com.hihonor.search                              (all users)
