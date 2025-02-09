@@ -9,14 +9,29 @@ adb tcpip 5555	(while being USB connected)
 adb pair 192.168.43.124:34363
 
 pm list packages -d
-pm list packages | grep location
+pm list packages | grep [package]
 
+for pkg in [packages]; do pm disable-user --user current "$pkg"; done
 pm disable-user --user current [package]
 
+for pkg in [packages]; do pm uninstall --user current "$pkg"; done
+pm uninstall [package]
 pm uninstall --user current [package]
-pm uninstall "package"
 pm uninstall --user 0 com.honor.browser
+
 pm enable [package]
 pm install-existing [package]
 
 reboot
+
+com.hihonor.hiviewtunnel
+com.android.bookmarkprovider
+com.hihonor.phoneservice
+com.hihonor.android.pushagent                   (all users)
+com.microsoftsdk.crossdeviceservicebroker
+com.hihonor.hnpanpayservice
+com.hihonor.keychain
+com.android.keychain
+com.hihonor.privatespace
+com.hihonor.contactscamcard (all users)
+
