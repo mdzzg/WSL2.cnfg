@@ -15,7 +15,9 @@ for pkg in [packages]; do pm disable-user --user current "$pkg"; done
 pm disable-user --user current [package]
 
 for pkg in [packages]; do pm uninstall --user current "$pkg"; done
+for pkg in [packages]; do pm uninstall "$pkg"; done
 pm uninstall [package]
+
 pm uninstall --user current [package]
 pm uninstall --user 0 com.honor.browser
 
@@ -24,6 +26,7 @@ pm install-existing [package]
 
 reboot
 
+com.android.dreams.basic                        (all users)
 com.hihonor.hiviewtunnel
 com.android.bookmarkprovider
 com.hihonor.phoneservice
@@ -33,5 +36,4 @@ com.hihonor.hnpanpayservice
 com.hihonor.keychain
 com.android.keychain
 com.hihonor.privatespace
-com.hihonor.contactscamcard (all users)
-
+com.hihonor.contactscamcard                     (all users)
