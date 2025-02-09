@@ -1,7 +1,7 @@
 # CMD
 
 adb connect 192.168.43.124:55555    (Ubuntu)
-adb connect 10.37.3.60:5555         (Windows)
+adb connect 10.37.3.60:55555        (Windows)
 adb devices
 adb shell
 
@@ -11,7 +11,9 @@ adb pair 192.168.43.124:34363
 pm list packages -d
 pm list packages | grep location
 
-pm disable-user --user 0 com.honor.browser
+pm disable-user --user current [package]
+
+pm uninstall --user current [package]
 pm uninstall "package"
 pm uninstall --user 0 com.honor.browser
 pm enable [package]
