@@ -14,8 +14,8 @@ pm list packages | grep [package]
 for pkg in [packages]; do pm disable-user --user current "$pkg"; done
 pm disable-user --user current [package]
 
-for pkg in [packages]; do pm uninstall --user current "$pkg"; done
 for pkg in [packages]; do pm uninstall "$pkg"; done
+for pkg in [packages]; do pm uninstall --user current "$pkg"; done
 pm uninstall [package]
 
 pm uninstall --user current [package]
