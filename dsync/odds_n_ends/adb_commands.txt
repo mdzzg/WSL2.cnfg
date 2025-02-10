@@ -43,8 +43,11 @@ com.hihonor.gameassistant	                (all users)
 com.hihonor.search                              (all users)
 com.hihonor.android.chr	
 com.hihonor.calendar	
-com.hihonor.contacts	
+com.hihonor.contacts
 com.microsoft.appmanager			(all users)
+
+com.android.egg
+com.android.dreams.phototable
 
 
 pm uninstall --user current com.android.stk  
