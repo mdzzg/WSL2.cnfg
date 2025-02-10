@@ -51,5 +51,6 @@ com.hihonor.imedia.sws
 com.microsoft.appmanager
 com.hihonor.medialibrary
 com.hihonor.mediadatacenter
-
+navigation ring
+magic ring
 pm list packages|cut -d: -f2|grep hihonor
