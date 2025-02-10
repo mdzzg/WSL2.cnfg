@@ -39,16 +39,16 @@ com.hihonor.privatespace
 com.hihonor.contactscamcard                     (all users)
 com.hihonor.systemappsupdater	                (all users)
 com.hihonor.detectrepair                        (all users)
-com.hihonor.gameassistant	                    (all users)
+com.hihonor.gameassistant	                (all users)
 com.hihonor.search                              (all users)
 com.hihonor.android.chr	
 com.hihonor.calendar	
 com.hihonor.contacts	
+com.microsoft.appmanager			(all users)
 
 
 pm uninstall --user current com.android.stk  
-com.hihonor.imedia.sws
-com.microsoft.appmanager
+com.hihonor.imedia.sws				(ne deinstalirati)
 com.hihonor.medialibrary
 com.hihonor.mediadatacenter
 navigation ring
