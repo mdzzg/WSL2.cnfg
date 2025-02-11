@@ -8,7 +8,7 @@ adb shell
 adb tcpip 5555	(while being USB connected)
 adb pair 192.168.43.124:34363
 
-pm list packages|cut -d: -f2|grep hihonor
+pm list packages|cut -d: -f2|sort -u|grep hihonor
 pm list packages -d
 pm list packages | grep [package]
 
@@ -61,3 +61,30 @@ magic ring
 com.google.android.videos
 
 am start -a android.intent.action.VIEW -d "market://details?id=com.google.android.videos"
+
+com.hihonor.printservice
+# com.hihonor.msdp
+com.hihonor.screenrecorder
+# com.hihonor.trustcircle
+# com.hihonor.HnMultiScreenShot
+# com.hihonor.wifieapsimplmn
+# com.hihonor.ddmp
+com.google.android.apps.photos
+com.google.android.apps.photosgo		(for all users)
+com.google.android.overlay.gmsconfig.photos
+com.google.android.googlequicksearchbox
+com.google.android.marvin.talkback
+com.google.android.tts
+com.google.android.videos
+com.google.android.apps.tachyon
+com.google.android.printservice.recommendation
+com.google.android.apps.wellbeing
+com.google.android.health.connect.backuprestore
+com.android.hotwordenrollment.okgoogle
+com.google.android.feedback
+com.google.android.as		(Google Assistant)
+com.google.android.as.oss
+com.google.android.healthconnect.controller
+com.google.android.apps.photosgo (Gallery - do not remove)
+com.google.android.partnersetup
+com.google.android.apps.walletnfcrel
