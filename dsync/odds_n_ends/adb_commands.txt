@@ -70,7 +70,8 @@ com.hihonor.screenrecorder
 # com.hihonor.wifieapsimplmn
 # com.hihonor.ddmp
 com.google.android.apps.photos
-com.google.android.apps.photosgo		(for all users)
+com.google.android.apps.photosgo			(Google Gallery - do not remove)
+com.google.android.overlay.gmsconfig.photos	(IT has to do something with the Google Gallery - do not remove)
 com.google.android.overlay.gmsconfig.photos
 com.google.android.googlequicksearchbox
 com.google.android.marvin.talkback
@@ -88,3 +89,4 @@ com.google.android.healthconnect.controller
 com.google.android.apps.photosgo (Gallery - do not remove)
 com.google.android.partnersetup
 com.google.android.apps.walletnfcrel
+com.google.android.onetimeinitializer
