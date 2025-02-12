@@ -59,7 +59,11 @@ com.hihonor.android.projectmenu			(ne deinstalirati)
 com.android.systemui				(ne deinstalirati)
 com.hihonor.android.launcher			(--||--)
 com.huawei.aod					(always on display - ne deinstalirati)
-com.hihonor.desktop.explorer			(remove Service that is been used when you wanna use your phone as an operative system on a PC. Safe to remove - project screen)
+com.hihonor.desktop.explorer			(remove Service that is been used when you want to use your phone as an operative system on a PC. Safe to remove - project screen)
+com.google.android.setupwizard			(remove)
+com.hihonor.koBackup				(remove)
+com.android.providers.calendar			(remove)
+com.android.vpndialogs				(remove)
 com.hihonor.medialibrary
 com.hihonor.mediadatacenter
 navigation ring
