@@ -27,6 +27,8 @@ pm install-existing [package]
 
 reboot
 
+am start -a android.intent.action.VIEW -d "market://details?id=com.google.android.videos"
+
 com.android.dreams.basic                        (all users)
 com.hihonor.hiviewtunnel
 com.android.bookmarkprovider
@@ -46,43 +48,9 @@ com.hihonor.android.chr
 com.hihonor.calendar	
 com.hihonor.contacts
 com.microsoft.appmanager			(all users)
-
 com.android.egg
 com.android.dreams.phototable
-
-
-pm uninstall --user current com.android.stk  
-com.hihonor.imedia.sws				(ne deinstalirati)
-com.google.android.providers.media.module	(ne deinstalirati)
-com.hihonor.android.thememanager		(ne deinstalirati - ringtone/notifications tone)
-com.hihonor.android.projectmenu			(ne deinstalirati)
-com.android.systemui				(ne deinstalirati)
-com.hihonor.android.launcher			(--||--)
-com.huawei.aod					(always on display - ne deinstalirati)
-com.hihonor.desktop.explorer			(remove Service that is been used when you want to use your phone as an operative system on a PC. Safe to remove - project screen)
-com.google.android.setupwizard			(remove)
-com.hihonor.koBackup				(remove)
-com.android.providers.calendar			(remove)
-com.android.vpndialogs				(remove)
-com.hihonor.medialibrary
-com.hihonor.mediadatacenter
-navigation ring
-magic ring
-
-com.google.android.videos
-
-am start -a android.intent.action.VIEW -d "market://details?id=com.google.android.videos"
-
-com.hihonor.printservice
-# com.hihonor.msdp
-com.hihonor.screenrecorder
-# com.hihonor.trustcircle
-# com.hihonor.HnMultiScreenShot
-# com.hihonor.wifieapsimplmn
-# com.hihonor.ddmp
-com.google.android.apps.photos
-com.google.android.apps.photosgo			(Google Gallery - do not remove)
-com.google.android.overlay.gmsconfig.photos	(IT has to do something with the Google Gallery - do not remove)
+com.android.stk
 com.google.android.overlay.gmsconfig.photos
 com.google.android.googlequicksearchbox
 com.google.android.marvin.talkback
@@ -97,7 +65,43 @@ com.google.android.feedback
 com.google.android.as		(Google Assistant)
 com.google.android.as.oss
 com.google.android.healthconnect.controller
-com.google.android.apps.photosgo (Gallery - do not remove)
 com.google.android.partnersetup
-com.google.android.apps.walletnfcrel
+com.google.android.apps.walletnfcrel		(Google Wallet)
 com.google.android.onetimeinitializer
+--
+com.hihonor.imedia.sws				(ne deinstalirati)
+com.google.android.providers.media.module	(ne deinstalirati)
+com.hihonor.android.thememanager		(ne deinstalirati - ringtone/notifications tone)
+com.hihonor.android.projectmenu			(ne deinstalirati)
+com.android.systemui				(ne deinstalirati)
+com.hihonor.android.launcher			(--||--)
+com.huawei.aod					(always on display - ne deinstalirati)
+com.google.android.apps.photosgo		(Google Gallery - do not remove)
+com.google.android.overlay.gmsconfig.photos	(IT has to do something with the Google Gallery - do not remove)
+--
+com.hihonor.desktop.explorer			(remove Service that is been used when you want to use your phone as an operative system on a PC. Safe to remove - project screen onto PC)
+com.google.android.setupwizard			(remove)
+com.hihonor.koBackup				(remove)
+com.android.providers.calendar			(remove)
+com.android.vpndialogs				(remove)
+com.hihonor.medialibrary
+com.hihonor.mediadatacenter
+navigation ring
+magic ring
+com.google.android.videos			(Youtube)
+
+com.hihonor.printservice
+# com.hihonor.msdp
+com.hihonor.screenrecorder
+# com.hihonor.trustcircle
+# com.hihonor.HnMultiScreenShot
+# com.hihonor.wifieapsimplmn
+# com.hihonor.ddmp
+com.google.android.apps.photos
+
+com.android.carrierconfig com.google.android.cellbroadcastreceiver com.android.htmlviewer com.android.inputdevices com.android.managedprovisioning com.android.pacprocessor 
+
+
+
+
+
