@@ -91,14 +91,15 @@ navigation ring
 magic ring
 com.google.android.videos			(Youtube)
 
+com.google.android.apps.photos
 com.hihonor.printservice
-# com.hihonor.msdp
 com.hihonor.screenrecorder
+# com.hihonor.msdp
 # com.hihonor.trustcircle
 # com.hihonor.HnMultiScreenShot
 # com.hihonor.wifieapsimplmn
 # com.hihonor.ddmp
-com.google.android.apps.photos
+
 
 com.android.carrierconfig com.google.android.cellbroadcastreceiver com.android.htmlviewer com.android.inputdevices com.android.managedprovisioning com.android.pacprocessor
 
