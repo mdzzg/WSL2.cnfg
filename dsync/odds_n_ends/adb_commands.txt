@@ -53,6 +53,7 @@ com.android.dreams.phototable
 
 pm uninstall --user current com.android.stk  
 com.hihonor.imedia.sws				(ne deinstalirati)
+com.google.android.providers.media.module	(ne deinstalirati)
 com.hihonor.medialibrary
 com.hihonor.mediadatacenter
 navigation ring
