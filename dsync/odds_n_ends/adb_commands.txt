@@ -31,16 +31,16 @@ reboot -p shutdown
 am start -a android.intent.action.VIEW -d "market://details?id=com.google.android.videos"
 
 
-com.hihonor.imedia.sws				(ne deinstalirati)
+com.hihonor.imedia.sws				        (ne deinstalirati)
 com.google.android.providers.media.module	(ne deinstalirati)
-com.hihonor.android.thememanager		(ne deinstalirati - ringtone/notifications tone)
-com.hihonor.android.projectmenu			(ne deinstalirati)
-com.android.systemui				(ne deinstalirati)
-com.hihonor.android.launcher			(--||--)
-com.huawei.aod					(always on display - ne deinstalirati)
-com.google.android.apps.photosgo		(Google Gallery - do not remove)
+com.hihonor.android.thememanager		    (ne deinstalirati - ringtone/notifications tone)
+com.hihonor.android.projectmenu			    (ne deinstalirati)
+com.android.systemui				        (ne deinstalirati)
+com.hihonor.android.launcher			    (--||--)
+com.huawei.aod					            (always on display - ne deinstalirati)
+com.google.android.apps.photosgo		    (Google Gallery - do not remove)
 com.google.android.overlay.gmsconfig.photos	(IT has to do something with the Google Gallery - do not remove)
-com.android.inputdevices            (ne deinstalirati)
+com.android.inputdevices                    (ne deinstalirati - sys. crash)
 --
 com.android.dreams.basic                        (all users)
 com.hihonor.hiviewtunnel
@@ -68,40 +68,43 @@ com.google.android.overlay.gmsconfig.photos
 com.google.android.googlequicksearchbox
 com.google.android.marvin.talkback
 com.google.android.tts
-com.google.android.videos
 com.google.android.apps.tachyon
 com.google.android.printservice.recommendation
 com.google.android.apps.wellbeing
 com.google.android.health.connect.backuprestore
 com.android.hotwordenrollment.okgoogle
 com.google.android.feedback
-com.google.android.as		(Google Assistant)
-com.google.android.as.oss
 com.google.android.healthconnect.controller
 com.google.android.partnersetup
 com.google.android.apps.walletnfcrel		(Google Wallet)
 com.google.android.onetimeinitializer
 --
+### Propriatery
 com.hihonor.desktop.explorer			    (remove Service that is been used when you want to use your phone as an operative system on a PC. Safe to remove - project screen onto PC)
-com.google.android.setupwizard			    (remove)
 com.hihonor.koBackup				        (remove)
-com.android.providers.calendar			    (remove)
-com.android.vpndialogs				        (remove)
 com.hihonor.medialibrary
 com.hihonor.mediadatacenter
+com.hihonor.printservice
+com.android.providers.calendar			    (remove)
+com.hihonor.screenrecorder
+com.android.vpndialogs				        (remove)
 navigation ring
 magic ring
-com.google.android.videos			        (Google TV)
-
-com.google.android.apps.photos
-com.hihonor.printservice
-com.hihonor.screenrecorder
 # com.hihonor.msdp
 # com.hihonor.trustcircle
 # com.hihonor.HnMultiScreenShot
 # com.hihonor.wifieapsimplmn
 # com.hihonor.ddmp
 
+### de-Google
+com.google.android.as               		(Google Assistant)
+com.google.android.as.oss                   (Google assistant)
+com.google.android.videos			        (Google TV)
+com.google.android.setupwizard			    (remove)
+com.google.android.apps.photos
+
+
+com.android.dreams.basic com.hihonor.hiviewtunnel com.android.bookmarkprovider com.hihonor.phoneservice com.hihonor.android.pushagent com.microsoftsdk.crossdeviceservicebroker com.hihonor.hnpanpayservice com.hihonor.keychain com.android.keychain
 
 com.android.carrierconfig com.google.android.cellbroadcastreceiver com.android.htmlviewer  com.android.managedprovisioning com.android.pacprocessor com.android.apps.tag com.android.wallpaper.livepicker com.android.wallpaperbackup com.android.wallpapercropper com.google.android.devicelockcontroller com.google.android.gms.supervision com.hihonor.android.wfdft com.hihonor.hnasm
 
