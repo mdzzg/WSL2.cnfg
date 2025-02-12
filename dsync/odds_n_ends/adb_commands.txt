@@ -30,6 +30,17 @@ reboot -p shutdown
 
 am start -a android.intent.action.VIEW -d "market://details?id=com.google.android.videos"
 
+
+com.hihonor.imedia.sws				(ne deinstalirati)
+com.google.android.providers.media.module	(ne deinstalirati)
+com.hihonor.android.thememanager		(ne deinstalirati - ringtone/notifications tone)
+com.hihonor.android.projectmenu			(ne deinstalirati)
+com.android.systemui				(ne deinstalirati)
+com.hihonor.android.launcher			(--||--)
+com.huawei.aod					(always on display - ne deinstalirati)
+com.google.android.apps.photosgo		(Google Gallery - do not remove)
+com.google.android.overlay.gmsconfig.photos	(IT has to do something with the Google Gallery - do not remove)
+--
 com.android.dreams.basic                        (all users)
 com.hihonor.hiviewtunnel
 com.android.bookmarkprovider
@@ -43,7 +54,7 @@ com.hihonor.privatespace
 com.hihonor.contactscamcard                     (all users)
 com.hihonor.systemappsupdater	                (all users)
 com.hihonor.detectrepair                        (all users)
-com.hihonor.gameassistant	                (all users)
+com.hihonor.gameassistant	                    (all users)
 com.hihonor.search                              (all users)
 com.hihonor.android.chr	
 com.hihonor.calendar	
@@ -70,26 +81,16 @@ com.google.android.partnersetup
 com.google.android.apps.walletnfcrel		(Google Wallet)
 com.google.android.onetimeinitializer
 --
-com.hihonor.imedia.sws				(ne deinstalirati)
-com.google.android.providers.media.module	(ne deinstalirati)
-com.hihonor.android.thememanager		(ne deinstalirati - ringtone/notifications tone)
-com.hihonor.android.projectmenu			(ne deinstalirati)
-com.android.systemui				(ne deinstalirati)
-com.hihonor.android.launcher			(--||--)
-com.huawei.aod					(always on display - ne deinstalirati)
-com.google.android.apps.photosgo		(Google Gallery - do not remove)
-com.google.android.overlay.gmsconfig.photos	(IT has to do something with the Google Gallery - do not remove)
---
-com.hihonor.desktop.explorer			(remove Service that is been used when you want to use your phone as an operative system on a PC. Safe to remove - project screen onto PC)
-com.google.android.setupwizard			(remove)
-com.hihonor.koBackup				(remove)
-com.android.providers.calendar			(remove)
-com.android.vpndialogs				(remove)
+com.hihonor.desktop.explorer			    (remove Service that is been used when you want to use your phone as an operative system on a PC. Safe to remove - project screen onto PC)
+com.google.android.setupwizard			    (remove)
+com.hihonor.koBackup				        (remove)
+com.android.providers.calendar			    (remove)
+com.android.vpndialogs				        (remove)
 com.hihonor.medialibrary
 com.hihonor.mediadatacenter
 navigation ring
 magic ring
-com.google.android.videos			(Youtube)
+com.google.android.videos			        (Google TV)
 
 com.google.android.apps.photos
 com.hihonor.printservice
