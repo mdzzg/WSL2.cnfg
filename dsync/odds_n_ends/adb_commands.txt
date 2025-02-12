@@ -9,7 +9,7 @@ adb tcpip 5555	(while being USB connected)
 adb pair 192.168.43.124:34363
 
 pm list packages|cut -d: -f2|sort -u|grep hihonor
-pm list packages -d
+pm list packages -d|cut -d: -f2|sort -u
 pm list packages | grep [package]
 
 for pkg in [packages]; do pm disable-user --user current "$pkg"; done
@@ -26,6 +26,7 @@ pm enable [package]
 pm install-existing [package]
 
 reboot
+reboot -p shutdown
 
 am start -a android.intent.action.VIEW -d "market://details?id=com.google.android.videos"
 
@@ -99,7 +100,9 @@ com.hihonor.screenrecorder
 # com.hihonor.ddmp
 com.google.android.apps.photos
 
-com.android.carrierconfig com.google.android.cellbroadcastreceiver com.android.htmlviewer com.android.inputdevices com.android.managedprovisioning com.android.pacprocessor 
+com.android.carrierconfig com.google.android.cellbroadcastreceiver com.android.htmlviewer com.android.inputdevices com.android.managedprovisioning com.android.pacprocessor
+
+com.android.apps.tag com.android.wallpaper.livepicker com.android.wallpaperbackup com.android.wallpapercropper com.google.android.devicelockcontroller com.google.android.gms.supervision com.hihonor.android.wfdft com.hihonor.hnasm
 
 
 
