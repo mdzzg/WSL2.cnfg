@@ -40,6 +40,7 @@ com.hihonor.android.launcher			(--||--)
 com.huawei.aod					(always on display - ne deinstalirati)
 com.google.android.apps.photosgo		(Google Gallery - do not remove)
 com.google.android.overlay.gmsconfig.photos	(IT has to do something with the Google Gallery - do not remove)
+com.android.inputdevices            (ne deinstalirati)
 --
 com.android.dreams.basic                        (all users)
 com.hihonor.hiviewtunnel
@@ -102,9 +103,7 @@ com.hihonor.screenrecorder
 # com.hihonor.ddmp
 
 
-com.android.carrierconfig com.google.android.cellbroadcastreceiver com.android.htmlviewer com.android.inputdevices com.android.managedprovisioning com.android.pacprocessor
-
-com.android.apps.tag com.android.wallpaper.livepicker com.android.wallpaperbackup com.android.wallpapercropper com.google.android.devicelockcontroller com.google.android.gms.supervision com.hihonor.android.wfdft com.hihonor.hnasm
+com.android.carrierconfig com.google.android.cellbroadcastreceiver com.android.htmlviewer  com.android.managedprovisioning com.android.pacprocessor com.android.apps.tag com.android.wallpaper.livepicker com.android.wallpaperbackup com.android.wallpapercropper com.google.android.devicelockcontroller com.google.android.gms.supervision com.hihonor.android.wfdft com.hihonor.hnasm
 
 
 
