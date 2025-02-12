@@ -55,6 +55,7 @@ pm uninstall --user current com.android.stk
 com.hihonor.imedia.sws				(ne deinstalirati)
 com.google.android.providers.media.module	(ne deinstalirati)
 com.hihonor.android.thememanager		(ne deinstalirati - ringtone/notifications tone)
+com.hihonor.android.projectmenu			(ne deinstalirati)
 com.hihonor.medialibrary
 com.hihonor.mediadatacenter
 navigation ring
