@@ -30,26 +30,27 @@ reboot -p shutdown
 
 am start -a android.intent.action.VIEW -d "market://details?id=com.google.android.videos"
 
-### ne deinstalirati
+### DO NOT REMOVE!!!
 com.hihonor.imedia.sws				        
 com.google.android.providers.media.module	
-com.hihonor.android.thememanager		    (ringtone/notifications tone)
-com.hihonor.android.projectmenu			    
-com.android.systemui				        
-com.hihonor.android.launcher			    (--||--)
-com.hihonor.aod					            (always on display - ne deinstalirati)
-com.google.android.apps.photosgo		    (Google Gallery - do not remove)
-com.google.android.overlay.gmsconfig.photos	(IT has to do something with the Google Gallery - do not remove)
-com.android.inputdevices                    (ne deinstalirati - sys. crash)
+com.hihonor.android.thememanager		        (ringtone/notifications tone)
+com.hihonor.android.projectmenu                 (project screen onto PC)
+com.android.systemui				            
+com.hihonor.android.launcher			        (--||--)
+com.hihonor.aod					                (always on display - ne deinstalirati)
+com.google.android.apps.photosgo		        (Google Gallery - do not remove)
+com.google.android.overlay.gmsconfig.photos	    (IT has to do something with the Google Gallery - do not remove)
+com.android.inputdevices                        (ne deinstalirati - sys. crash)
 --
-com.hihonor.hnpanpayservice
-com.hihonor.keychain
 
 ### Android
 com.android.bookmarkprovider
+com.android.providers.calendar			        (remove)
 com.android.dreams.basic                        (all users)
 com.android.dreams.phototable
 com.android.egg
+com.android.hotwordenrollment.okgoogle          (Google Assistant)
+com.android.hotwordenrollment.xgoogle           (Google Assistant)
 com.android.keychain
 com.android.stk
 com.microsoft.appmanager            			(all users)
@@ -58,25 +59,26 @@ com.microsoftsdk.crossdeviceservicebroker
 
 ### Propriatery
 com.hihonor.android.pushagent                   (all users)
+com.hihonor.android.chr
+com.hihonor.calendar
+com.hihonor.contacts
+com.hihonor.contactscamcard                     (all users)
+com.hihonor.desktop.explorer			        (remove Service that is been used when you want to use your phone as an operative system on a PC. Safe to remove - project screen onto PC)
+com.hihonor.detectrepair                        (all users)
+com.hihonor.gameassistant	                    (all users)
 com.hihonor.hiviewtunnel
-com.hihonor.desktop.explorer			    (remove Service that is been used when you want to use your phone as an operative system on a PC. Safe to remove - project screen onto PC)
-com.hihonor.koBackup				        (remove)
+com.hihonor.hnpanpayservice
+com.hihonor.keychain
+com.hihonor.koBackup				            (remove)
 com.hihonor.medialibrary
 com.hihonor.mediadatacenter
 com.hihonor.phoneservice
 com.hihonor.printservice
-com.android.providers.calendar			    (remove)
-com.hihonor.screenrecorder
-com.android.vpndialogs				        (remove)
 com.hihonor.privatespace
-com.hihonor.contactscamcard                     (all users)
-com.hihonor.systemappsupdater	                (all users)
-com.hihonor.detectrepair                        (all users)
-com.hihonor.gameassistant	                    (all users)
+com.hihonor.screenrecorder
 com.hihonor.search                              (all users)
-com.hihonor.android.chr	
-com.hihonor.calendar	
-com.hihonor.contacts
+com.hihonor.systemappsupdater	                (all users)
+com.android.vpndialogs				            (remove)
 navigation ring
 magic ring
 # com.hihonor.msdp
@@ -87,26 +89,24 @@ magic ring
 --
 
 ### de-Google
-com.google.android.as               		(Google Assistant)
-com.google.android.as.oss                   (Google assistant)
-com.google.android.videos			        (Google TV)
-com.google.android.setupwizard			    (remove)
 com.google.android.apps.photos
-com.android.hotwordenrollment.okgoogle      (Google Assistant)
-com.android.hotwordenrollment.xgoogle       (Google Assistant)
+com.google.android.apps.tachyon                 (Google Meets)
+com.google.android.apps.walletnfcrel		    (Google Wallet)
+com.google.android.apps.wellbeing
+com.google.android.as               		    (Google Assistant)
+com.google.android.as.oss                       (Google assistant)
 com.google.android.feedback
+com.google.android.googlequicksearchbox         (Google Search)
 com.google.android.healthconnect.controller
-com.google.android.partnersetup
-com.google.android.apps.walletnfcrel		(Google Wallet)
+com.google.android.health.connect.backuprestore
+com.google.android.marvin.talkback
 com.google.android.onetimeinitializer
 com.google.android.overlay.gmsconfig.photos
-com.google.android.googlequicksearchbox
-com.google.android.marvin.talkback
-com.google.android.tts
-com.google.android.apps.tachyon
+com.google.android.partnersetup
 com.google.android.printservice.recommendation
-com.google.android.apps.wellbeing
-com.google.android.health.connect.backuprestore
+com.google.android.setupwizard			        (remove)
+com.google.android.tts                          (Google Text-to-Speech)
+com.google.android.videos			            (Google TV)
 
 
 com.android.dreams.basic com.hihonor.hiviewtunnel com.android.bookmarkprovider com.hihonor.phoneservice com.hihonor.android.pushagent com.microsoftsdk.crossdeviceservicebroker com.hihonor.hnpanpayservice com.hihonor.keychain com.android.keychain
