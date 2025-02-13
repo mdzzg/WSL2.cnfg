@@ -42,30 +42,28 @@ com.google.android.apps.photosgo		    (Google Gallery - do not remove)
 com.google.android.overlay.gmsconfig.photos	(IT has to do something with the Google Gallery - do not remove)
 com.android.inputdevices                    (ne deinstalirati - sys. crash)
 --
-com.android.dreams.basic                        (all users)
-com.hihonor.hiviewtunnel
-com.android.bookmarkprovider
-com.hihonor.phoneservice
-com.hihonor.android.pushagent                   (all users)
-com.microsoftsdk.crossdeviceservicebroker
 com.hihonor.hnpanpayservice
 com.hihonor.keychain
-com.android.keychain
-
-com.microsoft.appmanager			(all users)
-com.android.egg
-com.android.dreams.phototable
-com.android.stk
 
 ### Android
-
-
+com.android.bookmarkprovider
+com.android.dreams.basic                        (all users)
+com.android.dreams.phototable
+com.android.egg
+com.android.keychain
+com.android.stk
+com.microsoft.appmanager            			(all users)
+com.microsoftsdk.crossdeviceservicebroker
 --
+
 ### Propriatery
+com.hihonor.android.pushagent                   (all users)
+com.hihonor.hiviewtunnel
 com.hihonor.desktop.explorer			    (remove Service that is been used when you want to use your phone as an operative system on a PC. Safe to remove - project screen onto PC)
 com.hihonor.koBackup				        (remove)
 com.hihonor.medialibrary
 com.hihonor.mediadatacenter
+com.hihonor.phoneservice
 com.hihonor.printservice
 com.android.providers.calendar			    (remove)
 com.hihonor.screenrecorder
@@ -86,6 +84,7 @@ magic ring
 # com.hihonor.HnMultiScreenShot
 # com.hihonor.wifieapsimplmn
 # com.hihonor.ddmp
+--
 
 ### de-Google
 com.google.android.as               		(Google Assistant)
