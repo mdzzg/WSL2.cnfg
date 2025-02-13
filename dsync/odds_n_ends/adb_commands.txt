@@ -123,6 +123,7 @@ magic ring
 ### de-Google
 com.google.android.apps.accessibility.voiceaccess
 com.google.android.apps.photos
+com.google.android.apps.setupwizard.searchselector
 com.google.android.apps.tachyon                 (Google Meets)
 com.google.android.apps.walletnfcrel		    (Google Wallet)
 com.google.android.apps.wellbeing
