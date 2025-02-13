@@ -34,8 +34,9 @@ am start -a android.intent.action.VIEW -d "market://details?id=com.google.androi
 com.android.inputdevices                        (ne deinstalirati - sys. crash)
 com.android.systemui				            
 com.google.android.apps.photosgo		        (Google Gallery - do not remove)
+com.google.android.documentsui                    (Google Files)
 com.google.android.overlay.gmsconfig.photos	    (IT has to do something with the Google Gallery - do not remove)
-com.google.android.providers.media.module	
+com.google.android.providers.media.module
 com.hihonor.android.projectmenu                 (project screen onto PC)
 com.hihonor.android.launcher			        (--||--)
 com.hihonor.android.thememanager		        (ringtone/notifications tone)
@@ -87,7 +88,9 @@ com.hihonor.desktop.explorer			        (remove Service that is been used when yo
 com.hihonor.detectrepair                        (all users)
 com.hihonor.gameassistant	                    (all users)
 com.hihonor.hnasm
+com.hihonor.hncloud	                            (honor cloud service)
 com.hihonor.hiviewtunnel
+com.hihonor.hndockbar
 com.hihonor.hnpanpayservice
 com.hihonor.keychain
 com.hihonor.koBackup				            (remove)
