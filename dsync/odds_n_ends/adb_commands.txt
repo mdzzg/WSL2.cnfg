@@ -138,6 +138,7 @@ com.google.android.onetimeinitializer
 com.google.android.overlay.gmsconfig.photos
 com.google.android.partnersetup
 com.google.android.printservice.recommendation
+com.google.android.projection.gearhead          (Android Auto)
 com.google.android.setupwizard			        (remove)
 com.google.android.tts                          (Google Text-to-Speech)
 com.google.android.videos			            (Google TV)
