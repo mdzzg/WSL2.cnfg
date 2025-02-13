@@ -30,6 +30,9 @@ reboot -p shutdown
 
 am start -a android.intent.action.VIEW -d "market://details?id=com.google.android.videos"
 
+adb push example.txt /sdcard/Download/example.txt
+adb push "C:\Users\mario\Pictures\Saved Pictures\honor_background.png" /sdcard/Pictures/
+
 ### DO NOT REMOVE!!!
 com.android.inputdevices                        (ne deinstalirati - sys. crash)
 com.android.systemui				            
@@ -80,6 +83,7 @@ com.facebook.system
 com.hihonor.android.chr
 com.hihonor.android.pushagent                   (all users)
 com.hihonor.android.wfdft
+com.hihonor.autoinstallapkfrommcc
 com.hihonor.calendar
 com.hihonor.contacts
 com.hihonor.contactscamcard                     (all users)
