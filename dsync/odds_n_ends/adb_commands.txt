@@ -61,6 +61,7 @@ com.android.magicvoice
 com.android.managedprovisioning
 com.android.pacprocessor
 com.android.providers.calendar			        (remove)
+com.android.providers.partnerbookmarks
 com.android.keychain
 com.android.stk
 com.android.vpndialogs				            (remove)
@@ -69,6 +70,9 @@ com.android.wallpaperbackup
 com.android.wallpapercropper
 com.microsoft.appmanager            			(all users)
 com.microsoftsdk.crossdeviceservicebroker
+com.facebook.appmanager
+com.facebook.services
+com.facebook.system
 --
 
 ### Propriatery
@@ -87,8 +91,10 @@ com.hihonor.hiviewtunnel
 com.hihonor.hnpanpayservice
 com.hihonor.keychain
 com.hihonor.koBackup				            (remove)
+com.hihonor.livewallpaper.paradise
 com.hihonor.medialibrary
 com.hihonor.mediadatacenter
+com.hihonor.parallelspace
 com.hihonor.phoneservice
 com.hihonor.printservice
 com.hihonor.privatespace
@@ -105,6 +111,7 @@ magic ring
 --
 
 ### de-Google
+com.google.android.apps.accessibility.voiceaccess
 com.google.android.apps.photos
 com.google.android.apps.tachyon                 (Google Meets)
 com.google.android.apps.walletnfcrel		    (Google Wallet)
