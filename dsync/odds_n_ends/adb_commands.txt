@@ -46,7 +46,6 @@ com.hihonor.imedia.sws
 ### Android
 com.android.apps.tag
 com.android.backupconfirm                       Restore google settings with Google Backup restore function.
-com.android.bips
 com.android.bluetoothmidiservice
 com.android.bookmarkprovider
 com.android.carrierconfig
@@ -58,8 +57,7 @@ com.android.emergency
 com.android.hotwordenrollment.okgoogle          (Google Assistant)
 com.android.hotwordenrollment.xgoogle           (Google Assistant)
 com.android.htmlviewer
-com.android.magicsmoke
-com.android.managedprovisioning
+com.android.magicvoice
 com.android.managedprovisioning
 com.android.pacprocessor
 com.android.providers.calendar			        (remove)
