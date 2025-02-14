@@ -124,7 +124,7 @@ magic ring
 com.google.ar.core                                  (all users)
 com.google.android.apps.accessibility.voiceaccess
 com.google.android.apps.photos
-com.google.android.apps.restore                     (all users)
+com.google.android.apps.restore
 com.google.android.apps.setupwizard.searchselector
 com.google.android.apps.tachyon                     (Google Meets)
 com.google.android.apps.walletnfcrel		        (Google Wallet)
