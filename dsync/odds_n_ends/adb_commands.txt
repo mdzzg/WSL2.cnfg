@@ -33,6 +33,14 @@ am start -a android.intent.action.VIEW -d "market://details?id=com.google.androi
 adb push example.txt /sdcard/Download/example.txt
 adb push "C:\Users\mario\Pictures\Saved Pictures\honor_background.png" /sdcard/Pictures/
 
+adb pull device_path local_path
+
+screencap /sdcard/screenshot.png
+
+cat packages | awk '{$1=$1};1' | paste -sd ' ' -
+
+
+
 ### DO NOT REMOVE!!!
 com.android.inputdevices                        (ne deinstalirati - sys. crash)
 com.android.systemui				            
@@ -137,6 +145,7 @@ com.google.android.cellbroadcastreceiver
 com.google.android.feedback
 com.google.android.gm                               (all users - Gmail)
 # com.google.android.gms            		        (breaks the system)
+com.google.android.gms.location.history
 # com.google.android.gms.supervision		        (breaks the system)
 com.google.android.googlequicksearchbox             (Google Search)
 com.google.android.healthconnect.controller
