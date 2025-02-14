@@ -40,14 +40,9 @@ screencap /sdcard/screenshot.png
 cat packages | awk '{$1=$1};1' | paste -sd ' ' -
 
 
-
 ### DO NOT REMOVE!!!
 com.android.inputdevices                        (ne deinstalirati - sys. crash)
 com.android.systemui				            
-com.google.android.apps.photosgo		        (Google Gallery - do not remove)
-com.google.android.documentsui                  (Google Files)
-com.google.android.overlay.gmsconfig.photos	    (IT has to do something with the Google Gallery - do not remove)
-com.google.android.providers.media.module
 com.hihonor.android.projectmenu                 (project screen onto PC)
 com.hihonor.android.launcher			        (--||--)
 com.hihonor.android.thememanager		        (ringtone/notifications tone)
@@ -132,6 +127,7 @@ magic ring
 com.google.ar.core                                  (all users)
 com.google.android.apps.accessibility.voiceaccess
 com.google.android.apps.photos
+# com.google.android.apps.photosgo		        (Google Gallery - do not remove)
 com.google.android.apps.restore
 com.google.android.apps.setupwizard.searchselector
 com.google.android.apps.tachyon                     (Google Meets)
@@ -142,6 +138,7 @@ com.google.android.as               		        (Google Assistant)
 com.google.android.as.oss                           (Google assistant)
 com.google.android.cellbroadcastreceiver
 # com.google.android.devicelockcontroller	        (breaks the system)
+# com.google.android.documentsui                  (Google Files)
 com.google.android.feedback
 com.google.android.gm                               (all users - Gmail)
 # com.google.android.gms            		        (breaks the system)
@@ -152,10 +149,11 @@ com.google.android.healthconnect.controller
 com.google.android.health.connect.backuprestore
 com.google.android.marvin.talkback
 com.google.android.onetimeinitializer
-com.google.android.overlay.gmsconfig.photos
+# com.google.android.overlay.gmsconfig.photos	    (IT has to do something with the Google Gallery - do not remove)
 com.google.android.partnersetup
 com.google.android.printservice.recommendation
 com.google.android.projection.gearhead              (Android Auto)
+# com.google.android.providers.media.module
 com.google.android.setupwizard			            (remove)
 com.google.android.tts                              (Google Text-to-Speech)
 com.google.android.videos			                (Google TV)
