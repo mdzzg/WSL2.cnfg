@@ -121,7 +121,7 @@ magic ring
 --
 
 ### de-Google
-com.google.ar.core
+com.google.ar.core                                  (all users)
 com.google.android.apps.accessibility.voiceaccess
 com.google.android.apps.photos
 com.google.android.apps.restore                     (all users)
@@ -135,7 +135,8 @@ com.google.android.as.oss                           (Google assistant)
 com.google.android.cellbroadcastreceiver
 # com.google.android.devicelockcontroller	        (breaks the system)
 com.google.android.feedback
-com.google.android.gm                               (Gmail)
+com.google.android.gm                               (all users - Gmail)
+# com.google.android.gms            		        (breaks the system)
 # com.google.android.gms.supervision		        (breaks the system)
 com.google.android.googlequicksearchbox             (Google Search)
 com.google.android.healthconnect.controller
