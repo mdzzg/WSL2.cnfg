@@ -8,16 +8,19 @@ adb shell
 adb tcpip 5555	(while being USB connected)
 adb pair 192.168.43.124:34363
 
-pm list packages|cut -d: -f2|sort -u|grep [package]
-pm list packages -d|cut -d: -f2|sort -u
+pm list packages|cut -c 9-|sort|grep
+pm list packages -f|cut -d= -f2|sort|grep
+pm list packages -d|cut -d: -f2|sort
 pm list packages | grep [package]
 
-for pkg in [packages]; do pm disable-user --user current "$pkg"; done
-pm disable-user --user current [package]
 
+pm clear
 for pkg in [packages]; do pm uninstall "$pkg"; done
 for pkg in [packages]; do pm uninstall --user current "$pkg"; done
 pm uninstall [package]
+
+for pkg in [packages]; do pm disable-user --user current "$pkg"; done
+pm disable-user --user current [package]
 
 pm uninstall --user current [package]
 pm uninstall --user 0 com.honor.browser
@@ -103,6 +106,7 @@ com.hihonor.desktop.explorer			        (remove Service that is been used when yo
 com.hihonor.detectrepair                        (all users)
 com.hihonor.filemanager
 com.hihonor.gameassistant	                    (all users)
+com.hihonor.health
 com.hihonor.hnasm
 com.hihonor.hncloud	                            (honor cloud service)
 com.hihonor.HnMultiScreenShot
