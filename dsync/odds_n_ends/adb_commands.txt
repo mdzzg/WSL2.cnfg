@@ -74,6 +74,8 @@ com.android.phone (caution)
 com.android.providers.calendar			        (remove)
 # com.android.providers.contacts
 com.android.providers.partnerbookmarks
+com.android.se
+com.android.simappdialog
 com.android.stk
 # com.android.systemui
 com.android.vpndialogs				            (remove)
@@ -113,12 +115,12 @@ com.hihonor.medialibrary
 com.hihonor.mediadatacenter
 com.hihonor.parallelspace
 com.hihonor.phoneservice                        (all users - My Honor - obligatory removal)
+com.hihonor.photos
 com.hihonor.printservice
 com.hihonor.privatespace
 com.hihonor.screenrecorder
 com.hihonor.search                              (all users)
 com.hihonor.systemappsupdater	                (all users)
-com.hihonor.android.wfdft
 navigation ring
 magic ring
 # com.hihonor.msdp
