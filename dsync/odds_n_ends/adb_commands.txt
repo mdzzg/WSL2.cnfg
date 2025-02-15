@@ -78,6 +78,7 @@ com.android.wallpapercropper
 com.microsoft.appmanager            			(all users)
 com.microsoftsdk.crossdeviceservicebroker
 com.facebook.appmanager
+com.facebook.katana
 com.facebook.services
 com.facebook.system
 --
