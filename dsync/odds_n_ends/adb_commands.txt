@@ -40,14 +40,6 @@ screencap /sdcard/screenshot.png
 cat packages | awk '{$1=$1};1' | paste -sd ' ' -
 
 
-### DO NOT REMOVE!!!
-com.hihonor.android.projectmenu                 (project screen onto PC)
-com.hihonor.android.launcher			        (--||--)
-com.hihonor.android.thememanager		        (ringtone/notifications tone)
-com.hihonor.aod					                (always on display - ne deinstalirati)
-com.hihonor.imedia.sws
---
-
 ### Android
 com.android.apps.tag
 com.android.backupconfirm					Restore google settings with Google Backup restore function.
@@ -63,14 +55,14 @@ com.android.emergency
 com.android.hotwordenrollment.okgoogle          (Google Assistant)
 com.android.hotwordenrollment.xgoogle           (Google Assistant)
 com.android.htmlviewer
-com.android.incallui (caution)
+com.android.incallui							(caution)
 # com.android.inputdevices						(ne deinstalirati - sys. crash)
 com.android.keychain
 com.android.magicvoice
 com.android.managedprovisioning
 # com.android.mms.service						(ne deinstalirati - sms service)
 com.android.pacprocessor
-com.android.phone (caution)
+com.android.phone								(caution)
 com.android.providers.calendar			        (remove)
 # com.android.providers.contacts
 com.android.providers.partnerbookmarks
@@ -92,27 +84,37 @@ com.facebook.system
 
 ### Propriatery
 com.hihonor.android.chr
+# com.hihonor.android.launcher
+# com.hihonor.android.projectmenu               (project screen onto PC)
 com.hihonor.android.pushagent                   (all users)
+com.hihonor.android.mirrorshare
+# com.hihonor.android.thememanager		        (ringtone/notifications tone)
 com.hihonor.android.wfdft
+# com.hihonor.aod					            (always on display - ne deinstalirati)
 com.hihonor.autoinstallapkfrommcc
 com.hihonor.calendar
 com.hihonor.contacts
 com.hihonor.contactscamcard                     (all users)
+# com.hihonor.ddmp
 com.hihonor.deskclock
 com.hihonor.desktop.explorer			        (remove Service that is been used when you want to use your phone as an operative system on a PC. Safe to remove - project screen onto PC)
 com.hihonor.detectrepair                        (all users)
+com.hihonor.filemanager
 com.hihonor.gameassistant	                    (all users)
 com.hihonor.hnasm
 com.hihonor.hncloud	                            (honor cloud service)
+# com.hihonor.HnMultiScreenShot
 com.hihonor.hiviewtunnel
 com.hihonor.hndockbar
 com.hihonor.hnpanpayservice
+# com.hihonor.imedia.sws
 com.hihonor.keychain
 com.hihonor.koBackup				            (remove)
 com.hihonor.linktowindowsservice                (optional - link to a Windows machine)
 com.hihonor.livewallpaper.paradise
-com.hihonor.medialibrary
 com.hihonor.mediadatacenter
+com.hihonor.medialibrary
+# com.hihonor.msdp
 com.hihonor.parallelspace
 com.hihonor.phoneservice                        (all users - My Honor - obligatory removal)
 com.hihonor.photos
@@ -121,13 +123,10 @@ com.hihonor.privatespace
 com.hihonor.screenrecorder
 com.hihonor.search                              (all users)
 com.hihonor.systemappsupdater	                (all users)
+# com.hihonor.trustcircle
+# com.hihonor.wifieapsimplmn
 navigation ring
 magic ring
-# com.hihonor.msdp
-# com.hihonor.trustcircle
-# com.hihonor.HnMultiScreenShot
-# com.hihonor.wifieapsimplmn
-# com.hihonor.ddmp
 --
 
 ### de-Google
