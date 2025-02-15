@@ -38,7 +38,7 @@ adb pull device_path local_path
 screencap /sdcard/screenshot.png
 
 cat packages | awk '{$1=$1};1' | paste -sd ' ' -
-
+====================================================================================================
 
 
 ### Android
@@ -75,13 +75,13 @@ com.android.vpndialogs				            (remove)
 com.android.wallpaper.livepicker
 com.android.wallpaperbackup
 com.android.wallpapercropper
-com.microsoft.appmanager            			(all users)
-com.microsoftsdk.crossdeviceservicebroker
 com.facebook.appmanager
 com.facebook.katana
 com.facebook.services
 com.facebook.system
---
+com.microsoft.appmanager            			(all users)
+com.microsoftsdk.crossdeviceservicebroker
+====================================================================================================
 
 
 ### Propriatery
@@ -130,7 +130,7 @@ com.hihonor.systemappsupdater	                (all users)
 # com.hihonor.wifieapsimplmn
 navigation ring
 magic ring
---
+====================================================================================================
 
 
 ### de-Google
@@ -169,7 +169,7 @@ com.google.android.setupwizard			            (remove)
 com.google.android.tts                              (Google Text-to-Speech)
 com.google.android.videos			                (Google TV)
 com.google.android.youtube
-
+====================================================================================================
 
 com.android.dreams.basic com.hihonor.hiviewtunnel com.android.bookmarkprovider com.hihonor.phoneservice com.hihonor.android.pushagent com.microsoftsdk.crossdeviceservicebroker com.hihonor.hnpanpayservice com.hihonor.keychain com.android.keychain
 
