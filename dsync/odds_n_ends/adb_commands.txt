@@ -41,8 +41,6 @@ cat packages | awk '{$1=$1};1' | paste -sd ' ' -
 
 
 ### DO NOT REMOVE!!!
-com.android.inputdevices                        (ne deinstalirati - sys. crash)
-com.android.systemui				            
 com.hihonor.android.projectmenu                 (project screen onto PC)
 com.hihonor.android.launcher			        (--||--)
 com.hihonor.android.thememanager		        (ringtone/notifications tone)
@@ -52,11 +50,12 @@ com.hihonor.imedia.sws
 
 ### Android
 com.android.apps.tag
-com.android.backupconfirm                       Restore google settings with Google Backup restore function.
+com.android.backupconfirm					Restore google settings with Google Backup restore function.
 com.android.bluetoothmidiservice
 com.android.bookmarkprovider
 com.android.carrierconfig
 com.android.cellbroadcastreceiver
+com.android.cts.priv.ctsshimm
 com.android.dreams.basic                        (all users)
 com.android.dreams.phototable
 com.android.egg
@@ -64,13 +63,19 @@ com.android.emergency
 com.android.hotwordenrollment.okgoogle          (Google Assistant)
 com.android.hotwordenrollment.xgoogle           (Google Assistant)
 com.android.htmlviewer
+com.android.incallui
+# com.android.inputdevices						(ne deinstalirati - sys. crash)
+com.android.keychain
 com.android.magicvoice
 com.android.managedprovisioning
+# com.android.mms.service						(ne deinstalirati - sms service)
 com.android.pacprocessor
+com.android.phone
 com.android.providers.calendar			        (remove)
+# com.android.providers.contacts
 com.android.providers.partnerbookmarks
-com.android.keychain
 com.android.stk
+# com.android.systemui
 com.android.vpndialogs				            (remove)
 com.android.wallpaper.livepicker
 com.android.wallpaperbackup
