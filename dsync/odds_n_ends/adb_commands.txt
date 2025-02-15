@@ -47,7 +47,7 @@ com.hihonor.android.projectmenu                 (project screen onto PC)
 com.hihonor.android.launcher			        (--||--)
 com.hihonor.android.thememanager		        (ringtone/notifications tone)
 com.hihonor.aod					                (always on display - ne deinstalirati)
-com.hihonor.imedia.sws				        
+com.hihonor.imedia.sws
 --
 
 ### Android
@@ -57,7 +57,6 @@ com.android.bluetoothmidiservice
 com.android.bookmarkprovider
 com.android.carrierconfig
 com.android.cellbroadcastreceiver
-com.android.chrome
 com.android.dreams.basic                        (all users)
 com.android.dreams.phototable
 com.android.egg
@@ -124,10 +123,11 @@ magic ring
 --
 
 ### de-Google
+com.android.chrome
 com.google.ar.core                                  (all users)
 com.google.android.apps.accessibility.voiceaccess
 com.google.android.apps.photos
-# com.google.android.apps.photosgo		        (Google Gallery - do not remove)
+# com.google.android.apps.photosgo	    	        (Google Gallery - do not remove)
 com.google.android.apps.restore
 com.google.android.apps.setupwizard.searchselector
 com.google.android.apps.tachyon                     (Google Meets)
@@ -163,8 +163,3 @@ com.google.android.youtube
 com.android.dreams.basic com.hihonor.hiviewtunnel com.android.bookmarkprovider com.hihonor.phoneservice com.hihonor.android.pushagent com.microsoftsdk.crossdeviceservicebroker com.hihonor.hnpanpayservice com.hihonor.keychain com.android.keychain
 
 com.android.carrierconfig com.google.android.cellbroadcastreceiver com.android.htmlviewer com.android.managedprovisioning com.android.pacprocessor com.android.apps.tag com.android.wallpaper.livepicker com.android.wallpaperbackup com.android.wallpapercropper com.google.android.devicelockcontroller com.google.android.gms.supervision com.hihonor.android.wfdft com.hihonor.hnasm
-
-
-
-
-
