@@ -1,3 +1,4 @@
+com.hihonor.airlink
 com.hihonor.android.chr
 com.hihonor.android.FloatTasks
 com.hihonor.android.mirrorshare
@@ -10,12 +11,15 @@ com.hihonor.assistant
 com.hihonor.associateassistant
 com.hihonor.autoinstallapkfrommcc
 com.hihonor.awareness
+com.hihonor.bluetooth
 com.hihonor.brain
+com.hihonor.browserhomepage
 com.hihonor.calendar
 com.hihonor.compass
 com.hihonor.contacts
 com.hihonor.contactscamcard
 com.hihonor.contacts.sync
+com.hihonor.crossdeviceserviceshare
 com.hihonor.deskclock
 com.hihonor.desktop.explorer
 com.hihonor.detectrepair
@@ -25,6 +29,7 @@ com.hihonor.fido.uafclient
 com.hihonor.filemanager
 com.hihonor.gameassistant
 com.hihonor.gamecenter
+com.hihonor.game.kitserver
 com.hihonor.handoff
 com.hihonor.health
 com.hihonor.hiview
@@ -41,12 +46,16 @@ com.hihonor.hnpanpayservice
 com.hihonor.hnstartupguide
 com.hihonor.hnvideoplayer
 com.hihonor.iaware
+com.hihonor.iconnect
+com.hihonor.imedia.sws
 com.hihonor.keychain
 com.hihonor.koBackup
 com.hihonor.linktowindowsservice
 com.hihonor.livewallpaper.paradise
+com.hihonor.magazine
 com.hihonor.mediadatacenter
 com.hihonor.medialibrary
+com.hihonor.mediamaterial
 com.hihonor.mirror
 com.hihonor.numberidentity
 com.hihonor.parallelspace
@@ -63,3 +72,4 @@ com.hihonor.synergy
 com.hihonor.systemappsupdater
 com.hihonor.tips
 com.hihonor.videoeditor
+com.hihonor.wifieapsimplmn
