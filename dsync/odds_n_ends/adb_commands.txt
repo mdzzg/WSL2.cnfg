@@ -78,6 +78,7 @@ com.android.vpndialogs				            (remove)
 com.android.wallpaper.livepicker
 com.android.wallpaperbackup
 com.android.wallpapercropper
+com.amazon.appmanager
 com.facebook.appmanager
 com.facebook.katana
 com.facebook.services
