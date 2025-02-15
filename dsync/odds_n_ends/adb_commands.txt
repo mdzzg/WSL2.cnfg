@@ -40,6 +40,7 @@ screencap /sdcard/screenshot.png
 cat packages | awk '{$1=$1};1' | paste -sd ' ' -
 
 
+
 ### Android
 com.android.apps.tag
 com.android.backupconfirm					Restore google settings with Google Backup restore function.
@@ -82,6 +83,7 @@ com.facebook.services
 com.facebook.system
 --
 
+
 ### Propriatery
 com.hihonor.android.chr
 # com.hihonor.android.launcher
@@ -103,7 +105,7 @@ com.hihonor.filemanager
 com.hihonor.gameassistant	                    (all users)
 com.hihonor.hnasm
 com.hihonor.hncloud	                            (honor cloud service)
-# com.hihonor.HnMultiScreenShot
+com.hihonor.HnMultiScreenShot
 com.hihonor.hiviewtunnel
 com.hihonor.hndockbar
 com.hihonor.hnpanpayservice
@@ -114,6 +116,7 @@ com.hihonor.linktowindowsservice                (optional - link to a Windows ma
 com.hihonor.livewallpaper.paradise
 com.hihonor.mediadatacenter
 com.hihonor.medialibrary
+com.hihonor.mirror								(all users)
 # com.hihonor.msdp
 com.hihonor.parallelspace
 com.hihonor.phoneservice                        (all users - My Honor - obligatory removal)
@@ -128,6 +131,7 @@ com.hihonor.systemappsupdater	                (all users)
 navigation ring
 magic ring
 --
+
 
 ### de-Google
 com.android.chrome
