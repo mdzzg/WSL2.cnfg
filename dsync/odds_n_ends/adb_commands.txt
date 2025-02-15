@@ -63,14 +63,14 @@ com.android.emergency
 com.android.hotwordenrollment.okgoogle          (Google Assistant)
 com.android.hotwordenrollment.xgoogle           (Google Assistant)
 com.android.htmlviewer
-com.android.incallui
+com.android.incallui (caution)
 # com.android.inputdevices						(ne deinstalirati - sys. crash)
 com.android.keychain
 com.android.magicvoice
 com.android.managedprovisioning
 # com.android.mms.service						(ne deinstalirati - sms service)
 com.android.pacprocessor
-com.android.phone
+com.android.phone (caution)
 com.android.providers.calendar			        (remove)
 # com.android.providers.contacts
 com.android.providers.partnerbookmarks
