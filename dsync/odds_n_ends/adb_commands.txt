@@ -8,15 +8,15 @@ adb shell
 adb tcpip 5555	(while being USB connected)
 adb pair 192.168.43.124:34363
 
-pm list packages|cut -c 9-|sort|grep
 pm list packages -f|cut -d= -f2|sort|grep
+pm list packages|cut -c 9-|sort|grep
 pm list packages -d|cut -d: -f2|sort
 pm list packages | grep [package]
 
 
 pm clear
-for pkg in [packages]; do pm uninstall "$pkg"; done
-for pkg in [packages]; do pm uninstall --user current "$pkg"; done
+for APP in [packages]; do pm uninstall "$APP"; done
+for APP in [packages]; do pm uninstall --user current "$APP"; done
 pm uninstall [package]
 
 for pkg in [packages]; do pm disable-user --user current "$pkg"; done
