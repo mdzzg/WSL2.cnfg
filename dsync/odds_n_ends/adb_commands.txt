@@ -25,8 +25,8 @@ pm disable-user --user current [package]
 pm uninstall --user current [package]
 pm uninstall --user 0 com.honor.browser
 
+pm install-existing --user current [package]
 pm enable [package]
-pm install-existing [package]
 
 reboot
 reboot -p shutdown
@@ -70,6 +70,7 @@ com.android.pacprocessor
 com.android.phone								(caution)
 com.android.providers.calendar			        (remove)
 # com.android.providers.contacts
+# com.android.providers.blockednumber            (breaks task switching)
 com.android.providers.partnerbookmarks
 com.android.se
 com.android.simappdialog
