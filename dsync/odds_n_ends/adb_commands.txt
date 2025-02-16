@@ -14,7 +14,7 @@ pm list packages -d|cut -d: -f2|sort
 pm list packages | grep [package]
 
 
-pm clear
+for APP in ; do pm clear "$APP"; done
 for APP in [packages]; do pm uninstall "$APP"; done
 for APP in [packages]; do pm uninstall --user current "$APP"; done
 pm uninstall [package]
