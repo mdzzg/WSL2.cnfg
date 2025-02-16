@@ -186,5 +186,3 @@ com.google.android.tts                              (Google Text-to-Speech)
 com.google.android.videos			                (Google TV)
 com.google.android.youtube
 ====================================================================================================
-
-com.android.carrierconfig com.google.android.cellbroadcastreceiver com.android.htmlviewer com.android.managedprovisioning com.android.pacprocessor com.android.apps.tag com.android.wallpaper.livepicker com.android.wallpaperbackup com.android.wallpapercropper com.google.android.devicelockcontroller com.google.android.gms.supervision com.hihonor.android.wfdft com.hihonor.hnasm
