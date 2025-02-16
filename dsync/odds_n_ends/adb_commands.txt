@@ -98,7 +98,7 @@ ctrip.english
 
 ### Honor
 com.hihonor.android.chr
-# com.hihonor.android.launcher
+# com.hihonor.android.launcher                  (app responsible for system navigation)
 # com.hihonor.android.projectmenu               (project screen onto PC)
 com.hihonor.android.pushagent                   (all users)
 com.hihonor.android.mirrorshare
@@ -128,7 +128,7 @@ com.hihonor.koBackup				            (remove)
 com.hihonor.linktowindowsservice                (optional - link to a Windows machine)
 com.hihonor.livewallpaper.paradise
 com.hihonor.mediadatacenter
-# com.hihonor.medialibrary                      (keep - otherwise camera crashes)
+# com.hihonor.medialibrary                      (keep - otherwise camera crashes after taking a photo)
 com.hihonor.mirror								(all users)
 # com.hihonor.msdp
 com.hihonor.parallelspace
