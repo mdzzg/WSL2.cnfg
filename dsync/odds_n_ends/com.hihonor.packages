@@ -1,5 +1,6 @@
 com.hihonor.airlink
 com.hihonor.android.chr
+com.hihonor.android.clone
 com.hihonor.android.FloatTasks
 com.hihonor.android.mirrorshare
 com.hihonor.android.pushagent
@@ -35,6 +36,7 @@ com.hihonor.health
 com.hihonor.hiview
 com.hihonor.hiviewtunnel
 com.hihonor.hisight
+com.hihonor.android.hnaps
 com.hihonor.hnasm
 com.hihonor.hncloud
 com.hihonor.hndockbar
@@ -58,6 +60,7 @@ com.hihonor.mediadatacenter
 com.hihonor.medialibrary
 com.hihonor.mediamaterial
 com.hihonor.mirror
+com.hihonor.notepad
 com.hihonor.numberidentity
 com.hihonor.parallelspace
 com.hihonor.pcassistant
@@ -69,8 +72,10 @@ com.hihonor.remotepassword
 com.hihonor.screenrecorder
 com.hihonor.search
 com.hihonor.searchservice
+com.hihonor.soundrecorder
 com.hihonor.synergy
 com.hihonor.systemappsupdater
 com.hihonor.tips
+com.hihonor.trustcircle
 com.hihonor.videoeditor
 com.hihonor.wifieapsimplmn

@@ -45,6 +45,7 @@ cat packages | awk '{$1=$1};1' | paste -sd ' ' -
 
 
 ### Android
+cn.wps.moffice_eng
 com.android.apps.tag
 com.android.backupconfirm					Restore google settings with Google Backup restore function.
 com.android.bluetoothmidiservice
@@ -78,17 +79,24 @@ com.android.vpndialogs				            (remove)
 com.android.wallpaper.livepicker
 com.android.wallpaperbackup
 com.android.wallpapercropper
+com.alibaba.aliexpresshd
 com.amazon.appmanager
+com.amazon.mp3
+com.amazon.mShop.android.shopping
+com.booking
 com.facebook.appmanager
 com.facebook.katana
 com.facebook.services
 com.facebook.system
 com.microsoft.appmanager            			(all users)
 com.microsoftsdk.crossdeviceservicebroker
+com.netflix.mediaclient
+ctrip.english
+
 ====================================================================================================
 
 
-### Propriatery
+### Honor
 com.hihonor.android.chr
 # com.hihonor.android.launcher
 # com.hihonor.android.projectmenu               (project screen onto PC)
@@ -114,7 +122,7 @@ com.hihonor.HnMultiScreenShot
 com.hihonor.hiviewtunnel
 com.hihonor.hndockbar
 com.hihonor.hnpanpayservice
-# com.hihonor.imedia.sws
+com.hihonor.imedia.sws
 com.hihonor.keychain
 com.hihonor.koBackup				            (remove)
 com.hihonor.linktowindowsservice                (optional - link to a Windows machine)
