@@ -123,6 +123,7 @@ com.hihonor.HnMultiScreenShot
 com.hihonor.hiviewtunnel
 com.hihonor.hndockbar
 com.hihonor.hnpanpayservice
+com.hihonor.iaware                              (prioritizes apps to avoid slowdown - can be removed)
 com.hihonor.imedia.sws
 com.hihonor.keychain
 com.hihonor.koBackup				            (remove)
