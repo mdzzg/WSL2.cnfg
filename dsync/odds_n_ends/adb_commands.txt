@@ -128,7 +128,7 @@ com.hihonor.koBackup				            (remove)
 com.hihonor.linktowindowsservice                (optional - link to a Windows machine)
 com.hihonor.livewallpaper.paradise
 com.hihonor.mediadatacenter
-com.hihonor.medialibrary
+# com.hihonor.medialibrary                      (keep - otherwise camera crashes)
 com.hihonor.mirror								(all users)
 # com.hihonor.msdp
 com.hihonor.parallelspace
