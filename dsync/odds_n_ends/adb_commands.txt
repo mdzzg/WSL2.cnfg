@@ -116,34 +116,60 @@ com.hihonor.deskclock
 com.hihonor.desktop.explorer			        (remove Service that is been used when you want to use your phone as an operative system on a PC. Safe to remove - project screen onto PC)
 com.hihonor.detectrepair                        (all users)
 com.hihonor.filemanager
+
 com.hihonor.gameassistant	                    (all users)
+com.hihonor.gamecenter
+com.hihonor.game.kitserver
+com.hihonor.handoff
 com.hihonor.health
+com.hihonor.hiview
+com.hihonor.hiviewtunnel
+com.hihonor.hisight
 com.hihonor.hnasm
 com.hihonor.hncloud	                            (honor cloud service)
-com.hihonor.HnMultiScreenShot
-com.hihonor.hiviewtunnel
 com.hihonor.hndockbar
+com.hihonor.hnmediagraph
+com.hihonor.HnMultiScreenShot
+com.hihonor.hnmusicplayer
+com.hihonor.hnoffice
 com.hihonor.hnpanpayservice
+com.hihonor.hnstartupguide
+com.hihonor.hnvideoplayer
 com.hihonor.iaware                              (prioritizes apps to avoid slowdown - can be removed)
+com.hihonor.iconnect
 com.hihonor.imedia.sws
+com.hihonor.lens
 com.hihonor.keychain
 com.hihonor.koBackup				            (remove)
 com.hihonor.linktowindowsservice                (optional - link to a Windows machine)
 com.hihonor.livewallpaper.paradise
+com.hihonor.magazine
 com.hihonor.mediadatacenter
 # com.hihonor.medialibrary                      (keep - otherwise camera crashes after taking a photo)
+com.hihonor.mediamaterial
 com.hihonor.mirror								(all users)
+com.hihonor.mmitest
+com.hihonor.motionservice
 # com.hihonor.msdp
+com.hihonor.nearby
+com.hihonor.notepad
+com.hihonor.numberidentity
 com.hihonor.parallelspace
 com.hihonor.phoneservice                        (all users - My Honor - obligatory removal)
 com.hihonor.photos
 com.hihonor.printservice
 com.hihonor.privatespace
+com.hihonor.remotepassword
 com.hihonor.screenrecorder
 com.hihonor.search                              (all users)
+com.hihonor.searchservice
+com.hihonor.soundrecorder
+com.hihonor.synergy
 com.hihonor.systemappsupdater	                (all users)
-# com.hihonor.trustcircle
-# com.hihonor.wifieapsimplmn
+com.hihonor.tips
+com.hihonor.trustcircle
+com.hihonor.videoeditor
+com.hihonor.wifieapsimplmn
 navigation ring
 magic ring
 ====================================================================================================
