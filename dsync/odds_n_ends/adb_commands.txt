@@ -177,6 +177,7 @@ com.hihonor.nearby
 com.hihonor.notepad
 com.hihonor.numberidentity
 com.hihonor.parallelspace
+com.hihonor.pcassistant
 com.hihonor.phoneservice                        (all users - My Honor - obligatory removal)
 com.hihonor.photos
 com.hihonor.printservice
