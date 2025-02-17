@@ -45,6 +45,7 @@ cat packages | awk '{$1=$1};1' | paste -sd ' ' -
 
 
 ### Android
+
 cn.wps.moffice_eng
 com.android.apps.tag
 com.android.backupconfirm					Restore google settings with Google Backup restore function.
@@ -99,24 +100,45 @@ ctrip.english
 
 
 ### Honor
+
+com.hihonor.airlink
 com.hihonor.android.chr
+com.hihonor.android.clone
+com.hihonor.android.FloatTasks
+com.hihonor.android.hnaps
 # com.hihonor.android.launcher                  (app responsible for system navigation)
-# com.hihonor.android.projectmenu               (project screen onto PC)
-com.hihonor.android.pushagent                   (all users)
 com.hihonor.android.mirrorshare
+com.hihonor.android.projectmenu					(project screen onto PC)
+com.hihonor.android.pushagent                   (all users)
+com.hihonor.android.remotecontroller
 # com.hihonor.android.thememanager		        (ringtone/notifications tone)
+com.hihonor.android.totemweather
 com.hihonor.android.wfdft
 # com.hihonor.aod					            (always on display - ne deinstalirati)
+com.hihonor.appmarket
+com.hihonor.assistant
+com.hihonor.associateassistant
 com.hihonor.autoinstallapkfrommcc
+com.hihonor.awareness
+com.hihonor.behaviorauth
+com.hihonor.bluetooth
+com.hihonor.brain
+com.hihonor.browserhomepage
 com.hihonor.calendar
+com.hihonor.compass
 com.hihonor.contacts
 com.hihonor.contactscamcard                     (all users)
+com.hihonor.contacts.sync
+com.hihonor.crossdeviceserviceshare
 # com.hihonor.ddmp
 com.hihonor.deskclock
 com.hihonor.desktop.explorer			        (remove Service that is been used when you want to use your phone as an operative system on a PC. Safe to remove - project screen onto PC)
 com.hihonor.detectrepair                        (all users)
+com.hihonor.devicegroupmanage
+com.hihonor.dsdscardmanager
+com.hihonor.email
+com.hihonor.fido.uafclient
 com.hihonor.filemanager
-
 com.hihonor.gameassistant	                    (all users)
 com.hihonor.gamecenter
 com.hihonor.game.kitserver
@@ -176,6 +198,7 @@ magic ring
 
 
 ### de-Google
+
 com.android.chrome
 com.google.ar.core                                  (all users)
 com.google.android.apps.accessibility.voiceaccess
