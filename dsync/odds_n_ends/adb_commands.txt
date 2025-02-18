@@ -8,6 +8,7 @@ adb shell
 adb tcpip 55555	(while being USB connected)
 adb pair 192.168.43.124:34363
 
+pm list packages|cut -d: -f2|sort
 pm list packages -f|cut -d= -f2|sort|grep
 pm list packages|cut -c 9-|sort|grep
 pm list packages -d|cut -d: -f2|sort
