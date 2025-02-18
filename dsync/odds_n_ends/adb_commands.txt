@@ -5,7 +5,7 @@ adb connect 10.37.3.60:55555        (Windows)
 adb devices
 adb shell
 
-adb tcpip 5555	(while being USB connected)
+adb tcpip 55555	(while being USB connected)
 adb pair 192.168.43.124:34363
 
 pm list packages -f|cut -d= -f2|sort|grep
@@ -47,8 +47,12 @@ cat packages | awk '{$1=$1};1' | paste -sd ' ' -
 ### Android
 
 cn.wps.moffice_eng
+com.alibaba.aliexpresshd
+com.amazon.appmanager
+com.amazon.mShop.android.shopping
+com.amazon.mp3
 com.android.apps.tag
-com.android.backupconfirm					Restore google settings with Google Backup restore function.
+com.android.backupconfirm					    Restore google settings with Google Backup restore function.
 com.android.bluetoothmidiservice
 com.android.bookmarkprovider
 com.android.carrierconfig
