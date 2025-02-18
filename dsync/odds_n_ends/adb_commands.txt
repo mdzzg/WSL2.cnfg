@@ -72,7 +72,7 @@ com.android.magicvoice
 com.android.managedprovisioning
 # com.android.mms.service						(ne deinstalirati - sms service)
 com.android.pacprocessor
-com.android.phone								(caution)
+# com.android.phone								(DO NOT remove - breaks mobile data)
 # com.android.providers.blockednumber           (breaks task switching)
 com.android.providers.calendar
 # com.android.providers.contacts
