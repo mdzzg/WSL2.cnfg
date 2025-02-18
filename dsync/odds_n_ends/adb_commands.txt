@@ -180,6 +180,7 @@ com.hihonor.parallelspace
 com.hihonor.pcassistant
 com.hihonor.phoneservice                        (all users - My Honor - obligatory removal)
 com.hihonor.photos
+# com.hihonor.powergenie                        (Power management app. DO NOT remove this.)
 com.hihonor.printservice
 com.hihonor.privatespace
 com.hihonor.remotepassword
@@ -189,6 +190,7 @@ com.hihonor.searchservice
 com.hihonor.soundrecorder
 com.hihonor.synergy
 com.hihonor.systemappsupdater	                (all users)
+# com.hihonor.systemmanager                     (system manager - do not remove)
 com.hihonor.tips
 com.hihonor.trustcircle
 com.hihonor.videoeditor
