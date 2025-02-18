@@ -1,172 +1,172 @@
 ###     Installed packages
 
-     1  android
-     2  androidhnext
-     3  apps.syrupy.fullbatterychargealarm
-     4  com.android.bluetooth
-     5  com.android.calllogbackup
-     6  com.android.cameraextensions
-     7  com.android.cellbroadcastreceiver.overlay
-     8  com.android.certinstaller
-     9  com.android.companiondevicemanager
-    10  com.android.credentialmanager
-    11  com.android.cts.ctsshim
-    12  com.android.cts.priv.ctsshim
-    13  com.android.dynsystem
-    14  com.android.externalstorage
-    15  com.android.frameworkres.overlay
-    16  com.android.frameworkreshnext.overlay
-    17  com.android.imsserviceentitlement
-    18  com.android.inputdevices
-    19  com.android.intentresolver
-    20  com.android.internal.systemui.navbar.gestural
-    21  com.android.internal.systemui.navbar.hide
-    22  com.android.internal.systemui.navbar.threebutton
-    23  com.android.localtransport
-    24  com.android.location.fused
-    25  com.android.mms.service
-    26  com.android.mtp
-    27  com.android.networkstack.overlay
-    28  com.android.networkstack.tethering.overlay
-    29  com.android.nfc
-    30  com.android.ons
-    31  com.android.phone
-    32  com.android.printspooler
-    33  com.android.providers.blockednumber
-    34  com.android.providers.contacts
-    35  com.android.providers.downloads
-    36  com.android.providers.downloads.ui
-    37  com.android.providers.settings
-    38  com.android.providers.telephony
-    39  com.android.providers.userdictionary
-    40  com.android.proxyhandler
-    41  com.android.rkpdapp
-    42  com.android.server.telecom
-    43  com.android.settings
-    44  com.android.sharedstoragebackup
-    45  com.android.shell
-    46  com.android.statementservice
-    47  com.android.systemui
-    48  com.android.systemui.overlay
-    49  com.android.vending
-    50  com.android.virtualmachine.res
-    51  com.android.wifi.resources.overlay
-    52  com.brave.browser
-    53  com.google.android.adservices.api
-    54  com.google.android.apps.docs
-    55  com.google.android.apps.maps
-    56  com.google.android.apps.messaging
-    57  com.google.android.appsearch.apk
-    58  com.google.android.captiveportallogin
-    59  com.google.android.cellbroadcastservice
-    60  com.google.android.configupdater
-    61  com.google.android.connectivity.resources
-    62  com.google.android.devicelockcontroller
-    63  com.google.android.dialer
-    64  com.google.android.documentsui
-    65  com.google.android.ext.services
-    66  com.google.android.ext.shared
-    67  com.google.android.federatedcompute
-    68  com.google.android.gms
-    69  com.google.android.gms.supervision
-    70  com.google.android.gsf
-    71  com.google.android.hotspot2.osulogin
-    72  com.google.android.ims
-    73  com.google.android.modulemetadata
-    74  com.google.android.networkstack
-    75  com.google.android.networkstack.tethering
-    76  com.google.android.ondevicepersonalization.services
-    77  com.google.android.overlay.gmsconfig.asi
-    78  com.google.android.overlay.gmsconfig.common
-    79  com.google.android.overlay.gmsconfig.gsa
-    80  com.google.android.overlay.gmsconfig.searchselector
-    81  com.google.android.overlay.modules.captiveportallogin.forframework
-    82  com.google.android.overlay.modules.documentsui
-    83  com.google.android.overlay.modules.ext.services
-    84  com.google.android.overlay.modules.healthfitness.forframework
-    85  com.google.android.overlay.modules.modulemetadata.forframework
-    86  com.google.android.overlay.modules.permissioncontroller
-    87  com.google.android.overlay.modules.permissioncontroller.forframework
-    88  com.google.android.packageinstaller
-    89  com.google.android.packageinstaller.overlay
-    90  com.google.android.permissioncontroller
-    91  com.google.android.photopicker
-    92  com.google.android.providers.media.module
-    93  com.google.android.safetycenter.resources
-    94  com.google.android.safetycore
-    95  com.google.android.sdksandbox
-    96  com.google.android.server.deviceconfig.resources
-    97  com.google.android.syncadapters.calendar
-    98  com.google.android.webview
-    99  com.google.android.wifi.dialog
-   100  com.google.android.wifi.resources
-   101  com.google.mainline.adservices
-   102  com.google.mainline.telemetry
-   103  com.hihonor.aipluginengine
-   104  com.hihonor.android.hnaps
-   105  com.hihonor.android.honorsuite
-   106  com.hihonor.android.internal.app
-   107  com.hihonor.android.launcher
-   108  com.hihonor.android.magicx.media.audioengine
-   109  com.hihonor.android.thememanager
-   110  com.hihonor.aod
-   111  com.hihonor.assetsync
-   112  com.hihonor.assetsyncservice
-   113  com.hihonor.audioaccessorymanager
-   114  com.hihonor.calculator
-   115  com.hihonor.camera
-   116  com.hihonor.cameraextension
-   117  com.hihonor.carrierlocation
-   118  com.hihonor.coauthservice
-   119  com.hihonor.collectcenter
-   120  com.hihonor.controlcenter
-   121  com.hihonor.cooperatedconfig
-   122  com.hihonor.ddmp
-   123  com.hihonor.desktop.systemui
-   124  com.hihonor.deviceauth
-   125  com.hihonor.dmsdp
-   126  com.hihonor.esimmanager
-   127  com.hihonor.esimservice
-   128  com.hihonor.euicc.overlay
-   129  com.hihonor.featurelayer.sharedfeature.stylus
-   130  com.hihonor.id
-   131  com.hihonor.koBackup
-   132  com.hihonor.lbs
-   133  com.hihonor.magicvoice
-   134  com.hihonor.mcs.media.avfoundation
-   135  com.hihonor.medialibrary
-   136  com.hihonor.mediaprocessor
-   137  com.hihonor.msdp
-   138  com.hihonor.omacp
-   139  com.hihonor.ouc
-   140  com.hihonor.permissioncontroller.overlay
-   141  com.hihonor.powergenie
-   142  com.hihonor.safetycenter.resources.overlay
-   143  com.hihonor.safetycenter.styles.overlay
-   144  com.hihonor.securitypluginbase
-   145  com.hihonor.securityserver
-   146  com.hihonor.smartshot
-   147  com.hihonor.systemmanager
-   148  com.hihonor.systemserver
-   149  com.hihonor.virtualinput
-   150  com.hihonor.visionengine
-   151  com.honor.gpudrivers
-   152  com.jgba.appinspector
-   153  com.mixplorer
-   154  com.mixplorer.addon.pdf
-   155  com.qti.dpmserviceapp
-   156  com.qti.qcc
-   157  com.qualcomm.location
-   158  com.qualcomm.qcrilmsgtunnel
-   159  com.qualcomm.qti.cne
-   160  com.qualcomm.qti.telephonyservice
-   161  com.qualcomm.timeservice
-   162  com.revolut.revolut
-   163  com.swiftkey.swiftkeyconfigurator
-   164  com.touchtype.swiftkey
-   165  org.codeaurora.ims
-   166  vendor.qti.hardware.cacert.server
-   167  vendor.qti.iwlan
+android
+androidhnext
+apps.syrupy.fullbatterychargealarm
+com.android.bluetooth
+com.android.calllogbackup
+com.android.cameraextensions
+com.android.cellbroadcastreceiver.overlay
+com.android.certinstaller
+com.android.companiondevicemanager
+com.android.credentialmanager
+com.android.cts.ctsshim
+com.android.cts.priv.ctsshim
+com.android.dynsystem
+com.android.externalstorage
+com.android.frameworkres.overlay
+com.android.frameworkreshnext.overlay
+com.android.imsserviceentitlement
+com.android.inputdevices
+com.android.intentresolver
+com.android.internal.systemui.navbar.gestural
+com.android.internal.systemui.navbar.hide
+com.android.internal.systemui.navbar.threebutton
+com.android.localtransport
+com.android.location.fused
+com.android.mms.service
+com.android.mtp
+com.android.networkstack.overlay
+com.android.networkstack.tethering.overlay
+com.android.nfc
+com.android.ons
+com.android.phone
+com.android.printspooler
+com.android.providers.blockednumber
+com.android.providers.contacts
+com.android.providers.downloads
+com.android.providers.downloads.ui
+com.android.providers.settings
+com.android.providers.telephony
+com.android.providers.userdictionary
+com.android.proxyhandler
+com.android.rkpdapp
+com.android.server.telecom
+com.android.settings
+com.android.sharedstoragebackup
+com.android.shell
+com.android.statementservice
+com.android.systemui
+com.android.systemui.overlay
+com.android.vending
+com.android.virtualmachine.res
+com.android.wifi.resources.overlay
+com.brave.browser
+com.google.android.adservices.api
+com.google.android.apps.docs
+com.google.android.apps.maps
+com.google.android.apps.messaging
+com.google.android.appsearch.apk
+com.google.android.captiveportallogin
+com.google.android.cellbroadcastservice
+com.google.android.configupdater
+com.google.android.connectivity.resources
+com.google.android.devicelockcontroller
+com.google.android.dialer
+com.google.android.documentsui
+com.google.android.ext.services
+com.google.android.ext.shared
+com.google.android.federatedcompute
+com.google.android.gms
+com.google.android.gms.supervision
+com.google.android.gsf
+com.google.android.hotspot2.osulogin
+com.google.android.ims
+com.google.android.modulemetadata
+com.google.android.networkstack
+com.google.android.networkstack.tethering
+com.google.android.ondevicepersonalization.services
+com.google.android.overlay.gmsconfig.asi
+com.google.android.overlay.gmsconfig.common
+com.google.android.overlay.gmsconfig.gsa
+com.google.android.overlay.gmsconfig.searchselector
+com.google.android.overlay.modules.captiveportallogin.forframework
+com.google.android.overlay.modules.documentsui
+com.google.android.overlay.modules.ext.services
+com.google.android.overlay.modules.healthfitness.forframework
+com.google.android.overlay.modules.modulemetadata.forframework
+com.google.android.overlay.modules.permissioncontroller
+com.google.android.overlay.modules.permissioncontroller.forframework
+com.google.android.packageinstaller
+com.google.android.packageinstaller.overlay
+com.google.android.permissioncontroller
+com.google.android.photopicker
+com.google.android.providers.media.module
+com.google.android.safetycenter.resources
+com.google.android.safetycore
+com.google.android.sdksandbox
+com.google.android.server.deviceconfig.resources
+com.google.android.syncadapters.calendar
+com.google.android.webview
+com.google.android.wifi.dialog
+com.google.android.wifi.resources
+com.google.mainline.adservices
+com.google.mainline.telemetry
+com.hihonor.aipluginengine
+com.hihonor.android.hnaps
+com.hihonor.android.honorsuite
+com.hihonor.android.internal.app
+com.hihonor.android.launcher
+com.hihonor.android.magicx.media.audioengine
+com.hihonor.android.thememanager
+com.hihonor.aod
+com.hihonor.assetsync
+com.hihonor.assetsyncservice
+com.hihonor.audioaccessorymanager
+com.hihonor.calculator
+com.hihonor.camera
+com.hihonor.cameraextension
+com.hihonor.carrierlocation
+com.hihonor.coauthservice
+com.hihonor.collectcenter
+com.hihonor.controlcenter
+com.hihonor.cooperatedconfig
+com.hihonor.ddmp
+com.hihonor.desktop.systemui
+com.hihonor.deviceauth
+com.hihonor.dmsdp
+com.hihonor.esimmanager
+com.hihonor.esimservice
+com.hihonor.euicc.overlay
+com.hihonor.featurelayer.sharedfeature.stylus
+com.hihonor.id
+com.hihonor.koBackup
+com.hihonor.lbs
+com.hihonor.magicvoice
+com.hihonor.mcs.media.avfoundation
+com.hihonor.medialibrary
+com.hihonor.mediaprocessor
+com.hihonor.msdp
+com.hihonor.omacp
+com.hihonor.ouc
+com.hihonor.permissioncontroller.overlay
+com.hihonor.powergenie
+com.hihonor.safetycenter.resources.overlay
+com.hihonor.safetycenter.styles.overlay
+com.hihonor.securitypluginbase
+com.hihonor.securityserver
+com.hihonor.smartshot
+com.hihonor.systemmanager
+com.hihonor.systemserver
+com.hihonor.virtualinput
+com.hihonor.visionengine
+com.honor.gpudrivers
+com.jgba.appinspector
+com.mixplorer
+com.mixplorer.addon.pdf
+com.qti.dpmserviceapp
+com.qti.qcc
+com.qualcomm.location
+com.qualcomm.qcrilmsgtunnel
+com.qualcomm.qti.cne
+com.qualcomm.qti.telephonyservice
+com.qualcomm.timeservice
+com.revolut.revolut
+com.swiftkey.swiftkeyconfigurator
+com.touchtype.swiftkey
+org.codeaurora.ims
+vendor.qti.hardware.cacert.server
+vendor.qti.iwlan
 
 
 ###     Disabled packages
