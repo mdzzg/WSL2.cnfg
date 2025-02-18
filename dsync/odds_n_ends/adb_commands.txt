@@ -77,7 +77,7 @@ com.android.phone								(caution)
 com.android.providers.calendar
 # com.android.providers.contacts
 com.android.providers.partnerbookmarks
-# com.android.providers.userdictionary          (breaks VoLITE)
+# com.android.providers.userdictionary          (breaks VoLITE - DO NOT remove)
 com.android.se
 com.android.simappdialog
 com.android.stk
