@@ -73,29 +73,25 @@ com.android.managedprovisioning
 # com.android.mms.service						(ne deinstalirati - sms service)
 com.android.pacprocessor
 com.android.phone								(caution)
-com.android.providers.calendar			        (remove)
-# com.android.providers.contacts
 # com.android.providers.blockednumber           (breaks task switching)
+com.android.providers.calendar
+# com.android.providers.contacts
 com.android.providers.partnerbookmarks
 # com.android.providers.userdictionary          (breaks VoLITE)
 com.android.se
 com.android.simappdialog
 com.android.stk
 # com.android.systemui
-com.android.vpndialogs				            (remove)
+com.android.vpndialogs
 com.android.wallpaper.livepicker
 com.android.wallpaperbackup
 com.android.wallpapercropper
-com.alibaba.aliexpresshd
-com.amazon.appmanager
-com.amazon.mp3
-com.amazon.mShop.android.shopping
 com.booking
 com.facebook.appmanager
 com.facebook.katana
 com.facebook.services
 com.facebook.system
-com.microsoft.appmanager            			(all users)
+com.microsoft.appmanager
 com.microsoftsdk.crossdeviceservicebroker
 com.netflix.mediaclient
 ctrip.english
@@ -109,7 +105,7 @@ com.hihonor.airlink
 com.hihonor.android.chr
 com.hihonor.android.clone
 com.hihonor.android.FloatTasks
-com.hihonor.android.hnaps
+# com.hihonor.android.hnaps                     (Advanced Power Saving feature. DO NOT remove this.)
 # com.hihonor.android.launcher                  (app responsible for system navigation)
 com.hihonor.android.mirrorshare
 com.hihonor.android.projectmenu					(project screen onto PC)
