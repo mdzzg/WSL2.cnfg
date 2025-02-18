@@ -218,7 +218,9 @@ com.google.android.as               		        (Google Assistant)
 com.google.android.as.oss                           (Google assistant)
 com.google.android.cellbroadcastreceiver
 # com.google.android.devicelockcontroller	        (breaks the system)
-# com.google.android.documentsui                  (Google Files)
+com.google.android.documentsui                      (Google Files)
+com.google.android.ext.services
+com.google.android.ext.shared
 com.google.android.feedback
 com.google.android.gm                               (all users - Gmail)
 # com.google.android.gms            		        (breaks the system)
