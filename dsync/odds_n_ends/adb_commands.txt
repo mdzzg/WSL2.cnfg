@@ -205,6 +205,7 @@ magic ring
 com.android.chrome
 com.google.ar.core                                  (all users)
 com.google.android.apps.accessibility.voiceaccess
+# com.google.android.apps.docs                      (Google Drive)
 com.google.android.apps.photos
 # com.google.android.apps.photosgo	    	        (Google Gallery - do not remove)
 com.google.android.apps.restore
