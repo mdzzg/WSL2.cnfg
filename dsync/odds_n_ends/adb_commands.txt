@@ -107,7 +107,7 @@ com.hihonor.android.clone
 com.hihonor.android.FloatTasks
 com.hihonor.android.instantshare
 # com.hihonor.android.hnaps                     (Advanced Power Saving feature. DO NOT remove this.)
-# com.hihonor.android.launcher                  (app responsible for system navigation)
+# com.hihonor.android.launcher                  (DO NOT REMOVE - app responsible for system navigation)
 com.hihonor.android.mirrorshare
 com.hihonor.android.projectmenu					(project screen onto PC)
 com.hihonor.android.pushagent                   (all users)

@@ -23,6 +23,7 @@ com.android.magicvoice
 com.android.managedprovisioning
 com.android.pacprocessor
 com.android.phone
+com.android.printspooler
 com.android.providers.calendar
 com.android.providers.partnerbookmarks
 com.android.se
