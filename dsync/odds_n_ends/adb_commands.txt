@@ -167,6 +167,7 @@ com.hihonor.koBackup				            (remove)
 com.hihonor.linktowindowsservice                (optional - link to a Windows machine)
 com.hihonor.livewallpaper.paradise
 com.hihonor.magazine
+com.hihonor.magicvoice                          (DISABLE - do not remove)
 com.hihonor.mediadatacenter
 # com.hihonor.medialibrary                      (keep - otherwise camera crashes after taking a photo)
 com.hihonor.mediamaterial
