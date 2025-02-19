@@ -31,7 +31,6 @@ com.android.networkstack.tethering.overlay
 com.android.nfc
 com.android.ons
 com.android.phone
-com.android.printspooler
 com.android.providers.blockednumber
 com.android.providers.contacts
 com.android.providers.downloads
@@ -51,6 +50,7 @@ com.android.systemui.overlay
 com.android.vending
 com.android.virtualmachine.res
 com.android.wifi.resources.overlay
+com.beforesoft.launcher
 com.brave.browser
 com.google.android.adservices.api
 com.google.android.apps.docs
@@ -78,6 +78,7 @@ com.google.android.ondevicepersonalization.services
 com.google.android.overlay.gmsconfig.asi
 com.google.android.overlay.gmsconfig.common
 com.google.android.overlay.gmsconfig.gsa
+com.google.android.overlay.gmsconfig.photos
 com.google.android.overlay.gmsconfig.searchselector
 com.google.android.overlay.modules.captiveportallogin.forframework
 com.google.android.overlay.modules.documentsui
@@ -128,7 +129,6 @@ com.hihonor.esimservice
 com.hihonor.euicc.overlay
 com.hihonor.featurelayer.sharedfeature.stylus
 com.hihonor.id
-com.hihonor.koBackup
 com.hihonor.lbs
 com.hihonor.magicvoice
 com.hihonor.mcs.media.avfoundation
