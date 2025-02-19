@@ -3,6 +3,7 @@ com.hihonor.android.chr
 com.hihonor.android.clone
 com.hihonor.android.FloatTasks
 com.hihonor.android.instantshare
+com.hihonor.android.launcher
 com.hihonor.android.hnaps
 com.hihonor.android.mirrorshare
 com.hihonor.android.projectmenu
@@ -73,6 +74,7 @@ com.hihonor.parallelspace
 com.hihonor.pcassistant
 com.hihonor.phoneservice
 com.hihonor.photos
+com.hihonor.powergenie
 com.hihonor.printservice
 com.hihonor.privatespace
 com.hihonor.remotepassword
