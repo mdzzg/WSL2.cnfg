@@ -106,7 +106,7 @@ com.hihonor.android.chr
 com.hihonor.android.clone
 com.hihonor.android.FloatTasks
 com.hihonor.android.instantshare
-# com.hihonor.android.hnaps                     (Advanced Power Saving feature. DO NOT remove this.)
+# com.hihonor.android.hnaps                     (cannot be removed - system protected)
 com.hihonor.android.launcher                    (DO NOT REMOVE - app responsible for system navigation)
 com.hihonor.android.mirrorshare
 com.hihonor.android.projectmenu					(project screen onto PC)
@@ -115,7 +115,7 @@ com.hihonor.android.remotecontroller
 # com.hihonor.android.thememanager		        (ringtone/notifications tone)
 com.hihonor.android.totemweather
 com.hihonor.android.wfdft
-# com.hihonor.aod					            (always on display - ne deinstalirati)
+# com.hihonor.aod					            (always on display - DO NOT REMOVE)
 com.hihonor.appmarket
 com.hihonor.assistant
 com.hihonor.associateassistant
@@ -169,7 +169,7 @@ com.hihonor.livewallpaper.paradise
 com.hihonor.magazine
 com.hihonor.magicvoice                          (DISABLE - do not remove)
 com.hihonor.mediadatacenter
-# com.hihonor.medialibrary                      (keep - otherwise camera crashes after taking a photo)
+# com.hihonor.medialibrary                      (keep - otherwise camera crashes after taking a photo - tested)
 com.hihonor.mediamaterial
 com.hihonor.mirror								(all users)
 com.hihonor.mmitest
@@ -182,7 +182,7 @@ com.hihonor.parallelspace
 com.hihonor.pcassistant
 com.hihonor.phoneservice                        (all users - My Honor - obligatory removal)
 com.hihonor.photos
-# com.hihonor.powergenie                        (Power management app. DO NOT remove this.)
+# com.hihonor.powergenie                        (Power management app - cannot be removed)
 com.hihonor.printservice
 com.hihonor.privatespace
 com.hihonor.remotepassword
@@ -225,10 +225,11 @@ com.google.android.ext.services
 com.google.android.ext.shared
 com.google.android.feedback
 com.google.android.gm                               (all users - Gmail)
-# com.google.android.gms            		        (breaks the system)
+# com.google.android.gms            		        (Google Play Services - background services required by Google apps)
 com.google.android.gms.location.history
 # com.google.android.gms.supervision		        (breaks the system)
 com.google.android.googlequicksearchbox             (Google Search)
+# com.google.android.gsf                            (Google Services Framework - Google account management and sync functionality)
 com.google.android.healthconnect.controller
 com.google.android.health.connect.backuprestore
 com.google.android.marvin.talkback

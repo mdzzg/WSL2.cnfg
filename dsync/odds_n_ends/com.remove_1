@@ -1,0 +1,196 @@
+# android                                                               /system/framework/framework-res.apk
+# androidhwext                                                          /system/framework/framework-res-hwext.apk
+c cn.wps.moffice_eng                          # WPS Office              /data/hw_init/version/special_cust/CMR-AL19/hw/eu/app/WPS/WPS.apk
+# com.android.backupconfirm          # Restore google settings          /system/priv-app/BackupRestoreConfirmation/BackupRestoreConfirmation.apk
+# com.android.bips                                                      /system/app/BuiltInPrintService/BuiltInPrintService.apk
+# com.android.bluetoothmidiservice  # Provides classes for sending and receiving messages using the MIDI event protocol over Bluetooth LE      /system/app/BluetoothMidiService/BluetoothMidiService.apk
+# com.android.bluetooth            # Core of Bluetooth services         /system/app/Bluetooth/Bluetooth.apk
+# com.android.bookmarkprovider                                          /system/app/BookmarkProvider/BookmarkProvider.apk
+# com.android.calculator2               # Stock calculator app          /system/priv-app/ExactCalculator/ExactCalculator.apk
+# com.android.calendar                  # Stock calendar app            /system/priv-app/Calendar/Calendar.apk
+# com.android.calllogbackup                                             /system/priv-app/CallLogBackup/CallLogBackup.apk
+# com.android.captiveportallogin      # This consists in a web page that the user of a public access network is obliged to view and interect with, before access is granted. Like public Wi-Fi hotspots that prompts you with an user and password login /system/app/CaptivePortalLogin/CaptivePortalLogin.apk
+# com.android.carrierconfig          # Provides access to telephony configuration values that are carrier-specific       /system/priv-app/CarrierConfig/CarrierConfig.apk
+# com.android.cellbroadcastreceiver  # Alerts for Broadcast warnt wenn die nationale Sicherheit gefährdet ist          /system/priv-app/CellBroadcastReceiver/CellBroadcastReceiver.apk
+# com.android.certinstaller         # Certificate installer. When removed, the Wi-Fi wouldn't be able to be turned on        /system/app/CertInstaller/CertInstaller.apk
+# com.android.chrome                               #                    /system/app/Chrome/Chrome.apk
+# com.android.companiondevicemanager                                    /system/app/CompanionDeviceManager/CompanionDeviceManager.apk
+# com.android.contacts               # Stock contacts app               /system/priv-app/Contacts/Contacts.apk
+# com.android.cts.ctsshim                                               /system/app/CtsShimPrebuilt/CtsShimPrebuilt.apk
+# com.android.cts.priv.ctsshim                                          /system/priv-app/CtsShimPrivPrebuilt/CtsShimPrivPrebuilt.apk
+# com.android.defcontainer    # Needed for installer by applications    /system/priv-app/DefaultContainerService/DefaultContainerService.apk
+# com.android.deskclock       # Clock app, plus alarm function          /system/app/HwDeskClock/HwDeskClock.apk
+# com.android.documentsui          # Downloaded files app : it's a "file picker" the recommended default interfact for apps wishing to access files outside of their own storage area (i.e. to save data to your SD card)            /system/priv-app/DocumentsUI/DocumentsUI.apk
+# com.android.dreams.basic          # Support for screensaver mode      /system/delapp/BasicDreams/BasicDreams.apk
+# com.android.dreams.phototable   # Photographic screensavers Photobildschirmschoner        /system/app/PhotoTable/PhotoTable.apk
+# com.android.egg                # Android build's easter egg feature   /system/app/EasterEgg/EasterEgg.apk
+c com.android.email                  # Stock Email app (not Gmail)      /system/priv-app/Email/Email.apk
+# com.android.emergency                                                 /system/priv-app/EmergencyInfo/EmergencyInfo.apk
+c com.android.exchange        # microsoft spyware high security risk    /system/priv-app/Exchange2/Exchange2.apk
+# com.android.externalstorage                                           /system/priv-app/ExternalStorageProvider/ExternalStorageProvider.apk
+# com.android.frameworkhwext.dark         #                             /system/emui/base/overlay/frameworkhwextdark/frameworkhwextdark.apk
+# com.android.frameworkhwext.honor        #                             /system/emui/base/overlay/frameworkhwexthonor/frameworkhwexthonor.apk
+# com.android.frameworkres.overlay        #                             /hw_oem/overlay/frameworkResOverlay.apk
+# com.android.gallery3d                    # Gallery app                /system/priv-app/Gallery2/Gallery2.apk
+# com.android.htmlviewer              # HTML viewer package             /system/app/HTMLViewer/HTMLViewer.apk
+# com.android.incallui       # In Call User Interface - Controls various activities during a call          /system/priv-app/InCallUI/InCallUI.apk
+# com.android.inputdevices    # Manages the input device                /system/priv-app/InputDevices/InputDevices.apk
+# com.android.keychain       # Should provide access to private keys plus their certificate chains in storage           /system/app/KeyChain/KeyChain.apk
+# com.android.keyguard                          lockscreen              /system/app/HwMagazine/HwMagazine.apk
+# com.android.location.fused    # Provides everything you need for GPS, Cellular and Wi-Fi networks location data           /system/priv-app/FusedLocation/FusedLocation.apk
+c com.android.managedprovisioning  # Google Workplace For corporate restritctions on phones with Google Workplace               /system/priv-app/ManagedProvisioning/ManagedProvisioning.apk
+c com.android.mediacenter               # Huawei Musik Player App       /system/priv-app/HwMediaCenter/HwMediaCenter.apk
+# com.android.mms.service        # Provides support for sending MMS messages with photos, videos, ecc        /system/priv-app/MmsService/MmsService.apk
+# com.android.mms                #  Stock SMS app                       /system/priv-app/Mms/Mms.apk
+# com.android.mtp                                                       /system/priv-app/MtpDocumentsProvider/MtpDocumentsProvider.apk
+# com.android.pacprocessor       # proxy auto-config : this file defines how web browsers and other agents can automatically define the correct proxy server for fetching an URL                  /system/app/PacProcessor/PacProcessor.apk
+c com.android.partnerbrowsercustomizations.tmobile  # Browser           /system/app/ChromeHomePage/ChromeHomePage.apk
+# com.android.phone                   # Dialer app                      /system/priv-app/TeleService/TeleService.apk
+# com.android.printspooler           # print directly via your phone    /system/app/PrintSpooler/PrintSpooler.apk
+# com.android.providers.blockednumber   # Storage of blocked numbers    /system/priv-app/BlockedNumberProvider/BlockedNumberProvider.apk
+# com.android.providers.calendar                                        /system/priv-app/CalendarProvider/CalendarProvider.apk
+# com.android.providers.contacts                                        /system/priv-app/ContactsProvider/ContactsProvider.apk
+# com.android.providers.downloads       # Download provider             /system/priv-app/DownloadProvider/DownloadProvider.apk
+# com.android.providers.downloads.ui    # Download app                  /system/app/DownloadProviderUi/DownloadProviderUi.apk
+# com.android.providers.media           # Needed to access media files, and ringtones               /system/priv-app/MediaProvider/MediaProvider.apk
+c com.android.providers.partnerbookmarks      # GoogleApp Provides bookmarks about partners of Google in Chrome              /system/app/PartnerBookmarksProvider/PartnerBookmarksProvider.apk
+# com.android.providers.settings              # Sync settings           /system/priv-app/SettingsProvider/SettingsProvider.apk
+# com.android.providers.telephony         # Telephony provider contains data related to phone operation               /system/priv-app/TelephonyProvider/TelephonyProvider.apk
+# com.android.providers.userdictionary    # User dictionary for keyboard apps                   /system/app/UserDictionaryProvider/UserDictionaryProvider.apk
+# com.android.proxyhandler                                              /system/priv-app/ProxyHandler/ProxyHandler.apk
+# com.android.server.telecom                                            /system/priv-app/Telecom/Telecom.apk
+# com.android.settings                    # Settings app                /system/priv-app/Settings/Settings.apk
+# com.android.sharedstoragebackup    # Possibly USB connection menu     /system/priv-app/SharedStorageBackup/SharedStorageBackup.apk
+# com.android.shell                  # Unix shell to communicate via ADB commands through PC              /system/priv-app/Shell/Shell.apk
+# com.android.soundrecorder          # Huawei Sound recorder            /system/app/HwSoundRecorder/HwSoundRecorder.apk
+# com.android.statementservice                                          /system/priv-app/StatementService/StatementService.apk
+# com.android.stk                           SIM toolkit app             /system/app/Stk/Stk.apk
+# com.android.storagemanager                                            /system/priv-app/StorageManager/StorageManager.apk
+# com.android.supl              #  SUPL20SERVICES, seems related to GPS in Huawei devices                 /system/app/gnss_supl20service_hisi/gnss_supl20service_hisi.apk
+# com.android.systemui              # System User Interface             /system/priv-app/SystemUI/SystemUI.apk
+# com.android.vending                     Google Play Store app         /system/priv-app/Phonesky/Phonesky.apk
+# com.android.vpndialogs                    VPN system                  /system/priv-app/VpnDialogs/VpnDialogs.apk
+# com.android.wallpaperbackup                       #                   /system/delapp/WallpaperBackup/WallpaperBackup.apk
+# com.android.wallpapercropper           # Wallpaper cropper            /system/priv-app/WallpaperCropper/WallpaperCropper.apk
+# com.android.wallpaper.livepicker      # Live (bewegte) Wallpaper      /system/app/LiveWallpapersPicker/LiveWallpapersPicker.apk
+c com.booking                                       #                   /data/hw_init/version/special_cust/CMR-AL19/hw/eu/app/Booking/Booking.apk
+c com.ebay.carrier                                  #                   /data/hw_init/version/special_cust/CMR-AL19/hw/eu/app/idapk-1.0.0.5-117/idapk-1.0.0.5-117.apk
+c com.ebay.mobile                                   #                   /data/hw_init/version/special_cust/CMR-AL19/hw/eu/app/eBay/eBay.apk
+# com.example.android.notepad             # Notepad app                  /system/priv-app/HwNotePad/HwNotePad.apk
+# com.facebook.appmanager                           #                   /data/hw_init/version/special_cust/CMR-AL19/hw/eu/app/Appmanager/Appmanager.apk
+# com.facebook.katana                               #                   /data/hw_init/version/special_cust/CMR-AL19/hw/eu/app/Facebook_Stub/Facebook_Stub.apk
+# com.facebook.services                             #                   /data/hw_init/version/special_cust/CMR-AL19/hw/eu/app/Facebook_Services/Facebook_Services.apk
+# com.facebook.system                               #                   /data/hw_init/version/special_cust/CMR-AL19/hw/eu/app/Installer/Installer.apk
+c com.gameloft.android.GloftANPH                    #                   /data/hw_init/version/special_cust/CMR-AL19/hw/eu/app/AsphaltNitro/AsphaltNitro.apk
+c com.gameloft.android.GloftDBMF                    #                   /data/hw_init/version/special_cust/CMR-AL19/hw/eu/app/PuzzlePets/PuzzlePets.apk
+c com.gameloft.android.GloftDMKF                    #                   /data/hw_init/version/special_cust/CMR-AL19/hw/eu/app/DisneyMagicKingdom/DisneyMagicKingdom.apk
+c com.gameloft.android.GloftPDMF                    #                   /data/hw_init/version/special_cust/CMR-AL19/hw/eu/app/DragonMania/DragonMania.apk
+c com.gameloft.android.GloftSMIF                    #                   /data/hw_init/version/special_cust/CMR-AL19/hw/eu/app/SpiderManUltimatePower/SpiderManUltimatePower.apk
+# com.google.android.apps.docs                 # Google Drive           /system/app/Drive/Drive.apk
+# com.google.android.apps.maps                 # Google maps            /system/app/Maps/Maps.apk
+# com.google.android.apps.photos               # Google Photos          /system/app/Photos/Photos.apk
+c com.google.android.apps.tachyon        # Google Duo Videotelefonie    /system/app/Duo/Duo.apk
+# com.google.android.apps.work.oobconfig       # Device Setup           /system/priv-app/OobConfig/OobConfig.apk
+# com.google.android.backuptransport           # Allows apps to backup their data on Google servers /system/priv-app/GoogleBackupTransport/GoogleBackupTransport.apk
+# com.google.android.configupdater              # Google ConfigUpdater automatically update certificates, firewall configuration, premium sms list (you'll be warned if an app sends a premium sms), time zone information and SELinux configuration             /system/priv-app/ConfigUpdater/ConfigUpdater.apk
+# com.google.android.ext.services     # Google Play Services for Instant Apps Android Notification Ranking service, part of Android Services Library           /system/priv-app/GoogleExtServices/GoogleExtServices.apk
+# com.google.android.ext.shared       # Google Play Services for Instant Apps            /system/app/GoogleExtShared/GoogleExtShared.apk
+# com.google.android.feedback        # When an app crashes, this is the app that briefly asks you if you want to feedback the crash on the market. /system/priv-app/GoogleFeedback/GoogleFeedback.apk
+# com.google.android.gm                        # Gmail                  /system/app/Gmail2/Gmail2.apk
+# com.google.android.gms                       Google Play Services     /system/priv-app/GmsCore/GmsCore.apk
+# com.google.android.googlequicksearchbox      # Google Search widget   /system/priv-app/Velvet/Velvet.apk
+# com.google.android.gsf                     Google Services Framework  /system/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk
+# com.google.android.marvin.talkback    # Accessibility Google TalkBack Stromfresser Adds some features about accessibility settings    /system/app/talkback/talkback.apk
+c com.google.android.music                      # GoogleMusikApp        /system/app/Music2/Music2.apk
+# com.google.android.onetimeinitializer     # first time bootup prompts for what Google Apps to install Provides first time use setup     /system/priv-app/GoogleOneTimeInitializer/GoogleOneTimeInitializer.apk
+# com.google.android.packageinstaller    # Gives ability to install, update or remove applications on the device                         /system/priv-app/GooglePackageInstaller/GooglePackageInstaller.apk
+# com.google.android.partnersetup        # Software that helps other apps to work with Google products                   /system/priv-app/GooglePartnerSetup/GooglePartnerSetup.apk
+# com.google.android.printservice.recommendation   # print directly via your phone               /system/app/GooglePrintRecommendationService/GooglePrintRecommendationService.apk
+# com.google.android.setupwizard             # Removable after the first start of the phone               /system/priv-app/SetupWizard/SetupWizard.apk
+# com.google.android.syncadapters.calendar   # Google Calendar Sync     /system/app/GoogleCalendarSyncAdapter/GoogleCalendarSyncAdapter.apk
+# com.google.android.syncadapters.contacts   # Google Contacts sync     /system/app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk
+# com.google.android.tts                     Text-to-speech powers apps to read text on your scream aloud, in many languages   /system/app/GoogleTTS/GoogleTTS.apk
+c com.google.android.videos     # Google Play Movies Google Video App   /system/app/Videos/Videos.apk
+# com.google.android.webview                                            /system/app/WebViewGoogle/WebViewGoogle.apk
+# com.google.android.youtube                # YouTube app               /system/app/YouTube/YouTube.apk
+c com.hicloud.android.clone                    # Phone Clone            /system/delapp/PhoneClone_OVE/PhoneClone_OVE.apk
+# com.hisi.mapcon                          used by WiFi Calling app     /system/app/Mapcon/Mapcon.apk
+c com.huawei.android.chr             # Stromfresser somehow related to SarControlService           /system/priv-app/HwChrService/HwChrService.apk
+# com.huawei.android.FloatTasks     # navigation dock : alternate home button  /system/app/HwFloatTasks/HwFloatTasks.apk
+# com.huawei.android.hsf                               #                /system/priv-app/HwServiceFramework/HwServiceFramework.apk
+c com.huawei.android.hwaps                             #                /system/app/HwAps/HwAps.apk
+# com.huawei.android.hwouc         System update app zieht unentwegt Strom       /system/app/HwOUC/HwOUC.apk
+# com.huawei.android.instantshare         Huawei Share features         /system/app/HuaweiShare/HuaweiShare.apk
+# com.huawei.android.internal.app           # also huawei share         /system/app/HwResolver/HwResolver.apk
+c com.huawei.android.launcher                  # Huawei launcher app     /system/app/HwLauncher6/HwLauncher6.apk
+# com.huawei.android.mirrorshare      MirrorShare feature Bildschirminhalt teilen Screen Mirrorring      /system/app/MirrorShare/MirrorShare.apk
+# com.huawei.android.projectmenu       # ProjectMenu interface : phone *#*#2846579#*#* (flash any Huawei stock firmware on your huawei device)  /system/app/HwProjectMenu/HwProjectMenu.apk
+c com.huawei.android.pushagent     # (Health) speichert auch Kontodaten /cust/hw/eu/app/HwPushService/HwPushService.apk
+t com.huawei.android.thememanager        # Huawei Theme Manager app     /system/app/HwThemeManager/HwThemeManager.apk
+c com.huawei.android.tips                       # tips                  /system/delapp/HwEmuiManual/HwEmuiManual.apk
+c com.huawei.android.totemweatherapp           # Huawei Weather app     /system/priv-app/HwWeatherClockApp/HwWeatherClockApp.apk
+c com.huawei.android.totemweather              # Huawei Weather app     /system/priv-app/HwWeatherClock/HwWeatherClock.apk
+c com.huawei.android.totemweatherwidget        # Huawei Weather app     /system/priv-app/HwWeatherClockWidget/HwWeatherClockWidget.apk
+# com.huawei.android.wfdft                    Wi-Fi Direct feature      /system/app/HwWiFiDirect/HwWiFiDirect.apk
+c com.huawei.autoinstallapkfrommcc              # Information           /data/hw_init/version/special_cust/CMR-AL19/hw/eu/app/AutoInStallAPKFromMcc/AutoInStallAPKFromMcc.apk
+c com.huawei.bd                         # HwUE Huawei user experience   /data/hw_init/version/special_cust/CMR-AL19/hw/eu/app/HwUserExperience/HwUserExperience.apk
+c com.huawei.bluetooth          # Import contact via Bluetooth function /system/app/HwBluetoothImport/HwBluetoothImport.apk
+# com.huawei.camera                                                     /system/priv-app/HwCamera2/HwCamera2.apk
+c com.huawei.compass                       # Huawei Compass app         /system/delapp/HwCompass/HwCompass.apk
+c com.huawei.contactscamcard        # business card scanner reader app  /data/hw_init/system/app/ContactsCamcard/ContactsCamcard.apk
+# com.huawei.desktop.explorer           huawei desktop mode switching   /product/app/HwPCExplorer/HwPCExplorer.apk
+# com.huawei.desktop.systemui           huawei desktop mode switching   /product/app/HwPCSystemUI/HwPCSystemUI.apk
+c com.huawei.fido.uafclient         # FIDO UAF Client Fast ID Online    /product/app/HwFidoClient/HwFidoClient.apk
+c com.huawei.gameassistant                           #                  /data/hw_init/product/app/HwGameAssistant/HwGameAssistant.apk
+c com.huawei.hidisk                      # Huawei File Manager app      /cust/hw/eu/app/HwCloudDrive_EU/HwCloudDrive_EU.apk
+c com.huawei.hifolder                               #                   /cust/hw/eu/app/HiFolder/HiFolder.apk
+c com.huawei.himovie.overseas                # Huawei Video App         /system/priv-app/HiMovie/HiMovie.apk
+c com.huawei.hiview                       # versendet Daten             /system/app/HiView/HiView.apk
+c com.huawei.hiviewtunnel                 # gehört zu HiView            /system/app/HiViewTunnel/HiViewTunnel.apk
+c com.huawei.hwasm         # ASM FIDO UAF Autenthicator-Specific Module /product/app/HwFidoAsm/HwFidoAsm.apk
+c com.huawei.hwdetectrepair                         #                   /system/app/HwDetectRepair/HwDetectRepair.apk
+c com.huawei.hwid       # Huawei ID app Huawei login for all services   /cust/hw/eu/app/HMS/HMS.apk
+# com.huawei.HwMultiScreenShot       Sliding screen feature             /system/priv-app/HwMultiScreenShot/HwMultiScreenShot.apk
+c com.huawei.hwstartupguide                         #                   /system/priv-app/HwStartupGuide/HwStartupGuide.apk
+t com.huawei.iaware             # prioritizes apps to avoid slowdown    /system/app/HwIAware/HwIAware.apk
+c com.huawei.iconnect                               #                   /system/app/iConnect/iConnect.apk
+c com.huawei.imedia.sws             # Huawei Histen audio 3d effects    /product/app/SWSHeadphone/SWSHeadphone.apk
+c com.huawei.indexsearch.observer                   #                   /system/app/HwIndexSearchObserverService/HwIndexSearchObserverService.apk
+c com.huawei.indexsearch                            #                   /system/priv-app/HwIndexSearchService/HwIndexSearchService.apk
+c com.huawei.kidsmode.kidspaint                     #                   /product/app/HwKidsPaint/HwKidsPaint.apk
+c com.huawei.kidsmode                               #                   /product/app/HwKidsMode/HwKidsMode.apk
+c com.huawei.KoBackup                               #                   /system/delapp/HwBackup_Local/HwBackup_Local.apk
+# com.huawei.mmitest              has to do with all the hardware test  /system/app/HwMMITest/HwMMITest.apk
+# com.huawei.nearby       # necessary for System settings > Device connectivity > Huawei Share     /system/app/HwNearby/HwNearby.apk
+# com.huawei.omacp                         send/receive MMS             /cust/hw/eu/app/OMACP/OMACP.apk
+c com.huawei.phoneservice                     # HiCare app              /version/special_cust/CMR-AL19/hw/eu/app/HwPhoneService/HwPhoneService.apk
+c com.huawei.powergenie                   #                             /system/app/HwPowerGenieEngine3/HwPowerGenieEngine3.apk
+c com.huawei.recsys                       #                             /system/priv-app/HwIntelligentRecSystem/HwIntelligentRecSystem.apk
+c com.huawei.sarcontrolservice   # reduces radio power when phone against ear  /data/hw_init/version/region_comm/oversea/app/HwSarControlService/HwSarControlService.apk
+# com.huawei.scanner                        Huawei Scanner function     /system/priv-app/HwScanner/HwScanner.apk
+# com.huawei.screenrecorder            Huawei Screen recorder feature   /system/priv-app/HwScreenRecorder/HwScreenRecorder.apk
+c com.huawei.securitymgr                             #                  /system/app/HwSecurityMgrService/HwSecurityMgrService.apk
+# com.huawei.stylus.floatmenu                        #                  /product/app/HwFloatMenu/HwFloatMenu.apk
+# com.huawei.synergy                                 #                  /system/app/HwSynergy/HwSynergy.apk
+# com.huawei.systemmanager    # Huawei System Manager app. recent apps menu keep showing removed apps if removed.   /system/priv-app/HwSystemManager/HwSystemManager.apk
+# com.huawei.systemserver                                               /system/priv-app/HwSystemServer/HwSystemServer.apk
+c com.huawei.tips                        # lässt Tipps aufpoppen        /system/app/HwSmartSuggestion/HwSmartSuggestion.apk
+# com.huawei.trustagent               # Intelligent unlock feature (unlock with a bluetooth device)     /system/app/HwTrustAgent/HwTrustAgent.apk
+t com.huawei.trustcircle        # Service d'authentification d'appareil /cust/hw/eu/app/HwTrustCircle/HwTrustCircle.apk
+c com.huawei.vassistant      # HiVoice app Sprachbefehls App, Hello Emy /system/app/HwVAssistant/HwVAssistant.apk
+# com.huawei.videoeditor                # Video editor function       /system/app/HwVideoEditor/HwVideoEditor.apk
+c com.huawei.watch.sync             # für Uhrensyncronisation benötigt  /system/app/WatchSync/WatchSync.apk
+c com.huawei.wifieapsimplmn    # Extensible_Authentication_Protocol Seems to be an hotspot system which serve to authenticate via sim info            /cust/hw/eu/app/PredefinedEapSim/PredefinedEapSim.apk
+c com.huawei.wifiprobqeservice                       #                  /system/app/HwWifiproBqeService/HwWifiproBqeService.apk
+# com.instagram.android                              #                  /data/hw_init/version/special_cust/CMR-AL19/hw/eu/app/Instagram_Stub/Instagram_Stub.apk
+# com.myscript.nebo.huawei                   write draw with pen        /data/hw_init/version/special_cust/CMR-AL19/hw/eu/app/Nebo/Nebo.apk
+# com.netflix.mediaclient                            #                  /data/hw_init/version/special_cust/CMR-AL19/hw/eu/app/NetflixStub/NetflixStub.apk
+# com.netflix.partner.activation                     #                  /data/hw_init/version/special_cust/CMR-AL19/hw/eu/app/NetflixActivation/NetflixActivation.apk
+# com.qeexo.smartshot                 finger sense smart shot knuckel touch     /product/app/HwSmartShot/HwSmartShot.apk
+c com.stupeflix.replay                # erstellt aus Fotos kleine Moves bzw. Dia- shows, die sich nur auf dem eigenen Handy abspielen lassen                 /system/delapp/quik/quik.apk
+# com.swiftkey.swiftkeyconfigurator                  #                  /system/app/SwiftKeyFactorySettings/SwiftKeyFactorySettings.apk
+# com.touchtype.swiftkey                             #                  /system/app/SwiftKey/SwiftKey.apk
+# com.visionobjects.calculator_huawei_cameron   myscript calculator pen /data/hw_init/version/special_cust/CMR-AL19/hw/eu/app/Calculator/Calculator.apk
+# com.visionobjects.stylusmobile.v3_2_huawei                            /data/hw_init/version/special_cust/CMR-AL19/hw/eu/app/Stylus/Stylus.apk
+# huawei.android.widget                                                 /system/priv-app/HwWidget/HwWidget.apk
+# org.simalliance.openmobileapi.service   Android's interface to the SIM card Sim- Karten Dienstprogramm, nicht in Europa nutzbar SmartcardService. "The SmartCard API is a reference implementation of the SIMalliance Open Mobile API specification that enables Android applications to communicate with Secure Elements, e.g. SIM card, embedded Secure Elements, Mobile Security Card or others." /system/app/SmartcardService/SmartcardService.apk
