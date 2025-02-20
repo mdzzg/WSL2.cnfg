@@ -136,7 +136,7 @@ com.hihonor.deskclock
 com.hihonor.desktop.explorer			        (remove Service that is been used when you want to use your phone as an operative system on a PC. Safe to remove - project screen onto PC)
 com.hihonor.detectrepair                        (all users)
 com.hihonor.devicegroupmanage
-com.hihonor.dsdscardmanager
+# com.hihonor.dsdscardmanager                   (dual SIM card manager - do not remove)
 com.hihonor.email
 com.hihonor.fido.uafclient
 com.hihonor.filemanager
