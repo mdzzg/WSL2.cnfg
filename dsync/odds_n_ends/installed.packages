@@ -1,4 +1,5 @@
 ###     Installed packages
+# pm list packages|cut -d: -f2|sort
 
 android
 androidhnext
@@ -124,13 +125,14 @@ com.hihonor.ddmp
 com.hihonor.desktop.systemui
 com.hihonor.deviceauth
 com.hihonor.dmsdp
+com.hihonor.dsdscardmanager
 com.hihonor.esimmanager
 com.hihonor.esimservice
 com.hihonor.euicc.overlay
 com.hihonor.featurelayer.sharedfeature.stylus
 com.hihonor.id
+com.hihonor.koBackup
 com.hihonor.lbs
-com.hihonor.magicvoice
 com.hihonor.mcs.media.avfoundation
 com.hihonor.medialibrary
 com.hihonor.mediaprocessor
@@ -151,7 +153,6 @@ com.hihonor.visionengine
 com.honor.gpudrivers
 com.jgba.appinspector
 com.mixplorer
-com.mixplorer.addon.pdf
 com.qti.dpmserviceapp
 com.qti.qcc
 com.qualcomm.location
@@ -162,6 +163,7 @@ com.qualcomm.timeservice
 com.revolut.revolut
 com.swiftkey.swiftkeyconfigurator
 com.touchtype.swiftkey
+de.eplus.mappecc.client.android.alditalk
 org.codeaurora.ims
 vendor.qti.hardware.cacert.server
 vendor.qti.iwlan
