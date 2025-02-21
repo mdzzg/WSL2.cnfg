@@ -163,7 +163,7 @@ com.hihonor.iaware                              (prioritizes apps to avoid slowd
 com.hihonor.iconnect
 # com.hihonor.id                                (cannot be removed - system protected)
 com.hihonor.imedia.sws
-com.hihonor.lens
+# com.hihonor.lens                              (do not remove - QR code scanner)
 com.hihonor.keychain
 com.hihonor.koBackup				            (DO NOT REMOVE - sys. backup app of the Honor Suite)
 com.hihonor.linktowindowsservice                (optional - link to a Windows machine)
