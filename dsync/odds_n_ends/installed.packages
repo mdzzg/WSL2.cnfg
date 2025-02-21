@@ -38,7 +38,6 @@ com.android.providers.downloads
 com.android.providers.downloads.ui
 com.android.providers.settings
 com.android.providers.telephony
-com.android.providers.userdictionary
 com.android.proxyhandler
 com.android.rkpdapp
 com.android.server.telecom
@@ -64,8 +63,6 @@ com.google.android.connectivity.resources
 com.google.android.contactkeys
 com.google.android.devicelockcontroller
 com.google.android.dialer
-com.google.android.ext.services
-com.google.android.ext.shared
 com.google.android.federatedcompute
 com.google.android.gms
 com.google.android.gms.supervision

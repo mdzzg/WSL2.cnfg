@@ -25,6 +25,7 @@ com.android.pacprocessor
 com.android.printspooler
 com.android.providers.calendar
 com.android.providers.partnerbookmarks
+com.android.providers.userdictionary
 com.android.se
 com.android.stk
 com.android.vpndialogs
