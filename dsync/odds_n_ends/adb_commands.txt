@@ -108,6 +108,7 @@ com.hihonor.android.FloatTasks
 com.hihonor.android.instantshare
 # com.hihonor.android.hnaps                     (cannot be removed - system protected)
 com.hihonor.android.launcher                    (DO NOT REMOVE - app responsible for system navigation)
+com.hihonor.android.magicx.media.audioengine
 com.hihonor.android.mirrorshare
 com.hihonor.android.projectmenu					(project screen onto PC)
 com.hihonor.android.pushagent                   (all users)
