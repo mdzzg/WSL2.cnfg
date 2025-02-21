@@ -10,6 +10,7 @@ com.google.android.apps.wellbeing
 com.google.android.apps.youtube.music
 com.google.android.as
 com.google.android.as.oss
+com.google.android.captiveportallogin
 com.google.android.cellbroadcastreceiver
 com.google.android.documentsui
 com.google.android.feedback
@@ -20,6 +21,7 @@ com.google.android.healthconnect.controller
 com.google.android.health.connect.backuprestore
 com.google.android.marvin.talkback
 com.google.android.onetimeinitializer
+com.google.android.overlay.modules.captiveportallogin.forframework
 com.google.android.partnersetup
 com.google.android.printservice.recommendation
 com.google.android.projection.gearhead
