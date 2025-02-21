@@ -182,7 +182,7 @@ com.hihonor.parallelspace
 com.hihonor.pcassistant
 com.hihonor.phoneservice                        (all users - My Honor - obligatory removal)
 com.hihonor.photos
-# com.hihonor.powergenie                        (Power management app - cannot be removed)
+# com.hihonor.powergenie                        (Power management app - cannot be removed without root)
 com.hihonor.printservice
 com.hihonor.privatespace
 com.hihonor.remotepassword
