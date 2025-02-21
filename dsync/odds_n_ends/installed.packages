@@ -58,10 +58,10 @@ com.google.android.apps.docs
 com.google.android.apps.maps
 com.google.android.apps.messaging
 com.google.android.appsearch.apk
-com.google.android.captiveportallogin
 com.google.android.cellbroadcastservice
 com.google.android.configupdater
 com.google.android.connectivity.resources
+com.google.android.contactkeys
 com.google.android.devicelockcontroller
 com.google.android.dialer
 com.google.android.ext.services
@@ -79,9 +79,7 @@ com.google.android.ondevicepersonalization.services
 com.google.android.overlay.gmsconfig.asi
 com.google.android.overlay.gmsconfig.common
 com.google.android.overlay.gmsconfig.gsa
-com.google.android.overlay.gmsconfig.photos
 com.google.android.overlay.gmsconfig.searchselector
-com.google.android.overlay.modules.captiveportallogin.forframework
 com.google.android.overlay.modules.documentsui
 com.google.android.overlay.modules.ext.services
 com.google.android.overlay.modules.healthfitness.forframework
@@ -171,6 +169,5 @@ vendor.qti.iwlan
 
 ###     Disabled packages
 
-     1  com.google.android.devicelockcontroller
-     2  com.google.android.gms.supervision
-     3  com.hihonor.magicvoice
+1  com.google.android.devicelockcontroller
+2  com.google.android.gms.supervision
