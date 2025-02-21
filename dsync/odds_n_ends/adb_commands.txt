@@ -209,7 +209,7 @@ com.google.ar.core                                  (all users)
 com.google.android.apps.accessibility.voiceaccess
 # com.google.android.apps.docs                      (Google Drive)
 com.google.android.apps.photos
-# com.google.android.apps.photosgo	    	        (Google Gallery - do not remove)
+com.google.android.apps.photosgo	    	        (Google Gallery - do not remove)
 com.google.android.apps.restore
 com.google.android.apps.setupwizard.searchselector
 com.google.android.apps.tachyon                     (Google Meets)
@@ -236,7 +236,7 @@ com.google.android.health.connect.backuprestore
 com.google.android.marvin.talkback
 com.google.android.onetimeinitializer
 com.google.android.overlay.modules.captiveportallogin.forframework
-# com.google.android.overlay.gmsconfig.photos	    (IT has to do something with the Google Gallery - do not remove)
+# com.google.android.overlay.gmsconfig.photos	    (IT has to do something with the Google Gallery - not installed by default, can be removed WO problems)
 com.google.android.partnersetup
 com.google.android.printservice.recommendation
 com.google.android.projection.gearhead              (Android Auto)
