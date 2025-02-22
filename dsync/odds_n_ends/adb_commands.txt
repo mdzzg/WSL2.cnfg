@@ -14,9 +14,9 @@ pm list packages -f|cut -d= -f2|sort|grep
 pm list packages -d|cut -d: -f2|sort
 pm list packages | grep [package]
 
-for APP in $(cat ~/cnfg.bak/dsync/odds_n_ends/com.*.remove); do pm clear "$APP"; done
+for APP in $(cat /storage/emulated/0/Download/odds_n_ends/com.*.remove); do pm clear "$APP"; done
 for APP in $(cat ~/cnfg.bak/dsync/odds_n_ends/com.*.remove); do pm uninstall "$APP"; done
-for APP in $(cat ~/cnfg.bak/dsync/odds_n_ends/com.*.remove); do pm uninstall --user current "$APP"; done
+for APP in $(cat ~/cnfg.bak/dsync/odds_n_ends/com.*.remove); do pm uninstall --user 0 "$APP"; done
 pm uninstall *
 
 for APP in [packages]; do pm disable-user --user current "$APP"; done
