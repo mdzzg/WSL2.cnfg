@@ -82,6 +82,7 @@ com.android.providers.partnerbookmarks
 com.android.se
 com.android.stk
 # com.android.systemui
+# com.android.vending                (DO NOT REMOVE - Google Play Store)
 com.android.vpndialogs
 com.android.wallpaper.livepicker
 com.android.wallpaperbackup
