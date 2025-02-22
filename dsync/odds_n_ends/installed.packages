@@ -51,7 +51,7 @@ com.android.vending
 com.android.virtualmachine.res
 com.android.wifi.resources.overlay
 com.beforesoft.launcher
-com.brave.browser
+com.brave.browser_nightly
 com.google.android.adservices.api
 com.google.android.apps.docs
 com.google.android.apps.maps
@@ -127,6 +127,7 @@ com.hihonor.featurelayer.sharedfeature.stylus
 com.hihonor.id
 com.hihonor.koBackup
 com.hihonor.lbs
+com.hihonor.lens
 com.hihonor.mcs.media.avfoundation
 com.hihonor.medialibrary
 com.hihonor.mediaprocessor
