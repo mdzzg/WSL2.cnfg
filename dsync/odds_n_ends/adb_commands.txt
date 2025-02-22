@@ -223,7 +223,7 @@ com.google.android.as               		        (Google Assistant)
 com.google.android.as.oss                           (Google assistant)
 com.google.android.captiveportallogin
 com.google.android.cellbroadcastreceiver
-com.google.android.contactkeys                      (breaks the system - DO NOT REMOVE, disable it)
+com.google.android.contactkeys                      (Android System Key Verifier)
 # com.google.android.devicelockcontroller	        (breaks the system)
 com.google.android.documentsui                      (Google Files)
 com.google.android.ext.services

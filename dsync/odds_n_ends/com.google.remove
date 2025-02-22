@@ -9,12 +9,14 @@ com.google.android.apps.tachyon
 com.google.android.apps.walletnfcrel
 com.google.android.apps.wellbeing
 com.google.android.apps.youtube.music
-com.google.android.as
-com.google.android.as.oss
+# com.google.android.as
+# com.google.android.as.oss
+com.google.android.captiveportallogin
 com.google.android.cellbroadcastreceiver
+com.google.android.contactkeys
 com.google.android.documentsui
-com.google.android.ext.services
-com.google.android.ext.shared
+# com.google.android.ext.services
+# com.google.android.ext.shared
 com.google.android.feedback
 com.google.android.gm
 com.google.android.gms.location.history
