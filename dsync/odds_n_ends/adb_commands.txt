@@ -92,8 +92,8 @@ com.facebook.appmanager
 com.facebook.katana
 com.facebook.services
 com.facebook.system
-com.microsoft.appmanager			            (Link to Windows)
-com.microsoftsdk.crossdeviceservicebroker       (Link to Windows)
+com.microsoft.appmanager			            (Link to Windows - opt not to remove)
+com.microsoftsdk.crossdeviceservicebroker       (Link to Windows - opt not to remove)
 com.netflix.mediaclient
 ctrip.english
 
