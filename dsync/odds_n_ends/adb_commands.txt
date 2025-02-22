@@ -103,12 +103,13 @@ ctrip.english
 ### Honor
 
 com.hihonor.airlink
+com.hihonor.airplugengine
 com.hihonor.android.chr
 com.hihonor.android.clone
 com.hihonor.android.FloatTasks
 com.hihonor.android.instantshare
 # com.hihonor.android.hnaps                     (cannot be removed - system protected)
-com.hihonor.android.launcher                    (DO NOT REMOVE - app responsible for system navigation)
+# com.hihonor.android.launcher                    (DO NOT REMOVE - app responsible for system navigation)
 com.hihonor.android.magicx.media.audioengine
 com.hihonor.android.mirrorshare
 com.hihonor.android.projectmenu					(project screen onto PC)
@@ -128,6 +129,7 @@ com.hihonor.bluetooth
 com.hihonor.brain
 com.hihonor.browserhomepage
 com.hihonor.calendar
+com.hihonor.collectcenter
 com.hihonor.compass
 com.hihonor.contacts
 com.hihonor.contactscamcard                     (all users)
@@ -140,6 +142,7 @@ com.hihonor.detectrepair                        (all users)
 com.hihonor.devicegroupmanage
 # com.hihonor.dsdscardmanager                   (dual SIM card manager - do not remove)
 com.hihonor.email
+com.hihonor.esimmanager
 com.hihonor.fido.uafclient
 com.hihonor.filemanager
 com.hihonor.gameassistant	                    (all users)

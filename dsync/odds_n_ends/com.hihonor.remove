@@ -1,9 +1,9 @@
 com.hihonor.airlink
+com.hihonor.airplugengine
 com.hihonor.android.chr
 com.hihonor.android.clone
 com.hihonor.android.FloatTasks
 com.hihonor.android.instantshare
-com.hihonor.android.launcher
 com.hihonor.android.magicx.media.audioengine
 com.hihonor.android.mirrorshare
 com.hihonor.android.projectmenu
@@ -21,6 +21,7 @@ com.hihonor.bluetooth
 com.hihonor.brain
 com.hihonor.browserhomepage
 com.hihonor.calendar
+com.hihonor.collectcenter
 com.hihonor.compass
 com.hihonor.contacts
 com.hihonor.contactscamcard
@@ -32,6 +33,7 @@ com.hihonor.desktop.explorer
 com.hihonor.detectrepair
 com.hihonor.devicegroupmanage
 com.hihonor.email
+com.hihonor.esimmanager
 com.hihonor.fido.uafclient
 com.hihonor.filemanager
 com.hihonor.gameassistant
@@ -84,7 +86,3 @@ com.hihonor.tips
 com.hihonor.trustcircle
 com.hihonor.videoeditor
 com.hihonor.wifieapsimplmn
-
-com.hihonor.collectcenter
-com.hihonor.esimmanager
-com.hihonor.airplugengine
