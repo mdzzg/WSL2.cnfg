@@ -60,7 +60,6 @@ com.google.android.appsearch.apk
 com.google.android.cellbroadcastservice
 com.google.android.configupdater
 com.google.android.connectivity.resources
-com.google.android.contactkeys
 com.google.android.devicelockcontroller
 com.google.android.dialer
 com.google.android.federatedcompute
