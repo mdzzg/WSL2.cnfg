@@ -82,7 +82,7 @@ com.android.providers.partnerbookmarks
 com.android.se
 com.android.stk
 # com.android.systemui
-# com.android.vending                (DO NOT REMOVE - Google Play Store)
+# com.android.vending                			(DO NOT REMOVE - Google Play Store)
 com.android.vpndialogs
 com.android.wallpaper.livepicker
 com.android.wallpaperbackup
@@ -92,8 +92,8 @@ com.facebook.appmanager
 com.facebook.katana
 com.facebook.services
 com.facebook.system
-com.microsoft.appmanager			            (Link to Windows - opt not to remove)
-com.microsoftsdk.crossdeviceservicebroker       (Link to Windows - opt not to remove)
+# com.microsoft.appmanager			            (Link to Windows - opt not to remove)
+# com.microsoftsdk.crossdeviceservicebroker		(Link to Windows - opt not to remove)
 com.netflix.mediaclient
 ctrip.english
 
@@ -164,10 +164,10 @@ com.hihonor.iaware                              (prioritizes apps to avoid slowd
 com.hihonor.iconnect
 # com.hihonor.id                                (cannot be removed - system protected)
 com.hihonor.imedia.sws
-# com.hihonor.lens                              (do not remove - QR code scanner)
 com.hihonor.keychain
 com.hihonor.koBackup				            (DO NOT REMOVE - sys. backup app of the Honor Suite)
-com.hihonor.linktowindowsservice                (optional - link to a Windows machine)
+# com.hihonor.lens                              (do not remove - QR code scanner)
+# com.hihonor.linktowindowsservice                (optional - link to a Windows machine)
 com.hihonor.livewallpaper.paradise
 com.hihonor.magazine
 com.hihonor.magicvoice                          (DISABLE - do not remove)
@@ -223,7 +223,7 @@ com.google.android.as               		        (Google Assistant)
 com.google.android.as.oss                           (Google assistant)
 com.google.android.captiveportallogin
 com.google.android.cellbroadcastreceiver
-com.google.android.contactkeys
+com.google.android.contactkeys                      (breaks the system - DO NOT REMOVE, disable it)
 # com.google.android.devicelockcontroller	        (breaks the system)
 com.google.android.documentsui                      (Google Files)
 com.google.android.ext.services
