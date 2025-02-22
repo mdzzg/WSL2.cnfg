@@ -9,6 +9,7 @@ com.android.bluetoothmidiservice
 com.android.bookmarkprovider
 com.android.carrierconfig
 com.android.cellbroadcastreceiver
+com.android.chrome
 com.android.cts.priv.ctsshimm
 com.android.dreams.basic
 com.android.dreams.phototable

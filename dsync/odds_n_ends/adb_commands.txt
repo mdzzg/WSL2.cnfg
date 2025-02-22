@@ -8,17 +8,16 @@ adb shell
 adb tcpip 55555	(while being USB connected)
 adb pair 192.168.43.124:34363
 
+pm list packages|cut -c 9-|sort|grep
 pm list packages|cut -d: -f2|sort
 pm list packages -f|cut -d= -f2|sort|grep
-pm list packages|cut -c 9-|sort|grep
 pm list packages -d|cut -d: -f2|sort
 pm list packages | grep [package]
 
-
-for APP in $(cat ~/cnfg.bak/dsync/odds_n_ends/com.google.remove); do pm clear "$APP"; done
-for APP in ; do pm uninstall "$APP"; done
-for APP in ; do pm uninstall --user current "$APP"; done
-pm uninstall [package]
+for APP in $(cat ~/cnfg.bak/dsync/odds_n_ends/com.*.remove); do pm clear "$APP"; done
+for APP in $(cat ~/cnfg.bak/dsync/odds_n_ends/com.*.remove); do pm uninstall "$APP"; done
+for APP in $(cat ~/cnfg.bak/dsync/odds_n_ends/com.*.remove); do pm uninstall --user current "$APP"; done
+pm uninstall *
 
 for APP in [packages]; do pm disable-user --user current "$APP"; done
 pm disable-user --user current [package]
@@ -58,6 +57,7 @@ com.android.bluetoothmidiservice
 com.android.bookmarkprovider
 com.android.carrierconfig
 com.android.cellbroadcastreceiver
+com.android.chrome
 com.android.cts.priv.ctsshimm
 com.android.dreams.basic                        (all users)
 com.android.dreams.phototable
@@ -210,7 +210,6 @@ magic ring
 
 ### de-Google
 
-com.android.chrome
 com.google.ar.core                                  (all users)
 com.google.android.apps.accessibility.voiceaccess
 # com.google.android.apps.docs                      (Google Drive)
