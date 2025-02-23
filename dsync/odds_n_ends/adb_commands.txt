@@ -19,8 +19,10 @@ for APP in $(cat /storage/emulated/0/com.*.remove); do pm uninstall "$APP"; done
 for APP in $(cat /storage/emulated/0/com.*.remove); do pm uninstall -k --user 0 "$APP"; done
 pm uninstall *
 
-for APP in [packages]; do pm disable-user --user current "$APP"; done
-pm disable-user --user current [package]
+for APP in *; do pm clear "$APP"; done
+for APP in *; do pm disable-user --user 0 "$APP"; done
+for APP in *; do pm uninstall --user 0 "$APP"; done
+pm disable-user --user current *
 
 pm uninstall --user current [package]
 pm uninstall --user 0 com.honor.browser
@@ -228,13 +230,13 @@ com.google.android.cellbroadcastreceiver
 com.google.android.contactkeys                      (Android System Key Verifier)
 # com.google.android.devicelockcontroller	        (breaks the system)
 com.google.android.documentsui                      (Google Files)
-# com.google.android.ext.services					(breaks the system ???)
+com.google.android.ext.services
 com.google.android.ext.shared
 com.google.android.feedback
 com.google.android.gm                               (all users - Gmail)
 # com.google.android.gms            		        (Google Play Services - background services required by Google apps)
 # com.google.android.gms.location.history			(part of the Google Play Services)
-# com.google.android.gms.supervision		        (breaks the system ???)
+# com.google.android.gms.supervision		        (breaks the system - restoraes all Google apps to factory settings)
 com.google.android.googlequicksearchbox             (Google Search)
 # com.google.android.gsf                            (Google Services Framework - Google account management and sync functionality)
 com.google.android.healthconnect.controller
@@ -243,7 +245,7 @@ com.google.android.marvin.talkback
 com.google.android.onetimeinitializer
 com.google.android.overlay.modules.captiveportallogin.forframework
 # com.google.android.overlay.gmsconfig.photos	    (IT has to do something with the Google Gallery - not installed by default, can be removed WO problems)
-# com.google.android.partnersetup					(breaks the system ???)
+# com.google.android.partnersetup
 com.google.android.printservice.recommendation
 com.google.android.projection.gearhead              (Android Auto)
 # com.google.android.providers.media.module
