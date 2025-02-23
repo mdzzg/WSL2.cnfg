@@ -14,7 +14,7 @@
 #   pm uninstall --user 0 <package>
 
 # Define the directory where the files are stored.
-FILE_DIR="/storage/emulated/0/Download/odds_n_ends"
+FILE_DIR="/storage/emulated/0"
 
 # Define an array of package list filenames.
 FILES="$FILE_DIR/com.google.remove $FILE_DIR/com.android.remove $FILE_DIR/com.hihonor.remove"
