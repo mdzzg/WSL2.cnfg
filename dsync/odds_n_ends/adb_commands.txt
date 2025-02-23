@@ -233,7 +233,7 @@ com.google.android.ext.shared
 com.google.android.feedback
 com.google.android.gm                               (all users - Gmail)
 # com.google.android.gms            		        (Google Play Services - background services required by Google apps)
-com.google.android.gms.location.history
+com.google.android.gms.location.history				(part of the Google Play Services)
 # com.google.android.gms.supervision		        (breaks the system)
 com.google.android.googlequicksearchbox             (Google Search)
 # com.google.android.gsf                            (Google Services Framework - Google account management and sync functionality)
