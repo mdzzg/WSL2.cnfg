@@ -14,7 +14,7 @@ pm list packages -f|cut -d= -f2|sort|grep
 pm list packages -d|cut -d: -f2|sort
 pm list packages | grep [package]
 
-for APP in $(cat /storage/emulated/0/com.*.remove); do pm clear "$APP"; done
+for APP in $(cat /storage/emulated/0/com.*.remove); do pm clear "$APP"; done        # clear app data - do not clear Google com. packages
 for APP in $(cat /storage/emulated/0/com.*.remove); do pm uninstall "$APP"; done
 for APP in $(cat /storage/emulated/0/com.*.remove); do pm uninstall -k --user 0 "$APP"; done
 pm uninstall *
@@ -230,8 +230,8 @@ com.google.android.cellbroadcastreceiver
 com.google.android.contactkeys                      (Android System Key Verifier)
 # com.google.android.devicelockcontroller	        (breaks the system)
 com.google.android.documentsui                      (Google Files)
-com.google.android.ext.services
-com.google.android.ext.shared
+# com.google.android.ext.services                   (disabled ATM - testing)
+# com.google.android.ext.shared                     (disabled ATM - testing)
 com.google.android.feedback
 com.google.android.gm                               (all users - Gmail)
 # com.google.android.gms            		        (Google Play Services - background services required by Google apps)
