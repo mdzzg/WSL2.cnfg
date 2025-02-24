@@ -160,6 +160,7 @@ com.qualcomm.timeservice
 com.revolut.revolut
 com.swiftkey.swiftkeyconfigurator
 com.touchtype.swiftkey
+com.whatsapp
 de.eplus.mappecc.client.android.alditalk
 org.codeaurora.ims
 vendor.qti.hardware.cacert.server
