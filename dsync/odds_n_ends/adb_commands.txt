@@ -127,7 +127,7 @@ com.hihonor.associateassistant
 com.hihonor.autoinstallapkfrommcc
 com.hihonor.awareness
 com.hihonor.behaviorauth
-com.hihonor.bluetooth
+# com.hihonor.bluetooth                         (required for the Link to Windows Bluetooth)
 com.hihonor.brain
 com.hihonor.browserhomepage
 com.hihonor.calendar
