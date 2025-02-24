@@ -18,6 +18,7 @@ com.google.android.ext.services
 com.google.android.ext.shared
 com.google.android.feedback
 com.google.android.gm
+com.google.android.gms.location.history
 com.google.android.googlequicksearchbox
 com.google.android.healthconnect.controller
 com.google.android.health.connect.backuprestore
@@ -31,3 +32,7 @@ com.google.android.setupwizard
 com.google.android.tts
 com.google.android.videos
 com.google.android.youtube
+
+#   disable:
+com.google.android.devicelockcontroller
+com.google.android.gms.supervision
