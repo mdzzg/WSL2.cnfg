@@ -76,7 +76,6 @@ com.google.android.ondevicepersonalization.services
 com.google.android.overlay.gmsconfig.asi
 com.google.android.overlay.gmsconfig.common
 com.google.android.overlay.gmsconfig.gsa
-com.google.android.overlay.gmsconfig.photos
 com.google.android.overlay.gmsconfig.searchselector
 com.google.android.overlay.modules.documentsui
 com.google.android.overlay.modules.ext.services
@@ -124,10 +123,8 @@ com.hihonor.esimservice
 com.hihonor.euicc.overlay
 com.hihonor.featurelayer.sharedfeature.stylus
 com.hihonor.id
-com.hihonor.koBackup
 com.hihonor.lbs
 com.hihonor.lens
-com.hihonor.linktowindowsservice
 com.hihonor.mcs.media.avfoundation
 com.hihonor.medialibrary
 com.hihonor.mediaprocessor
@@ -147,8 +144,6 @@ com.hihonor.virtualinput
 com.hihonor.visionengine
 com.honor.gpudrivers
 com.jgba.appinspector
-com.microsoft.appmanager
-com.microsoftsdk.crossdeviceservicebroker
 com.mixplorer
 com.qti.dpmserviceapp
 com.qti.qcc
@@ -160,6 +155,7 @@ com.qualcomm.timeservice
 com.revolut.revolut
 com.swiftkey.swiftkeyconfigurator
 com.touchtype.swiftkey
+com.transferwise.android
 com.whatsapp
 de.eplus.mappecc.client.android.alditalk
 org.codeaurora.ims

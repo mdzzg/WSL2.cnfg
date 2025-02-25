@@ -58,6 +58,8 @@ com.hihonor.iaware
 com.hihonor.iconnect
 com.hihonor.imedia.sws
 com.hihonor.keychain
+com.hihonor.koBackup
+com.hihonor.linktowindowsservice
 com.hihonor.livewallpaper.paradise
 com.hihonor.magazine
 com.hihonor.magicvoice

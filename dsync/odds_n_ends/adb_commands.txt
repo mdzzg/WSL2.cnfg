@@ -243,7 +243,7 @@ com.google.android.health.connect.backuprestore
 com.google.android.marvin.talkback
 com.google.android.onetimeinitializer
 com.google.android.overlay.modules.captiveportallogin.forframework
-# com.google.android.overlay.gmsconfig.photos	    (IT has to do something with the Google Gallery - not installed by default, can be removed WO problems)
+com.google.android.overlay.gmsconfig.photos	        (IT has to do something with the Google Gallery - somehow installed by default?)
 com.google.android.partnersetup
 com.google.android.printservice.recommendation
 com.google.android.projection.gearhead              (Android Auto)

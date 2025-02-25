@@ -25,6 +25,7 @@ com.google.android.health.connect.backuprestore
 com.google.android.marvin.talkback
 com.google.android.onetimeinitializer
 com.google.android.overlay.modules.captiveportallogin.forframework
+com.google.android.overlay.gmsconfig.photos
 com.google.android.partnersetup
 com.google.android.printservice.recommendation
 com.google.android.projection.gearhead
@@ -32,7 +33,3 @@ com.google.android.setupwizard
 com.google.android.tts
 com.google.android.videos
 com.google.android.youtube
-
-#   disable:
-com.google.android.devicelockcontroller
-com.google.android.gms.supervision
