@@ -54,7 +54,7 @@ com.amazon.appmanager
 com.amazon.mShop.android.shopping
 com.amazon.mp3
 com.android.apps.tag
-com.android.backupconfirm					    Restore google settings with Google Backup restore function.
+com.android.backupconfirm					    (Restore google settings with Google Backup restore function.)
 com.android.bluetoothmidiservice
 com.android.bookmarkprovider
 com.android.carrierconfig
@@ -94,8 +94,8 @@ com.facebook.appmanager
 com.facebook.katana
 com.facebook.services
 com.facebook.system
-# com.microsoft.appmanager			            (Link to Windows - opt not to remove)
-# com.microsoftsdk.crossdeviceservicebroker		(Link to Windows - opt not to remove)
+com.microsoft.appmanager			            (Link to Windows - opt not to remove)
+com.microsoftsdk.crossdeviceservicebroker		(Link to Windows - opt not to remove)
 com.netflix.mediaclient
 ctrip.english
 
@@ -127,7 +127,7 @@ com.hihonor.associateassistant
 com.hihonor.autoinstallapkfrommcc
 com.hihonor.awareness
 com.hihonor.behaviorauth
-# com.hihonor.bluetooth                         (required for the Link to Windows Bluetooth - incorrect)
+# com.hihonor.bluetooth                         (required for the Link to Windows Bluetooth - incorrect, not needed)
 com.hihonor.brain
 com.hihonor.browserhomepage
 com.hihonor.calendar
@@ -172,7 +172,7 @@ com.hihonor.imedia.sws
 com.hihonor.keychain
 com.hihonor.koBackup				            (DO NOT REMOVE - sys. backup app of the Honor Suite)
 # com.hihonor.lens                              (do not remove - QR code scanner)
-# com.hihonor.linktowindowsservice              (optional - link to a Windows machine)
+com.hihonor.linktowindowsservice                (optional - link to a Windows machine)
 com.hihonor.livewallpaper.paradise
 com.hihonor.magazine
 com.hihonor.magicvoice                          (DISABLE - do not remove)
@@ -205,8 +205,7 @@ com.hihonor.tips
 com.hihonor.trustcircle
 com.hihonor.videoeditor
 com.hihonor.wifieapsimplmn
-navigation ring
-magic ring
+
 ====================================================================================================
 
 
@@ -245,7 +244,7 @@ com.google.android.marvin.talkback
 com.google.android.onetimeinitializer
 com.google.android.overlay.modules.captiveportallogin.forframework
 # com.google.android.overlay.gmsconfig.photos	    (IT has to do something with the Google Gallery - not installed by default, can be removed WO problems)
-# com.google.android.partnersetup
+com.google.android.partnersetup
 com.google.android.printservice.recommendation
 com.google.android.projection.gearhead              (Android Auto)
 # com.google.android.providers.media.module
