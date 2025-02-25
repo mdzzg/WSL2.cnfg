@@ -111,7 +111,7 @@ com.hihonor.android.clone
 com.hihonor.android.FloatTasks
 com.hihonor.android.instantshare
 # com.hihonor.android.hnaps                     (cannot be removed - system protected)
-# com.hihonor.android.launcher                    (DO NOT REMOVE - app responsible for system navigation)
+# com.hihonor.android.launcher                  (DO NOT REMOVE - app responsible for system navigation)
 com.hihonor.android.magicx.media.audioengine
 com.hihonor.android.mirrorshare
 com.hihonor.android.projectmenu					(project screen onto PC)
@@ -127,7 +127,7 @@ com.hihonor.associateassistant
 com.hihonor.autoinstallapkfrommcc
 com.hihonor.awareness
 com.hihonor.behaviorauth
-# com.hihonor.bluetooth                         (required for the Link to Windows Bluetooth)
+# com.hihonor.bluetooth                         (required for the Link to Windows Bluetooth - incorrect)
 com.hihonor.brain
 com.hihonor.browserhomepage
 com.hihonor.calendar
@@ -172,7 +172,7 @@ com.hihonor.imedia.sws
 com.hihonor.keychain
 com.hihonor.koBackup				            (DO NOT REMOVE - sys. backup app of the Honor Suite)
 # com.hihonor.lens                              (do not remove - QR code scanner)
-# com.hihonor.linktowindowsservice                (optional - link to a Windows machine)
+# com.hihonor.linktowindowsservice              (optional - link to a Windows machine)
 com.hihonor.livewallpaper.paradise
 com.hihonor.magazine
 com.hihonor.magicvoice                          (DISABLE - do not remove)
