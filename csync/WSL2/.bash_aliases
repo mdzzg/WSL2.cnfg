@@ -298,6 +298,7 @@ export -f fd
 
 ###    WSL   ###
 alias adb='adb.exe'
+alias scrcpy='scrcpy.exe'
 # alias pss34='/mnt/c/Program\ Files\ \(x86\)/PTI/PSSEXplore34/PSSBIN/Psse34.exe'
 # alias insiders='/mnt/c/Users/mario/AppData/Local/Programs/Microsoft\ VS\ Code\ Insiders/Code\ -\ Insiders.exe'
 
