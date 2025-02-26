@@ -89,7 +89,6 @@ com.google.android.permissioncontroller
 com.google.android.photopicker
 com.google.android.providers.media.module
 com.google.android.safetycenter.resources
-com.google.android.safetycore
 com.google.android.sdksandbox
 com.google.android.server.deviceconfig.resources
 com.google.android.syncadapters.calendar
@@ -98,9 +97,7 @@ com.google.android.wifi.dialog
 com.google.android.wifi.resources
 com.google.mainline.adservices
 com.google.mainline.telemetry
-com.hihonor.aipluginengine
 com.hihonor.android.hnaps
-com.hihonor.android.honorsuite
 com.hihonor.android.internal.app
 com.hihonor.android.launcher
 com.hihonor.android.thememanager
