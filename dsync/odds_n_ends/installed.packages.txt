@@ -53,6 +53,7 @@ com.android.wifi.resources.overlay
 com.beforesoft.launcher
 com.brave.browser_nightly
 com.google.android.adservices.api
+com.google.android.apps.authenticator2
 com.google.android.apps.docs
 com.google.android.apps.maps
 com.google.android.apps.messaging
@@ -69,6 +70,7 @@ com.google.android.gms.supervision
 com.google.android.gsf
 com.google.android.hotspot2.osulogin
 com.google.android.ims
+com.google.android.keep
 com.google.android.modulemetadata
 com.google.android.networkstack
 com.google.android.networkstack.tethering
@@ -141,6 +143,7 @@ com.hihonor.virtualinput
 com.hihonor.visionengine
 com.honor.gpudrivers
 com.jgba.appinspector
+com.kaufland.Kaufland
 com.mixplorer
 com.qti.dpmserviceapp
 com.qti.qcc
