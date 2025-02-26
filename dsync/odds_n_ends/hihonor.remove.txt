@@ -1,5 +1,5 @@
 com.hihonor.airlink
-com.hihonor.airplugengine
+com.hihonor.aipluginengine
 com.hihonor.android.chr
 com.hihonor.android.clone
 com.hihonor.android.FloatTasks
