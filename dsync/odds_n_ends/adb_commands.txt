@@ -45,6 +45,10 @@ screencap /sdcard/screenshot.png
 cat com.*.remove | awk '{$1=$1};1' | paste -sd ' ' -
 
 adb shell dumpsys battery
+
+adb shell input keyevent 26
+
+adb shell input keyevent 224
 ====================================================================================================
 
 
