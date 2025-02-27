@@ -118,7 +118,6 @@ com.hihonor.desktop.systemui
 com.hihonor.deviceauth
 com.hihonor.dmsdp
 com.hihonor.dsdscardmanager
-com.hihonor.esimservice
 com.hihonor.euicc.overlay
 com.hihonor.featurelayer.sharedfeature.stylus
 com.hihonor.id

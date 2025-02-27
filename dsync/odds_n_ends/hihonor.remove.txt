@@ -34,6 +34,7 @@ com.hihonor.detectrepair
 com.hihonor.devicegroupmanage
 com.hihonor.email
 com.hihonor.esimmanager
+com.hihonor.esimservice
 com.hihonor.fido.uafclient
 com.hihonor.filemanager
 com.hihonor.gameassistant
