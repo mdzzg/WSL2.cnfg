@@ -43,11 +43,13 @@ adb push "C:\Users\mario\Pictures\Saved Pictures\honor_background.png" /sdcard/P
 
 adb pull device_path local_path
 
-screencap /sdcard/screenshot.png
+screencap -p /sdcard/screenshot.png
 
 cat com.*.remove | awk '{$1=$1};1' | paste -sd ' ' -
 
-adb shell dumpsys battery       # (battery status)
+adb shell dumpsys battery|grep level       # (battery status)
+
+adb shell dumpsys battery set level
 
 adb shell input keyevent 26     # (power-on screen)
 
