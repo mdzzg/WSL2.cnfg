@@ -33,9 +33,12 @@ pm enable [package]
 reboot
 reboot -p (--poweroff)
 
+adb shell am start -n com.android.vending/com.google.android.finsky.activities.MainActivity
+
 am start -a android.intent.action.VIEW -d "market://details?id=com.google.android.videos"
 
 adb push example.txt /sdcard/Download/example.txt
+
 adb push "C:\Users\mario\Pictures\Saved Pictures\honor_background.png" /sdcard/Pictures/
 
 adb pull device_path local_path
@@ -56,7 +59,10 @@ adb devices -l
 #   scrcpy
 
 scrcpy -Sw --keyboard=uhid --window-width=1200 --window-height=1920
+
 scrcpy -s 192.168.43.203:46313 --screen-off-timeout=600 --stay-awake --disable-screensaver
+
+sh rish
 
 ====================================================================================================
 
