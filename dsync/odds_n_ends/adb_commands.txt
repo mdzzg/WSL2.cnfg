@@ -50,6 +50,8 @@ adb shell input keyevent 26     # (power-on screen)
 
 adb shell input keyevent 224    # (power-on screen)
 
+adb devices -l
+
 ====================================================================================================
 #   scrcpy
 
