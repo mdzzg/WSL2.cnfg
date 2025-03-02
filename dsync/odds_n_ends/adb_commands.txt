@@ -49,6 +49,13 @@ adb shell dumpsys battery       # (battery status)
 adb shell input keyevent 26     # (power-on screen)
 
 adb shell input keyevent 224    # (power-on screen)
+
+====================================================================================================
+#   scrcpy
+
+scrcpy -Sw --keyboard=uhid --window-width=1200 --window-height=1920
+scrcpy -s 192.168.43.203:46313 --screen-off-timeout=600 --stay-awake --disable-screensaver
+
 ====================================================================================================
 
 
