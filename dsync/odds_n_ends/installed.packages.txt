@@ -153,10 +153,12 @@ com.qualcomm.qti.telephonyservice
 com.qualcomm.timeservice
 com.revolut.revolut
 com.swiftkey.swiftkeyconfigurator
+com.termux
 com.touchtype.swiftkey
 com.transferwise.android
 com.whatsapp
 de.eplus.mappecc.client.android.alditalk
+moe.shizuku.privileged.api
 org.codeaurora.ims
 vendor.qti.hardware.cacert.server
 vendor.qti.iwlan
