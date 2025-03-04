@@ -267,7 +267,7 @@ function up() {
 export -f up
 
 ###     process kill    ###
-function pss(){ ps aux|grep snap|awk '{print $2}'|sudo xargs kill -9;}
+function pss(){ ps aux|grep snapd|awk '{print $2}'|sudo xargs kill -9;}
 export -f pss
 
 function psb(){ ps aux|grep brave|awk '{print $2}'|sudo xargs kill -9;}
