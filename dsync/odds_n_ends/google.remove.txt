@@ -1,7 +1,5 @@
-com.google.ar.core
 com.google.android.apps.accessibility.voiceaccess
 com.google.android.apps.photos
-com.google.android.apps.photosgo
 com.google.android.apps.restore
 com.google.android.apps.setupwizard.searchselector
 com.google.android.apps.tachyon
@@ -12,9 +10,8 @@ com.google.android.as
 com.google.android.as.oss
 com.google.android.captiveportallogin
 com.google.android.cellbroadcastreceiver
-com.google.android.contactkeys
+com.google.android.cellbroadcastservice
 com.google.android.documentsui
-com.google.android.ext.services
 com.google.android.ext.shared
 com.google.android.feedback
 com.google.android.gm

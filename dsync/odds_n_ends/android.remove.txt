@@ -21,7 +21,6 @@ com.android.hotwordenrollment.xgoogle
 com.android.htmlviewer
 com.android.incallui
 com.android.keychain
-com.android.magicvoice
 com.android.managedprovisioning
 com.android.pacprocessor
 com.android.printspooler
