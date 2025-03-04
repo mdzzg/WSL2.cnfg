@@ -62,6 +62,8 @@ adb devices -l
 
 scrcpy -Sw --keyboard=uhid --window-width=1200 --window-height=1920
 
+scrcpy -Sw --keyboard=uhid --window-width=1050 --window-height=1850
+
 scrcpy -s 192.168.43.203:46313 --screen-off-timeout=600 --stay-awake --disable-screensaver
 
 sh rish
