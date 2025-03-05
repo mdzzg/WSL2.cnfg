@@ -64,12 +64,17 @@ adb disconnect
 adb kill-server
 adb start-server
 
+adb shell wm size
+adb shell wm size 800x1280
+adb shell wm size reset
+adb shell wm density 520
+adb shell wm density reset
 
 
 ====================================================================================================
 #   scrcpy
 
-scrcpy -Sw --keyboard=uhid --window-width=1200 --window-height=1920
+scrcpy -Sw --keyboard=uhid --window-width=1200 --window-height=1920 --disable-screensaver --always-on-top
 
 scrcpy -Sw --keyboard=uhid --window-width=1050 --window-height=1850
 
