@@ -7,7 +7,6 @@ apps.syrupy.fullbatterychargealarm
 com.android.bluetooth
 com.android.calllogbackup
 com.android.cameraextensions
-com.android.cellbroadcastreceiver.overlay
 com.android.certinstaller
 com.android.companiondevicemanager
 com.android.credentialmanager
