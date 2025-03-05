@@ -57,6 +57,13 @@ adb shell input keyevent 224    # (power-on screen)
 
 adb devices -l
 
+export ANDROID_SERIAL="${ANDROID_SERIAL}:55555"
+unset ANDROID_SERIAL
+adb connect $ANDROID_SERIAL
+adb disconnect
+adb kill-server
+adb start-server
+
 ====================================================================================================
 #   scrcpy
 
