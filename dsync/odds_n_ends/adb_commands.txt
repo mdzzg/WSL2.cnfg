@@ -76,7 +76,7 @@ adb shell wm density reset
 
 scrcpy -Sw --keyboard=uhid --window-width=1200 --window-height=1920 --disable-screensaver --always-on-top
 
-scrcpy -Sw --keyboard=uhid --window-width=1050 --window-height=1850
+scrcpy -Sw --keyboard=uhid --window-width=1050 --window-height=1850 --disable-screensaver --always-on-top
 
 scrcpy -Sw --disable-screensaver --keyboard=uhid 
 
