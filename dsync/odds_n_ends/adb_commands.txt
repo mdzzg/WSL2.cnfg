@@ -55,6 +55,8 @@ adb shell input keyevent 26     # (power-on screen)
 
 adb shell input keyevent 224    # (power-on screen)
 
+input keyevent 111              # (disable virtual keyboard)
+
 adb devices -l
 
 export ANDROID_SERIAL="${ANDROID_SERIAL}55555"
