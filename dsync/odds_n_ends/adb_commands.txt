@@ -47,18 +47,13 @@ screencap -p /sdcard/screenshot.png
 
 cat com.*.remove | awk '{$1=$1};1' | paste -sd ' ' -
 
-adb shell dumpsys battery|grep level       # (battery status)
-
-adb shell dumpsys battery set level
-
-adb shell input keyevent 26     # (power-on screen)
-
-adb shell input keyevent 224    # (power-on screen)
-
-input keyevent 111              # (disable virtual keyboard)
+(adb shell) dumpsys battery|grep level      # (battery status)
+(adb shell) dumpsys battery set level
+(adb shell) input keyevent 26               # (power-on screen)
+(adb shell) input keyevent 224              # (power-on screen)
+input keyevent 111                          # (disable virtual keyboard)
 
 adb devices -l
-
 export ANDROID_SERIAL="${ANDROID_SERIAL}55555"
 adb connect $ANDROID_SERIAL
 unset ANDROID_SERIAL
