@@ -64,11 +64,11 @@ adb disconnect
 adb kill-server
 adb start-server
 
-adb shell wm size
-adb shell wm size 800x1280
-adb shell wm size reset
-adb shell wm density 520
-adb shell wm density reset
+(adb shell) wm size
+(adb shell) wm size 1280x1865
+(adb shell) wm size reset
+(adb shell) wm density 150
+(adb shell) wm density reset
 
 
 ====================================================================================================
