@@ -1,0 +1,20 @@
+### Automated Approach (One Command) - venv activated
+
+for env in $(conda env list | awk '{print $1}' | tail -n +3); do
+    conda activate "$env"
+    mamba update --all -y
+done
+
+
+### Automated Approach (One Command) - venv not activated
+### No Activation
+
+for env in $(conda env list | awk '{print $1}' | tail -n +3); do
+    conda run -n "$env" mamba update --all -y
+done
+
+
+### update core Conda/Mamba components only
+
+mamba activate base
+mamba update conda mamba python -y
