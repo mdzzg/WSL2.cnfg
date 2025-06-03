@@ -195,7 +195,8 @@ eval "$(dircolors -b ~/.dircolors)"
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;21;31;40:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-export ANDROID_SERIAL="192.168.43.203:"
+# export ANDROID_SERIAL="192.168.43.203:"
+export ANDROID_SERIAL="100.83.217.154:"
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
