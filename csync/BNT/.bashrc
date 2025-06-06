@@ -237,3 +237,7 @@ if [ -f "/home/madz/miniforge3/etc/profile.d/mamba.sh" ]; then
 fi
 # <<< conda initialize <<<
 mamba deactivate
+
+export GUROBI_HOME="$(pwd)"
+export PATH="${GUROBI_HOME}/bin:${PATH}"
+export LD_LIBRARY_PATH="${GUROBI_HOME}/lib:${LD_LIBRARY_PATH}"
