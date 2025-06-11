@@ -238,6 +238,6 @@ fi
 # <<< conda initialize <<<
 mamba deactivate
 
-export GUROBI_HOME="$(pwd)"
+export GUROBI_HOME="opt/gurobi1202"
 export PATH="${GUROBI_HOME}/bin:${PATH}"
 export LD_LIBRARY_PATH="${GUROBI_HOME}/lib:${LD_LIBRARY_PATH}"
