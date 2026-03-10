@@ -78,6 +78,7 @@ screencap -p /sdcard/screenshot.png
 input keyevent 111                          # (disable virtual keyboard)
 
 adb devices -l
+echo $ANDROID_SERIAL
 export ANDROID_SERIAL="${ANDROID_SERIAL}55555"
 adb connect $ANDROID_SERIAL
 unset ANDROID_SERIAL
