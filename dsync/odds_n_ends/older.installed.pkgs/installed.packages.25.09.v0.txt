@@ -2,8 +2,10 @@
 #   pm list packages|cut -d: -f2|sort
 
 android
+android.autoinstalls.config.honor.device
 androidhnext
 apps.syrupy.fullbatterychargealarm
+at.helloagain.mucke
 com.android.bluetooth
 com.android.calllogbackup
 com.android.cameraextensions
@@ -24,6 +26,7 @@ com.android.internal.systemui.navbar.hide
 com.android.internal.systemui.navbar.threebutton
 com.android.localtransport
 com.android.location.fused
+com.android.microdroid.empty_payload
 com.android.mms.service
 com.android.mtp
 com.android.networkstack.overlay
@@ -45,24 +48,27 @@ com.android.sharedstoragebackup
 com.android.shell
 com.android.statementservice
 com.android.systemui
+com.android.systemui.accessibility.accessibilitymenu
 com.android.systemui.overlay
 com.android.vending
 com.android.virtualmachine.res
 com.android.wifi.resources.overlay
 com.beforesoft.launcher
 com.brave.browser_nightly
+com.decathlon.app
+com.deepl.mobiletranslator
 com.google.android.adservices.api
 com.google.android.apps.authenticator2
 com.google.android.apps.docs
 com.google.android.apps.maps
 com.google.android.apps.messaging
 com.google.android.appsearch.apk
-com.google.android.cellbroadcastservice
 com.google.android.configupdater
 com.google.android.connectivity.resources
+com.google.android.contacts
 com.google.android.devicelockcontroller
 com.google.android.dialer
-com.google.android.ext.services
+com.google.android.euicc
 com.google.android.federatedcompute
 com.google.android.gms
 com.google.android.gms.supervision
@@ -74,8 +80,10 @@ com.google.android.modulemetadata
 com.google.android.networkstack
 com.google.android.networkstack.tethering
 com.google.android.ondevicepersonalization.services
+com.google.android.overlay.devicelockcontroller
 com.google.android.overlay.gmsconfig.asi
 com.google.android.overlay.gmsconfig.common
+com.google.android.overlay.gmsconfig.geotz
 com.google.android.overlay.gmsconfig.gsa
 com.google.android.overlay.gmsconfig.searchselector
 com.google.android.overlay.modules.documentsui
@@ -102,6 +110,7 @@ com.hihonor.android.hnaps
 com.hihonor.android.internal.app
 com.hihonor.android.launcher
 com.hihonor.android.thememanager
+com.hihonor.android.upgradeguide
 com.hihonor.aod
 com.hihonor.assetsync
 com.hihonor.assetsyncservice
@@ -112,6 +121,7 @@ com.hihonor.cameraextension
 com.hihonor.carrierlocation
 com.hihonor.coauthservice
 com.hihonor.cooperatedconfig
+com.hihonor.credentialmanager.overlay
 com.hihonor.ddmp
 com.hihonor.desktop.systemui
 com.hihonor.deviceauth
@@ -119,6 +129,7 @@ com.hihonor.dmsdp
 com.hihonor.dsdscardmanager
 com.hihonor.euicc.overlay
 com.hihonor.featurelayer.sharedfeature.stylus
+com.hihonor.fitness.healthservice
 com.hihonor.id
 com.hihonor.lbs
 com.hihonor.lens
@@ -139,10 +150,16 @@ com.hihonor.systemmanager
 com.hihonor.systemserver
 com.hihonor.virtualinput
 com.hihonor.visionengine
+com.hihonor.wallpapereditor
 com.honor.gpudrivers
+com.jabra.moments
+com.jefftharris.passwdsafe
 com.jgba.appinspector
 com.kaufland.Kaufland
+com.lidl.eci.lidlplus
+com.microsoft.teams
 com.mixplorer
+com.monks.praxis_app.hap
 com.qti.dpmserviceapp
 com.qti.qcc
 com.qualcomm.location
@@ -153,14 +170,25 @@ com.qualcomm.timeservice
 com.revolut.revolut
 com.swiftkey.swiftkeyconfigurator
 com.termux
+com.termux.tasker
 com.touchtype.swiftkey
 com.transferwise.android
 com.whatsapp
+de.deutschepost.postident
 de.eplus.mappecc.client.android.alditalk
+de.flixbus.app
+de.hafas.android.db
+de.ingdiba.bankingapp
+de.komoot.android
+de.payback.client.android
+de.rewe.app.mobile
 moe.shizuku.privileged.api
 org.codeaurora.ims
+us.zoom.videomeetings
 vendor.qti.hardware.cacert.server
+vendor.qti.imsdatachannel
 vendor.qti.iwlan
+
 
 
 ###     Disabled packages

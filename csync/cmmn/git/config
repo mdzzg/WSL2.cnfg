@@ -30,15 +30,24 @@
 	
 	br = branch
 	bra = branch -a
-	brr = branch -r		# List remote branches
-	brm = branch -M		# M - shortcut for --move --force
+	brr = branch -r				# List remote branches
+	brm = branch -M				# M - shortcut for --move --force
 
 	rt = remote -v
 	rta = remote add
 
-	st = status			# 'status' is protected name so using 'st' instead
-	tg = tag			# Creates a lightweight tag: Contains no additional metadata, such as a tag message or an author
-	ntg = tag -a		# Creates an annotated tag: Contains a tag message, the name of the person who created the tag, the date of the tag
+	st = status					# 'status' is protected name so using 'st' instead
+	tg = tag					# Creates a lightweight tag: Contains no additional metadata, such as a tag message or an author
+	ntg = tag -a				# Creates an annotated tag: Contains a tag message, the name of the person who created the tag, the date of the tag
+	
+	#	gt difftool default -- subfiles/work.tex
+	#	gt diff default -- subfiles/intro/info.tex
+	#	gt difftool default	(compares all files, 1-by-1, sequentially)
+	#	gt diff --name-only default		#	compares all files, shows only names of changed files
+	#	gt rm (-r) /path/to/file
+	
+	#	git restore --source=HEAD --staged bin/resume.pdf
+	#	git restore --source=HEAD bin/resume.pdf
 [color]
 	ui = auto
 [color "branch"]
@@ -51,3 +60,7 @@
 	default = matching
 [init]
 	defaultBranch = default
+[diff]
+	tool = meld
+[difftool]
+	prompt = false

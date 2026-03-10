@@ -25,5 +25,24 @@ PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 # For more information see the manual pages of crontab(5) and cron(8)
 # 
 # m h  dom mon dow   command
+
 */30 * * * * echo "cnfg sync: $(date)" >> /tmp/cron.log; /bin/bash /home/madz/cnfg.bak/sync/BNT/cnfg_sync_bnt.sh >> /tmp/cron.log 2>&1
+
 @reboot	sleep 180; echo "startup cnfg sync: $(date)" >> /tmp/cron.log; /bin/bash /home/madz/cnfg.bak/sync/BNT/cnfg_sync_bnt.sh >> /tmp/cron.log 2>&1
+
+🔍 Explanation
+
+/sys/class/power_supply/BAT0/charge_control_end_threshold
+→ a kernel interface used by many laptops (especially ThinkPads, Tuxedo, Dell, etc.)
+→ controls how far the battery charges before stopping (to reduce battery wear).
+
+echo 80 > ...
+→ sets the upper charging limit to 80%.
+
+@reboot
+→ runs once at every system startup.
+
+root
+→ the command runs as root (necessary because writing to /sys/... requires root permissions).
+
+@reboot root echo 80 > /sys/class/power_supply/BAT0/charge_control_end_threshold

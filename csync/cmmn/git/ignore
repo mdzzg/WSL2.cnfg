@@ -1,7 +1,7 @@
 # pdflatex generated files #
 ######################
 /bin/
-# *.pdf
+*.pdf
 *.aux
 *.log
 *.out

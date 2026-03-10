@@ -1,0 +1,267 @@
+==================================================================================================== android remove
+
+cn.wps.moffice_eng
+com.alibaba.aliexpresshd
+com.amazon.appmanager
+com.amazon.mp3
+com.amazon.mShop.android.shopping
+com.android.apps.tag
+com.android.backupconfirm							# Restore Google settings with Google Backup restore function.
+com.android.bips
+com.android.bluetoothmidiservice
+com.android.bookmarkprovider
+com.android.carrierconfig
+com.android.cellbroadcastreceiver
+com.android.cellbroadcastreceiver.overlay
+com.android.chrome
+com.android.cts.priv.ctsshimm
+com.android.dreams.basic                            # all users
+com.android.dreams.phototable
+com.android.egg
+com.android.emergency								# emergency contact & location accuracy - not needed for normal use
+com.android.externalstorage
+com.android.hotwordenrollment.okgoogle				# Google Assistant - ok google
+com.android.hotwordenrollment.xgoogle				# Google Assistant - ok google
+com.android.htmlviewer
+com.android.keychain
+com.android.managedprovisioning
+com.android.pacprocessor
+com.android.printspooler
+com.android.providers.calendar
+com.android.providers.contactkeys
+com.android.providers.partnerbookmarks
+com.android.providers.userdictionary
+com.android.se
+com.android.stk
+com.android.stk2
+# com.android.systemui								# DO NOT REMOVE - Android GUI, not the launcher
+# com.android.systemui.theme.dark					# Dark theme - do not remove
+com.android.vpndialogs
+com.android.wallpaperbackup
+com.android.wallpapercropper
+com.android.wallpaper.livepicker
+com.booking
+com.diotek.sec.lookup.dictionary					# dictionary
+com.facebook.appmanager
+com.facebook.katana
+com.facebook.services
+com.facebook.system
+com.hiya.star
+com.microsoft.office.excel
+com.microsoft.office.powerpoint
+com.microsoft.office.word
+com.microsoftsdk.crossdeviceservicebroker
+com.microsoft.skydrive
+com.monotype.android.font.chococooky
+com.monotype.android.font.cooljazz
+com.monotype.android.font.foundation
+com.monotype.android.font.rosemary
+com.netflix.mediaclient
+com.sec.android.app.voicenote
+com.skms.android.agent
+com.skype.raider
+com.wsomacp											# configuration message
+ctrip.english
+de.telekom.tsc
+
+==================================================================================================== google remove
+
+com.google.android.apps.accessibility.voiceaccess
+com.google.android.apps.photos
+com.google.android.apps.restore
+com.google.android.apps.setupwizard.searchselector
+com.google.android.apps.tachyon
+com.google.android.apps.turbo
+com.google.android.apps.walletnfcrel
+com.google.android.apps.wellbeing
+com.google.android.apps.youtube.music
+com.google.android.as
+com.google.android.as.oss
+com.google.android.captiveportallogin
+com.google.android.cellbroadcastreceiver
+com.google.android.cellbroadcastservice
+# com.google.android.configupdater					# do not remove
+com.google.android.contactkeys
+com.google.android.documentsui
+com.google.android.ext.services
+com.google.android.ext.shared
+com.google.android.feedback
+com.google.android.gm
+com.google.android.gms.location.history
+com.google.android.googlequicksearchbox
+com.google.android.healthconnect.controller
+com.google.android.health.connect.backuprestore
+com.google.android.marvin.talkback
+com.google.android.music
+com.google.android.onetimeinitializer
+com.google.android.overlay.modules.captiveportallogin.forframework
+com.google.android.overlay.modules.healthfitness.forframework
+com.google.android.overlay.gmsconfig.photos
+com.google.android.partnersetup
+com.google.android.photopicker
+com.google.android.printservice.recommendation
+com.google.android.projection.gearhead
+com.google.android.setupwizard
+com.google.android.syncadapters.calendar
+com.google.android.tts
+com.google.android.videos
+com.google.android.youtube
+
+==================================================================================================== samsung remove
+
+# com.android.mms.service							# Mms service - do not remove
+com.android.simappdialog
+com.enhance.gameservice
+com.knox.vpn.proxyhandler
+com.osp.app.signin									# samsung account
+com.samsung.aasaservice
+com.samsung.advp.imssettings
+com.samsung.android.allshare.service.fileshare
+com.samsung.android.allshare.service.mediashare
+com.samsung.android.app.clockpack
+com.samsung.android.app.galaxyfinder
+com.samsung.android.app.notes
+com.samsung.android.app.reminder
+com.samsung.android.app.simplesharing
+com.samsung.android.app.social
+com.samsung.android.app.soundpicker
+# com.samsung.android.app.telephonyui				# breaks the 2G/3G/LTE network selection
+com.samsung.android.app.watchmanagerstub
+com.samsung.android.bbc.bbcagent
+com.samsung.android.beaconmanager
+# com.samsung.android.brightnessbackupservice		# adaptive brightness app
+com.samsung.android.calendar
+# com.samsung.android.clipboarduiservice			# clipboard service - do not remove, it is needed for clipboard to work
+com.samsung.android.contacts
+com.samsung.android.da.daagent						# Dual Messanger
+# com.samsung.android.dialer						# DO NOT REMOVE - Google Phone does not work on Droid 9, and the other dialers are shit
+com.samsung.android.dqagent
+com.samsung.android.dsms
+# com.samsung.android.easyonehand
+com.samsung.android.easysetup
+com.samsung.android.email.provider
+com.samsung.android.emojiupdater
+com.samsung.android.fmm
+com.samsung.android.game.gamehome
+com.samsung.android.game.gametools
+# com.samsung.android.game.gos						# safe to remove, but it keeps reinstalling itself & prevents cleaning up the device
+# com.samsung.android.incallui                      # DO NOT REMOVE - when receiving a call u cannot answer the call !!! 
+com.samsung.android.ipsgeofence
+com.samsung.android.keyguardwallpaperupdator		# wallpaper
+# com.samsung.android.kgclient						# for some reason it cannot be cleared - This is knox related, DO NOT DISABLE IT, it will lock your phone completely.
+# com.samsung.android.kgclient						#This is knox related, DO NOT DISABLE IT, it will lock your phone completely.
+com.samsung.android.kidsinstaller
+com.samsung.android.knox.analytics.uploader
+com.samsung.android.knox.attestation
+com.samsung.android.knox.containeragent				# Workspace
+com.samsung.android.knox.containercore
+com.samsung.android.location
+# com.samsung.android.lool                      	# DO NOT REMOVE - Device Care/Optimization/RAM Manager
+com.samsung.android.mdm
+com.samsung.android.messaging
+com.samsung.android.mobileservice
+com.samsung.android.mobileservice
+# com.samsung.android.MtpApplication
+com.samsung.android.net.wifi.wifiguider
+com.samsung.android.provider.filterprovider
+com.samsung.android.providers.context				# context service
+# com.samsung.android.rlc
+com.samsung.android.rubin.app
+com.samsung.android.scloud
+com.samsung.android.securitylogagent				# some kind of Samsung security logging
+com.samsung.android.setting.multisound
+com.samsung.android.SettingsReceiver                # safe to remove
+com.samsung.android.shortcutbackupservice
+com.samsung.android.sm.devicesecurity				# Samsung security
+com.samsung.android.stickercenter
+com.samsung.android.themecenter
+com.samsung.android.themestore
+# com.samsung.android.timezone.data_P				# DO NOT REMOVE
+# com.samsung.android.timezone.updater				# DO NOT REMOVE
+com.samsung.android.video
+com.samsung.android.voc
+com.samsung.android.wallpaper.res					# wallpaper
+com.samsung.android.wellbeing
+com.samsung.app.newtrim
+com.samsung.clipboardsaveservice
+com.samsung.cmh
+com.samsung.crane
+com.samsung.faceservice
+com.samsung.klmsagent
+com.samsung.knox.securefolder						# secure folder
+com.samsung.rcs
+com.samsung.safetyinformation
+com.samsung.SMT
+com.samsung.storyservice
+# com.samsung.ucs.agent.boot						# unclear what this is for, but it is related to Knox
+com.sec.android.app.billing
+com.sec.android.app.bluetoothtest
+# com.sec.android.app.camera						# camera app - do not remove, it is needed for camera to work
+com.sec.android.app.chromecustomizations
+com.sec.android.app.clockpackage
+com.sec.android.app.DataCreate
+com.sec.android.app.factorykeystring
+com.sec.android.app.fm
+com.sec.android.app.hwmoduletest
+# com.sec.android.app.launcher						# One UI Home/Samsung Launcher - do not remove, it is needed for side-by-side app view
+com.sec.android.app.magnifier
+# com.sec.android.app.mdm							# device management - do not remove, it is needed for device management to work
+com.sec.android.app.myfiles
+com.sec.android.app.parser
+# com.sec.android.app.personalization
+com.sec.android.app.popupcalculator
+com.sec.android.app.ringtoneBR
+com.sec.android.app.safetyassurance
+com.sec.android.app.samsungapps
+com.sec.android.app.sbrowser
+com.sec.android.app.SecSetupWizard
+com.sec.android.app.servicemodeapp
+com.sec.android.app.setupwizardlegalprovider
+com.sec.android.app.shealth
+com.sec.android.app.soundalive
+# com.sec.android.app.splitsound					# sound settings - do not remove, it is needed for sound settings to work
+com.sec.android.app.voicenote
+com.sec.android.app.wlantest
+com.sec.android.daemonapp							# Weather
+com.sec.android.diagmonagent
+com.sec.android.easyMover.Agent						# SmartSwitch
+com.sec.android.easyonehand
+com.sec.android.emergencylauncher
+com.sec.android.emergencymode.service
+com.sec.android.gallery3d
+com.sec.android.inputmethod							# Samsung Keyboard
+com.sec.android.mimage.photoretouching
+com.sec.android.preloadinstaller
+com.sec.android.provider.badge
+com.sec.android.provider.emergencymode
+com.sec.android.providers.security					# security storage
+com.sec.android.RilServiceModeApp
+# com.sec.android.sdhms								# related to cleaner app under device maintenance
+com.sec.android.soagent								# User's Manual/Software Update
+# com.sec.android.timezone.data_P					# DO NOT REMOVE, breaks the system otherwise
+# com.sec.android.timezone.updater					# DO NOT REMOVE, breaks the system otherwise
+com.sec.android.wallpapercropper2					# wallpaper
+com.sec.android.widgetapp.easymodecontactswidget	# Favorite Contacts
+com.sec.android.widgetapp.samsungapps				# Widget
+com.sec.android.widgetapp.webmanual					# user manual
+# com.sec.app.RilErrorNotifier
+# com.sec.automation								# do not remove
+com.sec.bcservice
+com.sec.enterprise.knox.attestation
+com.sec.enterprise.knox.cloudmdm.smdms
+com.sec.enterprise.mdm.services.simpin
+# com.sec.epdg										# do not remove, it is needed for wifi calling
+com.sec.epdgtestapp
+com.sec.factory
+com.sec.factory.camera
+com.sec.hearingadjust								# do not remove, it is for sound enhancement
+# com.sec.ims										# do not remove, it is for ims/volte
+com.sec.imslogger
+# com.sec.imsservice
+com.sec.location.nsflp2
+com.sec.modem.settings
+# com.sec.phone										# do not remove, it is needed for telephony to work
+com.sec.spp.push
+com.sec.unifiedwfc
+# com.wssyncmldm									# software updater - do not remove, it keeps your device secure with latest patches
+====================================================================================================
