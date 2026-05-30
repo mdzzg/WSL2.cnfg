@@ -10,7 +10,7 @@
 ### PSEUDONYMS ###
 
 # list all pseudonyms
-alias ali='alias -p'
+alias ali='alias -p|sort|nl'
 
 # navigation
 # cd -/cd -- -> go to the previous dir -> officially retired given the up function
@@ -23,26 +23,28 @@ alias ali='alias -p'
 ###	alias for the most used commands	###
 
 alias cnfg=~/cnfg.bak
-alias cv=~/Documents/data/job.applications/cv/tex.v4.6
-alias cla=~/Documents/data/job.applications/personal.letter/novo.academia/cl_ac_gen
-alias cli=~/Documents/data/job.applications/personal.letter/novo.industry/gen_app/cl_in_gen
-alias dc=~/Documents
-alias dl=~/Downloads
+alias cv=~/docs/job.applications/cv/tex.v4.6
+alias cla=~/docs/job.applications/personal.letter/novo.academia/cl_ac_gen
+alias cli=~/docs/job.applications/personal.letter/novo.industry/gen_app/cl_in_gen
+alias dc=~/docs
+alias dl=~/dls
+alias pw=~/.config/pwsafe/
+# alias dcw=/mnt/c/Users/mario/Documents/data/backup
 
 ###     ls    ###
 # export LS_COLORS="no=01;32;40:di=01;36;40:fi=01;04;97:ex=01;04;31:ow=92;100:*.tex=01;04;31:*.pdf=01;04;35:"\
 # "*.py=01;04;32:*.sh=01;04;32:*.tar.gz=01;04;32:*html=01;04;33:*css=01;04;33:*js=01;04;33:*json=01;04;33:*xml=01;04;33:*md=01;04;33:*txt=01;04;33:*csv=01;04;33:*dat=01;04;33:*log=01;04;33:*bak=01;04;33:*tar=01;04;33:*zip=01;04;33:*rar=01;04;33:*7z=01;04;33:*deb=01;04;33:*bin=01;04;33:*iso=01;04;33:*img=01;04;33:*mp3=01;04;33:*mp4=01;04;33:*mkv=01;04;33:*avi=01;04;33:*mov=01;04;33:*wmv=01;04;33:*flv=01;04;33:*webm=01;04;33:*gif=01;04;33:*jpg=01;04;33:*png=01;04;33:*bmp=01;04;33:*svg=01;04;33:*tiff=01;04;33:*eps=01;04;33:*ps=01;04;33:*odt=01;04;33:*doc=01;04;33:*docx=01;04;33:*xls=01;04;33:*xlsx=01;04;33:*ppt=01;04;33:*pptx=01;04;33:*odp=01;04;33:*rtf=01;04"
-alias ll="ls -AFghoX --hyperlink=always --color=always"  # F - classify executables (*), directories (/), symbolic links (@); X - alphabetical sort; A - all WO parents; og - omit owner & group;
-alias lc="ls -CFhm --hyperlink=always --color=always"    # C - column mode; m - comma separated
+alias ll='ls -AFghoX --color=always'  # F - classify executables (*), directories (/), symbolic links (@); X - alphabetical sort; A - all WO parents; og - omit owner & group;
+alias lc='ls -CFhm --color=always'    # C - column mode; m - comma separated
 # R - recursive display of all dirs
-alias dir='dir --hyperlink=always --color=always'
-alias vdir='vdir --hyperlink=always --color=always'
-alias nfnd="find . ! -path './.git/*' -exec ls -AFghoX --hyperlink=always --color=always -ld {} +"  # -type f ! -name '*.png'    all files in the current directory except for the .git directory
+alias dir='dir --color=always'
+alias vdir='vdir --color=always'
+alias nfnd="find . ! -path './.git/*' -exec ls -AFghoX --color=always -ld {} +"  # -type f ! -name '*.png'    all files in the current directory except for the .git directory
 alias nls='ll -d !('.git')'  # list all files in the current directory except for the .git directory
-# alias tr='tree -a -I '.git''
-alias tr='tree -aC -L 2 --dirsfirst --noreport'  # -a - all files; -C - colorize; -L 2 - depth 2; --dirsfirst - list directories first; --noreport - no summary; --hyperlink=auto - hyperlink files; --color=always - colorize output
+alias tr='tree -a -I '.git''
+# 'tree -aC -L 2 --dirsfirst --noreport'  # -a - all files; -C - colorize; -L 2 - depth 2; --dirsfirst - list directories first; --noreport - no summary; --hyperlink=auto - hyperlink files; --color=always - colorize output
 
-###     grep    ###
+###		grep	###
 export GREP_COLORS="ms=01;04;33:mc=01;32;7:sl=01;37:cx=33:fn=01;33:ln=32:bn=34:se=36"
 alias grep='grep --color=always --group-separator=SEP'
 alias fgrep='grep -F --color=always'    # Interpret PATTERNS as fixed strings (F).
@@ -51,14 +53,15 @@ alias diff='diff --color=always'
 alias sdiff='sdiff -s'
 
 ###	apt/snap	###
-alias list_apt="apt list --installed|cut -d/ -f1|grep -v Listing...|nl|most"
+alias list_apt="apt list --installed 2>/dev/null | sed -n 's,/.*,,p'|nl|most"
 alias list_apts="apt list --installed 2>/dev/null | sed -n 's,/.*,,p'|egrep -nv '^(python|lib)'|nl"
-# alias list_apt="apt list --installed|awk -F '/' '/^/ {print $1}'|cut -f1|grep -v Listing...|nl|most"	# inflated compared to the above
-# alias list_apt="apt list --installed 2>/dev/null | sed -n 's,/.*,,p'|nl|most"
+# alias list_apt="apt list --installed|awk -F '/' '/^/ {print $1}'|cut -f1|grep -v Listing...|nl|most"
+# alias list_apt="apt list --installed|cut -d/ -f1|grep -v Listing...|nl|most"
 alias list_full='compgen -c|sort -u|nl|most'
 alias list_descriptive='whatis `compgen -c`|sort -u|nl|most'
-alias update='sudo apt update -y && sudo apt full-upgrade -y'
 alias clean='sudo apt purge -y && sudo apt autoclean -y && sudo apt autoremove -y'
+alias update='sudo apt update -y && sudo apt full-upgrade -y'
+alias cu2='clean && update && upgradable'
 alias snaprf='sudo snap refresh'
 alias snapi='sudo snap install'
 alias snaprm='sudo snap remove'
@@ -81,16 +84,21 @@ alias cronr='sudo service cron restart' # Stops and then starts the cron service
 alias psa='ps auxf'          # process status of all running processes - tree view
 alias psgrep='ps aux|grep -v grep|grep -i VSZ'
 alias psmem='ps auxf|sort -nr -k 4'
-alias pscpu='ps auxf|sort -nr -k 3'
+alias pscpu='ps auxf|sort -nr -c2uk 3'
 
 ### system  ###
+alias firmware='sudo fwupdmgr refresh --force && sudo fwupdmgr get-updates && sudo fwupdmgr update'  # firmware update
+alias scf='snaprf && cu2 && firmware'  # clean, update, upgradable & firmware update
+alias temp="paste <(cat /sys/class/thermal/thermal_zone*/type) <(cat /sys/class/thermal/thermal_zone*/temp) | column -s $'\t' -t | sed 's/\(.\)..$/.\1°C/'"	# show cpu/gpu temps
 alias var='env|most'
+alias cc='sudo sysctl vm.drop_caches=3'   # free pagecache, dentries and inodes
 
-###	turn off	###
+###	turn off/system	###
+alias rbt='systemctl reboot -i'
+alias rbtb='systemctl reboot -i --firmware-setup'   # --firmware-setup - reboots to UEFI/BIOS firmware settings
 alias off='systemctl poweroff --now'
-alias reboot='systemctl reboot -i'
+alias slp='systemctl suspend'
 alias hoff='systemctl hibernate'
-#	sudo systemctl reboot --firmware-setup
 
 ###	latex/pdf	##
 alias txfy='pdflatex -output-directory=bin' # -jobname=filename -output-directory=bin -aux-directory=bin
@@ -98,15 +106,16 @@ alias pdf2txt='pdftotext -q'
 
 ### git ###
 alias gt='git'
-alias gcnfg='gt cnfg|fgrep alias|sort'
-#alias graph='git log --oneline --decorate --all --graph'
+# alias gcnfg='gt cnfg|fgrep alias|sort'
+alias galias='gt config --global --list |grep ali|sort'
+# alias graph='git log --oneline --decorate --all --graph'
 
 ###	frequent	###
 alias rst='. ~/.bashrc'	#'source ~/.bashrc'
 alias rsti='bind -f ~/.inputrc'	#'source ~/.bashrc'
 alias cls="printf '\033c'"
 alias alt='sudo update-alternatives --config' 
-#alias forget='1
+# alias forget='1
 alias line="printf '\033[1;31m%0.s=\033[0m' {1..100};echo"
 # alias hline="printf '%100s\n' | tr ' ' \#"
 # alias mline="printf '%125s\n' | tr ' ' --"
@@ -129,7 +138,8 @@ alias power='upower -i /org/freedesktop/UPower/devices/battery_BAT0|grep -e 'sta
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 ###	rsync	###
-alias csync='~/cnfg.bak/csync/BNT/cnfg_sync_bnt.sh'
+alias csync='~/cnfg.bak/csync/WSL2/cnfg_sync_WSL2.sh'
+alias dsync='/mnt/c/Windows/system32/cmd.exe /c "C:\Users\mario\Documents\data\backup\install\windows\linux\WSL2\backup_script\backup_Lat_E7450.bat"'
 alias clone='dd if=/dev/sda1 of=/dev/sdb1 bs=64k status=progress conv=fdatasync,noerror,sync'
 # block size 64k, reliable copy, compared to larger block sizes; fdatasync - flushes data to disk for integrity, ensures that all written data reaches the physical disk before dd exits; noerror - continues on read errors; prevents the process from stopping when a read error occurs but does not handle skipped blocks; sync	- pads blocks with nulls for alignment; works with noerror to ensure skipped blocks are filled with null bytes, maintaining the correct output size.
 
@@ -166,26 +176,51 @@ alias disk='df -h'          # human-readable sizes
 # alias umounta='sudo umount -a'
 # alias spec='sudo smartctl -i'
 # sudo blkid
-# lsblk
+# lsblk -f
+# sudo e2label /dev/nvme0n1p2 HOME
+# sudo exfatlabel /dev/sdc1 SD.119T
 
 ###	variuos	###
+# date -d "1984-04-03 8:10 AM CEST" +%s
+# date -d @449820600
+alias fnc='declare -F'   # list all functions
 alias clc='bc' ### scale=2
 alias PWD='LANG=c < /dev/urandom tr -dc _A-Z-a-z-0-9|head -c$"16";echo;'
+# PWD='openssl rand -base64 18'
 # alias clc='ncal -b' ### scale=2
 
-### speedtest   ###
-alias spdtst='speedtest-cli --bytes --simple' #  --list ->  Display a list of speedtest.net servers sorted by distance
-# alias spdtst='speedtest -v -P 8 -u MiB/s'
+###	speedtest	###
+alias st='speedtest-cli --secure --bytes --no-upload --no-pre-allocate'
+#  --list ->  Display a list of speedtest.net servers sorted by distance | --simple -> Suppress verbose output, only show basic information# alias spdtst='speedtest -v -P 8 -u MiB/s'
+#	stay the fuck away from the `mamba create -n spdtst -c conda-forge python=3.12.3 speedtest-cli` - since it installs ~ 45 MB of mamba python venv packages, compared to ~ 104 kB of the APT package installation
 
 ###    FUNCTIONS	###
+
+
+function backup_all(){
+rsync -aEHO --delete --info=progress2 --whole-file \
+/home/madz/docs/backup/ /mnt/evo990+932G/backup/ || { echo "backup failed"; fail=1; }
+
+rsync -aEHO --delete --info=progress2 --whole-file \
+/home/madz/pics/ /mnt/evo990+932G/photos/ || { echo "pics failed"; fail=1; }
+
+rsync -aEHO --delete --info=progress2 --whole-file \
+/home/madz/docs/job.applications/ /mnt/evo990+932G/job.applications/ || { echo "job apps failed"; fail=1; }
+
+rsync -aEHO --delete --info=progress2 --whole-file \
+/home/madz/docs/ebooks/ /mnt/evo990+932G/ebooks/ || { echo "ebooks failed"; fail=1; }
+
+return $fail
+}
+export -f backup_all
 
 # function that queries apt for upgradable packages, lists them, & then installs them
 function upgradable() { echo $(apt list --upgradable 2>/dev/null | egrep -v 'Listing...|apt does not have a stable CLI interface' | cut -d/ -f1 | awk '{$1=$1};1' | paste -sd ' ' -);}
 export -f upgradable
 
-function upgrade(){ sudo apt install $(apt list --upgradable 2>&1|awk -F '/' '/^/ {print $1}'|cut -f1|egrep -v 'Listing...|apt does not have a stable CLI interface'|sed 's/^[[:space:]]*//');}
+function upgrade(){ sudo apt install $(apt list --upgradable 2>&1|awk -F '/' '/^/ {print $1}'|cut -f1|egrep -v 'Listing...|apt does not have a stable CLI interface'|sed 's/^[[:space:]]*//'|tr '\r\n' ' ') -y;}
 export -f upgrade
-# |tr '\r\n' ' ') -y
+
 # function that lists installed apt/dpkg packages
 list_dpkg(){
     # dpkg-query -W -f='${Package}\n' | less
@@ -272,7 +307,7 @@ function psb(){ ps aux|grep brave|awk '{print $2}'|sudo xargs kill -9;}
 export -f psb
 
 # function that checks for broken URLs in a resume.pdf
-function pdfcheck(){ pdfx -v bin/"$1" -c;}
+function pdfcheck(){ mamba run -n pdf pdfx -v "$1" -c;}
 export -f pdfcheck
 
 ###     mkdir creates parents verbosely and cds into it immediatelly    ###
@@ -294,7 +329,9 @@ export -f fd
 #	pdfgrep -ri python /home/madz/Dropbox/
 #	find /path -iname '*.pdf' -exec pdfgrep pattern {} +
 
-###	work    ###
+###    WSL   ###
+# alias adb='adb.exe'
+# alias scrcpy='scrcpy.exe'
 # alias pss34='/mnt/c/Program\ Files\ \(x86\)/PTI/PSSEXplore34/PSSBIN/Psse34.exe'
 # alias insiders='/mnt/c/Users/mario/AppData/Local/Programs/Microsoft\ VS\ Code\ Insiders/Code\ -\ Insiders.exe'
 
@@ -312,3 +349,11 @@ export -f fd
 #	alias yta='youtube-dl -x -f bestaudio/best'
 #	alias ytva='youtube-dl -f bestvideo,bestaudio'
 #	alias playlist='%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s'
+
+###    mamba/conda    ###
+
+# mamba run -n pdf pdfx -v bin/resume.pdf -c
+# mamba create -n env_name python=3.13 pip setuptools wheel
+# rm -rf $(mamba info --base)/envs/env_name
+
+###	END OF .bash_aliases	###

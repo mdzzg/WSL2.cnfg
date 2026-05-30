@@ -14,8 +14,8 @@
 ### EXPORT  ###
 # no duplicate entries, no entry with leading space == ignorespace & ignoredups - don't put duplicate lines or lines starting with space into the history
 # alternative:
-export HISTCONTROL=ignoreboth:erasedups           
-export HISTTIMEFORMAT=' %y/%m/%d '	# save timestamp beside history entry
+export HISTCONTROL=ignoreboth:erasedups
+export HISTTIMEFORMAT=' [%y/%m/%d] [%H:%M] '	# alternative: %y/%m/%d / save timestamp beside history entry
 export HISTIGNORE='&:history:ls:[bf]g:exit:pwd:clear:cls:mount:umount:forget*:[ ]*'
 # export TERM='xterm-256color'                      # getting proper colors
 
@@ -52,7 +52,7 @@ shopt -s dotglob        # Include hidden files (dotfiles) for wildcard expansion
 ### myown SHOPT configuration
 shopt -s checkhash      # Automatically checks and updates the hash table of commands when their location changes | Example: Useful for ensuring commands like python point to updated binaries after installation or relocation.
 shopt -s direxpand      # Expands ~ or .. into full directory paths when using Tab completion
-shopt -s failglob       # If a wildcard pattern does not match any files, an error message will be printed
+shopt -u failglob       # DISABLED: If a wildcard pattern does not match any files, an error message will be printed
 shopt -s extglob        # extended pattern matching
 shopt -s globstar       # Enables the ** wildcard pattern to match all files in nested directories
 shopt -s histreedit     # Allows the user to re-edit a failed recalled history line
@@ -120,10 +120,10 @@ parse_git_status() {
 }
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;04;31;7m\]$(parse_git_status)\[\033[0m\]\[\033[01;04;32;7m\]\W\n\[\033[0m\]\[\033[01;37m\]'
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[03;38;05;00;48;05;160m\]$(parse_git_status)\[\033[0m\]\[\033[04;38;05;00;48;05;35m\]\W\[\033[0m\]\[\033[K\]\n\[\033[01;38;05;214m\]'
 #    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]$(parse_git_branch)\[\033[01;34m\]\W:\n\[\033[01;32m\]\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[03;38;05;00;48;05;160m\]$(parse_git_status)\[\033[0m\]\[\033[04;38;05;00;48;05;35m\]\W\n\[\033[0m\]\[\033[01;38;05;221m\]'
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[03;38;05;00;48;05;124m\]$(parse_git_status)\[\033[0m\]\[\033[03;38;05;05;48;05;04m\]\W\n\[\033[0m\]\[\033[01;37m\]'
 #    PS1='${debian_chroot:+($debian_chroot)}\[\033[1;32m\]\W \D{%H:%M}\[\033[1;32m\]$(parse_git_branch)\$ '
 fi
 unset color_prompt force_color_prompt
@@ -132,8 +132,7 @@ unset color_prompt force_color_prompt
 ### Terminal Title  ###
 
 # Define hardware information dynamically
-# export HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | cut -d: -f2 | xargs)
-# export HOSTNAMECTL_INFO_2=$(hostnamectl | grep "Hardware Vendor" | cut -d: -f2 | xargs)
+# export HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Virtualization" | cut -d: -f2 | xargs)
 
 # Update PROMPT_COMMAND for dynamic terminal title
 export PROMPT_COMMAND="
@@ -143,45 +142,23 @@ export PROMPT_COMMAND="
     elif [[ \"\$PWD\" == \"\$HOME\"/* ]]; then
         current_dir=\"~/\$(basename \"\$PWD\")\"
     fi
-    echo -ne \"\033]0;${USER}@${HOSTNAME} ${HOSTNAMECTL_INFO_1} ${HOSTNAMECTL_INFO_2} | \${current_dir} | $(date +"%H:%M:%S %a %b %d") | jobs = $(jobs | wc -l) | clh = ${HISTCMD}\a\"
+    echo -ne \"\033]0;${USER}@${HOSTNAME} | \${current_dir} | $(date +"%H:%M:%S %a %b %d") | jobs = $(jobs | wc -l) | clh = ${HISTCMD}\a\"
 "
 
-# HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | cut -d: -f2  | xargs)
-# HOSTNAMECTL_INFO_2=$(hostnamectl | grep "Hardware Vendor" | cut -d: -f2 | xargs)
-# PROMPT_COMMAND='
-#     current_dir=$(basename "$PWD")
-#     if [[ "$PWD" == "$HOME" ]]; then
-#         current_dir="~"
-#     elif [[ "$PWD" == "$HOME/"* ]]; then
-#         current_dir="~/$(basename "$PWD")"
-#     fi
-#     echo -en "\033]0;${USER}@${HOSTNAME} ${HOSTNAMECTL_INFO_1} ${HOSTNAMECTL_INFO_2} | ${current_dir} |\r\n\r\n $(date +"%H:%M:%S %a %b %d") | jobs = $(jobs | wc -l) | clh = ${HISTCMD}\a"
-#     '
 # case "$TERM" in
 # xterm*|rxvt*)
-#     HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | awk -F: '{print $2}' | xargs)
-#     HOSTNAMECTL_INFO_2=$(hostnamectl | grep "Hardware Vendor" | awk -F: '{print $2}' | xargs)
-#     PROMPT_COMMAND="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h $HOSTNAMECTL_INFO_1 $HOSTNAMECTL_INFO_2 | \w |\r\n\r\n \t \d | jobs = \j | clh = \!\a\]$PROMPT_COMMAND"
+#     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h | \w |\r\n\r\n \t \d | jobs = \j | clh = \!\a\]$PS1"
 #     ;;
 # *)
 #     ;;
 # esac
 
-# PROMPT_COMMAND="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h | \w |\r\n\r\n \t \d | jobs = \j | clh = \!\a\]$PS1"
 # case "$TERM" in
 # xterm*|rxvt*)
-#     PROMPT_COMMAND='
-#     HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | cut -d: -f2  | xargs)
-#     HOSTNAMECTL_INFO_2=$(hostnamectl | grep "Hardware Vendor" | cut -d: -f2 | xargs)
-#     echo -ne "\033]0;${debian_chroot:+($debian_chroot)}\u@\h $HOSTNAMECTL_INFO_1 $HOSTNAMECTL_INFO_2 | \w |\t | \d$PROMPT_COMMAND\007"'
-#     ;;
-# esac
-
-# Update PROMPT_COMMAND for dynamic terminal title
-# case "$TERM" in
-# xterm*|rxvt*)
-#     HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Hardware Model" | cut -d: -f2  | xargs)
-#     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h | \w |\r\n\r\n \t \d | jobs = \j | clh = \!\a\]$PS1"
+#     # PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+#     HOSTNAMECTL_INFO_1=$(hostnamectl | grep "Virtualization" | awk -F: '{print $2}' | xargs)
+#     # HOSTNAMECTL_INFO_2=$(hostnamectl | grep "Static hostname" | awk -F: '{print $2}' | xargs)
+#     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h $HOSTNAMECTL_INFO_1 | \w |\r\n\r\n \t \d | jobs = \j | clh = \!\a\]$PS1"
 #     ;;
 # *)
 #     ;;
@@ -195,8 +172,7 @@ eval "$(dircolors -b ~/.dircolors)"
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;21;31;40:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# export ANDROID_SERIAL="192.168.43.203:"
-# export ANDROID_SERIAL="132.180.224.132:"
+# export ANDROID_SERIAL="10.37.3.86:"
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -218,26 +194,21 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/madz/miniforge3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+# >>> mamba initialize >>>
+# !! Contents within this block are managed by 'mamba shell init' !!
+export MAMBA_EXE='/home/madz/miniconda3/bin/mamba';
+export MAMBA_ROOT_PREFIX='/home/madz/miniconda3';
+__mamba_setup="$("$MAMBA_EXE" shell hook --shell bash --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
 if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
+    eval "$__mamba_setup"
 else
-    if [ -f "/home/madz/miniforge3/etc/profile.d/conda.sh" ]; then
-        . "/home/madz/miniforge3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/madz/miniforge3/bin:$PATH"
-    fi
+    alias mamba="$MAMBA_EXE"  # Fallback on help from mamba activate
 fi
-unset __conda_setup
+unset __mamba_setup
+# <<< mamba initialize <<<
 
-if [ -f "/home/madz/miniforge3/etc/profile.d/mamba.sh" ]; then
-    . "/home/madz/miniforge3/etc/profile.d/mamba.sh"
-fi
-# <<< conda initialize <<<
-mamba deactivate
+# mamba deactivate
 
-export GUROBI_HOME="opt/gurobi1202"
-export PATH="${GUROBI_HOME}/bin:${PATH}"
-export LD_LIBRARY_PATH="${GUROBI_HOME}/lib:${LD_LIBRARY_PATH}"
+export GUROBI_HOME="/opt/gurobi1202/linux64"
+export PATH="${GUROBI_HOME}/bin:$PATH"
+export LD_LIBRARY_PATH="${GUROBI_HOME}/lib:$LD_LIBRARY_PATH"
